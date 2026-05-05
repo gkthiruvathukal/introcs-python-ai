@@ -19,8 +19,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = u'Introduction to Computer Science in Python'
-author = u'Andrew N. Harrington and George K. Thiruvathukal'
-copyright = u'2012-2025, Andrew N. Harrington and George K. Thiruvathukal'
+author = u'The Computer Science Department Faculty at Loyola University Chicago'
+copyright = u'2025, The Computer Science Department Faculty at Loyola University Chicago'
 
 version = date.today().strftime("%d %b %Y")
 release = version
@@ -65,7 +65,7 @@ latex_elements = {}
 latex_documents = [
     ('index', 'introcs-python.tex',
      u'Introduction to Computer Science in Python',
-     u'Andrew N. Harrington and George K. Thiruvathukal', 'manual'),
+     u'The Computer Science Department Faculty at Loyola University Chicago', 'manual'),
 ]
 
 epub_basename = 'introcs-python'

@@ -4,6 +4,7 @@ Appendix
 .. toctree::
    :maxdepth: 2
 
+   contributors
    acknowledgments
    cmdline
    precedence
