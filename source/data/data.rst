@@ -1,0 +1,21 @@
+Python Data and Operations
+##########################
+
+.. toctree::
+   :maxdepth: 2
+
+   sampleprogram
+   lab-edit-compile-run
+   arithmetic
+   variables
+   typography
+   strings1
+   print1
+   programstructure
+   io
+   strings2
+   fstrings
+   types-and-conversions
+   learning-to-problem-solve
+   lab-division-sentences
+   reviewdataop
