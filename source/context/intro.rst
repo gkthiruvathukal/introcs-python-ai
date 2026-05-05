@@ -42,7 +42,9 @@ The Interactive Shell
 
 Python provides an interactive shell (also called a REPL, for
 Read-Evaluate-Print Loop) that lets you type expressions and see their
-values immediately.  Start it by typing ``python3`` at your terminal::
+values immediately.  Start it by typing ``python3`` at your terminal:
+
+.. code-block:: none
 
    $ python3
    Python 3.12.0 (default, ...)

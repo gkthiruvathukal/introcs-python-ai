@@ -37,7 +37,9 @@ Part 1: String Length
 Write a function ``show_length()`` that reads a string from the user and
 prints its length with a label.
 
-Sample run::
+Sample run:
+
+.. code-block:: none
 
    Enter a string: Hello, world!
    Length: 13
@@ -49,7 +51,9 @@ Write a function ``initials()`` that reads a full name (first and last,
 separated by a single space) and prints the person's initials in the form
 ``F.L.``
 
-Sample run::
+Sample run:
+
+.. code-block:: none
 
    Enter your full name: Marcel Proust
    Initials: M.P.
@@ -64,7 +68,9 @@ Write a function ``sentence_type()`` that reads a sentence and prints whether
 it is *declarative* (ends in ``.``), *interrogatory* (ends in ``?``),
 *exclamatory* (ends in ``!``), or *not a sentence* (anything else).
 
-Sample runs::
+Sample runs:
+
+.. code-block:: none
 
    Enter a sentence: The sky is blue.
    Declarative
@@ -80,7 +86,9 @@ Part 4: Last, First
 Write a function ``last_first()`` that reads a full name (first and last)
 and prints it in the form ``Last, First``.
 
-Sample run::
+Sample run:
+
+.. code-block:: none
 
    Enter your full name: Marcel Proust
    Proust, Marcel
@@ -88,7 +96,9 @@ Sample run::
 Extend the function to handle a single name (no space), printing it
 unchanged:
 
-Sample run::
+Sample run:
+
+.. code-block:: none
 
    Enter your full name: Socrates
    Socrates

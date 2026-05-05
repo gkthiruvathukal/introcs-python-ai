@@ -80,6 +80,6 @@ everything.  This book introduces procedural programming first, then
 objects.
 
 Object-oriented programming is introduced gradually.  After the chapter on
-functions you can read the first sections of :ref:`classes` to get an early
-look at defining your own objects; but the full chapter is placed after
+functions you can read the first sections of the classes chapter to get an
+early look at defining your own objects; but the full chapter is placed after
 collections, where objects are most naturally useful.

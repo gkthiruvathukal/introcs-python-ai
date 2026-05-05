@@ -112,7 +112,7 @@ To "change" a string, create a new one:
    >>> s
    'Jello'
 
-Slicing and indexing are covered in :ref:`basicstringops`.
+Slicing and indexing are covered in the Basic String Operations chapter.
 
 .. index:: str(), type conversion
 

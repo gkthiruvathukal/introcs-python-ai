@@ -74,7 +74,7 @@ The following would fail:
    def greet():
        print("Hello!")
 
-The ``if __name__ == '__main__':`` pattern (from :ref:`programstructure`)
+The ``if __name__ == '__main__':`` pattern (from the Program Structure section)
 keeps calls cleanly separated from definitions:
 
 .. code-block:: python

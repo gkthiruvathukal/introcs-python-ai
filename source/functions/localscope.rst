@@ -67,11 +67,11 @@ How Python Looks Up Names
 When Python looks up a variable name inside a function, it searches in this
 order (LEGB):
 
-1. **L**ocal — variables assigned in the current function.
-2. **E**nclosing — local variables of any enclosing functions (for nested
+1. **Local** — variables assigned in the current function.
+2. **Enclosing** — local variables of any enclosing functions (for nested
    functions, covered later).
-3. **G**lobal — variables assigned at the top level of the module.
-4. **B**uilt-in — names built into Python (``print``, ``len``, ``range``,
+3. **Global** — variables assigned at the top level of the module.
+4. **Built-in** — names built into Python (``print``, ``len``, ``range``,
    etc.).
 
 .. code-block:: python

@@ -79,7 +79,9 @@ Wages with Overtime
    pay   = weekly_wages(hours, rate)
    print(f"Weekly wages: ${pay:.2f}")
 
-Sample run::
+Sample run:
+
+.. code-block:: none
 
    Hours worked: 45
    Hourly rate: $20
