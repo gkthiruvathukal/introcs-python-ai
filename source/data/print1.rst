@@ -6,6 +6,12 @@
 Writing to the Screen
 =====================
 
+.. note::
+
+   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
+   lines 753–780) and adapted from the C# edition (``data/print1.rst``).
+   The ``sep=`` and ``end=`` keyword arguments are Python-specific additions.
+
 The primary way to produce output in Python is the built-in ``print``
 function.
 

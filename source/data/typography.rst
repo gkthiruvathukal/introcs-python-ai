@@ -3,6 +3,12 @@
 Reading Python Syntax
 =====================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``data/typography.rst``).
+   Python-specific elements (REPL ``>>>`` prompt, colon-and-indent blocks,
+   reading error messages) are original additions.
+
 Throughout this book, we describe Python syntax using *templates* — patterns
 showing the structure of a statement with the variable parts in italics or
 indicated by placeholder names.

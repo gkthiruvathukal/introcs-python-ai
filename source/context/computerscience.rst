@@ -1,6 +1,12 @@
 Computer Science, Broadly
 =========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition context chapter.  The Algorithms,
+   Data, and Abstraction subsections are original additions providing
+   Python-oriented framing.
+
 Computer science is the study of computation: what can be computed, how to
 compute it efficiently, and how to build the systems that do the computing.
 The word *computer* in "computer science" is somewhat misleading — the field is

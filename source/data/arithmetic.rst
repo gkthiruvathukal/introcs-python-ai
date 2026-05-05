@@ -5,6 +5,13 @@
 Arithmetic
 ==========
 
+.. note::
+
+   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
+   lines 196–441) and the C# edition (``data/arithmetic.rst``).  Operator
+   tables, integer vs. float distinction, and ``math`` module introduction
+   closely follow the SE4ML presentation.
+
 We start with integers and arithmetic — not because arithmetic is exciting, but
 because the symbolism should be mostly familiar.
 

@@ -6,6 +6,13 @@
 Variables and Assignment
 =========================
 
+.. note::
+
+   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
+   lines 442–484) and the C# edition (``data/variables.rst``).
+   Augmented assignment, swap idiom, and no-declaration discussion are
+   Python-specific additions based on the SE4ML presentation.
+
 Programs need to store and refer to data.  *Variables* are names that refer
 to values stored in memory.
 

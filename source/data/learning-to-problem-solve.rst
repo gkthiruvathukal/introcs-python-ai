@@ -1,6 +1,12 @@
 Learning to Solve Problems
 ==========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``data/learning-to-problem-solve.rst``).
+   The six-step framework and bill-splitting example are Python translations
+   of the original.
+
 Programming is fundamentally about *problem solving*.  The computer is a tool;
 the skill is figuring out how to express a solution in a way the computer can
 execute.

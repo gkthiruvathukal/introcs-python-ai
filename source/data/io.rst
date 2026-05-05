@@ -5,6 +5,13 @@
 Combining Input and Output
 ==========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``data/io.rst``) and the SE4ML
+   Python chapter (``chapter_python.rst``, lines 781–786).  The SE4ML section
+   was itself marked as a todo; full content here is an original expansion
+   covering ``input()``, type conversion, and combined patterns.
+
 Most useful programs need to communicate with the user — asking for data and
 reporting results.  In Python this is done with ``input()`` and ``print()``.
 

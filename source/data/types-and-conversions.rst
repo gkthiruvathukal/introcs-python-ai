@@ -3,6 +3,12 @@
 Types and Conversions
 =====================
 
+.. note::
+
+   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
+   lines 1760–1801) and the C# edition (``data/types-and-conversions.rst``).
+   ``bool`` truthiness table and ``None`` discussion are original additions.
+
 Every value in Python has a *type* that determines what operations can be
 performed on it and how it is stored.
 

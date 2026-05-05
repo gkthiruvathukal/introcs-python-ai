@@ -1,6 +1,12 @@
 Multiple Function Definitions
 ==============================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``functions/multfunc.rst``).
+   The ``if __name__ == '__main__':`` pattern is a Python-specific original
+   addition.
+
 A program can contain as many function definitions as needed.  Functions can
 call other functions.
 

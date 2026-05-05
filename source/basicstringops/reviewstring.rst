@@ -1,4 +1,63 @@
 Chapter Review Questions
 ========================
 
-.. todo:: Add review questions for the Basic String Operations chapter.
+.. note::
+
+   *Source:* Questions 1–5 adapted from the C# edition
+   (``basicstringops/reviewstring.rst``).  Questions 6–10 are original
+   additions specific to Python.
+
+1. What is printed by this fragment?
+
+   .. code-block:: python
+
+      s = "question"
+      print(len(s))
+      print(s[2])
+      print(s[2:5])
+      print(s[3:])
+      print(s.find("ti"))
+      print(s.find("to"))
+
+2. What is printed by this fragment?
+
+   .. code-block:: python
+
+      s = "Word"
+      s.upper()
+      print(s)
+
+3. What is printed by this fragment?
+
+   .. code-block:: python
+
+      a = "hi"
+      b = a.upper()
+      print(a + b)
+
+4. Are strings mutable or immutable?  What does that mean in practice?
+
+5. What is the difference between ``s.find(sub)`` and ``s.index(sub)`` when
+   the substring is not present?
+
+6. Write an expression that extracts the last three characters of a string
+   ``s``, without using a literal index number.
+
+7. What does ``s[::-1]`` do?
+
+8. Write a function ``count_vowels(s)`` that returns the number of vowel
+   characters (``a``, ``e``, ``i``, ``o``, ``u``, case-insensitive) in
+   string ``s``.  (Hint: loop over ``s`` with a ``for`` loop — we will
+   cover loops soon — or count each with ``s.lower().count('a')`` etc.)
+
+9. What is printed by this fragment?
+
+   .. code-block:: python
+
+      parts = "2024-05-01".split("-")
+      print(parts)
+      print("-".join(parts))
+
+10. Write a function ``title_case(s)`` that returns ``s`` converted to title
+    case (first letter of each word capitalized) without using the built-in
+    ``str.title()`` method.  Use ``split()`` and ``join()``.

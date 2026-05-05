@@ -5,6 +5,12 @@
 A Sample Python Program
 =======================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``data/sampleprogram.rst``).
+   The room-painting scenario and line-by-line walkthrough mirror the C#
+   original; the code is a Python translation.
+
 As a start, consider a small problem and a program to solve it.  Suppose you
 paint the walls of rooms in one color and the ceiling in another, and you want
 to calculate the size of the areas to cover with paint.  For simplicity, ignore

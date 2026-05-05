@@ -3,6 +3,13 @@
 Returned Function Values
 ========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``functions/funcreturn.rst``).
+   The weekly-wages example mirrors the C# original.  Python-specific
+   details (implicit ``None`` return, early return pattern) are original
+   additions.
+
 So far, our functions have *done* something (printed output) but not
 *produced* a value for the calling code to use.  Functions that return values
 are far more flexible.

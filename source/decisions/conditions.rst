@@ -1,4 +1,98 @@
+.. index:: Boolean, bool, True, False
+
+.. _Simple-Conditions:
+
 Conditions
 ==========
 
-.. todo:: Boolean values ``True``/``False``, comparison operators, ``bool()`` conversion.
+.. note::
+
+   *Source:* Adapted from the C# edition (``decisions/conditions.rst``).
+   Chained comparisons and the truthiness discussion are Python-specific
+   features drawn from the SE4ML Python chapter
+   (``chapter_python.rst``, lines 872–905).
+
+So far all our programs have executed instructions sequentially.  But many
+problems require making a *decision*: do one thing if some condition is true,
+something else otherwise.
+
+A *condition* is an expression whose value is either ``True`` or ``False``.
+These are Python's *Boolean* values (named after 19th-century mathematician
+George Boole), and their type is ``bool``.
+
+.. code-block:: none
+
+   >>> 2 < 5
+   True
+   >>> 3 > 7
+   False
+   >>> x = 11
+   >>> x > 10
+   True
+   >>> 2 * x < x
+   False
+
+Comparison Operators
+--------------------
+
+The basic comparison operators that produce Boolean results are:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 40
+
+   * - Operator
+     - Meaning
+   * - ``==``
+     - Equal to
+   * - ``!=``
+     - Not equal to
+   * - ``<``
+     - Less than
+   * - ``>``
+     - Greater than
+   * - ``<=``
+     - Less than or equal to
+   * - ``>=``
+     - Greater than or equal to
+
+.. warning::
+
+   Use ``==`` for comparison, ``=`` for assignment.  Writing ``if x = 5:``
+   is a ``SyntaxError`` in Python.
+
+The ``bool`` Type
+-----------------
+
+``True`` and ``False`` are built-in constants, not strings.  You can also
+create Boolean values with the ``bool()`` conversion function:
+
+.. code-block:: none
+
+   >>> bool(0)
+   False
+   >>> bool(1)
+   True
+   >>> bool("")
+   False
+   >>> bool("hello")
+   True
+
+Any non-zero number and any non-empty sequence is *truthy*; zero, ``None``,
+and empty sequences are *falsy*.  This matters in ``if`` statements.
+
+Chained Comparisons
+-------------------
+
+Python allows comparisons to be *chained* — a convenience not in C#:
+
+.. code-block:: none
+
+   >>> x = 5
+   >>> 0 < x < 10
+   True
+   >>> 0 < x < 4
+   False
+
+The expression ``0 < x < 10`` is equivalent to ``0 < x and x < 10``.
+Chaining reads naturally and avoids repeating the middle variable.

@@ -3,6 +3,12 @@
 Function Parameters
 ===================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``functions/funcparam.rst``).
+   The birthday-with-name example is a Python translation of the C#
+   original.
+
 The two birthday functions in the previous section were nearly identical.  The
 only difference was the name.  *Parameters* let us pass data into a function,
 eliminating duplication.

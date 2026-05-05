@@ -3,6 +3,12 @@
 Python Program Structure
 ========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``data/programstructure.rst``).
+   The ``if __name__ == '__main__':`` pattern and indentation-as-syntax
+   discussion are Python-specific original additions.
+
 A Python program file — a ``.py`` file — is much simpler in structure than
 the equivalent in C# or Java.
 

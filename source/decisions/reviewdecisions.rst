@@ -1,4 +1,66 @@
 Chapter Review Questions
 ========================
 
-.. todo:: Add review questions for the Decisions chapter.
+.. note::
+
+   *Source:* Adapted from the C# edition (``decisions/reviewdecisions.rst``).
+   Questions 7–10 are original additions.
+
+1. What is the difference between ``=`` and ``==`` in Python?  Give an
+   example of each.
+
+2. What are Python's three Boolean operators?  How do they differ from C#?
+
+3. What is printed?
+
+   .. code-block:: python
+
+      x = 7
+      if x > 5:
+          print("big")
+      if x > 10:
+          print("very big")
+      else:
+          print("not very big")
+
+4. What is short-circuit evaluation?  Give an example where it prevents
+   an error.
+
+5. Rewrite this nested ``if`` using a single condition with ``and``:
+
+   .. code-block:: python
+
+      if age >= 18:
+          if has_id:
+              print("Entry allowed.")
+
+6. What is the bug in this code?  Fix it.
+
+   .. code-block:: python
+
+      score = 85
+      if score >= 90:
+          grade = "A"
+      if score >= 80:
+          grade = "B"
+      if score >= 70:
+          grade = "C"
+      print(grade)
+
+7. Write a function ``absolute_value(x)`` using an ``if``/``else``
+   statement that returns the absolute value of ``x`` without using
+   ``abs()``.
+
+8. Write a function ``sign(x)`` that returns ``1`` if ``x > 0``,
+   ``-1`` if ``x < 0``, and ``0`` if ``x == 0``.
+
+9. Write a function ``is_leap_year(year)`` that returns ``True`` if
+   ``year`` is a leap year.  A year is a leap year if it is divisible
+   by 4, *except* centuries (divisible by 100) are not leap years, *unless*
+   they are also divisible by 400.
+
+10. What does this expression evaluate to, and what type does it produce?
+
+    .. code-block:: python
+
+       "pass" if 75 >= 60 else "fail"

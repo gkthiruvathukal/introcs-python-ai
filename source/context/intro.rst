@@ -3,6 +3,11 @@
 Resources Online
 ================
 
+.. note::
+
+   *Source:* Adapted from the C# edition introduction.  Python workflow,
+   REPL usage, and VS Code recommendation sections are original additions.
+
 This book is designed for the introductory computer science course at Loyola
 University Chicago.  The materials are available to all on the web.
 

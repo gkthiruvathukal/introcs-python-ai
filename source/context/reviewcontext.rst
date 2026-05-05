@@ -1,6 +1,11 @@
 Chapter Review Questions
 ========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition context review questions.  Questions
+   specific to Python (dynamic typing, REPL) are original additions.
+
 1. What is an algorithm?  Give three properties an algorithm must have.
 
 2. In your own words, explain what it means for Python to be *dynamically

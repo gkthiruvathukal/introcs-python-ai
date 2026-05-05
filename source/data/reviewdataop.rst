@@ -1,6 +1,12 @@
 Chapter Review Questions
 ========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition data-chapter review questions.
+   Python-specific questions (f-strings, floor division, truthiness) are
+   original additions.
+
 1. What are the two main numeric types in Python?  How does ``/`` differ
    from ``//``?
 

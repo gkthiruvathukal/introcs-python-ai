@@ -1,6 +1,12 @@
 Chapter Review Questions
 ========================
 
+.. note::
+
+   *Source:* Adapted from the C# edition (``functions/reviewfunc.rst``).
+   Python-specific questions (docstrings, ``import``, implicit ``None``) are
+   original additions.
+
 1. What is the purpose of a function?  Name two advantages of using functions
    over copying and pasting code.
 
