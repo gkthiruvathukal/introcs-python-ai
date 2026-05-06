@@ -13,26 +13,37 @@ Chapter Review Questions
 
 #.  What are the two essential parts of every correct recursive function?
 
-#.  What error does Python raise when the recursion limit is exceeded?
-    What is the default limit?
+#.  Python's recursion limit.
+
+    a.  What error does Python raise when the recursion limit is exceeded?
+    b.  What is the default limit?
 
 #.  Trace ``factorial(3)`` step by step, showing each recursive call and
     its return value.
 
-#.  Why is the naive recursive Fibonacci slow for large ``n``?  What is
-    the time complexity in terms of the number of calls made?
+#.  Naive recursive Fibonacci.
 
-#.  What does ``functools.lru_cache`` do, and how does it improve the
-    performance of recursive Fibonacci?
+    a.  Why is the naive recursive Fibonacci slow for large ``n``?
+    b.  What is the time complexity in terms of the number of calls made?
+
+#.  Memoization with ``lru_cache``.
+
+    a.  What does ``functools.lru_cache`` do?
+    b.  How does it improve the performance of recursive Fibonacci?
 
 #.  Write a recursive function ``sum_list(lst)`` that returns the sum
     of all integers in a list, without using ``sum()``.
 
-#.  In the recursive GCD algorithm, what is the base case?  Why does the
-    algorithm always terminate?
+#.  Recursive GCD.
 
-#.  What is a *call stack*?  What happens to it as recursive calls
-    are made and as they return?
+    a.  In the recursive GCD algorithm, what is the base case?
+    b.  Why does the algorithm always terminate?
+
+#.  The call stack.
+
+    a.  What is a *call stack*?
+    b.  What happens to it as recursive calls are made?
+    c.  What happens to it as those calls return?
 
 #.  When is recursion a better choice than an iterative loop?
     Give one concrete example.

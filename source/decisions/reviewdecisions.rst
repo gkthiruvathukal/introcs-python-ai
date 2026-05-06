@@ -6,10 +6,16 @@ Chapter Review Questions
    *Source:* Adapted from the C# edition (``decisions/reviewdecisions.rst``).
    Questions 7–10 are original additions.
 
-1. What is the difference between ``=`` and ``==`` in Python?  Give an
-   example of each.
+1. Two similar-looking operators.
 
-2. What are Python's three Boolean operators?  How do they differ from C#?
+   a.  What does ``=`` do in Python?
+   b.  What does ``==`` do?
+   c.  Give a one-line example of each.
+
+2. Python's Boolean operators.
+
+   a.  Name all three.
+   b.  How do they differ from the C# equivalents (``&&``, ``||``, ``!``)?
 
 3. What is printed?
 
@@ -23,8 +29,10 @@ Chapter Review Questions
       else:
           print("not very big")
 
-4. What is short-circuit evaluation?  Give an example where it prevents
-   an error.
+4. Short-circuit evaluation.
+
+   a.  What does *short-circuit evaluation* mean?
+   b.  Give an example where it prevents a runtime error.
 
 5. Rewrite this nested ``if`` using a single condition with ``and``:
 

@@ -12,8 +12,10 @@ Chapter Review Questions
    Python-specific questions on ``range()``, ``enumerate()``, and list
    comprehensions are added.
 
-#.  When might you prefer a ``for`` loop over a ``while`` loop?  What do
-    you gain?
+#.  Choosing the right loop.
+
+    a.  When might you prefer a ``for`` loop over a ``while`` loop?
+    b.  What do you gain by using ``for``?
 
 #.  When might you prefer a ``while`` loop over a ``for`` loop?
 
@@ -63,10 +65,8 @@ Chapter Review Questions
            if len(w) > 4:
                result.append(w.upper())
 
-#.  What is the difference between these two expressions?::
+#.  Two similar expressions.
 
-       [n * 2 for n in range(5)]
-
-       (n * 2 for n in range(5))
-
-    (Hint: check the type of each.)
+    a.  What is the type and value of ``[n * 2 for n in range(5)]``?
+    b.  What is the type and value of ``(n * 2 for n in range(5))``?
+    c.  When would you prefer the second form?

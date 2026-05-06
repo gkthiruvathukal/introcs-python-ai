@@ -7,8 +7,10 @@ Chapter Review Questions
    Python-specific questions (docstrings, ``import``, implicit ``None``) are
    original additions.
 
-1. What is the purpose of a function?  Name two advantages of using functions
-   over copying and pasting code.
+1. The purpose of functions.
+
+   a.  What is the purpose of a function?
+   b.  Name two advantages of using functions over copying and pasting code.
 
 2. What is the difference between a *parameter* and an *argument*?
 
@@ -26,14 +28,20 @@ Chapter Review Questions
    d. ``def``
    e. ``TOTAL``
 
-6. What does ``import math`` do?  How do you then call ``math.sqrt``?
+6. Using the ``math`` module.
+
+   a.  What does ``import math`` do?
+   b.  How do you then call ``math.sqrt``?
 
 7. Write a function ``rectangle_area(length, width)`` that returns the area
    of a rectangle.  Include a docstring.
 
-8. Write a function ``celsius_to_fahrenheit(c)`` that converts a temperature
-   from Celsius to Fahrenheit (:math:`F = C \times 9/5 + 32`) and returns
-   the result.  Then write a short program that uses it.
+8. A temperature converter.
+
+   a.  Write a function ``celsius_to_fahrenheit(c)`` that converts a
+       temperature from Celsius to Fahrenheit
+       (:math:`F = C \times 9/5 + 32`) and returns the result.
+   b.  Write a short program that calls that function and prints the result.
 
 9. What is a docstring?  Write a docstring for the following function::
 

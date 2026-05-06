@@ -17,12 +17,21 @@ Chapter Review Questions
 
 #.  How do you iterate over all key-value pairs in a dictionary ``d``?
 
-#.  What is the difference between ``d[key]`` and ``d.get(key, default)``?
-    When would you prefer the second form?
+#.  Two ways to look up a key.
 
-#.  How is a dictionary like a list?  How is it different?
+    a.  What does ``d[key]`` do if the key is not present?
+    b.  What does ``d.get(key, default)`` do instead?
+    c.  When would you prefer the second form?
 
-#.  What restriction applies to dictionary keys?  Why?
+#.  Comparing dicts and lists.
+
+    a.  How is a dictionary similar to a list?
+    b.  How is it different?
+
+#.  Dictionary key restrictions.
+
+    a.  What restriction applies to dictionary keys?
+    b.  Why does that restriction exist?
 
 #.  What does ``d.pop("x", None)`` do if ``"x"`` is not in ``d``?
 
@@ -39,7 +48,12 @@ Chapter Review Questions
 #.  Why is looking up a key in a dictionary O(1) on average, while
     searching for a value in a list is O(N)?
 
-#.  What does ``collections.Counter`` add on top of a plain ``dict``?
-    Give an example use case.
+#.  ``collections.Counter``.
 
-#.  Can a list be used as a dictionary key?  Can a tuple?  Explain why.
+    a.  What does ``collections.Counter`` add on top of a plain ``dict``?
+    b.  Give an example use case.
+
+#.  Keys and mutability.
+
+    a.  Can a list be used as a dictionary key?  Why or why not?
+    b.  Can a tuple be used as a dictionary key?  Why or why not?

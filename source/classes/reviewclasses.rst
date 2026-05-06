@@ -15,14 +15,21 @@ Chapter Review Questions
 
 #.  What is ``__init__`` and when is it called?
 
-#.  Why does every instance method have ``self`` as its first parameter?
-    Do you pass ``self`` explicitly when calling a method?
+#.  The ``self`` parameter.
 
-#.  What is the difference between an *instance variable* and a *local
-    variable* inside a method?  How long does each live?
+    a.  Why does every instance method have ``self`` as its first parameter?
+    b.  Do you pass ``self`` explicitly when calling a method?
 
-#.  What does ``__str__`` return, and when does Python call it
-    automatically?
+#.  Instance variables vs. local variables.
+
+    a.  What is an *instance variable*?
+    b.  What is a *local variable* inside a method?
+    c.  How long does each live?
+
+#.  The ``__str__`` method.
+
+    a.  What should ``__str__`` return?
+    b.  When does Python call it automatically?
 
 #.  What is the difference between ``__str__`` and ``__repr__``?
 
@@ -35,8 +42,10 @@ Chapter Review Questions
 #.  In the ``Rational`` class, ``__add__`` is defined.  What expression in
     user code triggers a call to ``__add__``?
 
-#.  What does ``@dataclass`` generate automatically?  What does it *not*
-    generate?
+#.  The ``@dataclass`` decorator.
+
+    a.  What does ``@dataclass`` generate automatically?
+    b.  What does it *not* generate?
 
 #.  When would you prefer ``@dataclass(frozen=True)`` over a plain
     ``@dataclass``?

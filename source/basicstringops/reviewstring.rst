@@ -35,10 +35,15 @@ Chapter Review Questions
       b = a.upper()
       print(a + b)
 
-4. Are strings mutable or immutable?  What does that mean in practice?
+4. Strings and mutability.
 
-5. What is the difference between ``s.find(sub)`` and ``s.index(sub)`` when
-   the substring is not present?
+   a.  Are strings mutable or immutable?
+   b.  What does that mean in practice when you call a method like
+       ``s.upper()``?
+
+5. Both ``s.find(sub)`` and ``s.index(sub)`` search for a substring.
+   What is the difference in their behavior when the substring is *not*
+   present in ``s``?
 
 6. Write an expression that extracts the last three characters of a string
    ``s``, without using a literal index number.
@@ -47,8 +52,7 @@ Chapter Review Questions
 
 8. Write a function ``count_vowels(s)`` that returns the number of vowel
    characters (``a``, ``e``, ``i``, ``o``, ``u``, case-insensitive) in
-   string ``s``.  (Hint: loop over ``s`` with a ``for`` loop — we will
-   cover loops soon — or count each with ``s.lower().count('a')`` etc.)
+   string ``s``.
 
 9. What is printed by this fragment?
 

@@ -7,28 +7,40 @@ Chapter Review Questions
    Python-specific questions (f-strings, floor division, truthiness) are
    original additions.
 
-1. What are the two main numeric types in Python?  How does ``/`` differ
-   from ``//``?
+1. Python has two main numeric types.
 
-2. In Python, do you need to declare a variable before using it?  What
-   happens if you use a variable that has never been assigned?
+   a.  Name them.
+   b.  How does ``/`` differ from ``//``?
 
-3. What does ``input()`` always return?  Why does this matter when you
-   want to do arithmetic with user input?
+2. In Python, do you need to declare a variable before using it?
+   What happens if you use a variable that has never been assigned?
 
-4. Explain the difference between these two lines::
+3. Consider ``input()``.
+
+   a.  What type does it always return?
+   b.  Why does that matter when you want to do arithmetic with user input?
+
+4. Consider these two lines::
 
       print("The total is " + total)
       print(f"The total is {total}")
 
-   Which one will cause an error if ``total`` is an integer?
+   a.  Which one will cause a ``TypeError`` if ``total`` is an integer?
+   b.  Explain why.
 
-5. What is an f-string?  Write an f-string that prints a float variable
-   ``price`` rounded to 2 decimal places.
+5. f-strings.
 
-6. What does ``type(x)`` tell you?  Give an example of when you might use it.
+   a.  What is an f-string?
+   b.  Write an f-string that prints a float variable ``price`` formatted
+       to exactly 2 decimal places.
 
-7. What is ``None`` in Python?  Give one situation where it appears.
+6. The built-in ``type()`` function.
+
+   a.  What does ``type(x)`` tell you?
+   b.  Give an example of a situation where you might call it.
+
+7. What is ``None`` in Python?  Give one situation where it appears
+   automatically without the programmer writing it explicitly.
 
 8. Python is called *dynamically typed*.  What does that mean?
 

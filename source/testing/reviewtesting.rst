@@ -19,7 +19,10 @@ Chapter Review Questions
 
 #.  Write a test function that verifies ``abs(-5) == 5``.
 
-#.  What does ``pytest.raises(ValueError)`` do, and when would you use it?
+#.  ``pytest.raises``.
+
+    a.  What does ``pytest.raises(ValueError)`` do?
+    b.  When would you use it?
 
 #.  What is the difference between a *unit test* and an *integration test*?
 
@@ -32,5 +35,8 @@ Chapter Review Questions
 #.  How do you run only the tests in a file called ``test_strings.py``
     from the command line?
 
-#.  In the C# edition, tests used ``[Test]`` attributes and
-    ``Assert.AreEqual``.  What are the Python equivalents?
+#.  C# vs. Python testing.
+
+    a.  In the C# edition, what attribute marks a test method?
+    b.  What is the Python pytest equivalent?
+    c.  What replaces ``Assert.AreEqual`` in pytest?

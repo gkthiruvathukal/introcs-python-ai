@@ -11,19 +11,27 @@ Chapter Review Questions
    Questions about ``StreamReader``/``StreamWriter`` are replaced by
    Python ``open()`` and ``with`` statement equivalents.
 
-#.  What does the ``with`` statement do when used with ``open()``?  Why is
-    this preferable to calling ``f.close()`` manually?
+#.  The ``with`` statement and ``open()``.
 
-#.  What mode string do you pass to ``open()`` to write to a file?  What
-    happens if the file already exists?
+    a.  What does the ``with`` statement do when used with ``open()``?
+    b.  Why is this preferable to calling ``f.close()`` manually?
+
+#.  What mode string do you pass to ``open()`` to write to a file?
+    What happens if the file already exists?
 
 #.  What mode string do you pass to ``open()`` to append to an existing file?
 
-#.  In a ``for line in f:`` loop, does each ``line`` string include the
-    trailing newline character?  How do you remove it?
+#.  Iterating over lines.
 
-#.  What is the difference between ``f.read()`` and ``f.readlines()``?
-    When would you prefer each?
+    a.  In a ``for line in f:`` loop, does each ``line`` string include the
+        trailing newline character?
+    b.  How do you remove it?
+
+#.  Two ways to read a file.
+
+    a.  What does ``f.read()`` return?
+    b.  What does ``f.readlines()`` return?
+    c.  When would you prefer each?
 
 #.  Write a cross-platform path for the file ``data.txt`` located in a
     subdirectory called ``input`` of the current directory, using
