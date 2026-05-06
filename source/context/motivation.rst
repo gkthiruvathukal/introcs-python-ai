@@ -156,18 +156,18 @@ Reading Before Writing
 
 In every discipline where writing matters, we expect people to read deeply
 before they can write well.  A student of literature who has never read a
-novel cannot write one.  A scientist who has never studied prior work cannot
-design a meaningful experiment, let alone critique someone else's
-conclusions.  A journalist who has never read good reporting cannot
-recognize it when they produce it.
+novel is unlikely to write one well.  A scientist who has never studied
+prior work is unlikely to design a meaningful experiment, let alone
+critique someone else's conclusions.  A journalist who has never read good
+reporting is unlikely to recognise it when they produce it.
 
 The same principle applies to code.  AI tools produce code as output.  If
-you have never written or read code yourself, you have no foundation for
-judging whether that output is correct, efficient, or secure.  You cannot
-spot the mistake you cannot recognise.  You cannot formulate a precise
-question if you lack the vocabulary to describe what you want.  The
-background knowledge is not optional — it is what makes the tool useful
-rather than dangerous.
+you have never written or read code yourself, you have little foundation
+for judging whether that output is correct, efficient, or secure.  You are
+unlikely to spot the mistake you have never learned to recognise.  It is
+hard to formulate a precise question if you lack the vocabulary to describe
+what you want.  The background knowledge is not optional — it is what makes
+the tool useful rather than dangerous.
 
 **AI output is code, and code requires a reader.**
 Even when AI writes most of the code, a person must evaluate it — for
@@ -278,6 +278,6 @@ The authors of this book see coding as something you do *after* you know
 what you want to do.  The thinking comes first: what is the problem,
 what are the inputs and outputs, what are the edge cases, what does
 success look like?  Code is the precise expression of answers to those
-questions.  AI can help you write the expression.  It cannot answer the
-questions for you.
+questions.  AI can help you write the expression.  It is unlikely to
+answer the questions for you.
 
