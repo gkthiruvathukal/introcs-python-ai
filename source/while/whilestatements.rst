@@ -58,17 +58,25 @@ Tracing a Loop
 To understand a loop, trace through it by tracking the variable before
 each test:
 
-+---------------+----------------------+---------+
-| ``temperature`` | condition ``> 112`` | Action  |
-+===============+======================+=========+
-| 115           | True                 | body    |
-+---------------+----------------------+---------+
-| 114           | True                 | body    |
-+---------------+----------------------+---------+
-| 113           | True                 | body    |
-+---------------+----------------------+---------+
-| 112           | False                | exit    |
-+---------------+----------------------+---------+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 20
+
+   * - ``temperature``
+     - condition ``> 112``
+     - Action
+   * - 115
+     - True
+     - body
+   * - 114
+     - True
+     - body
+   * - 113
+     - True
+     - body
+   * - 112
+     - False
+     - exit
 
 Countdown Example
 -----------------

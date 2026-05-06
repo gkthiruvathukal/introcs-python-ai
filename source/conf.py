@@ -18,7 +18,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'
 
-project = u'Introduction to Computer Science in Python'
+project = u'Introduction to Computer Science in Python: Software Engineering, Systems, and Foundational Thinking'
 author = u'The Computer Science Department Faculty at Loyola University Chicago'
 copyright = u'2025, The Computer Science Department Faculty at Loyola University Chicago'
 
@@ -53,7 +53,7 @@ html_theme_options = {
 }
 
 html_title = f'{project} ({release})'
-html_short_title = 'Intro CS Python'
+html_short_title = 'Intro CS in Python'
 html_static_path = ['_static']
 html_last_updated_fmt = '%d-%B-%Y %H:%M:%S'
 
@@ -83,7 +83,7 @@ latex_elements = {
 
 latex_documents = [
     ('index', 'introcs-python.tex',
-     u'Introduction to Computer Science in Python',
+     u'Introduction to Computer Science in Python:\\\\ Software Engineering, Systems, and Foundational Thinking',
      u'The Computer Science Department Faculty at Loyola University Chicago', 'manual'),
 ]
 

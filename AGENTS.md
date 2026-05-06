@@ -1,40 +1,90 @@
 # AGENTS.md — Introduction to Computer Science in Python
 
 This file gives AI agents and contributors a complete picture of the project:
-what it is, how it is built, and how to work on it effectively.
+what it is, where things stand, and how to work on it effectively.
 
 ---
 
 ## What this project is
 
-**Introduction to Computer Science in Python** is a Sphinx-based course textbook
-written for Comp 170 (Introduction to Computer Science) at Loyola University Chicago.
-It is authored by the Computer Science Department Faculty at Loyola University Chicago.
+**Introduction to Computer Science in Python: Software Engineering, Systems,
+and Foundational Thinking** is a Sphinx-based course textbook for Comp 170
+(Introduction to Computer Science) at Loyola University Chicago.  It is
+authored by the Computer Science Department Faculty at Loyola University Chicago.
 
-The book teaches introductory CS concepts using Python as the implementation language.
-It is a ground-up Python rewrite of a prior C# edition of the same course
-(`introcs-csharp`, located at `/Volumes/Work/introcs-csharp`).
-The chapter structure and pedagogical arc are preserved from that edition,
-but all code, toolchain references, and language-specific explanations are Python-native.
+The book teaches introductory CS concepts using Python.  It is a ground-up
+Python rewrite of the prior C# edition (`introcs-csharp`, located at
+`~/Work/introcs-csharp`).  Chapter structure and pedagogical arc are preserved;
+all code and language-specific explanations are Python-native.
 
-### Relationship to the C# edition
+The book's broader argument — that programming, data structures, and algorithms
+should be taught as foundations for systems and engineering thinking, especially
+in the age of AI — is articulated in:
 
-The C# book (`introcs-csharp`) is the authoritative reference for:
-- The overall narrative voice and writing style — preserve this when writing new content
-- The conceptual ordering of topics
-- The set of example programs (painting, birthday series, wages, grade, GCD, etc.)
+> Chandra N. Sekharan and George K. Thiruvathukal,
+> *"Now's the Time: Computer Science Must Evolve to Emphasize Software and
+> Systems Engineering with Artificial Intelligence (AI),"*
+> IEEE Computer, Education Department, 2026.
+> https://arxiv.org/abs/2604.27230
 
-The Python edition deliberately differs from the C# edition in these ways:
-- No `foreach` chapter: Python's `for` loop covers both C# `foreach` and `for`
-- No `arrays` chapter: Python `lists` cover both C# arrays and `List<T>`
-- No `interfaces` chapter: replaced by `dataclasses` section in the classes chapter
-- New `tuples` chapter: no C# equivalent
-- `fstrings.rst` added to the data chapter (replaces `writeline-substitution`)
-- `librarymodule.rst` replaces `libraryclass.rst` (Python uses modules, not static classes)
-- `pathlib.rst` added to files chapter (replaces C# `Directory` class content)
-- `pytest` replaces NUnit for testing
-- `dataclasses` section added to classes chapter
-- Appendix: Git replaces Mercurial; `pip`/`venv` replaces Mono tools
+---
+
+## Remote repository
+
+```
+git@github.com:gkthiruvathukal/introcs-python-ai.git
+```
+
+Branch: `main`
+
+---
+
+## Source material
+
+When adapting or adding content, always draw from:
+
+1. **`~/Work/introcs-csharp`** — the C# predecessor; the primary source for
+   chapter structure, example programs, and narrative voice.
+2. **`~/Work/SE4ML`** — secondary source for systems/AI framing.
+
+Every RST file must have a `.. note::` attribution block at the top naming
+the specific C# source file(s) ideas come from, or stating
+"Python-specific — no equivalent in the C# edition."
+
+---
+
+## Content status (as of 2026-05-06)
+
+### Complete chapters (full prose, no stubs)
+
+| Chapter | Directory |
+|---------|-----------|
+| Context (motivation, CS intro) | `source/context/` |
+| Data (variables, arithmetic, I/O, types) | `source/data/` |
+| Functions | `source/functions/` |
+| Basic String Operations | `source/basicstringops/` |
+| Decisions | `source/decisions/` |
+| While Loops | `source/while/` |
+| For Loops | `source/for/` |
+| Files & pathlib | `source/files/` |
+| Lists | `source/lists/` |
+| Tuples | `source/tuples/` |
+| Dictionaries | `source/dictionaries/` |
+| Classes & dataclasses | `source/classes/` |
+| Testing (pytest) | `source/testing/` |
+| Recursion | `source/recursion/` |
+| Data Structures | `source/datastructures/` |
+
+### Remaining stubs
+
+`source/appendix/` — the following files are stubs:
+
+- `cmdline.rst`
+- `precedence.rst`
+- `lab-versioncontrol.rst`
+- `homework-gradecalculation.rst`
+- `acknowledgments.rst`
+- `contributors.rst`
 
 ---
 
@@ -42,156 +92,214 @@ The Python edition deliberately differs from the C# edition in these ways:
 
 ```
 introcs-python/
-├── AGENTS.md               # this file
-├── Makefile                # Sphinx build targets
-├── requirements.txt        # Python dependencies (sphinx, sphinx-book-theme)
+├── AGENTS.md                   # this file
+├── Makefile                    # Sphinx build targets
+├── requirements.txt            # sphinx, sphinx-book-theme
+├── .github/workflows/main.yml  # CI: HTML → GitHub Pages; PDF/EPUB → releases
 └── source/
-    ├── conf.py             # Sphinx configuration
-    ├── index.rst           # Top-level toctree
-    ├── context/            # Ch 1: Motivation, resources, what is CS
-    ├── data/               # Ch 2: Variables, arithmetic, strings, I/O, types
-    ├── functions/          # Ch 3: Defining functions, scope, modules
-    ├── basicstringops/     # Ch 4: String indexing, methods
-    ├── decisions/          # Ch 5: if/elif/else, boolean expressions
-    ├── while/              # Ch 6: While loops, interactive input, GCD
-    ├── for/                # Ch 7: For loops, range(), list comprehensions
-    ├── files/              # Ch 8: Reading/writing files, pathlib
-    ├── lists/              # Ch 9: Lists, searching, sorting
-    ├── tuples/             # Ch 10: Tuples, unpacking
-    ├── dictionaries/       # Ch 11: Dicts, word frequency, efficiency
-    ├── classes/            # Ch 12: OOP, dataclasses, Rational class
-    ├── testing/            # Ch 13: pytest
-    ├── recursion/          # Ch 14: Recursive algorithms
-    ├── datastructures/     # Ch 15: Stacks, queues, linked lists
-    └── appendix/           # Contributors, acknowledgments, CLI, precedence
+    ├── conf.py                 # Sphinx configuration
+    ├── index.rst               # Top-level toctree
+    ├── context/                # Ch 1
+    ├── data/                   # Ch 2
+    ├── functions/              # Ch 3
+    ├── basicstringops/         # Ch 4
+    ├── decisions/              # Ch 5
+    ├── while/                  # Ch 6
+    ├── for/                    # Ch 7
+    ├── files/                  # Ch 8
+    ├── lists/                  # Ch 9
+    ├── tuples/                 # Ch 10
+    ├── dictionaries/           # Ch 11
+    ├── classes/                # Ch 12
+    ├── testing/                # Ch 13
+    ├── recursion/              # Ch 14
+    ├── datastructures/         # Ch 15
+    └── appendix/               # Stubs remaining
 ```
-
-Each chapter directory contains:
-- A chapter toctree file (`<chapter>/<chapter>.rst`) with `####` title underline
-- Section files with `===` title underlines
-- Every section currently has a `.. todo::` block describing content to write
 
 ---
 
 ## Build instructions
 
-### Prerequisites
-
-```
+```bash
+# Install dependencies (once)
 pip install -r requirements.txt
-```
 
-The two required packages are `sphinx` and `sphinx-book-theme`.
-
-### Building HTML
-
-```
+# HTML (fast, for day-to-day work)
 make html
+open build/html/index.html
+
+# Check for Sphinx warnings/errors
+make html 2>&1 | grep -E "ERROR|WARNING"
+
+# PDF (requires TeX Live with xelatex and gnu-freefont)
+make latexpdf
+open build/latex/introcs-python.pdf
+
+# EPUB
+make epub
 ```
 
-Output is written to `build/html/`. Open `build/html/index.html` in a browser.
-
-### Other targets
-
-```
-make epub        # EPUB output
-make latexpdf    # PDF via LaTeX (requires a LaTeX installation)
-make text        # Plain text
-make linkcheck   # Check all external hyperlinks
-make clean       # Remove the build/ directory
-```
-
-### Checking todos
-
-```
-grep -r ".. todo::" source/ | wc -l
-```
-
-All section stubs currently contain `todo` directives. Sphinx renders these
-when `todo_include_todos = True` is set in `conf.py` (it is).
+The PDF uses **xelatex** (not pdflatex) because the book contains Unicode
+characters (—, →, ≈, π, etc.) throughout.  Fonts are referenced by filename
+(`FreeSerif.otf`) so fontspec uses TeX Live's kpathsea path search rather than
+fontconfig — no font installation step needed beyond a standard TeX Live full
+install.
 
 ---
 
-## Writing conventions
+## GitHub Actions CI
 
-### RST style
+`.github/workflows/main.yml`:
 
-- Chapter toctree files use `#` with overline (`####` above and below the title)
-- Section files use `=` underline only (`===` below the title)
-- Subsections use `-` underline
-- Default code block language is `python` (set globally in `conf.py` via `rst_prolog`)
-- Use `.. code-block:: python` for inline examples; `.. literalinclude::` for
-  external example files once the examples submodule exists
-- Use `.. code-block:: none` for program output and shell commands
-- Cross-references: `:ref:\`label\`` for internal links; `:repsrc:\`path\`` for
-  links to the examples repository
+- **Every push to `main`**: builds HTML, LaTeX, EPUB; compiles PDF with TeXLive;
+  deploys HTML to GitHub Pages.
+- **Tag push (`v*`)**: publishes `introcs-python.pdf` and `introcs-python.epub`
+  as GitHub Release assets.
+- **`workflow_dispatch`**: manual trigger from the Actions tab.
+
+GitHub Pages URL: `https://gkthiruvathukal.github.io/introcs-python-ai/`
+
+No CNAME configured yet (no custom domain).
+
+---
+
+## RST writing conventions
+
+### File structure
+
+Every section file must follow this pattern:
+
+```rst
+.. index:: keyword, another keyword
+
+.. _Label-Name:
+
+Section Title
+=============
+
+.. note::
+
+   *Source:* Adapted from the C# edition (``chapter/file.rst``).
+   <what changed for Python>
+
+[prose]
+
+.. code-block:: python
+
+   [example]
+
+Output:
+
+.. code-block:: none
+
+   [output]
+```
+
+### Heading levels
+
+| Level | Underline char | Used for |
+|-------|---------------|----------|
+| 1 | `=` | Section title (top of each `.rst` file) |
+| 2 | `-` | Subsection |
+| 3 | `^` | Sub-subsection |
+
+Chapter toctree files use `#` with overline for the chapter title.
+
+### Code blocks
+
+- `.. code-block:: python` — all Python code
+- `.. code-block:: none` — output, shell commands, syntax diagrams
+- Always precede output blocks with a plain `Output:` line (not a directive)
+- No `.. literalinclude::` — all code is inline
+
+### Review questions
+
+Each numbered review question must contain **exactly one question**.  If a
+topic naturally has two parts, use `a.` / `b.` / `c.` sub-items:
+
+```rst
+#.  Main question stem.
+
+    a.  Part one.
+    b.  Part two.
+```
 
 ### Voice and tone
 
-Follow the C# edition's style: direct, instructional, patient. Explain the *why*
-not just the *what*. Walk through example programs line by line where appropriate.
-Use the second person ("you", "your program").
+- Direct, instructional, patient — follow the C# edition's style
+- Explain the *why*, not just the *what*
+- Second person ("you", "your program")
+- Bold (`**term**`) for key terms when first introduced in characteristics lists
+- Soften absolute statements: prefer "is unlikely to" over "cannot"
 
-### Python idioms to prefer
+---
 
-- f-strings over `%` formatting or `.format()`
+## Python idioms to prefer
+
+- f-strings over `%` or `.format()`
 - `pathlib.Path` over `os.path`
 - `with open(...) as f:` for all file I/O
 - `for item in iterable:` over index-based loops where natural
-- Type hints are optional and should be introduced late (classes chapter or later)
-- `snake_case` for variables and functions, `PascalCase` for classes
-
-### What to note when adapting from the C# edition
-
-- Drop all `using System;`, namespace blocks, `static void Main()`, and `class` wrappers
-- `Console.WriteLine(...)` → `print(...)`
-- `Console.Write(...)` → `print(..., end='')`
-- `Console.ReadLine()` → `input()`
-- `double.Parse(s)` / `int.Parse(s)` → `float(s)` / `int(s)`
-- `//` comments → `#` comments
-- `{0:F2}` format strings → f-string `{value:.2f}`
-- Semicolons and braces → indentation
-- `&&`, `||`, `!` → `and`, `or`, `not`
-- `else if` → `elif`
+- `snake_case` for variables/functions, `PascalCase` for classes
+- Raise `ValueError` for invalid arguments (not silent failure)
 
 ---
 
-## Examples submodule
+## C# → Python translation reference
 
-The examples repository (`introcs-python-examples`) does not exist yet.
-When it is created, it will be added as a git submodule at `examples/`.
-The `extlinks` entry in `conf.py` already points to:
-
-```
-https://github.com/LoyolaChicagoBooks/introcs-python-examples/blob/master/%s
-```
-
-Until then, use inline `.. code-block:: python` for all code.
-When the submodule is ready, convert key examples to `.. literalinclude::` directives.
-
----
-
-## Content status
-
-All chapters are scaffolded with section stubs. Every stub contains a `.. todo::`
-block. No section has final prose yet. Work proceeds chapter by chapter, starting
-from Chapter 1 (Context) and moving forward.
-
-To see all outstanding todos:
-
-```
-grep -rl ".. todo::" source/
-```
+| C# | Python |
+|----|--------|
+| `Console.WriteLine(x)` | `print(x)` |
+| `Console.Write(x)` | `print(x, end='')` |
+| `Console.ReadLine()` | `input()` |
+| `int.Parse(s)` / `double.Parse(s)` | `int(s)` / `float(s)` |
+| `{0:F2}` format strings | f-string `{value:.2f}` |
+| `//` comments | `#` comments |
+| `&&`, `\|\|`, `!` | `and`, `or`, `not` |
+| `else if` | `elif` |
+| `foreach (var x in seq)` | `for x in seq:` |
+| `List<T>` | `list` |
+| `Dictionary<K,V>` | `dict` |
+| `Stack<T>` | `list` (append/pop) |
+| `Queue<T>` | `collections.deque` |
+| NUnit `[Test]` / `Assert.AreEqual` | pytest `def test_*` / `assert` |
+| `null` | `None` |
 
 ---
 
-## Authors and contributors
+## Key content notes
 
-**Author:** The Computer Science Department Faculty at Loyola University Chicago
+### Recursion chapter
 
-See `source/appendix/contributors.rst` for the full contributors list
-(currently a placeholder pending confirmation of contributors).
+- `recursionintro.rst`: shows recursive *and* iterative factorial/Fibonacci
+  side-by-side; both versions validate input with `ValueError` for negative n;
+  includes "No Tail-Call Optimisation" and "Security Implications of Unbounded
+  Recursion" subsections.
+- `recursionexamples.rst`: ends with a "Generators for Sequences with a Ceiling"
+  section showing infinite generators + `itertools.takewhile` for both
+  factorial and Fibonacci.
+
+### Motivation chapter (`source/context/motivation.rst`)
+
+- Includes a full "Programming in the Age of Artificial Intelligence" section
+  tracing the historical disruption arc from calculators through generative AI,
+  with the reading-before-writing analogy and an AGI/human-in-the-loop caveat.
+- Includes a separate "Software Engineering, Automation, and Prototyping"
+  section covering CASE tools as the 40-year precursor to AI code generation,
+  and the requirements-before-code argument.
+- References the Sekharan & Thiruvathukal (2026) op-ed at the top of the AI
+  section.
+
+---
+
+## Authors
+
+**Primary author:** George K. Thiruvathukal (thiruvathukal@gmail.com)
+
+**Co-author of foundational op-ed:** Chandra N. Sekharan
 
 This book has its roots in *Introduction to Computer Science in C#* by
-Andrew N. Harrington and George K. Thiruvathukal, which is the direct
-predecessor to this work.
+Andrew N. Harrington and George K. Thiruvathukal.
+
+See `source/appendix/contributors.rst` for the full contributors list.

@@ -91,6 +91,21 @@ A reasonable question today is: *if AI can write code, why learn to program?*
 We think this gets the situation exactly backwards — and we have heard this
 question before.
 
+.. note::
+
+   The argument in this section is developed more fully in:
+
+   Chandra N. Sekharan and George K. Thiruvathukal,
+   *"Now's the Time: Computer Science Must Evolve to Emphasize Software
+   and Systems Engineering with Artificial Intelligence (AI),"*
+   IEEE Computer, Education Department, 2026.
+   `arXiv:2604.27230 <https://arxiv.org/abs/2604.27230>`_
+
+   That paper contends that CS education must shift its focus so that
+   programming, data structures, and algorithms serve as foundational
+   elements within a systems and engineering curriculum — not as ends in
+   themselves.  This book is a practical companion to that argument.
+
 A Pattern of Disruption
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
