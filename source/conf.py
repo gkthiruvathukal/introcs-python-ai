@@ -60,7 +60,26 @@ html_last_updated_fmt = '%d-%B-%Y %H:%M:%S'
 htmlhelp_basename = 'introcs-python'
 highlight_language = 'python'
 
-latex_elements = {}
+latex_engine = 'xelatex'
+latex_elements = {
+    'fontpkg': r'''
+\setmainfont{FreeSerif.otf}[
+  ItalicFont     = FreeSerifItalic.otf,
+  BoldFont       = FreeSerifBold.otf,
+  BoldItalicFont = FreeSerifBoldItalic.otf
+]
+\setsansfont{FreeSans.otf}[
+  ItalicFont     = FreeSansOblique.otf,
+  BoldFont       = FreeSansBold.otf,
+  BoldItalicFont = FreeSansBoldOblique.otf
+]
+\setmonofont{FreeMono.otf}[Scale=0.9,
+  ItalicFont     = FreeMonoOblique.otf,
+  BoldFont       = FreeMonoBold.otf,
+  BoldItalicFont = FreeMonoBoldOblique.otf
+]
+''',
+}
 
 latex_documents = [
     ('index', 'introcs-python.tex',
