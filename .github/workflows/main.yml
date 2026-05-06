@@ -47,6 +47,7 @@ jobs:
         with:
           run: |
             apk add make
+            tlmgr install gnu-freefont
             make -C build/latex
 
       - name: Upload GitHub Pages artifact
