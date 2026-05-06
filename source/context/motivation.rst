@@ -214,6 +214,21 @@ analyse an algorithm's behaviour — will remain useful for as long as
 computers exist.  This course teaches those fundamentals.  The AI tools are
 for you to use along the way; the understanding is what you keep.
 
+**Human actuation and the limits of current AI.**
+We do not rule out the possibility that Artificial General Intelligence
+(AGI) — systems capable of autonomous reasoning and self-directed action
+across arbitrary domains — may eventually change this picture.  That
+remains an open question, and a subject of serious ongoing debate.  What
+we can say about the present is more straightforward: today's AI systems,
+including large language models and the agents built on top of them,
+reliably perform well when a knowledgeable human is in the loop — setting
+the goal, evaluating the output, catching errors, and deciding what to do
+next.  They are tools that amplify human intent, not substitutes for it.
+The human remains the prime mover: initiating the task, interpreting the
+result, and taking responsibility for what gets built.  That is unlikely
+to change soon, and it means that developing your own judgment, knowledge,
+and critical eye is as important now as it has ever been.
+
 Software Engineering, Automation, and Prototyping
 --------------------------------------------------
 
