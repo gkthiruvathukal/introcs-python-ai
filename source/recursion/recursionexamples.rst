@@ -1,4 +1,5 @@
-.. index:: recursion; examples, GCD; recursive, binary search; recursive
+.. index:: recursion; examples, GCD; recursive, binary search; recursive,
+           generator; factorial, generator; Fibonacci
 
 .. _Recursion-Examples:
 
@@ -151,3 +152,153 @@ automatically:
 
 With caching, each value of ``fib(n)`` is computed exactly once,
 reducing the total work to O(N).
+
+Generators for Sequences with a Ceiling
+-----------------------------------------
+
+.. index:: generator; infinite sequence, yield, itertools.takewhile
+
+For sequences defined by a recurrence — like factorials and Fibonacci
+numbers — Python *generators* offer a third style that is neither
+recursive nor a plain loop.  A generator function uses ``yield`` to
+produce one value at a time, suspending execution between calls.  This
+makes it natural to express "generate values indefinitely, and let the
+caller decide when to stop."
+
+Infinite Factorial Generator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: generator; factorial
+
+.. code-block:: python
+
+   def factorials():
+       """Yield 0!, 1!, 2!, 3!, ... without bound."""
+       result = 1
+       n = 0
+       while True:
+           yield result
+           n += 1
+           result *= n
+
+The generator runs forever by design.  To collect only the values up to
+a ceiling, use ``itertools.takewhile``:
+
+.. code-block:: python
+
+   from itertools import takewhile
+
+   for f in takewhile(lambda x: x <= 1_000_000, factorials()):
+       print(f)
+
+Output:
+
+.. code-block:: none
+
+   1
+   1
+   2
+   6
+   24
+   120
+   720
+   5040
+   40320
+   362880
+
+You can also write a self-contained generator that accepts the ceiling
+directly — useful when you want a single, reusable function:
+
+.. code-block:: python
+
+   def factorials_up_to(ceiling):
+       """Yield each factorial that does not exceed *ceiling*."""
+       if ceiling < 1:
+           raise ValueError(f"ceiling must be >= 1, got {ceiling}")
+       result, n = 1, 0
+       while result <= ceiling:
+           yield result
+           n += 1
+           result *= n
+
+.. code-block:: python
+
+   print(list(factorials_up_to(1_000_000)))
+
+Output:
+
+.. code-block:: none
+
+   [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
+
+Infinite Fibonacci Generator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: generator; Fibonacci
+
+.. code-block:: python
+
+   def fibonacci():
+       """Yield F(0), F(1), F(2), ... without bound."""
+       prev, curr = 0, 1
+       while True:
+           yield prev
+           prev, curr = curr, prev + curr
+
+.. code-block:: python
+
+   from itertools import takewhile
+
+   fibs = list(takewhile(lambda x: x <= 1000, fibonacci()))
+   print(fibs)
+
+Output:
+
+.. code-block:: none
+
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+
+Again, a ceiling-aware version keeps the intent local to the function:
+
+.. code-block:: python
+
+   def fibonacci_up_to(ceiling):
+       """Yield each Fibonacci number that does not exceed *ceiling*."""
+       if ceiling < 0:
+           raise ValueError(f"ceiling must be >= 0, got {ceiling}")
+       prev, curr = 0, 1
+       while prev <= ceiling:
+           yield prev
+           prev, curr = curr, prev + curr
+
+.. code-block:: python
+
+   print(list(fibonacci_up_to(1000)))
+
+Output:
+
+.. code-block:: none
+
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+
+Why Generators?
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Property
+     - Generators
+   * - Memory
+     - O(1) — only the current value is in memory at any time
+   * - Stack depth
+     - O(1) — no recursive frames; no ``RecursionError``
+   * - Early termination
+     - Natural with ``takewhile``, ``break``, or ``next()``
+   * - Composability
+     - Pipe generators through ``itertools`` functions freely
+
+Generators are the idiomatic Python choice for producing a potentially
+large (or infinite) sequence of values one at a time.  They combine the
+clarity of recursive definitions with the efficiency of iterative loops.
