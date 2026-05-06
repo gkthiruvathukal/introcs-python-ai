@@ -55,25 +55,25 @@ Characteristics of Python
 
 Here is a brief overview of Python's key characteristics.
 
-*Scripting.*
+**Scripting.**
 Python does not require a separate compile step.  The Python interpreter
 can execute programs directly.  You can also type statements interactively
 at the ``>>>`` prompt.
 
-*Dynamically typed.*
+**Dynamically typed.**
 Variables are not declared.  A value of any type may be assigned to any
 variable.  The *value* has a type; the *variable* does not.
 
-*High-level.*
+**High-level.**
 Python has high-level data structures built into the language, such as
 lists, dictionaries, and sets.  Memory management is automatic.
 
-*Modular.*
+**Modular.**
 Python programs are organized as collections of modules.  Each module is a
 ``.py`` file.  The standard library provides an enormous set of ready-to-use
 modules.
 
-*Object-oriented.*
+**Object-oriented.**
 Python supports object-oriented programming with classes and inheritance.
 Unlike some languages, Python does not *require* you to use objects for
 everything.  This book introduces procedural programming first, then
