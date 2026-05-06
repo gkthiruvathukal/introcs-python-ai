@@ -1,8 +1,120 @@
+.. index:: input; validation, try/except
+
 User Input Utilities
 ====================
 
-.. todo::
+.. note::
 
-   Python doesn't have a ``UIF`` helper library like the C# book used.
-   Show simple helper functions for prompting and validating input.
-   Introduce ``try``/``except`` lightly for robust numeric input.
+   *Source:* Adapted from the C# edition (``while/userinput.rst``), which
+   described the ``UI`` helper library.  Python has no equivalent built-in
+   library, so we build our own helper functions here.  The ``try``/``except``
+   pattern is original Python-specific content.
+
+The C# edition used a ``UI`` helper library to prompt for validated input.
+Python has no such built-in library, but building one is a good exercise in
+combining loops, functions, and error handling.
+
+Simple Prompt Helpers
+---------------------
+
+The simplest helper re-prompts the user when input cannot be converted:
+
+.. code-block:: python
+
+   def prompt_int(message):
+       """Keep prompting until the user enters a valid integer."""
+       while True:
+           try:
+               return int(input(message))
+           except ValueError:
+               print("Please enter a whole number.")
+
+   def prompt_float(message):
+       """Keep prompting until the user enters a valid float."""
+       while True:
+           try:
+               return float(input(message))
+           except ValueError:
+               print("Please enter a number.")
+
+.. index:: try/except
+
+A Brief Note on ``try``/``except``
+-----------------------------------
+
+``int(input(...))`` raises a ``ValueError`` if the user types something that
+cannot be converted to an integer (like ``"abc"``).  A ``try``/``except``
+block catches that error so the program can respond gracefully instead of
+crashing:
+
+.. code-block:: none
+
+   try:
+       risky_operation()
+   except SomeError:
+       handle_the_error()
+
+If ``risky_operation()`` raises ``SomeError``, execution jumps to the
+``except`` block.  If no error occurs, the ``except`` block is skipped.
+Error handling is covered more fully in a later chapter; for now just use
+this pattern as written.
+
+Prompting Within a Range
+-------------------------
+
+A more useful helper also enforces a valid range:
+
+.. code-block:: python
+
+   def prompt_int_in_range(message, low, high):
+       """Keep prompting until the user enters an integer in [low, high]."""
+       while True:
+           value = prompt_int(message)
+           if low <= value <= high:
+               return value
+           print(f"{value} is out of range!  Enter a value from {low} to {high}.")
+
+Sample interaction:
+
+.. code-block:: none
+
+   Enter a score (0-100): 233
+   233 is out of range!  Enter a value from 0 to 100.
+   Enter a score (0-100): -1
+   -1 is out of range!  Enter a value from 0 to 100.
+   Enter a score (0-100): 85
+
+Yes/No Prompt
+-------------
+
+Another common need is a yes/no confirmation:
+
+.. code-block:: python
+
+   def prompt_yes_no(message):
+       """Return True if user answers yes, False if no."""
+       while True:
+           answer = input(message + " (yes/no): ").strip().lower()
+           if answer in ("yes", "y"):
+               return True
+           if answer in ("no", "n"):
+               return False
+           print("Please answer yes or no.")
+
+Using the Helpers
+-----------------
+
+Collect these functions in a module (e.g., ``ui.py``) and import them:
+
+.. code-block:: python
+
+   from ui import prompt_int, prompt_int_in_range, prompt_yes_no
+
+   age  = prompt_int("Enter your age: ")
+   score = prompt_int_in_range("Enter score (0-100): ", 0, 100)
+   if prompt_yes_no("Save result?"):
+       print(f"Saved: age={age}, score={score}")
+
+These helpers keep your main program free of repetitive validation code —
+the same separation-of-concerns idea we applied to computation and output
+in the functions chapter.

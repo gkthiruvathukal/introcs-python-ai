@@ -1,8 +1,137 @@
+.. index:: dict; examples, word count example, Counter
+
+.. _Dictionary-Examples:
+
 Dictionary Examples
 ===================
 
-.. todo::
+.. note::
 
-   Python equivalent of count_words (word frequency on Gettysburg Address).
-   Show ``.items()``, ``.keys()``, ``.values()`` iteration.
-   Introduce ``collections.Counter`` as a modern alternative.
+   *Source:* Adapted from the C# edition (``dictionaries/dictionaryexamples.rst``).
+   The word-count example is a direct Python translation of the C# ``count_words``
+   program.  ``collections.Counter`` is a Python-specific addition with no C#
+   equivalent; it is introduced as a modern convenience.
+
+Word Count
+----------
+
+.. index:: word count, dict; word count
+
+Counting how often each word appears in a text is a classic dictionary
+application.  We process a string word by word, updating a count for each
+word seen:
+
+.. code-block:: python
+
+   def word_count(text):
+       counts = {}
+       for word in text.lower().split():
+           word = word.strip(".,!?;:\"'")   # remove punctuation
+           if word:
+               counts[word] = counts.get(word, 0) + 1
+       return counts
+
+.. code-block:: python
+
+   text = "four score and seven years ago our fathers four score"
+   counts = word_count(text)
+   for word in sorted(counts):
+       print(f"{word:10s}  {counts[word]}")
+
+Output:
+
+.. code-block:: none
+
+   ago            1
+   and            1
+   fathers        1
+   four           2
+   our            1
+   score          2
+   seven          1
+   years          1
+
+``counts.get(word, 0)`` returns the current count or 0 if the word has
+not been seen yet — a cleaner alternative to checking ``word in counts``
+first.
+
+Inverting a Dictionary
+-----------------------
+
+.. index:: dict; invert
+
+To build a reverse lookup (value → key) from a one-to-one dictionary:
+
+.. code-block:: python
+
+   e2sp = {"one": "uno", "two": "dos", "three": "tres"}
+   sp2e = {v: k for k, v in e2sp.items()}
+   print(sp2e)
+
+Output:
+
+.. code-block:: none
+
+   {'uno': 'one', 'dos': 'two', 'tres': 'three'}
+
+This dict comprehension is the dictionary analogue of a list comprehension.
+
+Using ``collections.Counter``
+------------------------------
+
+.. index:: Counter, collections.Counter
+
+Python's ``collections.Counter`` is a specialised dict subclass that
+counts hashable objects automatically.  It is cleaner than writing the
+accumulation loop by hand:
+
+.. code-block:: python
+
+   from collections import Counter
+
+   text = "four score and seven years ago our fathers four score"
+   counts = Counter(text.lower().split())
+   print(counts.most_common(3))
+
+Output:
+
+.. code-block:: none
+
+   [('four', 2), ('score', 2), ('ago', 1)]
+
+``most_common(n)`` returns the n most frequent elements as a list of
+``(element, count)`` tuples.
+
+Grouping Data
+--------------
+
+.. index:: dict; grouping
+
+A dictionary whose values are lists is a natural way to group items:
+
+.. code-block:: python
+
+   words = ["apple", "ant", "bear", "bee", "cat"]
+   by_letter = {}
+   for word in words:
+       letter = word[0]
+       if letter not in by_letter:
+           by_letter[letter] = []
+       by_letter[letter].append(word)
+
+   for letter in sorted(by_letter):
+       print(f"{letter}: {by_letter[letter]}")
+
+Output:
+
+.. code-block:: none
+
+   a: ['apple', 'ant']
+   b: ['bear', 'bee']
+   c: ['cat']
+
+``dict.setdefault(key, default)`` can simplify the inner ``if``:
+
+.. code-block:: python
+
+   by_letter.setdefault(letter, []).append(word)

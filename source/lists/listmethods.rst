@@ -1,8 +1,163 @@
+.. index:: list; methods, list; built-in functions
+
+.. _List-Methods:
+
 List Methods
 ============
 
-.. todo::
+.. note::
 
-   ``.append()``, ``.extend()``, ``.insert()``, ``.remove()``, ``.pop()``,
-   ``.sort()``, ``.reverse()``, ``.index()``, ``.count()``.
-   Built-in functions: ``sorted()``, ``reversed()``, ``min()``, ``max()``, ``sum()``.
+   *Source:* Adapted from the C# edition (``lists/listsyntax.rst`` and
+   ``arrays/onedim.rst``).  Python list methods replace C# ``List<T>``
+   methods (``Add``, ``Remove``, ``Contains``, etc.).  Built-in functions
+   ``sorted()``, ``min()``, ``max()``, and ``sum()`` replace C# LINQ equivalents.
+
+Python lists come with a rich set of methods for adding, removing,
+searching, and reordering elements.
+
+Adding Elements
+---------------
+
+.. index:: list.append(), list.insert(), list.extend()
+
+- ``append(x)`` adds ``x`` to the end — the most common way to grow a list.
+- ``insert(i, x)`` inserts ``x`` before index ``i``.
+- ``extend(other)`` appends all elements of ``other`` to the list.
+
+.. code-block:: python
+
+   words = ["up", "down"]
+   words.append("over")
+   print(words)
+
+   words.insert(1, "under")
+   print(words)
+
+   words.extend(["in", "out"])
+   print(words)
+
+Output:
+
+.. code-block:: none
+
+   ['up', 'down', 'over']
+   ['up', 'under', 'down', 'over']
+   ['up', 'under', 'down', 'over', 'in', 'out']
+
+Removing Elements
+-----------------
+
+.. index:: list.remove(), list.pop(), del
+
+- ``remove(x)`` deletes the *first* occurrence of ``x``; raises
+  ``ValueError`` if not found.
+- ``pop(i)`` removes and *returns* the element at index ``i`` (default:
+  last element).
+- ``del lst[i]`` removes the element at index ``i`` without returning it.
+
+.. code-block:: python
+
+   nums = [3, 1, 4, 1, 5]
+   nums.remove(1)     # removes the first 1
+   print(nums)
+
+   last = nums.pop()  # removes and returns 5
+   print(last, nums)
+
+Output:
+
+.. code-block:: none
+
+   [3, 4, 1, 5]
+   5 [3, 4, 1]
+
+Searching
+---------
+
+.. index:: list.index(), list.count()
+
+- ``index(x)`` returns the index of the first occurrence of ``x``;
+  raises ``ValueError`` if not found.
+- ``count(x)`` returns how many times ``x`` appears.
+
+.. code-block:: python
+
+   nums = [3, 1, 4, 1, 5]
+   print(nums.index(4))   # 2
+   print(nums.count(1))   # 2
+
+Sorting and Reversing
+---------------------
+
+.. index:: list.sort(), list.reverse()
+
+- ``sort()`` sorts the list *in place* (ascending by default).
+- ``reverse()`` reverses the list *in place*.
+
+.. code-block:: python
+
+   nums = [3, 1, 4, 1, 5, 9]
+   nums.sort()
+   print(nums)
+
+   nums.reverse()
+   print(nums)
+
+Output:
+
+.. code-block:: none
+
+   [1, 1, 3, 4, 5, 9]
+   [9, 5, 4, 3, 1, 1]
+
+Built-in Functions
+------------------
+
+.. index:: sorted(), min(), max(), sum(), reversed()
+
+These built-in functions work on any iterable and do *not* modify the
+original list:
+
+- ``sorted(lst)`` returns a new sorted list.
+- ``reversed(lst)`` returns an iterator over the list in reverse order.
+- ``min(lst)``, ``max(lst)`` return the smallest and largest element.
+- ``sum(lst)`` returns the sum of all elements (numbers only).
+
+.. code-block:: python
+
+   nums = [3, 1, 4, 1, 5]
+   print(sorted(nums))    # new list; nums unchanged
+   print(min(nums), max(nums), sum(nums))
+
+Output:
+
+.. code-block:: none
+
+   [1, 1, 3, 4, 5]
+   1 5 14
+
+Concatenation and Repetition
+------------------------------
+
+.. index:: list; +, list; *
+
+The ``+`` operator concatenates two lists into a new one; ``*``
+repeats a list:
+
+.. code-block:: python
+
+   a = [1, 2]
+   b = [3, 4]
+   print(a + b)
+   print(a * 3)
+
+Output:
+
+.. code-block:: none
+
+   [1, 2, 3, 4]
+   [1, 2, 1, 2, 1, 2]
+
+Note that ``+`` is different from ``extend``: ``+`` produces a *new*
+list and leaves both operands unchanged, while ``extend`` mutates the
+list it is called on.
