@@ -11,6 +11,7 @@ Introduction to Computer Science in Python
    :maxdepth: 2
 
    context/context
+   computing_history/computing_history
    hardware/hardware
    terminal/terminal
    data/data
