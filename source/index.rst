@@ -36,5 +36,4 @@ Introduction to Computer Science in Python
    datastructures/datastructures
    gui/gui
    appendix/appendix
-
-:ref:`genindex`
+   genindex

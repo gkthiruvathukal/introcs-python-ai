@@ -1,16 +1,17 @@
-.. index:: dataclass, @dataclass
+.. index:: dataclass, @dataclass, namedtuple
 
 .. _Dataclasses:
 
-Python Dataclasses
-==================
+Python Dataclasses and Named Tuples
+====================================
 
 .. note::
 
    *Source:* Python-specific — no direct equivalent in the C# edition.
    ``@dataclass`` (introduced in Python 3.7) automatically generates
    ``__init__``, ``__repr__``, and ``__eq__`` for classes that primarily
-   hold data, reducing boilerplate.
+   hold data, reducing boilerplate.  ``namedtuple`` (from the ``collections``
+   module) is an older, lighter-weight alternative for immutable records.
 
 Writing a data-holding class by hand requires repeating each field name
 three or four times — in ``__init__`` parameters, in ``self.x = x``
@@ -126,10 +127,240 @@ can be used as dictionary keys):
    p = Point(1.0, 2.0)
    # p.x = 5.0   # raises FrozenInstanceError
 
-When to Use ``@dataclass``
----------------------------
+Named Tuples
+------------
 
-Use ``@dataclass`` when a class is primarily a container for related
-fields and you want automatic ``__init__`` and ``__repr__``.  Write a
-class by hand when you need fine-grained control over initialisation,
-validation, or private attributes.
+.. index:: namedtuple, collections; namedtuple
+
+A *named tuple* is a tuple subclass whose fields have names as well as
+positions.  It comes from the ``collections`` module and requires no
+class body at all — you describe the fields in a single line:
+
+.. code-block:: python
+
+   from collections import namedtuple
+
+   Point = namedtuple('Point', ['x', 'y'])
+
+``Point`` is now a full type.  You create instances the same way you
+would call a constructor:
+
+.. code-block:: python
+
+   p = Point(3.0, 4.0)
+   print(p)
+   print(p.x, p.y)
+   print(p[0], p[1])   # positional access still works
+
+Output:
+
+.. code-block:: none
+
+   Point(x=3.0, y=4.0)
+   3.0 4.0
+   3.0 4.0
+
+Because a named tuple *is* a tuple, unpacking, indexing, and iteration
+all work exactly as with a plain tuple.
+
+Immutability and Hashing
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: namedtuple; immutable, namedtuple; hashable
+
+Named tuples are immutable — you cannot reassign a field after
+creation:
+
+.. code-block:: python
+
+   p = Point(1.0, 2.0)
+   # p.x = 5.0   # raises AttributeError
+
+Because they are immutable they are also *hashable*, so they can be
+used as dictionary keys, just like plain tuples:
+
+.. code-block:: python
+
+   labels = {Point(0, 0): "origin", Point(1, 0): "east"}
+   print(labels[Point(0, 0)])
+
+Output:
+
+.. code-block:: none
+
+   origin
+
+Creating Modified Copies with ``_replace``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: namedtuple; _replace
+
+Since you cannot mutate a named tuple in place, the ``_replace`` method
+returns a *new* instance with chosen fields changed:
+
+.. code-block:: python
+
+   p = Point(3.0, 4.0)
+   q = p._replace(y=0.0)
+   print(p, q)
+
+Output:
+
+.. code-block:: none
+
+   Point(x=3.0, y=4.0) Point(x=3.0, y=0.0)
+
+Reworking the Contact Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: namedtuple; Contact example
+
+The ``Contact`` class from the previous section becomes a one-liner:
+
+.. code-block:: python
+
+   from collections import namedtuple
+
+   Contact = namedtuple('Contact', ['name', 'phone', 'email'])
+
+   c = Contact("Marie Ortiz", "773-508-7890", "mortiz2@luc.edu")
+   print(c)
+   print(c.name)
+
+Output:
+
+.. code-block:: none
+
+   Contact(name='Marie Ortiz', phone='773-508-7890', email='mortiz2@luc.edu')
+   Marie Ortiz
+
+This is ideal when a contact record is read-only data being passed
+around the program.  If you need to update a contact's email, use
+``_replace``; if you need validation logic in ``__init__``, use a full
+class or ``@dataclass``.
+
+Reworking the Point Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: namedtuple; Point example
+
+``Point`` as a named tuple gives you named-field access, a readable
+``repr``, equality comparison, and hashability — all for free:
+
+.. code-block:: python
+
+   import math
+   from collections import namedtuple
+
+   Point = namedtuple('Point', ['x', 'y'])
+
+   def distance(p1, p2):
+       return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
+
+   origin = Point(0, 0)
+   p = Point(3, 4)
+   print(distance(origin, p))
+   print(origin == Point(0, 0))   # value equality, like tuples
+
+Output:
+
+.. code-block:: none
+
+   5.0
+   True
+
+The trade-off: because ``namedtuple`` produces a true tuple subclass,
+you cannot attach methods directly to it the way you can with a class.
+The ``distance`` function above is a standalone function rather than a
+method — a reasonable choice for simple geometric helpers, but
+awkward for richer objects.
+
+Choosing the Right Tool
+-----------------------
+
+.. index:: namedtuple; vs dataclass, @dataclass; when to use
+
+Python offers several ways to bundle related data, each with a
+different trade-off between simplicity, mutability, and power:
+
+**Plain tuple** — use when the structure is anonymous and throwaway,
+or when the positional meaning is universally obvious (e.g., ``(x, y)``
+in a tiny helper).  No named access, no repr, no type hint.
+
+**Named tuple** — use for lightweight, *immutable* records where named
+field access matters and no behaviour is needed.  Zero boilerplate, a
+clean repr, hashable by default.  Good for coordinates, colours, simple
+value objects.
+
+.. code-block:: python
+
+   Color = namedtuple('Color', ['r', 'g', 'b'])
+   red = Color(255, 0, 0)
+
+**Dataclass** — use when fields need defaults, mutability, or a small
+amount of domain logic (methods).  ``frozen=True`` gives you the same
+immutability and hashability as a named tuple but with richer
+annotation support.
+
+.. code-block:: python
+
+   @dataclass
+   class Point:
+       x: float
+       y: float
+
+       def distance_to(self, other):
+           return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
+
+**Full class** — use when initialisation requires validation, when
+attributes must be kept private, when inheritance is involved, or when
+the object has complex mutable state that changes over its lifetime.
+
+.. list-table:: Data container options at a glance
+   :header-rows: 1
+   :widths: 20 16 16 16 16 16
+
+   * - Feature
+     - tuple
+     - namedtuple
+     - @dataclass
+     - @dataclass(frozen)
+     - class
+   * - Named fields
+     - No
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - Mutable
+     - No
+     - No
+     - Yes
+     - No
+     - Yes
+   * - Hashable
+     - Yes
+     - Yes
+     - No
+     - Yes
+     - No *
+   * - Methods
+     - No
+     - Limited **
+     - Yes
+     - Yes
+     - Yes
+   * - Boilerplate
+     - None
+     - One line
+     - Decorator
+     - Decorator
+     - Full body
+
+\* Unless ``__hash__`` is defined manually.
+
+\*\* Methods can be added via subclassing, but it is uncommon.
+
+When in doubt: start with a named tuple.  If you find yourself
+wanting defaults, mutation, or methods, switch to ``@dataclass``.  If
+you need private state or validation logic, write a full class.

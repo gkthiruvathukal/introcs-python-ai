@@ -1,4 +1,4 @@
-.. index:: tuple; examples, tuple; as dict key, zip()
+.. index:: tuple; examples, tuple; as dict key, zip(), namedtuple; preview
 
 .. _Tuple-Examples:
 
@@ -142,3 +142,66 @@ Output:
 
    [('Alice', 91), ('Bob', 78), ('Carol', 85)]
    [('Alice', 91), ('Carol', 85), ('Bob', 78)]
+
+A Preview: Named Tuples
+------------------------
+
+.. index:: namedtuple; preview
+
+Plain tuples work well for small, obvious structures, but positional
+access can become unclear as tuples grow.  What does ``record[2]`` mean?
+Python's ``collections.namedtuple`` solves this by letting you give each
+position a name:
+
+.. code-block:: python
+
+   from collections import namedtuple
+
+   Student = namedtuple('Student', ['name', 'grade'])
+   s = Student("Alice", 91)
+   print(s.name, s.grade)   # clear
+   print(s[0], s[1])        # positional access still works
+
+Output:
+
+.. code-block:: none
+
+   Alice 91
+   Alice 91
+
+A named tuple is still a tuple — immutable, unpackable, usable as a
+dictionary key — but fields are readable by name.  We return to named
+tuples in the :ref:`Dataclasses` section, where they are compared with
+``@dataclass`` and full classes.
+
+Sorting a List of Named Tuples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: namedtuple; sorting
+
+Named field access makes sort keys easier to read.  Compare the plain-
+tuple version from above with the named-tuple version:
+
+.. code-block:: python
+
+   from collections import namedtuple
+
+   Student = namedtuple('Student', ['name', 'grade'])
+
+   students = [Student("Carol", 85), Student("Alice", 91), Student("Bob", 78)]
+   by_name  = sorted(students)
+   by_grade = sorted(students, key=lambda s: s.grade, reverse=True)
+
+   print(by_name)
+   print(by_grade)
+
+Output:
+
+.. code-block:: none
+
+   [Student(name='Alice', grade=91), Student(name='Bob', grade=78), Student(name='Carol', grade=85)]
+   [Student(name='Alice', grade=91), Student(name='Carol', grade=85), Student(name='Bob', grade=78)]
+
+``lambda s: s.grade`` is clearer than ``lambda s: s[1]`` — the intent
+is self-documenting.  Default (lexicographic) sorting still works
+because named tuples compare like ordinary tuples.
