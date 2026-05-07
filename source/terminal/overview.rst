@@ -1,4 +1,4 @@
-.. index:: terminal, shell, command line, stdin, stdout, stderr, sys.argv, argparse
+.. index:: terminal, shell, command line, stdin, stdout, stderr, sys.argv, argparse, cat, touch, cp, mv, rm, echo, less, grep, find, chmod, chown, ps, top, kill, file permissions, process management
 
 .. _Terminal-Overview:
 
@@ -115,6 +115,165 @@ succeeds, you just get the prompt back.
 
    $ whoami
    yourname
+
+``cat`` — display file contents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Prints the contents of a file to the terminal. You can view one file or several at once.
+
+.. code-block:: none
+
+   $ cat notes.txt
+
+   $ cat file1.txt file2.txt
+
+``touch`` — create empty files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Creates one or more empty files. If the file already exists, ``touch`` updates its
+timestamp without changing the contents.
+
+.. code-block:: none
+
+   $ touch hello.py
+   $ touch file1.py file2.py file3.py
+
+``cp`` — copy files and directories
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Copies a file to a new location. Use ``-r`` (recursive) to copy an entire directory.
+
+.. code-block:: none
+
+   $ cp notes.txt notes_backup.txt
+   $ cp -r my_project my_project_backup
+
+``mv`` — move or rename
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Moves a file to a different location, or renames it when the destination is in the
+same directory.
+
+.. code-block:: none
+
+   $ mv old_name.py new_name.py
+   $ mv script.py ~/Documents/
+
+``rm`` — remove files and directories
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Deletes a file permanently — there is no Recycle Bin from the terminal. Use ``-r``
+to remove a directory and everything inside it.
+
+.. code-block:: none
+
+   $ rm temp.txt
+   $ rm -r old_project
+
+``echo`` — print text
+^^^^^^^^^^^^^^^^^^^^^^
+
+Prints a message to the terminal. Frequently used in scripts and to inspect variable
+values.
+
+.. code-block:: none
+
+   $ echo "Hello, world!"
+   $ echo "Current user: $USER"
+
+``less`` — page through a file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Opens a file one screen at a time. Press ``Space`` to advance, ``b`` to go back,
+and ``q`` to quit. Unlike ``cat``, ``less`` is comfortable for long files.
+
+.. code-block:: none
+
+   $ less long_file.txt
+
+``grep`` — search text
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Searches for a pattern inside a file and prints matching lines. ``grep`` is one of
+the most useful commands for exploring code and log files.
+
+.. code-block:: none
+
+   $ grep "def " my_script.py
+   $ grep -i "error" server.log
+
+The ``-i`` flag makes the search case-insensitive.
+
+``find`` — locate files by name or property
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Searches a directory tree for files matching criteria such as name, size, or
+modification date.
+
+.. code-block:: none
+
+   $ find . -name "*.py"
+   $ find ~/Documents -name "report.txt"
+
+File Permissions
+-----------------
+
+Every file on a Unix-like system has an owner and a set of permissions that control
+who may read, write, or execute it.
+
+``chmod`` — change permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The numeric mode ``755`` means the owner can read, write, and execute; everyone else
+can read and execute.
+
+.. code-block:: none
+
+   $ chmod 755 my_script.py
+
+``chown`` — change ownership
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Transfers ownership of a file to a different user or group. This is most commonly
+needed on shared servers.
+
+.. code-block:: none
+
+   $ chown alice:staff my_script.py
+
+Process Management
+------------------
+
+A **process** is a running program. The terminal gives you tools to observe and
+control processes.
+
+``ps`` — list running processes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Shows a snapshot of the processes currently running in your terminal session.
+
+.. code-block:: none
+
+   $ ps
+
+``top`` — live process monitor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Displays all processes in real time, sorted by CPU usage. Press ``q`` to quit.
+
+.. code-block:: none
+
+   $ top
+
+``kill`` — terminate a process
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sends a signal to a process, usually to stop it. Replace ``PID`` with the numeric
+process ID shown by ``ps`` or ``top``.
+
+.. code-block:: none
+
+   $ kill 1234
 
 Standard Streams
 ----------------
