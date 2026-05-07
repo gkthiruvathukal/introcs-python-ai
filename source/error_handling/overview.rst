@@ -1,0 +1,178 @@
+.. index:: error handling, exceptions, try, except, finally, raise, ValueError, ZeroDivisionError
+
+.. _Error-Handling:
+
+Error Handling
+==============
+
+.. note::
+   *Source:* Contributed by PhD students in COMP 501 at Loyola University Chicago.
+
+Errors are a normal part of programming. Python distinguishes between three
+categories of errors, each requiring a different response.
+
+Types of Errors
+---------------
+
++-------------------+-----------------------------+---------------------------------------+
+| Category          | Example                     | Fix                                   |
++===================+=============================+=======================================+
+| **Syntax error**  | ``if x > 3 print(x)``       | Read the message and correct the code |
+|                   |                             | before running.                       |
++-------------------+-----------------------------+---------------------------------------+
+| **Runtime error** | ``1 / 0``                   | Catch with ``try``/``except``.        |
++-------------------+-----------------------------+---------------------------------------+
+| **Logic error**   | Wrong output for valid input| Test with known inputs; add print     |
+|                   |                             | statements to trace values.           |
++-------------------+-----------------------------+---------------------------------------+
+
+A **syntax error** is caught by Python before the program runs. A **runtime error**
+(also called an *exception*) occurs while the program is running and, if unhandled,
+crashes it. A **logic error** produces incorrect results without crashing —
+these are the hardest to find.
+
+Basic Exception Handling
+------------------------
+
+Python's ``try``/``except`` block lets you catch runtime errors and respond to them
+gracefully instead of crashing.
+
+.. code-block:: python
+
+   try:
+       x = int(input("Enter a number: "))
+       print(10 / x)
+   except ValueError:
+       print("Please enter numbers only.")
+   except ZeroDivisionError:
+       print("Cannot divide by zero.")
+   else:
+       print("Success!")
+   finally:
+       print("Done.")
+
+- ``except`` blocks are checked in order — the first match wins, so put specific
+  exceptions before general ones.
+- ``else`` runs only if the ``try`` block completed without raising an exception.
+- ``finally`` always runs, whether or not an exception occurred. Use it for
+  clean-up (closing files, releasing resources).
+
+Common Exception Types
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exception
+     - When it occurs
+   * - ``ValueError``
+     - Argument has the right type but an invalid value (e.g., ``int("abc")``).
+   * - ``ZeroDivisionError``
+     - Division or modulo by zero.
+   * - ``FileNotFoundError``
+     - File or directory does not exist.
+   * - ``TypeError``
+     - Operation applied to an object of the wrong type.
+   * - ``KeyError``
+     - Dictionary key not found.
+   * - ``IndexError``
+     - List index out of range.
+
+Catching File Errors
+--------------------
+
+File operations frequently raise exceptions. Wrapping them in ``try``/``except``
+makes programs robust:
+
+.. code-block:: python
+
+   try:
+       with open("data.txt") as f:
+           print(f.read())
+   except FileNotFoundError as e:
+       print("File not found:", e)
+
+The ``as e`` clause binds the exception object to the variable ``e``, giving you
+access to the error message.
+
+Handling Errors Inside a Loop
+------------------------------
+
+When processing a collection, you often want to skip invalid items rather than
+aborting the entire program.
+
+.. code-block:: python
+
+   nums = ["1", "2", "three", "4"]
+   total = 0
+
+   for n in nums:
+       try:
+           total += int(n)
+       except ValueError:
+           print(f"Skipped bad value: {n}")
+
+   print("Total:", total)
+
+Output:
+
+.. code-block:: none
+
+   Skipped bad value: three
+   Total: 7
+
+Raising Exceptions
+------------------
+
+You can raise exceptions deliberately using ``raise`` to signal that something is
+wrong:
+
+.. code-block:: python
+
+   def safe_divide(a, b):
+       if b == 0:
+           raise ValueError("Cannot divide by zero.")
+       return a / b
+
+   try:
+       result = safe_divide(10, 0)
+   except ValueError as e:
+       print(e)
+
+Output:
+
+.. code-block:: none
+
+   Cannot divide by zero.
+
+Prevention vs. Catching
+-----------------------
+
+There are two philosophies for dealing with potential errors:
+
+- **Prevention** — check conditions before they cause problems (``if``/``else``).
+- **Catching** — let the error occur and handle it in an ``except`` block.
+
+Python generally favors the "easier to ask forgiveness than permission" (EAFP) style
+— try the operation and handle exceptions if they arise, rather than checking every
+precondition. This makes code more readable and avoids race conditions when checking
+and acting on a condition separately.
+
+However, some checks are better done upfront. Validating user input before
+processing it is cleaner than catching errors deep in the call stack.
+
+Exercises
+---------
+
+1. Write a function ``safe_divide(a, b)`` that returns ``a / b`` or ``None`` if
+   division is not possible, printing a helpful message in either error case.
+   Test it with ``(4, 2)``, ``(5, 0)``, and ``("x", 2)``.
+2. Open a file called ``numbers.txt`` where each line contains one value. Sum all
+   valid integers and skip lines that are not valid integers. Use ``raise
+   ValueError`` if the file is completely empty.
+3. What is the difference between *detecting* an error and *handling* it? Give an
+   example of each.
+4. Modify exercise 2 so that invalid lines are written to ``error_log.txt`` instead
+   of printed to the screen.
+5. Research the ``assert`` statement. Write two assertions that guard a function
+   against invalid inputs.
