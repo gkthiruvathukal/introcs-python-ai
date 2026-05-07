@@ -7,10 +7,10 @@ what it is, where things stand, and how to work on it effectively.
 
 ## What this project is
 
-**Introduction to Computer Science in Python: Software Engineering, Systems,
-and Foundational Thinking** is a Sphinx-based course textbook for Comp 170
-(Introduction to Computer Science) at Loyola University Chicago.  It is
-authored by the Computer Science Department Faculty at Loyola University Chicago.
+**Introduction to Computer Science in Python: Principles and Practice** is a
+Sphinx-based course textbook for Comp 170 (Introduction to Computer Science) at
+Loyola University Chicago.  It is authored by the Computer Science Department
+Faculty at Loyola University Chicago.
 
 The book teaches introductory CS concepts using Python.  It is a ground-up
 Python rewrite of the prior C# edition (`introcs-csharp`, located at
@@ -32,59 +32,84 @@ in the age of AI — is articulated in:
 ## Remote repository
 
 ```
-git@github.com:gkthiruvathukal/introcs-python-ai.git
+git@github.com:LoyolaChicagoBooks/introcs-python-ai.git
 ```
 
 Branch: `main`
+
+Latest release tag: `v0.1`
+
+---
+
+## Deployed sites
+
+- **GitHub Pages (custom domain):** https://introcs-python.cs.luc.edu
+- **CNAME file:** generated at CI time (`build/html/CNAME`) — do not commit it
+- **GitHub Releases (PDF + EPUB):** published automatically on tag pushes
 
 ---
 
 ## Source material
 
-When adapting or adding content, always draw from:
+When adapting or adding content, draw from:
 
-1. **`~/Work/introcs-csharp`** — the C# predecessor; the primary source for
+1. **`~/Work/introcs-csharp`** — the C# predecessor; primary source for
    chapter structure, example programs, and narrative voice.
 2. **`~/Work/SE4ML`** — secondary source for systems/AI framing.
+3. **`~/Work/comp-501-book`** — PhD student contributions (COMP 501, Loyola);
+   source for: hardware/software, terminal, modules/scope, user input, error
+   handling, lists of dicts, dict algorithms, internet data, GUI chapters.
+4. **`~/Work/operatingsystems`** — Linux terminal examples drawn from
+   `source/introduction.rst`.
 
-Every RST file must have a `.. note::` attribution block at the top naming
-the specific C# source file(s) ideas come from, or stating
-"Python-specific — no equivalent in the C# edition."
+Every RST file contributed by PhD students carries a `.. note::` attribution:
+`*Source:* Contributed by PhD students in COMP 501 at Loyola University Chicago.`
 
 ---
 
-## Content status (as of 2026-05-06)
+## Content status (as of 2026-05-07)
 
 ### Complete chapters (full prose, no stubs)
 
 | Chapter | Directory |
 |---------|-----------|
 | Context (motivation, CS intro) | `source/context/` |
+| **Episodes in Computing History** *(preliminary)* | `source/computing_history/` |
+| Hardware and Software | `source/hardware/` |
+| The Terminal | `source/terminal/` |
 | Data (variables, arithmetic, I/O, types) | `source/data/` |
 | Functions | `source/functions/` |
+| Modules and Variable Scope | `source/modules/` |
 | Basic String Operations | `source/basicstringops/` |
 | Decisions | `source/decisions/` |
+| User Input | `source/user_input/` |
 | While Loops | `source/while/` |
 | For Loops | `source/for/` |
 | Files & pathlib | `source/files/` |
+| Error Handling | `source/error_handling/` |
 | Lists | `source/lists/` |
 | Tuples | `source/tuples/` |
 | Dictionaries | `source/dictionaries/` |
+| Lists of Dictionaries | `source/lists_of_dicts/` |
+| Dictionary Algorithms | `source/dict_algorithms/` |
+| Internet Data | `source/internet_data/` |
 | Classes & dataclasses | `source/classes/` |
 | Testing (pytest) | `source/testing/` |
 | Recursion | `source/recursion/` |
 | Data Structures | `source/datastructures/` |
+| Graphical User Interfaces (Tkinter) | `source/gui/` |
 
-### Remaining stubs
+### Appendix
 
-`source/appendix/` — the following files are stubs:
-
-- `cmdline.rst`
-- `precedence.rst`
-- `lab-versioncontrol.rst`
-- `homework-gradecalculation.rst`
-- `acknowledgments.rst`
-- `contributors.rst`
+| File | Status |
+|------|--------|
+| `lesson_plan.rst` | Complete — 16-week table with chapter links |
+| `contributors.rst` | Complete — all authors, faculty, emeritus |
+| `acknowledgments.rst` | Stub |
+| `cmdline.rst` | Stub |
+| `precedence.rst` | Stub |
+| `lab-versioncontrol.rst` | Stub |
+| `homework-gradecalculation.rst` | Stub |
 
 ---
 
@@ -94,28 +119,43 @@ the specific C# source file(s) ideas come from, or stating
 introcs-python/
 ├── AGENTS.md                   # this file
 ├── Makefile                    # Sphinx build targets
-├── requirements.txt            # sphinx, sphinx-book-theme
+├── requirements.txt            # sphinx, sphinx-book-theme, etc.
 ├── .github/workflows/main.yml  # CI: HTML → GitHub Pages; PDF/EPUB → releases
 └── source/
     ├── conf.py                 # Sphinx configuration
     ├── index.rst               # Top-level toctree
-    ├── context/                # Ch 1
-    ├── data/                   # Ch 2
-    ├── functions/              # Ch 3
-    ├── basicstringops/         # Ch 4
-    ├── decisions/              # Ch 5
-    ├── while/                  # Ch 6
-    ├── for/                    # Ch 7
-    ├── files/                  # Ch 8
-    ├── lists/                  # Ch 9
-    ├── tuples/                 # Ch 10
-    ├── dictionaries/           # Ch 11
-    ├── classes/                # Ch 12
-    ├── testing/                # Ch 13
-    ├── recursion/              # Ch 14
-    ├── datastructures/         # Ch 15
-    └── appendix/               # Stubs remaining
+    ├── _static/logo.png        # Book logo
+    ├── context/                # Ch 1 — motivation
+    ├── computing_history/      # Ch 2 — episodes in computing history (preliminary)
+    ├── hardware/               # Ch 3
+    ├── terminal/               # Ch 4
+    ├── data/                   # Ch 5
+    ├── functions/              # Ch 6
+    ├── modules/                # Ch 7
+    ├── basicstringops/         # Ch 8
+    ├── decisions/              # Ch 9
+    ├── user_input/             # Ch 10
+    ├── while/                  # Ch 11
+    ├── for/                    # Ch 12
+    ├── files/                  # Ch 13
+    ├── error_handling/         # Ch 14
+    ├── lists/                  # Ch 15
+    ├── tuples/                 # Ch 16
+    ├── dictionaries/           # Ch 17
+    ├── lists_of_dicts/         # Ch 18
+    ├── dict_algorithms/        # Ch 19
+    ├── internet_data/          # Ch 20
+    ├── classes/                # Ch 21
+    ├── testing/                # Ch 22
+    ├── recursion/              # Ch 23
+    ├── datastructures/         # Ch 24
+    ├── gui/                    # Ch 25
+    └── appendix/               # lesson_plan, contributors, stubs
 ```
+
+Each chapter follows the two-file pattern:
+- `chapter/chapter.rst` — container: `#`-underlined title + toctree
+- `chapter/overview.rst` (or multiple sub-files) — content: `=`-underlined title
 
 ---
 
@@ -129,11 +169,16 @@ pip install -r requirements.txt
 make html
 open build/html/index.html
 
+# Full clean rebuild (required when adding new toctree entries)
+make clean && make html
+
 # Check for Sphinx warnings/errors
 make html 2>&1 | grep -E "ERROR|WARNING"
 
-# PDF (requires TeX Live with xelatex and gnu-freefont)
-make latexpdf
+# PDF (requires TeX Live full install with xelatex)
+make latex
+# then compile PDF:
+make -C build/latex
 open build/latex/introcs-python.pdf
 
 # EPUB
@@ -141,10 +186,8 @@ make epub
 ```
 
 The PDF uses **xelatex** (not pdflatex) because the book contains Unicode
-characters (—, →, ≈, π, etc.) throughout.  Fonts are referenced by filename
-(`FreeSerif.otf`) so fontspec uses TeX Live's kpathsea path search rather than
-fontconfig — no font installation step needed beyond a standard TeX Live full
-install.
+characters throughout. The `texlive-full` CI image already includes all
+required fonts — no `tlmgr install` step is needed.
 
 ---
 
@@ -152,15 +195,15 @@ install.
 
 `.github/workflows/main.yml`:
 
-- **Every push to `main`**: builds HTML, LaTeX, EPUB; compiles PDF with TeXLive;
-  deploys HTML to GitHub Pages.
+- **Every push to `main`**: builds HTML, LaTeX, EPUB; compiles PDF with
+  `xu-cheng/texlive-action/full`; deploys HTML to GitHub Pages at
+  `https://introcs-python.cs.luc.edu`.
 - **Tag push (`v*`)**: publishes `introcs-python.pdf` and `introcs-python.epub`
-  as GitHub Release assets.
+  as GitHub Release assets via `softprops/action-gh-release`.
 - **`workflow_dispatch`**: manual trigger from the Actions tab.
 
-GitHub Pages URL: `https://gkthiruvathukal.github.io/introcs-python-ai/`
-
-No CNAME configured yet (no custom domain).
+Do **not** add `tlmgr install` steps — the full TeXLive image already contains
+everything needed, and network-dependent `tlmgr` calls have failed in CI.
 
 ---
 
@@ -168,7 +211,7 @@ No CNAME configured yet (no custom domain).
 
 ### File structure
 
-Every section file must follow this pattern:
+Every content file must follow this pattern:
 
 ```rst
 .. index:: keyword, another keyword
@@ -200,16 +243,16 @@ Output:
 
 | Level | Underline char | Used for |
 |-------|---------------|----------|
-| 1 | `=` | Section title (top of each `.rst` file) |
-| 2 | `-` | Subsection |
-| 3 | `^` | Sub-subsection |
-
-Chapter toctree files use `#` with overline for the chapter title.
+| 1 | `#` (no overline) | Chapter container title (`chapter.rst`) |
+| 2 | `=` | Section title (top of each content `.rst` file) |
+| 3 | `-` | Subsection |
+| 4 | `^` | Sub-subsection |
 
 ### Code blocks
 
 - `.. code-block:: python` — all Python code
 - `.. code-block:: none` — output, shell commands, syntax diagrams
+- `.. code-block:: bash` — shell/Linux commands
 - Always precede output blocks with a plain `Output:` line (not a directive)
 - No `.. literalinclude::` — all code is inline
 
@@ -231,6 +274,7 @@ topic naturally has two parts, use `a.` / `b.` / `c.` sub-items:
 - Explain the *why*, not just the *what*
 - Second person ("you", "your program")
 - Bold (`**term**`) for key terms when first introduced in characteristics lists
+- Prefer prose paragraphs over bullet lists
 - Soften absolute statements: prefer "is unlikely to" over "cannot"
 
 ---
@@ -270,6 +314,21 @@ topic naturally has two parts, use `a.` / `b.` / `c.` sub-items:
 
 ## Key content notes
 
+### Computing history chapter (`source/computing_history/`)
+
+Preliminary — not intended to be exhaustive. Based primarily on the author's
+own published works:
+- "Episodes in Computing History — Salon Talk" (Thiruvathukal, 2025)
+- "Computer Science and Cultural History: A Dialogue" (Thiruvathukal & Dennis, CESTEMER 2017)
+- "AI &| ML" panel talk (Thiruvathukal, LUCRA 2024)
+- CiSE Editor-in-Chief mini-history project (2013–2016)
+
+### Terminal chapter (`source/terminal/`)
+
+Extended with Linux command examples drawn from `~/Work/operatingsystems/source/introduction.rst`.
+Covers: pwd, ls, cd, mkdir, whoami, cat, touch, cp, mv, rm, echo, less, grep,
+find, plus File Permissions (chmod, chown) and Process Management (ps, top, kill).
+
 ### Recursion chapter
 
 - `recursionintro.rst`: shows recursive *and* iterative factorial/Fibonacci
@@ -277,29 +336,29 @@ topic naturally has two parts, use `a.` / `b.` / `c.` sub-items:
   includes "No Tail-Call Optimisation" and "Security Implications of Unbounded
   Recursion" subsections.
 - `recursionexamples.rst`: ends with a "Generators for Sequences with a Ceiling"
-  section showing infinite generators + `itertools.takewhile` for both
-  factorial and Fibonacci.
+  section showing infinite generators + `itertools.takewhile`.
 
 ### Motivation chapter (`source/context/motivation.rst`)
 
-- Includes a full "Programming in the Age of Artificial Intelligence" section
-  tracing the historical disruption arc from calculators through generative AI,
-  with the reading-before-writing analogy and an AGI/human-in-the-loop caveat.
-- Includes a separate "Software Engineering, Automation, and Prototyping"
-  section covering CASE tools as the 40-year precursor to AI code generation,
-  and the requirements-before-code argument.
-- References the Sekharan & Thiruvathukal (2026) op-ed at the top of the AI
-  section.
+- Includes "Programming in the Age of Artificial Intelligence" section with
+  AGI/human-in-the-loop caveat.
+- Includes "Software Engineering, Automation, and Prototyping" section.
+- References the Sekharan & Thiruvathukal (2026) op-ed.
 
 ---
 
 ## Authors
 
-**Primary author:** George K. Thiruvathukal (thiruvathukal@gmail.com)
+**Lead Editor and Co-Author:** George K. Thiruvathukal (thiruvathukal@gmail.com)
 
-**Co-author of foundational op-ed:** Chandra N. Sekharan
+**Faculty Co-Authors:** Konstantin Läufer, Leo Irakliotis
 
-This book has its roots in *Introduction to Computer Science in C#* by
-Andrew N. Harrington and George K. Thiruvathukal.
+**Contributing Co-Authors (COMP 501 PhD students):** Ihab Al Shaikhli,
+Arslan Bisharat, Behnaz Eslami, Matt Hyatt, Jason Luce, Manny Sandoval
+Madrigal, Mujtaba Nazari, Erik Pautsch, Michael Saban, Rushikesh Shirsat,
+Nicholas Synovic
+
+**Other Contributors:** Thomas W. Christopher (IIT, Emeritus),
+Andy Harrington (Loyola, Emeritus)
 
 See `source/appendix/contributors.rst` for the full contributors list.
