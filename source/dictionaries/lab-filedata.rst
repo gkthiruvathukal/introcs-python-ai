@@ -45,7 +45,7 @@ Steps
 
    .. code-block:: python
 
-      def read_grades(filename):
+      def read_grades(filename: str) -> dict[str, int]:
           grades = {}
           with open(filename) as f:
               for line in f:

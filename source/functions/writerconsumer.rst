@@ -26,7 +26,7 @@ Python tools can display it as help text:
 
 .. code-block:: python
 
-   def weekly_wages(hours, rate):
+   def weekly_wages(hours: float, rate: float) -> float:
        """Return total weekly wages including 1.5x overtime above 40 hours.
 
        hours -- total hours worked (float)
@@ -79,13 +79,13 @@ Good programs separate the *computation* (what is calculated) from the
 
 .. code-block:: python
 
-   def weekly_wages(hours, rate):
+   def weekly_wages(hours: float, rate: float) -> float:
        """Return total weekly pay."""
        if hours <= 40:
            return hours * rate
        return 40 * rate + (hours - 40) * rate * 1.5
 
-   def main():
+   def main() -> None:
        hours = float(input("Hours worked: "))
        rate = float(input("Hourly rate: $"))
        pay = weekly_wages(hours, rate)

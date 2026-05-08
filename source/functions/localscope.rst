@@ -22,7 +22,7 @@ Consider this function:
 
 .. code-block:: python
 
-   def compute_area(length, width):
+   def compute_area(length: float, width: float) -> float:
        area = length * width    # 'area' is a local variable
        return area
 
@@ -50,11 +50,11 @@ Local scope is a feature, not a limitation.  It means:
 
 .. code-block:: python
 
-   def add(a, b):
+   def add(a: int, b: int) -> int:
        result = a + b    # this 'result' is local to add()
        return result
 
-   def multiply(a, b):
+   def multiply(a: int, b: int) -> int:
        result = a * b    # this 'result' is local to multiply()
        return result
 
@@ -78,7 +78,7 @@ order (LEGB):
 
    x = 10           # global
 
-   def show():
+   def show() -> None:
        x = 99       # local — shadows the global
        print(x)
 
@@ -97,7 +97,7 @@ you want to modify a global variable, use the ``global`` statement:
 
    count = 0
 
-   def increment():
+   def increment() -> None:
        global count
        count += 1
 
@@ -123,6 +123,6 @@ The fix is to pass them as parameters:
 
 .. code-block:: python
 
-   def compute(a, b):
+   def compute(a: int, b: int) -> int:
        total = a + b
        return total

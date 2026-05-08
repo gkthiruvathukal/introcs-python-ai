@@ -229,7 +229,7 @@ width from the number of digits in ``n``:
 
 .. code-block:: python
 
-   def mod_mult_table(n):
+   def mod_mult_table(n: int) -> None:
        width = len(str(n))
        fmt = f"{{:>{width}}}"          # e.g. "{:>1}" for n=7, "{:>2}" for n=11
        header = "* | " + " ".join(fmt.format(i) for i in range(n))
@@ -270,7 +270,7 @@ characters.  Start ``rev`` as the empty string and append each character:
 
 .. code-block:: python
 
-   def reversed_string(s):
+   def reversed_string(s: str) -> str:
        rev = ""
        for i in range(len(s) - 1, -1, -1):
            rev += s[i]

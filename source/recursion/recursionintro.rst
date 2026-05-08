@@ -47,7 +47,7 @@ A recursive Python implementation follows that definition directly:
 
 .. code-block:: python
 
-   def factorial_recursive(n):
+   def factorial_recursive(n: int) -> int:
        if n < 0:
            raise ValueError(f"factorial not defined for negative integers: {n}")
        if n == 0:
@@ -78,7 +78,7 @@ faster, and scales to any size:
 
 .. code-block:: python
 
-   def factorial_iterative(n):
+   def factorial_iterative(n: int) -> int:
        if n < 0:
            raise ValueError(f"factorial not defined for negative integers: {n}")
        result = 1
@@ -111,7 +111,7 @@ Fibonacci Numbers
 
 .. code-block:: python
 
-   def fib_recursive(n):
+   def fib_recursive(n: int) -> int:
        if n < 0:
            raise ValueError(f"Fibonacci not defined for negative indices: {n}")
        if n <= 1:
@@ -143,7 +143,7 @@ stack growth at all:
 
 .. code-block:: python
 
-   def fib_iterative(n):
+   def fib_iterative(n: int) -> int:
        if n < 0:
            raise ValueError(f"Fibonacci not defined for negative indices: {n}")
        if n <= 1:

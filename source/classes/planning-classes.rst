@@ -62,12 +62,12 @@ references to a ``Book`` and a ``Patron``:
 .. code-block:: python
 
    class Loan:
-       def __init__(self, book, patron, due_date):
+       def __init__(self, book: str, patron: str, due_date: str):
            self.book = book
            self.patron = patron
            self.due_date = due_date
 
-       def __str__(self):
+       def __str__(self) -> str:
            return f"{self.patron} borrowed {self.book} (due {self.due_date})"
 
 This pattern — one class holding a reference to another — is called

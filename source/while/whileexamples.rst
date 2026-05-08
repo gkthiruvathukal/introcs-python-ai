@@ -49,7 +49,7 @@ We find the root of :math:`f(x) = x^2 - 2` in the interval [0, 2], which is
 
 .. code-block:: python
 
-   def bisection(f, a, b, tolerance=1e-10):
+   def bisection(f, a: float, b: float, tolerance: float = 1e-10) -> float | None:
        """Return an approximate root of f in [a, b].
 
        Requires f(a) and f(b) to have opposite signs.
@@ -69,7 +69,7 @@ We find the root of :math:`f(x) = x^2 - 2` in the interval [0, 2], which is
        return (a + b) / 2
 
 
-   def f(x):
+   def f(x: float) -> float:
        return x**2 - 2
 
    root = bisection(f, 0, 2)

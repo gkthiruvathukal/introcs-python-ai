@@ -66,7 +66,7 @@ through a list of objects by a field:
 
 .. code-block:: python
 
-   def linear_search(data, target):
+   def linear_search(data: list, target) -> int:
        for i, value in enumerate(data):
            if value == target:
                return i
@@ -85,7 +85,7 @@ To find all occurrences, collect every matching index:
 
 .. code-block:: python
 
-   def find_all(data, target):
+   def find_all(data: list, target) -> list[int]:
        return [i for i, v in enumerate(data) if v == target]
 
 .. code-block:: python

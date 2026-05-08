@@ -38,7 +38,7 @@ at a time:
 
 .. code-block:: python
 
-   def one_char_per_line(s):
+   def one_char_per_line(s: str) -> None:
        for ch in s:
            print(ch)
 
@@ -140,7 +140,7 @@ loops just as they do inside ``while`` loops.
 
 .. code-block:: python
 
-   def find_first_vowel(s):
+   def find_first_vowel(s: str) -> str | None:
        for ch in s.lower():
            if ch in "aeiou":
                return ch

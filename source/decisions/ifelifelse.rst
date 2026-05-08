@@ -66,7 +66,7 @@ Wages with Overtime
 
 .. code-block:: python
 
-   def weekly_wages(hours, rate):
+   def weekly_wages(hours: float, rate: float) -> float:
        """Return total weekly wages including 1.5x overtime above 40 hours."""
        if hours <= 40:
            return hours * rate
@@ -94,7 +94,7 @@ Here is an example with four ``elif`` branches:
 
 .. code-block:: python
 
-   def bmi_category(bmi):
+   def bmi_category(bmi: float) -> str:
        """Return the weight category for a given BMI."""
        if bmi < 18.5:
            return "Underweight"

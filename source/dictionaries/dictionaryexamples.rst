@@ -23,7 +23,7 @@ word seen:
 
 .. code-block:: python
 
-   def word_count(text):
+   def word_count(text: str) -> dict[str, int]:
        counts = {}
        for word in text.lower().split():
            word = word.strip(".,!?;:\"'")   # remove punctuation

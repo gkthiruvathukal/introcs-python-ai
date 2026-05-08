@@ -24,7 +24,7 @@ The Node Class
 .. code-block:: python
 
    class Node:
-       def __init__(self, data, next_node=None):
+       def __init__(self, data, next_node: "Node | None" = None):
            self.data = data
            self.next = next_node
 
@@ -50,7 +50,7 @@ Walk the list by following ``next`` until ``None``:
 
 .. code-block:: python
 
-   def print_list(head):
+   def print_list(head: "Node | None") -> None:
        current = head
        while current is not None:
            print(current.data, end=" -> ")
@@ -80,10 +80,10 @@ A wrapper class manages the ``head`` pointer and provides clean methods:
        def __init__(self):
            self.head = None
 
-       def prepend(self, data):
+       def prepend(self, data) -> None:
            self.head = Node(data, self.head)
 
-       def append(self, data):
+       def append(self, data) -> None:
            new_node = Node(data)
            if self.head is None:
                self.head = new_node
@@ -93,7 +93,7 @@ A wrapper class manages the ``head`` pointer and provides clean methods:
                current = current.next
            current.next = new_node
 
-       def remove(self, data):
+       def remove(self, data) -> None:
            if self.head is None:
                return
            if self.head.data == data:
@@ -112,7 +112,7 @@ A wrapper class manages the ``head`` pointer and provides clean methods:
                yield current.data
                current = current.next
 
-       def __str__(self):
+       def __str__(self) -> str:
            return " -> ".join(str(x) for x in self) + " -> None"
 
 .. code-block:: python

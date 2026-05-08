@@ -60,7 +60,7 @@ Wrapping the list in a class gives a cleaner interface:
        def __init__(self):
            self._data = []
 
-       def push(self, item):
+       def push(self, item) -> None:
            self._data.append(item)
 
        def pop(self):
@@ -73,10 +73,10 @@ Wrapping the list in a class gives a cleaner interface:
                raise IndexError("peek at empty stack")
            return self._data[-1]
 
-       def is_empty(self):
+       def is_empty(self) -> bool:
            return len(self._data) == 0
 
-       def __len__(self):
+       def __len__(self) -> int:
            return len(self._data)
 
 Application: Checking Balanced Brackets
@@ -88,7 +88,7 @@ A classic stack use-case: verify that brackets are correctly matched:
 
 .. code-block:: python
 
-   def is_balanced(s):
+   def is_balanced(s: str) -> bool:
        stack = Stack()
        pairs = {")": "(", "]": "[", "}": "{"}
        for ch in s:
@@ -149,7 +149,7 @@ A Queue Class
        def __init__(self):
            self._data = deque()
 
-       def enqueue(self, item):
+       def enqueue(self, item) -> None:
            self._data.append(item)
 
        def dequeue(self):
@@ -157,8 +157,8 @@ A Queue Class
                raise IndexError("dequeue from empty queue")
            return self._data.popleft()
 
-       def is_empty(self):
+       def is_empty(self) -> bool:
            return len(self._data) == 0
 
-       def __len__(self):
+       def __len__(self) -> int:
            return len(self._data)

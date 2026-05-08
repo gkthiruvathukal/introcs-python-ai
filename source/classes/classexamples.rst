@@ -28,23 +28,23 @@ track *changing internal state* rather than simply storing data:
            self._count = 0
            self._total = 0.0
 
-       def add_datum(self, value):
+       def add_datum(self, value: float) -> None:
            self._total += value
            self._count += 1
 
-       def get_average(self):
+       def get_average(self) -> float:
            if self._count == 0:
                return float("nan")
            return self._total / self._count
 
-       def get_count(self):
+       def get_count(self) -> int:
            return self._count
 
-       def clear(self):
+       def clear(self) -> None:
            self._count = 0
            self._total = 0.0
 
-       def __str__(self):
+       def __str__(self) -> str:
            return f"Averager({self._count} values, avg={self.get_average():.4f})"
 
 .. code-block:: python
@@ -85,14 +85,14 @@ recreates the object.
 .. code-block:: python
 
    class Point:
-       def __init__(self, x, y):
+       def __init__(self, x: float, y: float):
            self.x = x
            self.y = y
 
-       def __str__(self):
+       def __str__(self) -> str:
            return f"({self.x}, {self.y})"
 
-       def __repr__(self):
+       def __repr__(self) -> str:
            return f"Point({self.x!r}, {self.y!r})"
 
 .. code-block:: python
@@ -118,7 +118,7 @@ receives another ``Point``:
 
 .. code-block:: python
 
-       def distance_to(self, other):
+       def distance_to(self, other: "Point") -> float:
            import math
            return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
 

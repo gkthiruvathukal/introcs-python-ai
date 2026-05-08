@@ -70,7 +70,7 @@ unpack them:
 
 .. code-block:: python
 
-   def min_max(nums):
+   def min_max(nums: list) -> tuple:
        return min(nums), max(nums)
 
    lo, hi = min_max([3, 1, 4, 1, 5, 9])

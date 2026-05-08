@@ -90,7 +90,7 @@ Interactive loops are often used to drive a menu:
 
 .. code-block:: python
 
-   def show_menu():
+   def show_menu() -> None:
        print("\n1. Add")
        print("2. Subtract")
        print("3. Quit")

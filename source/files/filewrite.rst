@@ -68,7 +68,7 @@ upper case to a new output file — a Python translation of the C#
 
 .. code-block:: python
 
-   def copy_upper(src, dst):
+   def copy_upper(src: str, dst: str) -> None:
        with open(src) as reader:
            with open(dst, "w") as writer:
                for line in reader:

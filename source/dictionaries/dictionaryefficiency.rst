@@ -27,7 +27,7 @@ one for values — and search for a key with a linear scan:
    keys   = ["one", "two", "three"]
    values = ["uno", "dos", "tres"]
 
-   def slow_lookup(keys, values, key):
+   def slow_lookup(keys: list[str], values: list[str], key: str) -> str:
        i = keys.index(key)   # linear search: O(N)
        return values[i]
 

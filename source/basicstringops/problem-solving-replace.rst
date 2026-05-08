@@ -39,7 +39,7 @@ function must do, then make them pass.
 
 .. code-block:: python
 
-   def string_replace(s, target, replacement):
+   def string_replace(s: str, target: str, replacement: str) -> str:
        """Return s with the first occurrence of target replaced by replacement.
 
        If target is not in s, return s unchanged.
@@ -47,7 +47,7 @@ function must do, then make them pass.
        pass   # to be implemented
 
 
-   def main():
+   def main() -> None:
        print(string_replace("It was the best of times.", "best", "worst"))
        # expected: It was the worst of times.
        print(string_replace("abcabc", "bc", "X"))
@@ -82,7 +82,7 @@ case first:
 
 .. code-block:: python
 
-   def string_replace(s, target, replacement):
+   def string_replace(s: str, target: str, replacement: str) -> str:
        i = s.find(target)
        if i == -1:
            return s      # nothing to replace
@@ -109,7 +109,7 @@ For ``s = "It was the best of times."`` and ``target = "best"``:
 
 .. code-block:: python
 
-   def string_replace(s, target, replacement):
+   def string_replace(s: str, target: str, replacement: str) -> str:
        i = s.find(target)
        if i == -1:
            return s

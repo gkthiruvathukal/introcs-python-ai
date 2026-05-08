@@ -9,6 +9,7 @@ Defining Functions of Your Own
    funcparam
    funcparam2
    funcreturn
+   typehints
    writerconsumer
    localscope
    librarymodule

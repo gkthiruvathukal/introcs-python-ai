@@ -26,7 +26,7 @@ Class Definition and Normalisation
    import math
 
    class Rational:
-       def __init__(self, numerator, denominator=1):
+       def __init__(self, numerator: int, denominator: int = 1):
            if denominator == 0:
                raise ValueError("Denominator cannot be zero")
            g = math.gcd(abs(numerator), abs(denominator))
@@ -34,10 +34,10 @@ Class Definition and Normalisation
            self._num = sign * numerator // g
            self._denom = sign * denominator // g
 
-       def numerator(self):
+       def numerator(self) -> int:
            return self._num
 
-       def denominator(self):
+       def denominator(self) -> int:
            return self._denom
 
 ``math.gcd`` reduces the fraction to lowest terms.  We force the
@@ -51,12 +51,12 @@ String Representation
 
 .. code-block:: python
 
-       def __str__(self):
+       def __str__(self) -> str:
            if self._denom == 1:
                return str(self._num)
            return f"{self._num}/{self._denom}"
 
-       def __repr__(self):
+       def __repr__(self) -> str:
            return f"Rational({self._num}, {self._denom})"
 
 Arithmetic Operators
@@ -69,23 +69,23 @@ objects:
 
 .. code-block:: python
 
-       def __add__(self, other):
+       def __add__(self, other: "Rational") -> "Rational":
            return Rational(
                self._num * other._denom + other._num * self._denom,
                self._denom * other._denom
            )
 
-       def __sub__(self, other):
+       def __sub__(self, other: "Rational") -> "Rational":
            return Rational(
                self._num * other._denom - other._num * self._denom,
                self._denom * other._denom
            )
 
-       def __mul__(self, other):
+       def __mul__(self, other: "Rational") -> "Rational":
            return Rational(self._num * other._num,
                            self._denom * other._denom)
 
-       def __truediv__(self, other):
+       def __truediv__(self, other: "Rational") -> "Rational":
            return Rational(self._num * other._denom,
                            self._denom * other._num)
 
@@ -96,13 +96,13 @@ Comparison Operators
 
 .. code-block:: python
 
-       def __eq__(self, other):
+       def __eq__(self, other: object) -> bool:
            return self._num == other._num and self._denom == other._denom
 
-       def __lt__(self, other):
+       def __lt__(self, other: "Rational") -> bool:
            return self._num * other._denom < other._num * self._denom
 
-       def __le__(self, other):
+       def __le__(self, other: "Rational") -> bool:
            return self == other or self < other
 
 Conversion Methods
@@ -112,7 +112,7 @@ Conversion Methods
 
 .. code-block:: python
 
-       def __float__(self):
+       def __float__(self) -> float:
            return self._num / self._denom
 
 Putting It Together
@@ -154,7 +154,7 @@ Python's replacement for C#'s ``static Parse``:
 .. code-block:: python
 
        @classmethod
-       def parse(cls, s):
+       def parse(cls, s: str) -> "Rational":
            if "/" in s:
                num, denom = s.split("/")
                return cls(int(num), int(denom))

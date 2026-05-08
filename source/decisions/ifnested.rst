@@ -76,7 +76,7 @@ Shipping cost depends on both weight and destination zone:
 
 .. code-block:: python
 
-   def shipping_cost(weight, zone):
+   def shipping_cost(weight: float, zone: int) -> float:
        """Return shipping cost based on weight and zone (1 or 2)."""
        if zone == 1:
            if weight <= 5:

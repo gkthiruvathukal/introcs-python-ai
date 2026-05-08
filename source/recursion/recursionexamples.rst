@@ -28,7 +28,7 @@ definition:
 
 .. code-block:: python
 
-   def gcd(a, b):
+   def gcd(a: int, b: int) -> int:
        if b == 0:
            return a
        return gcd(b, a % b)
@@ -52,7 +52,7 @@ midpoint, then recurse on the left or right half:
 
 .. code-block:: python
 
-   def binary_search(data, target, lo=0, hi=None):
+   def binary_search(data: list, target, lo: int = 0, hi: int | None = None) -> int:
        if hi is None:
            hi = len(data) - 1
        if lo > hi:
@@ -83,7 +83,7 @@ nested list has no clean iterative equivalent:
 
 .. code-block:: python
 
-   def flatten(lst):
+   def flatten(lst: list) -> list:
        result = []
        for item in lst:
            if isinstance(item, list):
@@ -114,7 +114,7 @@ File systems are trees — a natural fit for recursion:
 
    from pathlib import Path
 
-   def print_tree(path, indent=0):
+   def print_tree(path, indent: int = 0) -> None:
        print("  " * indent + path.name)
        if path.is_dir():
            for child in sorted(path.iterdir()):
@@ -141,7 +141,7 @@ automatically:
    from functools import lru_cache
 
    @lru_cache(maxsize=None)
-   def fib(n):
+   def fib(n: int) -> int:
        if n <= 1:
            return n
        return fib(n - 1) + fib(n - 2)
@@ -211,7 +211,7 @@ directly — useful when you want a single, reusable function:
 
 .. code-block:: python
 
-   def factorials_up_to(ceiling):
+   def factorials_up_to(ceiling: int):
        """Yield each factorial that does not exceed *ceiling*."""
        if ceiling < 1:
            raise ValueError(f"ceiling must be >= 1, got {ceiling}")
@@ -262,7 +262,7 @@ Again, a ceiling-aware version keeps the intent local to the function:
 
 .. code-block:: python
 
-   def fibonacci_up_to(ceiling):
+   def fibonacci_up_to(ceiling: int):
        """Yield each Fibonacci number that does not exceed *ceiling*."""
        if ceiling < 0:
            raise ValueError(f"ceiling must be >= 0, got {ceiling}")

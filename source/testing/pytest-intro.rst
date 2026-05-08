@@ -56,7 +56,7 @@ Suppose we have a function in ``mymath.py``:
 
 .. code-block:: python
 
-   def factorial(n):
+   def factorial(n: int) -> int:
        if n == 0:
            return 1
        return n * factorial(n - 1)
@@ -67,13 +67,13 @@ A test file ``test_mymath.py``:
 
    from mymath import factorial
 
-   def test_factorial_zero():
+   def test_factorial_zero() -> None:
        assert factorial(0) == 1
 
-   def test_factorial_positive():
+   def test_factorial_positive() -> None:
        assert factorial(5) == 120
 
-   def test_factorial_one():
+   def test_factorial_one() -> None:
        assert factorial(1) == 1
 
 Running ``pytest`` produces:

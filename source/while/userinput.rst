@@ -21,7 +21,7 @@ The simplest helper re-prompts the user when input cannot be converted:
 
 .. code-block:: python
 
-   def prompt_int(message):
+   def prompt_int(message: str) -> int:
        """Keep prompting until the user enters a valid integer."""
        while True:
            try:
@@ -29,7 +29,7 @@ The simplest helper re-prompts the user when input cannot be converted:
            except ValueError:
                print("Please enter a whole number.")
 
-   def prompt_float(message):
+   def prompt_float(message: str) -> float:
        """Keep prompting until the user enters a valid float."""
        while True:
            try:
@@ -66,7 +66,7 @@ A more useful helper also enforces a valid range:
 
 .. code-block:: python
 
-   def prompt_int_in_range(message, low, high):
+   def prompt_int_in_range(message: str, low: int, high: int) -> int:
        """Keep prompting until the user enters an integer in [low, high]."""
        while True:
            value = prompt_int(message)
@@ -91,7 +91,7 @@ Another common need is a yes/no confirmation:
 
 .. code-block:: python
 
-   def prompt_yes_no(message):
+   def prompt_yes_no(message: str) -> bool:
        """Return True if user answers yes, False if no."""
        while True:
            answer = input(message + " (yes/no): ").strip().lower()

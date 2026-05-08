@@ -45,12 +45,12 @@ Chapter Review Questions
 
 9. What is a docstring?  Write a docstring for the following function::
 
-      def hypotenuse(a, b):
+      def hypotenuse(a: float, b: float) -> float:
           return (a**2 + b**2) ** 0.5
 
 10. Trace through the following code and predict the output::
 
-       def f(x):
+       def f(x: int) -> int:
            y = x * 2
            return y + 1
 

@@ -100,7 +100,7 @@ Suppose ``numbers.txt`` contains one integer per line:
 
 .. code-block:: python
 
-   def sum_file(filename):
+   def sum_file(filename: str) -> int:
        total = 0
        with open(filename) as f:
            for line in f:

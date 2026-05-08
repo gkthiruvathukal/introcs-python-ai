@@ -22,7 +22,7 @@ A module is simply a Python file that contains code you want to reuse elsewhere.
 .. code-block:: python
 
    # math_utils.py
-   def add(a, b):
+   def add(a: int, b: int) -> int:
        return a + b
 
 You can then import and use it in another file:
@@ -85,7 +85,7 @@ Every Python file has a special variable called ``__name__``.
 .. code-block:: python
 
    # greetings.py
-   def hello():
+   def hello() -> None:
        print("Hello!")
 
    if __name__ == "__main__":
@@ -109,9 +109,9 @@ resolves variable names using the **LEGB rule**, searching in this order:
 
    x = 10          # global
 
-   def outer():
+   def outer() -> None:
        x = 20      # enclosing
-       def inner():
+       def inner() -> None:
            x = 30  # local
            print(x)
        inner()
@@ -135,7 +135,7 @@ If a variable in an inner scope shares a name with one in an outer scope, it
 .. code-block:: python
 
    x = 5
-   def demo():
+   def demo() -> None:
        x = 10
        print(x)   # prints 10, not 5
 
@@ -156,7 +156,7 @@ Global Variables
 
    count = 0
 
-   def increment():
+   def increment() -> None:
        global count
        count += 1
 
@@ -180,9 +180,9 @@ Nonlocal Variables
 
 .. code-block:: python
 
-   def outer():
+   def outer() -> None:
        x = 5
-       def inner():
+       def inner() -> None:
            nonlocal x
            x += 1
        inner()

@@ -143,10 +143,10 @@ Any ``.py`` file can be used as a module.  If you save the following in
 
    import math
 
-   def circle_area(radius):
+   def circle_area(radius: float) -> float:
        return math.pi * radius ** 2
 
-   def circle_circumference(radius):
+   def circle_circumference(radius: float) -> float:
        return 2 * math.pi * radius
 
 Then another file can use it:

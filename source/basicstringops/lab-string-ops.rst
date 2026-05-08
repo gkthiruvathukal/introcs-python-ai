@@ -127,7 +127,7 @@ Your ``main()`` function should call each part in order:
 
 .. code-block:: python
 
-   def main():
+   def main() -> None:
        show_length()
        initials()
        sentence_type()

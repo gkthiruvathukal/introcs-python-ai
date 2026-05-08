@@ -22,7 +22,7 @@ To print each character of a string on its own line:
 
 .. code-block:: python
 
-   def one_char_per_line(s):
+   def one_char_per_line(s: str) -> None:
        """Print each character of s on a separate line."""
        i = 0
        while i < len(s):
@@ -51,7 +51,7 @@ Counting Vowels
 
 .. code-block:: python
 
-   def count_vowels(s):
+   def count_vowels(s: str) -> int:
        """Return the number of vowel characters in s."""
        vowels = "aeiouAEIOU"
        count = 0
@@ -69,7 +69,7 @@ Checking for All Digits
 
 .. code-block:: python
 
-   def all_digits(s):
+   def all_digits(s: str) -> bool:
        """Return True if every character of s is a digit."""
        i = 0
        while i < len(s):
@@ -91,7 +91,7 @@ Search for the first occurrence of a target character:
 
 .. code-block:: python
 
-   def find_char(s, target):
+   def find_char(s: str, target: str) -> int:
        """Return the index of the first occurrence of target in s, or -1."""
        i = 0
        while i < len(s):

@@ -62,7 +62,7 @@ into place.  It always makes exactly N-1 swaps, but O(N²) comparisons:
 
 .. code-block:: python
 
-   def selection_sort(data):
+   def selection_sort(data: list) -> None:
        n = len(data)
        for i in range(n):
            min_pos = i
@@ -98,7 +98,7 @@ O(N²):
 
 .. code-block:: python
 
-   def bubble_sort(data):
+   def bubble_sort(data: list) -> None:
        n = len(data)
        for i in range(n - 1):
            for j in range(n - 1 - i):
@@ -128,7 +128,7 @@ data:
 
 .. code-block:: python
 
-   def insertion_sort(data):
+   def insertion_sort(data: list) -> None:
        for i in range(1, len(data)):
            key = data[i]
            j = i - 1

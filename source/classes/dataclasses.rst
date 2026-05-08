@@ -254,7 +254,7 @@ Reworking the Point Example
 
    Point = namedtuple('Point', ['x', 'y'])
 
-   def distance(p1, p2):
+   def distance(p1: Point, p2: Point) -> float:
        return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
 
    origin = Point(0, 0)
