@@ -15,6 +15,8 @@ Strings are sequences of characters that we can access by index.  Before
 the ``for`` loop chapter, we use ``while`` loops with an index variable to
 process strings one character at a time.
 
+.. index:: string; character iteration, while loop; index variable
+
 One Character Per Line
 -----------------------
 

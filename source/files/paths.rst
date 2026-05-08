@@ -40,6 +40,8 @@ begin with a separator:
 
 ``..`` means "the parent directory"; ``.`` means "the current directory."
 
+.. index:: cross-platform; paths, portability
+
 Cross-Platform Path Separators
 --------------------------------
 

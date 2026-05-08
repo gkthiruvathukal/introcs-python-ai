@@ -35,6 +35,8 @@ A simple loan approval process requires both a minimum credit score
 The outer ``if`` checks the credit score; only if that passes does the
 inner ``if`` check the income.
 
+.. index:: nested if; reading, indentation; nesting level
+
 Reading Nested Code
 --------------------
 
@@ -52,6 +54,8 @@ Indentation levels tell you which ``else`` belongs to which ``if``:
 
 The ``else`` at indentation level 4 belongs to ``if b:``.
 The ``else`` at indentation level 0 belongs to ``if a:``.
+
+.. index:: flattening nested if, refactoring; conditions
 
 Flattening Nested ``if`` With ``and``
 --------------------------------------

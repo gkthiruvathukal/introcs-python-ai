@@ -74,6 +74,8 @@ tuples are allowed; lists and other mutable objects are not.
    d[(1, 2)] = "point"   # tuple key: OK
    # d[[1, 2]] = "point" # list key: TypeError
 
+.. index:: Big-O notation; dictionary, O(1); dict operations
+
 Performance Summary
 -------------------
 

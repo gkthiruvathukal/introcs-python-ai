@@ -82,6 +82,8 @@ Output:
 The function definition does not produce any output on its own.  Only when you
 *call* it does the code run.
 
+.. index:: function; reuse, DRY principle
+
 Calling Multiple Times
 ----------------------
 

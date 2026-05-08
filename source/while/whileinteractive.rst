@@ -46,6 +46,8 @@ duplication; Python's ``while True`` / ``break`` pattern avoids it:
 Both versions behave identically, but the ``while True`` form only writes
 the ``input`` call once.
 
+.. index:: sentinel value, loop; sentinel pattern
+
 Sentinel Values
 ---------------
 
@@ -92,6 +94,8 @@ Interactive loops are often used to drive a menu:
    :language: python
 
 The loop exits only when the user chooses option 3.
+
+.. index:: loop; common pitfalls, floating point; comparison pitfall
 
 Common Pitfalls
 ---------------

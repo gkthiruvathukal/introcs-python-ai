@@ -137,6 +137,8 @@ When checking membership in a range, be precise about ``<`` vs ``<=``:
 
 Always test the boundary values: exactly 0 and exactly 100 in this case.
 
+.. index:: NameError; uninitialized variable, variable; uninitialized
+
 Forgetting ``else``
 -------------------
 

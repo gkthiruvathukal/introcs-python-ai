@@ -39,6 +39,8 @@ Output:
    12
    15
 
+.. index:: range(); custom step
+
 Another approach steps directly through the multiples using a custom step:
 
 .. code-block:: python

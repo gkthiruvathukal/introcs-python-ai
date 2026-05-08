@@ -61,6 +61,8 @@ Python uses the keywords ``and``, ``or``, and ``not`` — not symbols like
    >>> not (x > 10)
    True
 
+.. index:: truth table
+
 Truth Tables
 ------------
 
@@ -75,6 +77,8 @@ Truth Tables
 +-------+-------+---------------+--------------+-----------+
 | False | False | False         | False        | True      |
 +-------+-------+---------------+--------------+-----------+
+
+.. index:: Boolean operators; precedence
 
 Operator Precedence
 -------------------

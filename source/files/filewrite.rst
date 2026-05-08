@@ -76,6 +76,8 @@ upper case to a new output file — a Python translation of the C#
 
    copy_upper("text.txt", "upper_text.txt")
 
+.. index:: with statement; nested, with statement; combined
+
 Nested ``with`` statements are valid, though Python also allows combining
 them on one line:
 

@@ -12,6 +12,8 @@ Stacks and Queues
    stack and ``collections.deque``.  The abstract data type concepts
    (LIFO, FIFO) are language-agnostic.
 
+.. index:: abstract data type, ADT
+
 Stacks and queues are *abstract data types* — they define what operations
 are available, not how they are implemented.
 
@@ -29,6 +31,8 @@ Operations:
 - **pop**: remove and return the top item
 - **peek**: inspect the top item without removing it
 - **is_empty**: check whether the stack is empty
+
+.. index:: list; as stack, O(1); list.append and pop
 
 **Using a Python list as a stack:**
 
@@ -91,6 +95,8 @@ Operations:
 - **is_empty**: check whether the queue is empty
 
 **Using ``collections.deque``:**
+
+.. index:: deque; O(1) both ends, collections.deque; efficiency
 
 A Python list is slow for dequeue (removing from the front is O(N)).
 ``collections.deque`` supports O(1) operations at both ends:

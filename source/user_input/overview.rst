@@ -14,6 +14,8 @@ is running — data typed by a user, arguments provided at startup, or values re
 from a file. Python provides three primary ways to receive this kind of external
 input.
 
+.. index:: input(); overview, input; always returns string
+
 The ``input()`` Function
 ------------------------
 
@@ -43,6 +45,8 @@ responses when they provide something unexpected.
 
 ``input()`` is ideal for simple, conversational programs where a human guides
 execution step by step.
+
+.. index:: argparse; CLI overview, command line interface; argparse
 
 Command-Line Interfaces with ``argparse``
 ------------------------------------------
@@ -80,6 +84,8 @@ Output:
 set of valid choices, and automatically generate ``--help`` output. A CLI is
 especially useful for automation and scripting — running a program repeatedly with
 different inputs without editing the source code each time.
+
+.. index:: file reading; overview, open(); with block
 
 Reading Data from Files
 -----------------------
@@ -124,6 +130,8 @@ The modern ``pathlib.Path`` class offers an object-oriented alternative:
 Both approaches achieve the same result. ``pathlib`` is often considered cleaner for
 complex path manipulation (joining directories, checking extensions, listing files),
 while ``open()`` is familiar and widely used.
+
+.. index:: input; method selection, input; comparison table
 
 Choosing the Right Input Method
 --------------------------------

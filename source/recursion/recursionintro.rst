@@ -94,6 +94,8 @@ faster, and scales to any size:
 Python's standard library also provides ``math.factorial(n)``, which is
 implemented in C and is the best choice in real code.
 
+.. index:: stack frame; recursion, call stack; depth
+
 The Call Stack
 --------------
 
@@ -178,6 +180,8 @@ without bound.  The default limit is 1 000.  You can inspect or raise it:
 
 Hitting the limit raises ``RecursionError``.
 
+.. index:: tail recursion, Guido van Rossum; TCO decision
+
 No Tail-Call Optimisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -214,6 +218,8 @@ Mitigations:
 - **Do not raise ``sys.setrecursionlimit`` in production** in response
   to untrusted input — that only delays the crash and may exhaust
   memory entirely.
+
+.. index:: recursion; when to use, divide and conquer, tree traversal
 
 When to Use Recursion
 ---------------------

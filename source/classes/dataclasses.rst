@@ -33,6 +33,8 @@ Basic Dataclass
        phone: str
        email: str
 
+.. index:: @dataclass; generated methods, boilerplate elimination
+
 This single declaration is equivalent to:
 
 .. code-block:: python

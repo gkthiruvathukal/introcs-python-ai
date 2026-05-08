@@ -92,6 +92,8 @@ were:
    FAILED test_mymath.py::test_factorial_positive
    AssertionError: assert 120 == 119
 
+.. index:: test discovery, naming convention; test files
+
 How pytest Finds Tests
 -----------------------
 

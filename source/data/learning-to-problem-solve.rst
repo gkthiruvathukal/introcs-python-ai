@@ -11,6 +11,8 @@ Programming is fundamentally about *problem solving*.  The computer is a tool;
 the skill is figuring out how to express a solution in a way the computer can
 execute.
 
+.. index:: problem solving; framework, algorithm; design
+
 A Framework for Problem Solving
 ---------------------------------
 
@@ -36,6 +38,8 @@ When you encounter a new problem, work through these steps:
 
 6. **Refine.**  Clean up names, add comments where the logic is non-obvious,
    and look for anything that could break.
+
+.. index:: data-in calculate data-out pattern, input-process-output
 
 The Data-in, Calculate, Data-out Pattern
 -----------------------------------------
@@ -86,6 +90,8 @@ With bill = 80 and people = 4, the output should be ``Each person owes $24.00.``
 
 Notice how closely the code matches the hand calculation.  Programming at its
 best is translating a clear solution into clear code.
+
+.. index:: debugging; strategies, print debugging
 
 Getting Unstuck
 ---------------

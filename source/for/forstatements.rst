@@ -68,6 +68,8 @@ The ``for`` version keeps the emphasis on the *characters*, not the secondary
 bookkeeping.  There is no index to initialise, no ``i += 1`` to remember, and
 no risk of an infinite loop.
 
+.. index:: for loop; list iteration
+
 Iterating Over a List
 ---------------------
 

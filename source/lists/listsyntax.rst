@@ -113,6 +113,8 @@ Output:
 
 A slice always produces a new list; the original is unchanged.
 
+.. index:: list; membership test
+
 Membership Test
 ---------------
 

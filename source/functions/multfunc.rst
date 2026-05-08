@@ -37,6 +37,8 @@ Output:
 This works, but notice the duplication — the two functions are nearly
 identical.  The next section shows how to eliminate it using parameters.
 
+.. index:: function; definition order, NameError; undefined function
+
 Order of Definitions and Calls
 -------------------------------
 

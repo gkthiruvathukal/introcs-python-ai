@@ -68,6 +68,8 @@ Why This Matters
 
    *Source:* Original addition.
 
+.. index:: while loop; tolerance condition, precondition checking, first-class functions
+
 The bisection method illustrates several important ideas:
 
 - **While loops with a tolerance condition**: ``while (b - a) > tolerance``

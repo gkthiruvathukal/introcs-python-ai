@@ -46,6 +46,8 @@ Output:
 The ``_count`` and ``_total`` prefixes with ``_`` signal that these are
 internal attributes not meant to be accessed from outside the class.
 
+.. index:: dunder methods; __str__ vs __repr__, string representation
+
 ``__str__`` and ``__repr__``
 -----------------------------
 

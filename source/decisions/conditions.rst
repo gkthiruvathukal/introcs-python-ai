@@ -32,6 +32,8 @@ George Boole), and their type is ``bool``.
    >>> 2 * x < x
    False
 
+.. index:: comparison operators; ==, !=, <, >, <=, >=
+
 Comparison Operators
 --------------------
 
@@ -61,6 +63,8 @@ The basic comparison operators that produce Boolean results are:
    Use ``==`` for comparison, ``=`` for assignment.  Writing ``if x = 5:``
    is a ``SyntaxError`` in Python.
 
+.. index:: bool type, True, False, falsy values, truthy values
+
 The ``bool`` Type
 -----------------
 
@@ -80,6 +84,8 @@ create Boolean values with the ``bool()`` conversion function:
 
 Any non-zero number and any non-empty sequence is *truthy*; zero, ``None``,
 and empty sequences are *falsy*.  This matters in ``if`` statements.
+
+.. index:: chained comparison; conditions
 
 Chained Comparisons
 -------------------

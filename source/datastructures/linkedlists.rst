@@ -94,6 +94,8 @@ Output:
    5 -> 10 -> 20 -> 30 -> None
    5 -> 10 -> 30 -> None
 
+.. index:: dynamic array; vs linked list, Big-O notation; data structures
+
 Performance Comparison
 -----------------------
 

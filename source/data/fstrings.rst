@@ -64,6 +64,8 @@ control how the value is displayed.
    >>> print(f"Price: ${price:.2f}")
    Price: $9.50
 
+.. index:: f-string; field width, f-string; alignment
+
 **Field width and alignment:**
 
 .. code-block:: none
@@ -78,6 +80,8 @@ control how the value is displayed.
    - ``:3`` means: right-align in a field of width 3.
    - ``:<10`` means: left-align in a field of width 10.
    - ``:^10`` means: center in a field of width 10.
+
+.. index:: f-string; integer format, f-string; binary, f-string; hexadecimal
 
 **Integer formatting:**
 

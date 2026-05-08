@@ -152,6 +152,8 @@ Output:
 The leftmost ``for`` is the outer loop; the rightmost is the inner loop —
 the same order as nested ``for`` statements written out explicitly.
 
+.. index:: list comprehension; when to use, side effects; avoid in comprehension
+
 When to Use List Comprehensions
 --------------------------------
 

@@ -22,6 +22,8 @@ The actual code might be::
 
    area = length * width
 
+.. index:: indentation; as syntax, block; indentation
+
 Indentation is Syntax
 ---------------------
 
@@ -91,6 +93,8 @@ Lines beginning with ``$`` show terminal commands run outside Python:
    $ python3 painting.py
    Calculation of Room Paint Requirements
    Enter room length:
+
+.. index:: traceback, error message; reading, ValueError
 
 Reading Error Messages
 -----------------------

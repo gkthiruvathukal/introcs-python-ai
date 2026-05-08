@@ -11,6 +11,8 @@ When working with functions, there are two distinct perspectives to keep in
 mind: the *writer* of the function and the *consumer* (or caller) of the
 function.
 
+.. index:: function; writer role, docstring; contract
+
 The Writer
 ----------
 
@@ -38,6 +40,8 @@ Python tools can display it as help text:
        Return total weekly wages including 1.5x overtime above 40 hours.
        ...
 
+.. index:: function; consumer role, abstraction; function contract
+
 The Consumer
 ------------
 
@@ -62,6 +66,8 @@ The docstring defines the *contract* between writer and consumer:
 
 If the consumer violates the preconditions (e.g., passes a negative number of
 hours), the function is not obligated to produce a sensible result.
+
+.. index:: separation of concerns, computation vs presentation
 
 Separation of Concerns
 ----------------------

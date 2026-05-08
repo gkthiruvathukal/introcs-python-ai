@@ -54,6 +54,8 @@ just equal values.  Its most common use is testing for ``None``:
 
 Use ``is None`` rather than ``== None`` — it is more precise and Pythonic.
 
+.. index:: string; comparison, lexicographic order, ASCII; ordering
+
 Comparison with Strings
 -----------------------
 
@@ -67,6 +69,8 @@ String comparison uses lexicographic (dictionary) order:
    True
    >>> "cat" == "cat"
    True
+
+.. index:: chained comparison
 
 Chained Comparisons Revisited
 ------------------------------

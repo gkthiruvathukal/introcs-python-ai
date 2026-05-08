@@ -149,6 +149,8 @@ Output:
    1
    0
 
+.. index:: range; lazy evaluation, range; memory efficiency
+
 Range Objects Are Lazy
 -----------------------
 

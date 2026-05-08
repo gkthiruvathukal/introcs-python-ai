@@ -27,6 +27,8 @@ requested at a time.  There are also larger assignments in the appendix.
 Why Python?
 -----------
 
+.. index:: Python; characteristics, dynamically typed, interpreted language
+
 Python is a good first language for several reasons.
 
 **It is interactive.**  You can type statements directly into the Python
@@ -52,6 +54,8 @@ structured English prose.
 
 Characteristics of Python
 --------------------------
+
+.. index:: pair: Python; scripting, pair: Python; high-level, pair: Python; object-oriented, pair: Python; modular
 
 Here is a brief overview of Python's key characteristics.
 
@@ -86,6 +90,8 @@ collections, where objects are most naturally useful.
 
 Programming in the Age of Artificial Intelligence
 --------------------------------------------------
+
+.. index:: artificial intelligence, AI; and programming
 
 A reasonable question today is: *if AI can write code, why learn to program?*
 We think this gets the situation exactly backwards — and we have heard this
@@ -247,8 +253,12 @@ and critical eye is as important now as it has ever been.
 Software Engineering, Automation, and Prototyping
 --------------------------------------------------
 
+.. index:: software engineering, prototyping, CASE tools
+
 The oldest promise in software engineering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: pair: software engineering; automation
 
 Software engineering has pursued the automation of software development
 since the field began.  **CASE tools** — Computer-Aided Software

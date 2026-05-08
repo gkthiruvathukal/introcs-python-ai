@@ -136,6 +136,8 @@ Output:
    [1, 1, 3, 4, 5]
    1 5 14
 
+.. index:: list; concatenation, list; repetition
+
 Concatenation and Repetition
 ------------------------------
 

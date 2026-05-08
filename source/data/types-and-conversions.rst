@@ -82,6 +82,8 @@ Use the type name as a function to convert between types:
    >>> str(100)
    '100'
 
+.. index:: int(); truncation, truncation vs rounding
+
 Note that ``int()`` *truncates* floats toward zero — it does not round:
 
 .. code-block:: none
@@ -135,6 +137,8 @@ the Python equivalent of ``null`` in Java or C#.
 Functions that do not explicitly return a value return ``None`` automatically.
 ``None`` is also used as a placeholder when a variable exists but has not been
 given a meaningful value yet.
+
+.. index:: None; is None, identity test
 
 Test for ``None`` with ``is None``, not with ``== None``:
 

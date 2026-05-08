@@ -100,6 +100,8 @@ The arithmetic operators in Python are:
      - Negation (unary)
      - ``-5``
 
+.. index:: operator; /; true division, operator; //; floor division, operator; %; modulus, operator; **; exponentiation
+
 A key difference from many other languages: ``/`` *always* produces a
 ``float``, even if both operands are integers:
 
@@ -160,6 +162,8 @@ When you mix ``int`` and ``float`` in an expression, Python converts the
    >>> type(1 + 2.0)
    <class 'float'>
 
+.. index:: widening conversion, implicit type conversion
+
 This *widening* conversion preserves the value.
 
 .. index:: built-in functions; abs, round, divmod
@@ -199,6 +203,8 @@ needed:
    3.14
    >>> divmod(17, 5)
    (3, 2)
+
+.. index:: math module, math.sqrt(), math.floor(), math.ceil(), math.pi
 
 The ``math`` module provides more functions.  Import it first:
 

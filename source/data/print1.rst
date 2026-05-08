@@ -36,6 +36,8 @@ You can print the value of any expression:
    >>> print(total)
    42
 
+.. index:: print; multiple arguments, print; sep=
+
 Multiple Arguments
 ------------------
 
@@ -57,6 +59,8 @@ You can change the separator with the ``sep`` keyword argument:
    1, 2, 3
    >>> print("cat", "dog", "bird", sep=" | ")
    cat | dog | bird
+
+.. index:: print; end=, print; newline
 
 Controlling the End Character
 -------------------------------
@@ -95,6 +99,8 @@ A ``print()`` with no arguments writes a blank line:
    After
 
 This is useful for adding vertical space in output.
+
+.. index:: print; file=
 
 Printing to a File
 ------------------

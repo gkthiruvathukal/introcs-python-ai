@@ -53,6 +53,8 @@ You can also pass arguments by name (called *keyword arguments*):
 With keyword arguments, order does not matter.  We will see keyword arguments
 used more heavily later (for example, ``print(end="")`` uses them).
 
+.. index:: function; default parameter values, optional parameter
+
 Default Values
 --------------
 

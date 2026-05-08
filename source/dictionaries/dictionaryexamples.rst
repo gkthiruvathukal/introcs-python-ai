@@ -55,6 +55,8 @@ Output:
 not been seen yet — a cleaner alternative to checking ``word in counts``
 first.
 
+.. index:: dict comprehension
+
 Inverting a Dictionary
 -----------------------
 
@@ -129,6 +131,8 @@ Output:
    a: ['apple', 'ant']
    b: ['bear', 'bee']
    c: ['cat']
+
+.. index:: dict.setdefault()
 
 ``dict.setdefault(key, default)`` can simplify the inner ``if``:
 

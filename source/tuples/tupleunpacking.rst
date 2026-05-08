@@ -109,6 +109,8 @@ Output:
 ``zip()`` stops at the shortest sequence.  Use ``zip(strict=True)`` in
 Python 3.10+ to raise an error if the sequences have different lengths.
 
+.. index:: star expression; unpacking, extended unpacking
+
 Extended Unpacking
 ------------------
 

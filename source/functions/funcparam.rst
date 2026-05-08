@@ -72,6 +72,8 @@ When Python sees ``happy_birthday("Emily")``, it:
 The next call ``happy_birthday("Andre")`` does the same thing with
 ``"Andre"``.
 
+.. index:: parameter vs argument
+
 Parameters vs. Arguments
 --------------------------
 

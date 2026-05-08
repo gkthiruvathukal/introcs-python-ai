@@ -99,6 +99,8 @@ Sample run:
    Enter second number: 1.5
    The sum is 5.0.
 
+.. index:: input; prompt, input; pattern
+
 Order Matters
 -------------
 

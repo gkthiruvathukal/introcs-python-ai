@@ -94,6 +94,8 @@ Output:
    (2, 4)
    (3, 9)
 
+.. index:: tabular data; tuple list
+
 Building a List of Tuples
 --------------------------
 
@@ -201,6 +203,8 @@ Output:
 
    [Student(name='Alice', grade=91), Student(name='Bob', grade=78), Student(name='Carol', grade=85)]
    [Student(name='Alice', grade=91), Student(name='Carol', grade=85), Student(name='Bob', grade=78)]
+
+.. index:: lambda; sort key
 
 ``lambda s: s.grade`` is clearer than ``lambda s: s[1]`` — the intent
 is self-documenting.  Default (lexicographic) sorting still works

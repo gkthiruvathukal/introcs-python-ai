@@ -37,6 +37,8 @@ vice versa) avoids backslashes:
    >>> "It's a fine day."
    "It's a fine day."
 
+.. index:: triple-quoted string, multiline string
+
 For strings spanning multiple lines, use *triple quotes* — either ``"""`` or
 ``'''``:
 

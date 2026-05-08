@@ -62,6 +62,8 @@ here — these concepts are each explained in detail in later sections.
 Line by line
 ------------
 
+.. index:: assignment statement, constant; naming convention, ALL_CAPS convention
+
 .. code-block:: python
 
    HEIGHT = 8
@@ -97,6 +99,8 @@ Unlike C#, there is no need to declare ``length`` first or specify its type.
 
    wall_area = 2 * (length + width) * HEIGHT
    ceiling_area = length * width
+
+.. index:: assignment statement; arithmetic, expression; evaluation order
 
 These are arithmetic *assignment statements*.  The expression on the right-hand
 side is evaluated first, then the result is stored in the variable on the left.

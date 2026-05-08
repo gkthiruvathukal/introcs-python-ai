@@ -30,6 +30,8 @@ Use braces with ``key: value`` pairs:
    word_count = {}       # empty dict
    ages = {"Alice": 30, "Bob": 25}
 
+.. index:: dict(); constructor
+
 You can also use ``dict()`` with keyword arguments:
 
 .. code-block:: python
@@ -48,6 +50,8 @@ Use square brackets to get or set a value by key:
    print(e2sp["one"])       # "uno"
    e2sp["four"] = "cuatro"  # add new entry
    e2sp["two"] = "DOS"      # update existing entry
+
+.. index:: KeyError, dict.get(); default value
 
 Accessing a key that does not exist raises a ``KeyError``.  Use
 ``dict.get(key, default)`` to avoid the exception:

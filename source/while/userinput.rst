@@ -46,6 +46,8 @@ If ``risky_operation()`` raises ``SomeError``, execution jumps to the
 Error handling is covered more fully in a later chapter; for now just use
 this pattern as written.
 
+.. index:: input; range validation, input; validation loop
+
 Prompting Within a Range
 -------------------------
 
@@ -75,6 +77,8 @@ Another common need is a yes/no confirmation:
    :language: python
    :start-after: # start: prompt_yes_no
    :end-before: # end: prompt_yes_no
+
+.. index:: module; helper functions, separation of concerns; input
 
 Using the Helpers
 -----------------

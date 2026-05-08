@@ -30,6 +30,8 @@ will **implement it ourselves** using only indexing, slicing, and
 ``find()``.  The goal is problem-solving practice, not reinventing the
 standard library.
 
+.. index:: test-first development, function; signature
+
 Function Signature and Tests First
 -----------------------------------
 
@@ -62,6 +64,8 @@ function must do, then make them pass.
 
 Running this with ``pass`` as the body will print ``None`` four times —
 but the test structure is in place.
+
+.. index:: incremental development, pair: problem solving; incremental
 
 Building the Solution Incrementally
 -------------------------------------

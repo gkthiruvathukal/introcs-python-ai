@@ -7,6 +7,8 @@ Computer Science, Broadly
    Data, and Abstraction subsections are original additions providing
    Python-oriented framing.
 
+.. index:: computation, computer science
+
 Computer science is the study of computation: what can be computed, how to
 compute it efficiently, and how to build the systems that do the computing.
 The word *computer* in "computer science" is somewhat misleading — the field is
@@ -15,6 +17,8 @@ perform it.
 
 Algorithms
 ----------
+
+.. index:: algorithm
 
 At the heart of computer science is the *algorithm*: a precise, step-by-step
 procedure for solving a problem.  An algorithm must be:
@@ -33,6 +37,8 @@ reliable software systems from many interacting programs.
 Data
 ----
 
+.. index:: data structure, data representation
+
 Algorithms operate on *data*.  Understanding how data is represented and
 organized is just as important as understanding algorithms.  Should a
 collection of items be stored in a list?  A dictionary?  A tree?  The choice
@@ -40,6 +46,8 @@ affects both the correctness and the speed of the program.
 
 Abstraction
 -----------
+
+.. index:: abstraction, interface
 
 One of the most powerful ideas in computer science is *abstraction*: hiding
 details behind a well-defined interface so that you can use something without

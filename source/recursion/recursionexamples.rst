@@ -93,6 +93,8 @@ Output:
 
    [1, 2, 3, 4, 5, 6, 7]
 
+.. index:: pathlib; recursive traversal, file system; tree traversal
+
 Directory Tree Traversal
 ------------------------
 
@@ -247,6 +249,8 @@ Output:
 .. code-block:: none
 
    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+
+.. index:: generator; advantages, lazy evaluation; generators
 
 Why Generators?
 ^^^^^^^^^^^^^^^^

@@ -35,6 +35,8 @@ Output:
 
    7
 
+.. index:: return value; in expression
+
 The returned value can be used in any expression:
 
 .. code-block:: none

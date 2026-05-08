@@ -97,6 +97,8 @@ Output (example):
    data/sales.csv
    data/inventory.csv
 
+.. index:: pathlib; convenience methods
+
 Reading and Writing via Path
 -----------------------------
 

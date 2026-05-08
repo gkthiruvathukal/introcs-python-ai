@@ -16,6 +16,8 @@ The terminal may seem intimidating at first — a text-based window with no butt
 click. But it is one of the most important tools in a programmer's toolkit, and
 learning to use it will make you more capable as a developer.
 
+.. index:: terminal emulator, shell; definition, bash, zsh
+
 Terminal vs. Shell
 ------------------
 
@@ -275,6 +277,8 @@ process ID shown by ``ps`` or ``top``.
 
    $ kill 1234
 
+.. index:: stdin, stdout, stderr, standard streams, redirection
+
 Standard Streams
 ----------------
 
@@ -323,6 +327,8 @@ Then run it:
 
 (Use ``python3`` if your system requires it.)
 
+.. index:: exit code, sys.exit(), shell; exit code
+
 Exit Codes
 ^^^^^^^^^^
 
@@ -353,6 +359,8 @@ Check the exit code after running:
 
    # Windows PowerShell
    echo $LASTEXITCODE
+
+.. index:: sys.argv, command line arguments; sys.argv
 
 Command Line Arguments with ``sys.argv``
 -----------------------------------------
@@ -402,6 +410,8 @@ Here is a script that uses ``sys.argv`` to greet a user:
    name = sys.argv[1]
    print(f"Hello, {name}!")
    sys.exit(0)
+
+.. index:: argparse; ArgumentParser, CLI; argparse, --help flag
 
 Professional CLI Programs with ``argparse``
 --------------------------------------------

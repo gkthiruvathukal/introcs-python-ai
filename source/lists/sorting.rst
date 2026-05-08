@@ -13,6 +13,8 @@ Sorting
    ``sorted()`` use Timsort, an optimized O(N log N) algorithm — far faster
    than the O(N²) algorithms for large lists.
 
+.. index:: Timsort, O(N log N), sorting algorithm
+
 Understanding how sorting works is essential even if you always use the
 built-in methods in practice.
 
@@ -132,6 +134,8 @@ Output:
 .. code-block:: none
 
    [-5, 2, 8, 9, 12, 22]
+
+.. index:: sorting; algorithm comparison, Big-O notation; sorting
 
 Algorithm Comparison
 --------------------

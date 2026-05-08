@@ -79,6 +79,8 @@ Two methods read everything in one call:
        lines = f.readlines()
    print(len(lines), "lines")
 
+.. index:: memory efficiency; file reading, streaming; file
+
 Use ``f.read()`` when you need the whole text at once (e.g., to pass to
 another function).  Use the ``for line in f:`` loop when the file may be
 large, since it reads one line at a time without loading everything into

@@ -130,6 +130,8 @@ Output:
 ``target`` could be inserted to keep ``data`` sorted.  If
 ``data[i] == target``, the value is present.
 
+.. index:: Big-O notation, O(N) vs O(log N)
+
 Performance Comparison
 -----------------------
 

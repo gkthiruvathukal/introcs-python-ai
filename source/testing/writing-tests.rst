@@ -65,6 +65,8 @@ Always test:
    :start-after: # start: edge_case_tests
    :end-before: # end: edge_case_tests
 
+.. index:: test organisation, test suite
+
 Organising Tests in a Class
 -----------------------------
 
@@ -79,6 +81,8 @@ For a large module, group related tests in a class prefixed with
    :end-before: # end: test_classes
 
 pytest discovers and runs these automatically with no extra configuration.
+
+.. index:: testing; single responsibility
 
 One Assert per Test (Guideline)
 ---------------------------------

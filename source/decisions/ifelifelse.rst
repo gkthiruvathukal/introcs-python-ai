@@ -13,6 +13,8 @@
 When there are more than two choices, chain conditions using ``elif``
 (short for "else if").  Python uses ``elif`` where C# uses ``else if``.
 
+.. index:: elif; grade example, if-elif-else; pattern
+
 Grade Classification
 --------------------
 

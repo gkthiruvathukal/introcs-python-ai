@@ -113,6 +113,8 @@ Or import everything (generally discouraged in larger programs):
 
    from math import *
 
+.. index:: import; alias, import as
+
 You can also give a module a shorter alias:
 
 .. code-block:: python
@@ -132,6 +134,8 @@ available.
 
 When you create your own ``.py`` files, Python can import them if they are in
 the same directory as your script.
+
+.. index:: module; user-defined, pair: module; .py file
 
 Writing Your Own Module
 -----------------------

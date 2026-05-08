@@ -88,6 +88,8 @@ The body can contain any number of statements, all indented to the same level:
        print("Balance was negative; funds transferred from backup.")
    print(f"Current balance: ${balance:.2f}")
 
+.. index:: conditional expression, ternary operator
+
 ``if`` as an Expression (Conditional Expression)
 -------------------------------------------------
 

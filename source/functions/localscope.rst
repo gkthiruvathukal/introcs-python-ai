@@ -61,6 +61,8 @@ Local scope is a feature, not a limitation.  It means:
 Both functions have a variable named ``result``, but they are completely
 independent.
 
+.. index:: LEGB rule, scope; lookup order, enclosing scope, global scope, built-in scope
+
 How Python Looks Up Names
 --------------------------
 

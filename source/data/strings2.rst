@@ -100,6 +100,8 @@ Output:
    Regards,
    The Department
 
+.. index:: docstring
+
 Triple-quoted strings are also used as *docstrings* — documentation attached
 to functions and classes.  We will see those in the Functions chapter.
 

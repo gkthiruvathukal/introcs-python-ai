@@ -82,6 +82,8 @@ Attempting to change an element raises a ``TypeError``:
    rgb = (255, 128, 0)
    rgb[0] = 100     # TypeError: 'tuple' object does not support item assignment
 
+.. index:: tuple vs list, pair: tuple; when to use
+
 Tuples vs. Lists
 ----------------
 

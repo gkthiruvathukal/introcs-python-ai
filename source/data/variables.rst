@@ -135,6 +135,8 @@ You can also assign to multiple variables from multiple values in one line:
    >>> y
    4
 
+.. index:: tuple unpacking; preview, multiple assignment; simultaneous
+
 This is called *tuple unpacking* (discussed further in the Tuples chapter).
 A particularly elegant use is swapping two values without a temporary variable:
 
@@ -146,6 +148,8 @@ A particularly elegant use is swapping two values without a temporary variable:
    20
    >>> b
    10
+
+.. index:: augmented assignment; operators list, +=, -=, *=, /=, //=, %=, **=
 
 *Augmented assignment* operators combine an operation with assignment:
 

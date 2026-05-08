@@ -12,6 +12,8 @@ Python Program Structure
 A Python program file — a ``.py`` file — is much simpler in structure than
 the equivalent in C# or Java.
 
+.. index:: Python; top-level statements, .py file
+
 No Required Wrapper
 -------------------
 
@@ -105,6 +107,8 @@ comments completely:
 
 Use comments to explain *why*, not *what* — the code itself should make
 *what* it does clear.
+
+.. index:: statement; line continuation, backslash continuation
 
 Statement Endings
 -----------------

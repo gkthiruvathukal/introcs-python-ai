@@ -52,6 +52,8 @@ Output:
    Temperature: 113°F — adding ice.
    Tea is ready at 112°F.
 
+.. index:: loop tracing, loop; trace table
+
 Tracing a Loop
 --------------
 
@@ -152,6 +154,8 @@ test the condition:
        if i % 2 == 0:
            continue      # skip even numbers
        print(i)          # prints 1 3 5 7 9
+
+.. index:: loop planning rubric, loop design
 
 Loop Planning Rubric
 --------------------

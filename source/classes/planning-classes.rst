@@ -51,6 +51,8 @@ For a ``Book`` class:
 Keep each class focused on one responsibility.  If a class is doing too
 many unrelated things, split it.
 
+.. index:: composition; class design
+
 Relationships Between Classes
 ------------------------------
 
@@ -73,6 +75,8 @@ references to a ``Book`` and a ``Patron``:
 This pattern — one class holding a reference to another — is called
 *composition*.  It is the main way to build larger systems from smaller
 classes.
+
+.. index:: class; design checklist
 
 A Checklist
 -----------

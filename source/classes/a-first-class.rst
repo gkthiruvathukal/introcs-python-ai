@@ -120,6 +120,8 @@ Output:
 
    maria.ortiz@gmail.com
 
+.. index:: name mangling, single underscore convention
+
 Privacy by Convention
 ---------------------
 

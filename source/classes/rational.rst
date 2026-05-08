@@ -101,6 +101,8 @@ Python dispatches ``f + h`` to ``f.__add__(h)`` and ``h > f`` to
 ``h.__gt__(f)`` (derived automatically from ``__lt__`` and ``__eq__``
 when Python can't find ``__gt__`` directly).
 
+.. index:: @classmethod, class method; factory method
+
 Static Parse Method
 -------------------
 
