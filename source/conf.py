@@ -55,6 +55,7 @@ html_theme_options = {
 html_title = f'{project} ({release})'
 html_short_title = 'Intro CS in Python'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 html_logo = '_static/logo.png'
 html_last_updated_fmt = '%d-%B-%Y %H:%M:%S'
 
