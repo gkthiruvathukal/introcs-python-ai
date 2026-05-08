@@ -83,6 +83,16 @@ that would supply the missing ingredient.
 The House of Wisdom and Al-Khowarizmi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/al_khowarizmi.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan
+
+   Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan — the
+   mathematician whose Latinized name gave us the word *algorithm*.
+   *Source:* Adam Harangozó / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench.jpg>`_,
+   CC BY-SA 4.0.
+
 In 800 CE, Caliph Al-Mamun established *Bayt al-Hikmah* — the House of Wisdom
 — in Baghdad. Scholars were dispatched to translate the accumulated scientific
 knowledge of Greece, preserved in the libraries of Constantinople, into Arabic.
@@ -133,6 +143,16 @@ Nascent Computing Attempts
 The Quipu of the Inca Empire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/quipu.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: A quipu from the Inca Empire, consisting of knotted colored strings
+
+   A quipu — knotted, colored cords used by the Inca Empire for census records,
+   tax accounting, and long-distance communication.
+   *Source:* Jorge Mori / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Quipu.JPG>`_,
+   Public Domain (CC0).
+
 Across the Atlantic, the Inca Empire and its predecessors developed a
 completely different recording technology. The quipu (also spelled khipu)
 consisted of colored, spun, and plied threads of llama or alpaca hair, or
@@ -143,6 +163,16 @@ encoding admits many physical forms.
 
 The Abacus
 ^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/abacus.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: A Chinese suanpan abacus with beads on rods
+
+   A Chinese suanpan abacus — the primary calculation aid across Asia and the
+   Mediterranean for millennia. This example encodes the number 9,034.
+   *Source:* Felix Winkelnkemper / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Chinese_Suanpan_Abacus.jpg>`_,
+   CC BY-SA 4.0.
 
 The abacus, an early form of beads on wires, appeared in China around 3000 BCE.
 Its name derives from the Semitic word *abaq*, meaning dust — an allusion to the
@@ -166,6 +196,16 @@ derive the rest.
 Napier's Bones and the Slide Rule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/napiers_bones.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: Napier's Bones — a set of numbered ivory rods used for multiplication
+
+   Napier's Bones (c. 1650, ivory) at the National Museum of Scotland — numbered
+   rods that reduced multiplication to reading diagonal sums.
+   *Source:* Kim Traynor / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Napier%27s_Bones.JPG>`_,
+   CC BY-SA 3.0.
+
 By the seventeenth century the tools of calculation were becoming more
 sophisticated. John Napier (1550–1617), best known for inventing logarithms,
 also devised a set of numbered rods — Napier's Bones — that reduced
@@ -183,6 +223,18 @@ precise calculation until pocket electronic calculators arrived in the 1970s.
 
 Blaise Pascal's Pascaline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/pascaline.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: The Pascaline mechanical calculator built by Blaise Pascal around 1642
+
+   The Pascaline (c. 1642) — Pascal's eight-digit mechanical adder.  Its
+   carry mechanism introduced the principle of complement arithmetic still used
+   in modern CPUs.
+   *Source:* J. A. V. Turck, *Origin of Modern Calculating Machines*, 1921 /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Pascaline_calculator.jpg>`_,
+   Public Domain.
 
 Blaise Pascal built his *Pascaline* around 1642, at the age of nineteen, to
 help his father — a tax collector in Rouen — manage the tedious arithmetic of
@@ -243,6 +295,16 @@ Looms and Mechanical Computing
 The Jacquard Loom
 ^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/jacquard_loom.jpg
+   :width: 220px
+   :figclass: float-right
+   :alt: A Jacquard loom at the Musée des Arts et Métiers, Paris
+
+   A Jacquard loom (c. 1804) at the Musée des Arts et Métiers, Paris. The chain
+   of punched cards at top encodes the weaving pattern — effectively a program.
+   *Source:* David Monniaux / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Jacquard_loom_p1040320.jpg>`_,
+   CC BY-SA 3.0.
+
 In 1804, the French silk weaver Joseph Marie Jacquard introduced a loom
 controlled by chains of punched cards. Each card encoded one row of a woven
 pattern: a hole in a given position allowed a hook to pass through and raise the
@@ -254,6 +316,28 @@ the 1890 census carried the same principle into data processing.
 
 Charles Babbage and Ada Lovelace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/babbage_difference_engine.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: The Science Museum London's 1991 reconstruction of Babbage's Difference Engine No. 2
+
+   Babbage's Difference Engine No. 2 — the Science Museum London's 1991
+   reconstruction, built from Babbage's original drawings. It computed correctly
+   to 31 digits on the first try.
+   *Source:* Carsten Ullrich / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:LondonScienceMuseumsReplicaDifferenceEngine.jpg>`_,
+   CC BY-SA 2.5.
+
+.. figure:: ../_static/images/computing_history/ada_lovelace.jpg
+   :width: 200px
+   :figclass: float-left
+   :alt: Portrait of Ada Lovelace by Alfred Edward Chalon, c. 1840
+
+   Ada Lovelace (c. 1840), painted by Alfred Edward Chalon. Her annotated
+   translation of Menabrea's account of the Analytical Engine is recognized as
+   the first algorithm intended for machine execution.
+   *Source:* Alfred Edward Chalon / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg>`_,
+   Public Domain.
 
 Charles Babbage designed two mechanical computing engines of extraordinary
 ambition. The Difference Engine, designed in the 1820s, was intended to compute
@@ -273,6 +357,16 @@ today in safety-critical systems, is named in her honor.
 
 Herman Hollerith and the 1890 Census
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/hollerith_tabulator.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: Hollerith's electrical tabulating machines as illustrated in Scientific American, 1890
+
+   Hollerith's electrical tabulating machines in operation, as illustrated in
+   *Scientific American*, August 30, 1890. His company eventually became IBM.
+   *Source:* Uncredited illustrator / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:1890_Census_Hollerith_Electrical_Counting_Machines_Sci_Amer.jpg>`_,
+   Public Domain.
 
 By 1880 the United States Census Bureau faced a crisis: it had taken nearly a
 decade to tabulate the previous census by hand, and the 1890 population would
@@ -306,6 +400,17 @@ the originator of several foundational computing concepts.
 Konrad Zuse and the Z3
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/zuse_z3.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: Reconstruction of Konrad Zuse's Z3 computer at the Deutsches Museum, Munich
+
+   Reconstruction of Konrad Zuse's Z3 (1941) at the Deutsches Museum, Munich —
+   the first Turing-complete programmable computer. The original was destroyed
+   in a 1943 Allied bombing raid.
+   *Source:* Venusianer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Z3_Deutsches_Museum.JPG>`_,
+   CC BY-SA 3.0.
+
 The German engineer Konrad Zuse built the Z3 in 1941 — the first
 Turing-complete programmable computer. It used binary arithmetic and was
 programmed via punched film tape. Zuse worked largely in isolation, unaware of
@@ -315,6 +420,17 @@ in Munich.
 
 Colossus at Bletchley Park
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/colossus.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: Colossus, the world's first programmable electronic computer, at Bletchley Park
+
+   Colossus (1944) at Bletchley Park — the world's first electronic, digital,
+   programmable computer. Its existence was classified until the 1970s.
+   *Source:* The National Archives (UK), ref. FO850/234 /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Colossus.jpg>`_,
+   Public Domain.
 
 In Britain, the urgent need to break German military codes drove the development
 of Colossus — the world's first electronic, digital, programmable computer,
@@ -326,6 +442,16 @@ obscured its place in computing history for decades.
 ENIAC and the Women Who Programmed It
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/eniac.jpg
+   :width: 280px
+   :figclass: float-right
+   :alt: The ENIAC computer filling a large room at the University of Pennsylvania
+
+   ENIAC (1945) on display at the University of Pennsylvania — the room-filling
+   machine that could perform thousands of arithmetic operations per second.
+   *Source:* Paul W. Shaffer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:ENIAC_Penn1.jpg>`_,
+   CC BY-SA 3.0.
+
 The ENIAC — Electronic Numerical Integrator and Computer — was built at the
 University of Pennsylvania by J. Presper Eckert and John Mauchly and became
 operational in 1945. Filling a room and consuming 150 kilowatts of power, it
@@ -335,6 +461,18 @@ wiring of computations on the ENIAC was carried out by six women: Jean Jennings,
 Frances Bilas, Betty Holberton, Ruth Lichterman, Kathleen McNulty, and Marlyn
 Wescoff. Working from mathematical problem descriptions and wiring diagrams, they
 developed the techniques of programming as we understand them today.
+
+.. figure:: ../_static/images/computing_history/eniac_programmers.jpg
+   :width: 280px
+   :figclass: float-left
+   :alt: Betty Jennings and Frances Bilas operating the ENIAC main control panel, c. 1946
+
+   Betty Jennings (left, later Jean Bartik) and Frances Bilas (right, later
+   Frances Spence) at the ENIAC main control panel, Moore School of Engineering,
+   c. 1945–1947.
+   *Source:* United States Army /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Two_women_operating_ENIAC.gif>`_,
+   Public Domain.
 
 UNIVAC and the 1952 Election
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -376,6 +514,16 @@ Stored Program and Universal Computing
 The Universal Turing Machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/alan_turing.jpg
+   :width: 200px
+   :figclass: float-right
+   :alt: Portrait photograph of Alan Turing, 1951
+
+   Alan Turing (1912–1954), photographed in 1951 by Elliott & Fry. His 1936
+   paper created theoretical computer science before electronic computers existed.
+   *Source:* Elliott & Fry / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951).jpg>`_,
+   Public Domain.
+
 In 1936, a young Cambridge mathematician named Alan Turing published a paper
 that created theoretical computer science before electronic computers existed.
 Turing proposed an abstract machine — now called the Turing machine — consisting
@@ -395,6 +543,18 @@ pardon in 2017.
 
 John von Neumann and the Architecture of Modern Computers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/von_neumann.jpg
+   :width: 200px
+   :figclass: float-right
+   :alt: Portrait photograph of John von Neumann at Los Alamos
+
+   John von Neumann at Los Alamos, c. 1940s. His 1945 EDVAC report described
+   the arithmetic unit, control unit, and memory architecture that every
+   computer still uses today.
+   *Source:* Los Alamos National Laboratory /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:JohnvonNeumann-LosAlamos.gif>`_,
+   Public Domain.
 
 While Turing provided the theoretical foundation, John von Neumann provided the
 architectural blueprint. Von Neumann was a polymath of extraordinary range —

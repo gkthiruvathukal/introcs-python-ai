@@ -3,3 +3,36 @@ table.genindextable td {
     display: block;
     width: 100% !important;
 }
+
+/* Wrapped figures */
+figure.float-right,
+div.figure.float-right {
+    float: right;
+    margin: 0 0 1.5em 2em;
+    clear: right;
+    max-width: 300px;
+}
+
+figure.float-left,
+div.figure.float-left {
+    float: left;
+    margin: 0 2em 1.5em 0;
+    clear: left;
+    max-width: 300px;
+}
+
+figure.float-right img,
+div.figure.float-right img,
+figure.float-left img,
+div.figure.float-left img {
+    width: 100%;
+    height: auto;
+}
+
+/* Clear floats at section boundaries */
+section::after,
+div.section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
