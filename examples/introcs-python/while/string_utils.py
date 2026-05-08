@@ -1,11 +1,14 @@
+# start: one_char_per_line
 def one_char_per_line(s: str) -> None:
     """Print each character of s on a separate line."""
     i = 0
     while i < len(s):
         print(s[i])
         i += 1
+# end: one_char_per_line
 
 
+# start: count_vowels
 def count_vowels(s: str) -> int:
     """Return the number of vowel characters in s."""
     vowels = "aeiouAEIOU"
@@ -16,8 +19,10 @@ def count_vowels(s: str) -> int:
             count += 1
         i += 1
     return count
+# end: count_vowels
 
 
+# start: all_digits
 def all_digits(s: str) -> bool:
     """Return True if every character of s is a digit."""
     i = 0
@@ -26,8 +31,10 @@ def all_digits(s: str) -> bool:
             return False
         i += 1
     return True
+# end: all_digits
 
 
+# start: find_char
 def find_char(s: str, target: str) -> int:
     """Return the index of the first occurrence of target in s, or -1."""
     i = 0
@@ -36,6 +43,7 @@ def find_char(s: str, target: str) -> int:
             return i
         i += 1
     return -1
+# end: find_char
 
 
 if __name__ == '__main__':

@@ -78,18 +78,10 @@ Adding a ``__str__`` Method
 ``__str__`` is called automatically whenever Python needs a string
 representation of the object (e.g., inside ``print()``):
 
-.. code-block:: python
-
-   class Contact:
-       def __init__(self, name: str, phone: str, email: str):
-           self.name = name
-           self.phone = phone
-           self.email = email
-
-       def __str__(self) -> str:
-           return (f"Name:  {self.name}\n"
-                   f"Phone: {self.phone}\n"
-                   f"Email: {self.email}")
+.. literalinclude:: ../../examples/introcs-python/classes/contact.py
+   :language: python
+   :start-after: # start: Contact
+   :end-before: # end: Contact
 
 .. code-block:: python
 

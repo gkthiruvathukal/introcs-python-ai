@@ -20,14 +20,12 @@ One Character Per Line
 
 To print each character of a string on its own line:
 
-.. code-block:: python
+.. literalinclude:: ../../examples/introcs-python/while/string_utils.py
+   :language: python
+   :start-after: # start: one_char_per_line
+   :end-before: # end: one_char_per_line
 
-   def one_char_per_line(s: str) -> None:
-       """Print each character of s on a separate line."""
-       i = 0
-       while i < len(s):
-           print(s[i])
-           i += 1
+.. code-block:: python
 
    one_char_per_line("bug")
 
@@ -49,34 +47,24 @@ Following the loop-planning rubric:
 Counting Vowels
 ---------------
 
-.. code-block:: python
+.. literalinclude:: ../../examples/introcs-python/while/string_utils.py
+   :language: python
+   :start-after: # start: count_vowels
+   :end-before: # end: count_vowels
 
-   def count_vowels(s: str) -> int:
-       """Return the number of vowel characters in s."""
-       vowels = "aeiouAEIOU"
-       count = 0
-       i = 0
-       while i < len(s):
-           if s[i] in vowels:
-               count += 1
-           i += 1
-       return count
+.. code-block:: python
 
    print(count_vowels("Hello World"))   # 3
 
 Checking for All Digits
 ------------------------
 
-.. code-block:: python
+.. literalinclude:: ../../examples/introcs-python/while/string_utils.py
+   :language: python
+   :start-after: # start: all_digits
+   :end-before: # end: all_digits
 
-   def all_digits(s: str) -> bool:
-       """Return True if every character of s is a digit."""
-       i = 0
-       while i < len(s):
-           if not s[i].isdigit():
-               return False
-           i += 1
-       return True
+.. code-block:: python
 
    print(all_digits("12345"))   # True
    print(all_digits("123a5"))   # False
@@ -89,16 +77,10 @@ Finding a Character
 
 Search for the first occurrence of a target character:
 
-.. code-block:: python
-
-   def find_char(s: str, target: str) -> int:
-       """Return the index of the first occurrence of target in s, or -1."""
-       i = 0
-       while i < len(s):
-           if s[i] == target:
-               return i
-           i += 1
-       return -1
+.. literalinclude:: ../../examples/introcs-python/while/string_utils.py
+   :language: python
+   :start-after: # start: find_char
+   :end-before: # end: find_char
 
 This is essentially what ``s.find(target)`` does internally.
 

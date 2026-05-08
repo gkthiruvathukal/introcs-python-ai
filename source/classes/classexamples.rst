@@ -21,31 +21,10 @@ An ``Averager`` accumulates numeric values one at a time and reports
 their running average.  It illustrates a class whose instance variables
 track *changing internal state* rather than simply storing data:
 
-.. code-block:: python
-
-   class Averager:
-       def __init__(self):
-           self._count = 0
-           self._total = 0.0
-
-       def add_datum(self, value: float) -> None:
-           self._total += value
-           self._count += 1
-
-       def get_average(self) -> float:
-           if self._count == 0:
-               return float("nan")
-           return self._total / self._count
-
-       def get_count(self) -> int:
-           return self._count
-
-       def clear(self) -> None:
-           self._count = 0
-           self._total = 0.0
-
-       def __str__(self) -> str:
-           return f"Averager({self._count} values, avg={self.get_average():.4f})"
+.. literalinclude:: ../../examples/introcs-python/classes/averager.py
+   :language: python
+   :start-after: # start: Averager
+   :end-before: # end: Averager
 
 .. code-block:: python
 

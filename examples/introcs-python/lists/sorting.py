@@ -1,3 +1,4 @@
+# start: selection_sort
 def selection_sort(data: list) -> None:
     """Sort data in place using selection sort — O(N²)."""
     n = len(data)
@@ -7,8 +8,10 @@ def selection_sort(data: list) -> None:
             if data[j] < data[min_pos]:
                 min_pos = j
         data[i], data[min_pos] = data[min_pos], data[i]
+# end: selection_sort
 
 
+# start: bubble_sort
 def bubble_sort(data: list) -> None:
     """Sort data in place using bubble sort — O(N²)."""
     n = len(data)
@@ -16,8 +19,10 @@ def bubble_sort(data: list) -> None:
         for j in range(n - 1 - i):
             if data[j] > data[j + 1]:
                 data[j], data[j + 1] = data[j + 1], data[j]
+# end: bubble_sort
 
 
+# start: insertion_sort
 def insertion_sort(data: list) -> None:
     """Sort data in place using insertion sort — O(N²), efficient for nearly-sorted data."""
     for i in range(1, len(data)):
@@ -27,6 +32,7 @@ def insertion_sort(data: list) -> None:
             data[j + 1] = data[j]
             j -= 1
         data[j + 1] = key
+# end: insertion_sort
 
 
 if __name__ == '__main__':

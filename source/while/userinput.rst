@@ -19,23 +19,10 @@ Simple Prompt Helpers
 
 The simplest helper re-prompts the user when input cannot be converted:
 
-.. code-block:: python
-
-   def prompt_int(message: str) -> int:
-       """Keep prompting until the user enters a valid integer."""
-       while True:
-           try:
-               return int(input(message))
-           except ValueError:
-               print("Please enter a whole number.")
-
-   def prompt_float(message: str) -> float:
-       """Keep prompting until the user enters a valid float."""
-       while True:
-           try:
-               return float(input(message))
-           except ValueError:
-               print("Please enter a number.")
+.. literalinclude:: ../../examples/introcs-python/while/ui.py
+   :language: python
+   :start-after: # start: prompt_int_float
+   :end-before: # end: prompt_int_float
 
 .. index:: try/except
 
@@ -64,15 +51,10 @@ Prompting Within a Range
 
 A more useful helper also enforces a valid range:
 
-.. code-block:: python
-
-   def prompt_int_in_range(message: str, low: int, high: int) -> int:
-       """Keep prompting until the user enters an integer in [low, high]."""
-       while True:
-           value = prompt_int(message)
-           if low <= value <= high:
-               return value
-           print(f"{value} is out of range!  Enter a value from {low} to {high}.")
+.. literalinclude:: ../../examples/introcs-python/while/ui.py
+   :language: python
+   :start-after: # start: prompt_int_in_range
+   :end-before: # end: prompt_int_in_range
 
 Sample interaction:
 
@@ -89,17 +71,10 @@ Yes/No Prompt
 
 Another common need is a yes/no confirmation:
 
-.. code-block:: python
-
-   def prompt_yes_no(message: str) -> bool:
-       """Return True if user answers yes, False if no."""
-       while True:
-           answer = input(message + " (yes/no): ").strip().lower()
-           if answer in ("yes", "y"):
-               return True
-           if answer in ("no", "n"):
-               return False
-           print("Please answer yes or no.")
+.. literalinclude:: ../../examples/introcs-python/while/ui.py
+   :language: python
+   :start-after: # start: prompt_yes_no
+   :end-before: # end: prompt_yes_no
 
 Using the Helpers
 -----------------

@@ -4,14 +4,17 @@ class Node:
         self.next = next_node
 
 
+# start: print_list
 def print_list(head: "Node | None") -> None:
     current = head
     while current is not None:
         print(current.data, end=" -> ")
         current = current.next
     print("None")
+# end: print_list
 
 
+# start: SinglyLinkedList
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
@@ -50,6 +53,7 @@ class SinglyLinkedList:
 
     def __str__(self) -> str:
         return " -> ".join(str(x) for x in self) + " -> None"
+# end: SinglyLinkedList
 
 
 if __name__ == '__main__':

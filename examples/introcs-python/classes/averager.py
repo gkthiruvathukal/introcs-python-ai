@@ -1,3 +1,4 @@
+# start: Averager
 class Averager:
     def __init__(self):
         self._count = 0
@@ -21,6 +22,7 @@ class Averager:
 
     def __str__(self) -> str:
         return f"Averager({self._count} values, avg={self.get_average():.4f})"
+# end: Averager
 
 
 if __name__ == '__main__':

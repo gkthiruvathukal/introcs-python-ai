@@ -1,3 +1,4 @@
+# start: string_replace
 def string_replace(s: str, target: str, replacement: str) -> str:
     """Return s with the first occurrence of target replaced by replacement.
 
@@ -9,6 +10,7 @@ def string_replace(s: str, target: str, replacement: str) -> str:
     before = s[:i]
     after = s[i + len(target):]
     return before + replacement + after
+# end: string_replace
 
 
 def main() -> None:

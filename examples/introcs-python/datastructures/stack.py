@@ -1,3 +1,4 @@
+# start: Stack
 class Stack:
     def __init__(self):
         self._data = []
@@ -20,8 +21,10 @@ class Stack:
 
     def __len__(self) -> int:
         return len(self._data)
+# end: Stack
 
 
+# start: is_balanced
 def is_balanced(s: str) -> bool:
     """Return True if all brackets in s are correctly matched and nested."""
     stack = Stack()
@@ -33,6 +36,7 @@ def is_balanced(s: str) -> bool:
             if stack.is_empty() or stack.pop() != pairs[ch]:
                 return False
     return stack.is_empty()
+# end: is_balanced
 
 
 if __name__ == '__main__':

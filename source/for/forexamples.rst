@@ -227,18 +227,10 @@ prints ``"* |"`` once, then the column labels 0–6:
 To generalise to mod ``n``, replace 7 with ``n`` and compute the column
 width from the number of digits in ``n``:
 
-.. code-block:: python
-
-   def mod_mult_table(n: int) -> None:
-       width = len(str(n))
-       fmt = f"{{:>{width}}}"          # e.g. "{:>1}" for n=7, "{:>2}" for n=11
-       header = "* | " + " ".join(fmt.format(i) for i in range(n))
-       print(header)
-       print("-" * len(header))
-       for r in range(n):
-           row = fmt.format(r) + " | "
-           row += " ".join(fmt.format((r * c) % n) for c in range(n))
-           print(row)
+.. literalinclude:: ../../examples/introcs-python/for/mod_table.py
+   :language: python
+   :start-after: # start: mod_mult_table
+   :end-before: # end: mod_mult_table
 
 .. code-block:: python
 

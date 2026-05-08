@@ -15,25 +15,10 @@ call other functions.
 Example: Two Birthday Songs
 ----------------------------
 
-.. code-block:: python
-
-   def happy_birthday_emily():
-       print("Happy Birthday to you!")
-       print("Happy Birthday to you!")
-       print("Happy Birthday, dear Emily.")
-       print("Happy Birthday to you!")
-
-
-   def happy_birthday_andre():
-       print("Happy Birthday to you!")
-       print("Happy Birthday to you!")
-       print("Happy Birthday, dear Andre.")
-       print("Happy Birthday to you!")
-
-
-   happy_birthday_emily()
-   print()
-   happy_birthday_andre()
+.. literalinclude:: ../../examples/introcs-python/functions/birthday.py
+   :language: python
+   :start-after: # start: birthday_functions
+   :end-before: # end: birthday_functions
 
 Output:
 
@@ -77,15 +62,5 @@ The following would fail:
 The ``if __name__ == '__main__':`` pattern (from the Program Structure section)
 keeps calls cleanly separated from definitions:
 
-.. code-block:: python
-
-   def happy_birthday_emily():
-       ...
-
-   def happy_birthday_andre():
-       ...
-
-   if __name__ == '__main__':
-       happy_birthday_emily()
-       print()
-       happy_birthday_andre()
+.. literalinclude:: ../../examples/introcs-python/functions/birthday.py
+   :language: python

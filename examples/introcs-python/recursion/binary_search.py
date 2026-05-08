@@ -1,3 +1,4 @@
+# start: binary_search
 def binary_search(data: list, target, lo: int = 0, hi: int | None = None) -> int:
     """Return the index of target in sorted data, or -1 if not found."""
     if hi is None:
@@ -11,6 +12,7 @@ def binary_search(data: list, target, lo: int = 0, hi: int | None = None) -> int
         return binary_search(data, target, mid + 1, hi)
     else:
         return binary_search(data, target, lo, mid - 1)
+# end: binary_search
 
 
 if __name__ == '__main__':

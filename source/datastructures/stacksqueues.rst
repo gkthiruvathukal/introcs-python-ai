@@ -54,30 +54,10 @@ A Stack Class
 
 Wrapping the list in a class gives a cleaner interface:
 
-.. code-block:: python
-
-   class Stack:
-       def __init__(self):
-           self._data = []
-
-       def push(self, item) -> None:
-           self._data.append(item)
-
-       def pop(self):
-           if self.is_empty():
-               raise IndexError("pop from empty stack")
-           return self._data.pop()
-
-       def peek(self):
-           if self.is_empty():
-               raise IndexError("peek at empty stack")
-           return self._data[-1]
-
-       def is_empty(self) -> bool:
-           return len(self._data) == 0
-
-       def __len__(self) -> int:
-           return len(self._data)
+.. literalinclude:: ../../examples/introcs-python/datastructures/stack.py
+   :language: python
+   :start-after: # start: Stack
+   :end-before: # end: Stack
 
 Application: Checking Balanced Brackets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -86,18 +66,10 @@ Application: Checking Balanced Brackets
 
 A classic stack use-case: verify that brackets are correctly matched:
 
-.. code-block:: python
-
-   def is_balanced(s: str) -> bool:
-       stack = Stack()
-       pairs = {")": "(", "]": "[", "}": "{"}
-       for ch in s:
-           if ch in "([{":
-               stack.push(ch)
-           elif ch in ")]}":
-               if stack.is_empty() or stack.pop() != pairs[ch]:
-                   return False
-       return stack.is_empty()
+.. literalinclude:: ../../examples/introcs-python/datastructures/stack.py
+   :language: python
+   :start-after: # start: is_balanced
+   :end-before: # end: is_balanced
 
 .. code-block:: python
 
@@ -141,24 +113,7 @@ A Queue Class
 
 .. index:: Queue class
 
-.. code-block:: python
-
-   from collections import deque
-
-   class Queue:
-       def __init__(self):
-           self._data = deque()
-
-       def enqueue(self, item) -> None:
-           self._data.append(item)
-
-       def dequeue(self):
-           if self.is_empty():
-               raise IndexError("dequeue from empty queue")
-           return self._data.popleft()
-
-       def is_empty(self) -> bool:
-           return len(self._data) == 0
-
-       def __len__(self) -> int:
-           return len(self._data)
+.. literalinclude:: ../../examples/introcs-python/datastructures/queue.py
+   :language: python
+   :start-after: # start: Queue
+   :end-before: # end: Queue

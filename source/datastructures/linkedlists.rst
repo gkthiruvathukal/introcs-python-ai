@@ -48,14 +48,10 @@ Traversal
 
 Walk the list by following ``next`` until ``None``:
 
-.. code-block:: python
-
-   def print_list(head: "Node | None") -> None:
-       current = head
-       while current is not None:
-           print(current.data, end=" -> ")
-           current = current.next
-       print("None")
+.. literalinclude:: ../../examples/introcs-python/datastructures/linked_list.py
+   :language: python
+   :start-after: # start: print_list
+   :end-before: # end: print_list
 
 .. code-block:: python
 
@@ -74,46 +70,10 @@ The SinglyLinkedList Class
 
 A wrapper class manages the ``head`` pointer and provides clean methods:
 
-.. code-block:: python
-
-   class SinglyLinkedList:
-       def __init__(self):
-           self.head = None
-
-       def prepend(self, data) -> None:
-           self.head = Node(data, self.head)
-
-       def append(self, data) -> None:
-           new_node = Node(data)
-           if self.head is None:
-               self.head = new_node
-               return
-           current = self.head
-           while current.next is not None:
-               current = current.next
-           current.next = new_node
-
-       def remove(self, data) -> None:
-           if self.head is None:
-               return
-           if self.head.data == data:
-               self.head = self.head.next
-               return
-           current = self.head
-           while current.next is not None:
-               if current.next.data == data:
-                   current.next = current.next.next
-                   return
-               current = current.next
-
-       def __iter__(self):
-           current = self.head
-           while current is not None:
-               yield current.data
-               current = current.next
-
-       def __str__(self) -> str:
-           return " -> ".join(str(x) for x in self) + " -> None"
+.. literalinclude:: ../../examples/introcs-python/datastructures/linked_list.py
+   :language: python
+   :start-after: # start: SinglyLinkedList
+   :end-before: # end: SinglyLinkedList
 
 .. code-block:: python
 

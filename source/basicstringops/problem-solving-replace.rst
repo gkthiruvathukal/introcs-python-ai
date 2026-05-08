@@ -107,15 +107,10 @@ For ``s = "It was the best of times."`` and ``target = "best"``:
 
 **Step 3 — Concatenate the pieces**
 
-.. code-block:: python
-
-   def string_replace(s: str, target: str, replacement: str) -> str:
-       i = s.find(target)
-       if i == -1:
-           return s
-       before = s[:i]
-       after  = s[i + len(target):]
-       return before + replacement + after
+.. literalinclude:: ../../examples/introcs-python/basicstringops/string_replace.py
+   :language: python
+   :start-after: # start: string_replace
+   :end-before: # end: string_replace
 
 All four tests should now pass.  Run and verify.
 

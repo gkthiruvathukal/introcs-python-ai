@@ -60,16 +60,10 @@ Selection Sort
 Selection sort finds the minimum of the unsorted portion and swaps it
 into place.  It always makes exactly N-1 swaps, but O(N²) comparisons:
 
-.. code-block:: python
-
-   def selection_sort(data: list) -> None:
-       n = len(data)
-       for i in range(n):
-           min_pos = i
-           for j in range(i + 1, n):
-               if data[j] < data[min_pos]:
-                   min_pos = j
-           data[i], data[min_pos] = data[min_pos], data[i]
+.. literalinclude:: ../../examples/introcs-python/lists/sorting.py
+   :language: python
+   :start-after: # start: selection_sort
+   :end-before: # end: selection_sort
 
 .. code-block:: python
 
@@ -96,14 +90,10 @@ they are out of order.  After each pass the largest unsorted element
 "bubbles" to its correct position.  Both swaps and comparisons are
 O(N²):
 
-.. code-block:: python
-
-   def bubble_sort(data: list) -> None:
-       n = len(data)
-       for i in range(n - 1):
-           for j in range(n - 1 - i):
-               if data[j] > data[j + 1]:
-                   data[j], data[j + 1] = data[j + 1], data[j]
+.. literalinclude:: ../../examples/introcs-python/lists/sorting.py
+   :language: python
+   :start-after: # start: bubble_sort
+   :end-before: # end: bubble_sort
 
 .. code-block:: python
 
@@ -126,16 +116,10 @@ Insertion sort builds a sorted sublist from the left, inserting each
 new element into its correct position.  It is efficient for nearly-sorted
 data:
 
-.. code-block:: python
-
-   def insertion_sort(data: list) -> None:
-       for i in range(1, len(data)):
-           key = data[i]
-           j = i - 1
-           while j >= 0 and data[j] > key:
-               data[j + 1] = data[j]
-               j -= 1
-           data[j + 1] = key
+.. literalinclude:: ../../examples/introcs-python/lists/sorting.py
+   :language: python
+   :start-after: # start: insertion_sort
+   :end-before: # end: insertion_sort
 
 .. code-block:: python
 

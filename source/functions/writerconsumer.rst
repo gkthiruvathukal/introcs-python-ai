@@ -24,18 +24,10 @@ The writer is responsible for:
 A *docstring* is a string literal placed immediately after the ``def`` line.
 Python tools can display it as help text:
 
-.. code-block:: python
-
-   def weekly_wages(hours: float, rate: float) -> float:
-       """Return total weekly wages including 1.5x overtime above 40 hours.
-
-       hours -- total hours worked (float)
-       rate  -- regular hourly wage in dollars (float)
-       """
-       if hours <= 40:
-           return hours * rate
-       else:
-           return 40 * rate + (hours - 40) * rate * 1.5
+.. literalinclude:: ../../examples/introcs-python/functions/wages.py
+   :language: python
+   :start-after: # start: weekly_wages
+   :end-before: # end: weekly_wages
 
 .. code-block:: none
 
@@ -77,21 +69,7 @@ Separation of Concerns
 Good programs separate the *computation* (what is calculated) from the
 *presentation* (how results are shown).  Functions help with this:
 
-.. code-block:: python
-
-   def weekly_wages(hours: float, rate: float) -> float:
-       """Return total weekly pay."""
-       if hours <= 40:
-           return hours * rate
-       return 40 * rate + (hours - 40) * rate * 1.5
-
-   def main() -> None:
-       hours = float(input("Hours worked: "))
-       rate = float(input("Hourly rate: $"))
-       pay = weekly_wages(hours, rate)
-       print(f"Weekly wages: ${pay:.2f}")
-
-   if __name__ == '__main__':
-       main()
+.. literalinclude:: ../../examples/introcs-python/functions/wages.py
+   :language: python
 
 The ``weekly_wages`` function only computes; ``main`` handles input and output.

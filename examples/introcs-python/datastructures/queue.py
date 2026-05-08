@@ -1,6 +1,7 @@
 from collections import deque
 
 
+# start: Queue
 class Queue:
     def __init__(self):
         self._data = deque()
@@ -18,6 +19,7 @@ class Queue:
 
     def __len__(self) -> int:
         return len(self._data)
+# end: Queue
 
 
 if __name__ == '__main__':

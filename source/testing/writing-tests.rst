@@ -22,31 +22,10 @@ Testing the Rational Class
 
 Assuming ``Rational`` is defined in ``rational.py``:
 
-.. code-block:: python
-
-   from rational import Rational
-
-   def test_normalisation() -> None:
-       r = Rational(6, -10)
-       assert str(r) == "-3/5"
-
-   def test_addition() -> None:
-       f = Rational(-3, 5)
-       h = Rational(1, 2)
-       assert str(f + h) == "-1/10"
-
-   def test_multiplication() -> None:
-       assert Rational(2, 3) * Rational(3, 4) == Rational(1, 2)
-
-   def test_equality() -> None:
-       assert Rational(2, 4) == Rational(1, 2)
-       assert Rational(1, 3) != Rational(1, 4)
-
-   def test_whole_number() -> None:
-       assert str(Rational(6, 3)) == "2"
-
-   def test_float_conversion() -> None:
-       assert float(Rational(1, 4)) == 0.25
+.. literalinclude:: ../../examples/introcs-python/testing/test_rational.py
+   :language: python
+   :start-after: # start: basic_tests
+   :end-before: # end: basic_tests
 
 Testing for Exceptions
 -----------------------
@@ -81,18 +60,10 @@ Always test:
 - **Already-normalised values**: ``Rational(1, 2)`` should stay ``1/2``
 - **Idempotent operations**: adding zero, multiplying by one
 
-.. code-block:: python
-
-   def test_add_zero() -> None:
-       r = Rational(3, 4)
-       assert r + Rational(0, 1) == r
-
-   def test_multiply_by_one() -> None:
-       r = Rational(3, 4)
-       assert r * Rational(1) == r
-
-   def test_negative_numerator_and_denominator() -> None:
-       assert str(Rational(-2, -3)) == "2/3"
+.. literalinclude:: ../../examples/introcs-python/testing/test_rational.py
+   :language: python
+   :start-after: # start: edge_case_tests
+   :end-before: # end: edge_case_tests
 
 Organising Tests in a Class
 -----------------------------
@@ -102,18 +73,10 @@ Organising Tests in a Class
 For a large module, group related tests in a class prefixed with
 ``Test``:
 
-.. code-block:: python
-
-   class TestRationalArithmetic:
-       def test_add(self) -> None:
-           assert Rational(1, 3) + Rational(1, 6) == Rational(1, 2)
-
-       def test_sub(self) -> None:
-           assert Rational(3, 4) - Rational(1, 4) == Rational(1, 2)
-
-   class TestRationalComparison:
-       def test_less_than(self) -> None:
-           assert Rational(1, 3) < Rational(1, 2)
+.. literalinclude:: ../../examples/introcs-python/testing/test_rational.py
+   :language: python
+   :start-after: # start: test_classes
+   :end-before: # end: test_classes
 
 pytest discovers and runs these automatically with no extra configuration.
 

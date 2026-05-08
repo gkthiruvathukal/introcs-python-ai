@@ -74,20 +74,10 @@ Example: Shipping Cost
 
 Shipping cost depends on both weight and destination zone:
 
-.. code-block:: python
-
-   def shipping_cost(weight: float, zone: int) -> float:
-       """Return shipping cost based on weight and zone (1 or 2)."""
-       if zone == 1:
-           if weight <= 5:
-               return 3.99
-           else:
-               return 3.99 + 0.50 * (weight - 5)
-       else:   # zone == 2
-           if weight <= 5:
-               return 6.99
-           else:
-               return 6.99 + 0.75 * (weight - 5)
+.. literalinclude:: ../../examples/introcs-python/decisions/shipping.py
+   :language: python
+   :start-after: # start: shipping_cost
+   :end-before: # end: shipping_cost
 
 Nesting is appropriate here because the cost formula differs by zone.
 

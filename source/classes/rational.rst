@@ -21,24 +21,10 @@ Class Definition and Normalisation
 
 .. index:: Rational; __init__, gcd
 
-.. code-block:: python
-
-   import math
-
-   class Rational:
-       def __init__(self, numerator: int, denominator: int = 1):
-           if denominator == 0:
-               raise ValueError("Denominator cannot be zero")
-           g = math.gcd(abs(numerator), abs(denominator))
-           sign = -1 if denominator < 0 else 1
-           self._num = sign * numerator // g
-           self._denom = sign * denominator // g
-
-       def numerator(self) -> int:
-           return self._num
-
-       def denominator(self) -> int:
-           return self._denom
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: init
+   :end-before: # end: init
 
 ``math.gcd`` reduces the fraction to lowest terms.  We force the
 denominator to always be positive so ``-3/5`` is stored as ``(-3, 5)``
@@ -49,15 +35,10 @@ String Representation
 
 .. index:: Rational; __str__, __repr__
 
-.. code-block:: python
-
-       def __str__(self) -> str:
-           if self._denom == 1:
-               return str(self._num)
-           return f"{self._num}/{self._denom}"
-
-       def __repr__(self) -> str:
-           return f"Rational({self._num}, {self._denom})"
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: str_repr
+   :end-before: # end: str_repr
 
 Arithmetic Operators
 --------------------
@@ -67,53 +48,30 @@ Arithmetic Operators
 Python calls ``__add__`` when ``+`` is used between two ``Rational``
 objects:
 
-.. code-block:: python
-
-       def __add__(self, other: "Rational") -> "Rational":
-           return Rational(
-               self._num * other._denom + other._num * self._denom,
-               self._denom * other._denom
-           )
-
-       def __sub__(self, other: "Rational") -> "Rational":
-           return Rational(
-               self._num * other._denom - other._num * self._denom,
-               self._denom * other._denom
-           )
-
-       def __mul__(self, other: "Rational") -> "Rational":
-           return Rational(self._num * other._num,
-                           self._denom * other._denom)
-
-       def __truediv__(self, other: "Rational") -> "Rational":
-           return Rational(self._num * other._denom,
-                           self._denom * other._num)
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: arithmetic
+   :end-before: # end: arithmetic
 
 Comparison Operators
 --------------------
 
 .. index:: Rational; __eq__, __lt__
 
-.. code-block:: python
-
-       def __eq__(self, other: object) -> bool:
-           return self._num == other._num and self._denom == other._denom
-
-       def __lt__(self, other: "Rational") -> bool:
-           return self._num * other._denom < other._num * self._denom
-
-       def __le__(self, other: "Rational") -> bool:
-           return self == other or self < other
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: comparison
+   :end-before: # end: comparison
 
 Conversion Methods
 ------------------
 
 .. index:: Rational; float()
 
-.. code-block:: python
-
-       def __float__(self) -> float:
-           return self._num / self._denom
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: float
+   :end-before: # end: float
 
 Putting It Together
 --------------------
@@ -151,18 +109,10 @@ Static Parse Method
 A class method acts on the class itself rather than an instance —
 Python's replacement for C#'s ``static Parse``:
 
-.. code-block:: python
-
-       @classmethod
-       def parse(cls, s: str) -> "Rational":
-           if "/" in s:
-               num, denom = s.split("/")
-               return cls(int(num), int(denom))
-           if "." in s:
-               digits_after = len(s.split(".")[1])
-               value = int(s.replace(".", ""))
-               return cls(value, 10 ** digits_after)
-           return cls(int(s))
+.. literalinclude:: ../../examples/introcs-python/classes/rational.py
+   :language: python
+   :start-after: # start: parse
+   :end-before: # end: parse
 
 .. code-block:: python
 

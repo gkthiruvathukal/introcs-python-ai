@@ -2,6 +2,7 @@ import math
 
 
 class Rational:
+    # start: init
     def __init__(self, numerator: int, denominator: int = 1):
         if denominator == 0:
             raise ValueError("Denominator cannot be zero")
@@ -15,7 +16,9 @@ class Rational:
 
     def denominator(self) -> int:
         return self._denom
+    # end: init
 
+    # start: str_repr
     def __str__(self) -> str:
         if self._denom == 1:
             return str(self._num)
@@ -23,7 +26,9 @@ class Rational:
 
     def __repr__(self) -> str:
         return f"Rational({self._num}, {self._denom})"
+    # end: str_repr
 
+    # start: arithmetic
     def __add__(self, other: "Rational") -> "Rational":
         return Rational(
             self._num * other._denom + other._num * self._denom,
@@ -41,7 +46,9 @@ class Rational:
 
     def __truediv__(self, other: "Rational") -> "Rational":
         return Rational(self._num * other._denom, self._denom * other._num)
+    # end: arithmetic
 
+    # start: comparison
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Rational):
             return NotImplemented
@@ -52,10 +59,14 @@ class Rational:
 
     def __le__(self, other: "Rational") -> bool:
         return self == other or self < other
+    # end: comparison
 
+    # start: float
     def __float__(self) -> float:
         return self._num / self._denom
+    # end: float
 
+    # start: parse
     @classmethod
     def parse(cls, s: str) -> "Rational":
         if "/" in s:
@@ -66,6 +77,7 @@ class Rational:
             value = int(s.replace(".", ""))
             return cls(value, 10 ** digits_after)
         return cls(int(s))
+    # end: parse
 
 
 if __name__ == '__main__':

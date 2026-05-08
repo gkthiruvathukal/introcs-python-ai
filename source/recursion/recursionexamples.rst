@@ -50,20 +50,10 @@ Recursive Binary Search
 Binary search on a sorted list can be expressed recursively: check the
 midpoint, then recurse on the left or right half:
 
-.. code-block:: python
-
-   def binary_search(data: list, target, lo: int = 0, hi: int | None = None) -> int:
-       if hi is None:
-           hi = len(data) - 1
-       if lo > hi:
-           return -1             # not found
-       mid = (lo + hi) // 2
-       if data[mid] == target:
-           return mid
-       elif data[mid] < target:
-           return binary_search(data, target, mid + 1, hi)
-       else:
-           return binary_search(data, target, lo, mid - 1)
+.. literalinclude:: ../../examples/introcs-python/recursion/binary_search.py
+   :language: python
+   :start-after: # start: binary_search
+   :end-before: # end: binary_search
 
 .. code-block:: python
 
@@ -170,16 +160,10 @@ Infinite Factorial Generator
 
 .. index:: generator; factorial
 
-.. code-block:: python
-
-   def factorials():
-       """Yield 0!, 1!, 2!, 3!, ... without bound."""
-       result = 1
-       n = 0
-       while True:
-           yield result
-           n += 1
-           result *= n
+.. literalinclude:: ../../examples/introcs-python/recursion/generators.py
+   :language: python
+   :start-after: # start: factorials
+   :end-before: # end: factorials
 
 The generator runs forever by design.  To collect only the values up to
 a ceiling, use ``itertools.takewhile``:
@@ -209,17 +193,10 @@ Output:
 You can also write a self-contained generator that accepts the ceiling
 directly — useful when you want a single, reusable function:
 
-.. code-block:: python
-
-   def factorials_up_to(ceiling: int):
-       """Yield each factorial that does not exceed *ceiling*."""
-       if ceiling < 1:
-           raise ValueError(f"ceiling must be >= 1, got {ceiling}")
-       result, n = 1, 0
-       while result <= ceiling:
-           yield result
-           n += 1
-           result *= n
+.. literalinclude:: ../../examples/introcs-python/recursion/generators.py
+   :language: python
+   :start-after: # start: factorials_up_to
+   :end-before: # end: factorials_up_to
 
 .. code-block:: python
 
@@ -236,14 +213,10 @@ Infinite Fibonacci Generator
 
 .. index:: generator; Fibonacci
 
-.. code-block:: python
-
-   def fibonacci():
-       """Yield F(0), F(1), F(2), ... without bound."""
-       prev, curr = 0, 1
-       while True:
-           yield prev
-           prev, curr = curr, prev + curr
+.. literalinclude:: ../../examples/introcs-python/recursion/generators.py
+   :language: python
+   :start-after: # start: fibonacci
+   :end-before: # end: fibonacci
 
 .. code-block:: python
 
@@ -260,16 +233,10 @@ Output:
 
 Again, a ceiling-aware version keeps the intent local to the function:
 
-.. code-block:: python
-
-   def fibonacci_up_to(ceiling: int):
-       """Yield each Fibonacci number that does not exceed *ceiling*."""
-       if ceiling < 0:
-           raise ValueError(f"ceiling must be >= 0, got {ceiling}")
-       prev, curr = 0, 1
-       while prev <= ceiling:
-           yield prev
-           prev, curr = curr, prev + curr
+.. literalinclude:: ../../examples/introcs-python/recursion/generators.py
+   :language: python
+   :start-after: # start: fibonacci_up_to
+   :end-before: # end: fibonacci_up_to
 
 .. code-block:: python
 

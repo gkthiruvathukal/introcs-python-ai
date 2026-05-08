@@ -1,3 +1,4 @@
+# start: Contact
 class Contact:
     def __init__(self, name: str, phone: str, email: str):
         self.name = name
@@ -11,6 +12,7 @@ class Contact:
 
     def set_email(self, new_email: str) -> None:
         self.email = new_email
+# end: Contact
 
 
 if __name__ == '__main__':

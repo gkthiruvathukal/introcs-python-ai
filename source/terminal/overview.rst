@@ -409,24 +409,8 @@ Professional CLI Programs with ``argparse``
 ``sys.argv`` is simple but limited — it provides no automatic help, no validation,
 and no support for optional flags. Python's ``argparse`` module solves all of this.
 
-.. code-block:: python
-
-   import argparse
-
-   def main():
-       parser = argparse.ArgumentParser(description="A friendly greeting program")
-       parser.add_argument("name", help="Your name")
-       parser.add_argument("-n", "--number", type=int, default=1,
-                           help="Number of times to greet (default: 1)")
-       args = parser.parse_args()
-
-       for _ in range(args.number):
-           print(f"Hello, {args.name}!")
-
-       return 0
-
-   if __name__ == "__main__":
-       exit(main())
+.. literalinclude:: ../../examples/introcs-python/terminal/greet_argparse.py
+   :language: python
 
 Try:
 
@@ -441,52 +425,8 @@ their types, and their descriptions — essential for any tool that others will 
 
 Here is a more complete example — a file search tool:
 
-.. code-block:: python
-
-   import argparse
-   import sys
-
-   def search_file(filename, keyword, case_sensitive=True, line_numbers=False):
-       try:
-           with open(filename, "r") as f:
-               for line_num, line in enumerate(f, start=1):
-                   haystack = line if case_sensitive else line.lower()
-                   needle = keyword if case_sensitive else keyword.lower()
-                   if needle in haystack:
-                       if line_numbers:
-                           print(f"{line_num}: {line.rstrip()}")
-                       else:
-                           print(line.rstrip())
-           return 0
-       except FileNotFoundError:
-           print(f"Error: '{filename}' not found", file=sys.stderr)
-           return 1
-       except PermissionError:
-           print(f"Error: permission denied for '{filename}'", file=sys.stderr)
-           return 1
-
-   def main():
-       parser = argparse.ArgumentParser(
-           description="Search for a keyword in a text file",
-           epilog="Example: python search_file.py data.txt Python -i -n"
-       )
-       parser.add_argument("filename", help="Path to the file to search")
-       parser.add_argument("keyword", help="Keyword to search for")
-       parser.add_argument("-i", "--ignore-case", action="store_true",
-                           help="Case-insensitive search")
-       parser.add_argument("-n", "--line-numbers", action="store_true",
-                           help="Show line numbers in output")
-       args = parser.parse_args()
-
-       return search_file(
-           args.filename,
-           args.keyword,
-           case_sensitive=not args.ignore_case,
-           line_numbers=args.line_numbers
-       )
-
-   if __name__ == "__main__":
-       sys.exit(main())
+.. literalinclude:: ../../examples/introcs-python/terminal/search_file.py
+   :language: python
 
 Try:
 

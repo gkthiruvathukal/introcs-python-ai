@@ -1,3 +1,4 @@
+# start: birthday_functions
 def happy_birthday_emily() -> None:
     print("Happy Birthday to you!")
     print("Happy Birthday to you!")
@@ -10,6 +11,7 @@ def happy_birthday_andre() -> None:
     print("Happy Birthday to you!")
     print("Happy Birthday, dear Andre.")
     print("Happy Birthday to you!")
+# end: birthday_functions
 
 
 if __name__ == '__main__':

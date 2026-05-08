@@ -64,20 +64,8 @@ optional but good practice when one of the choices should always apply.
 Wages with Overtime
 -------------------
 
-.. code-block:: python
-
-   def weekly_wages(hours: float, rate: float) -> float:
-       """Return total weekly wages including 1.5x overtime above 40 hours."""
-       if hours <= 40:
-           return hours * rate
-       else:
-           overtime = hours - 40
-           return 40 * rate + overtime * rate * 1.5
-
-   hours = float(input("Hours worked: "))
-   rate  = float(input("Hourly rate: $"))
-   pay   = weekly_wages(hours, rate)
-   print(f"Weekly wages: ${pay:.2f}")
+.. literalinclude:: ../../examples/introcs-python/decisions/wages.py
+   :language: python
 
 Sample run:
 
@@ -92,21 +80,8 @@ BMI Categories
 
 Here is an example with four ``elif`` branches:
 
-.. code-block:: python
-
-   def bmi_category(bmi: float) -> str:
-       """Return the weight category for a given BMI."""
-       if bmi < 18.5:
-           return "Underweight"
-       elif bmi < 25.0:
-           return "Normal"
-       elif bmi < 30.0:
-           return "Overweight"
-       else:
-           return "Obese"
-
-   bmi = float(input("Enter BMI: "))
-   print(bmi_category(bmi))
+.. literalinclude:: ../../examples/introcs-python/decisions/bmi.py
+   :language: python
 
 ``if``-``elif``-``else`` Exercise
 -----------------------------------

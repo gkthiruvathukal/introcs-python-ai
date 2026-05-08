@@ -1,3 +1,4 @@
+# start: mod_mult_table
 def mod_mult_table(n: int) -> None:
     """Print the modular multiplication table for mod n."""
     width = len(str(n))
@@ -9,6 +10,7 @@ def mod_mult_table(n: int) -> None:
         row = fmt.format(r) + " | "
         row += " ".join(fmt.format((r * c) % n) for c in range(n))
         print(row)
+# end: mod_mult_table
 
 
 if __name__ == '__main__':

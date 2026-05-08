@@ -88,29 +88,8 @@ Menu Loop
 
 Interactive loops are often used to drive a menu:
 
-.. code-block:: python
-
-   def show_menu() -> None:
-       print("\n1. Add")
-       print("2. Subtract")
-       print("3. Quit")
-
-   while True:
-       show_menu()
-       choice = input("Choose: ").strip()
-       if choice == "1":
-           a = float(input("a: "))
-           b = float(input("b: "))
-           print(f"Result: {a + b}")
-       elif choice == "2":
-           a = float(input("a: "))
-           b = float(input("b: "))
-           print(f"Result: {a - b}")
-       elif choice == "3":
-           print("Goodbye.")
-           break
-       else:
-           print("Invalid choice.")
+.. literalinclude:: ../../examples/introcs-python/while/menu.py
+   :language: python
 
 The loop exits only when the user chooses option 3.
 

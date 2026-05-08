@@ -1,3 +1,4 @@
+# start: prompt_int_float
 def prompt_int(message: str) -> int:
     """Keep prompting until the user enters a valid integer."""
     while True:
@@ -14,8 +15,10 @@ def prompt_float(message: str) -> float:
             return float(input(message))
         except ValueError:
             print("Please enter a number.")
+# end: prompt_int_float
 
 
+# start: prompt_int_in_range
 def prompt_int_in_range(message: str, low: int, high: int) -> int:
     """Keep prompting until the user enters an integer in [low, high]."""
     while True:
@@ -23,8 +26,10 @@ def prompt_int_in_range(message: str, low: int, high: int) -> int:
         if low <= value <= high:
             return value
         print(f"{value} is out of range!  Enter a value from {low} to {high}.")
+# end: prompt_int_in_range
 
 
+# start: prompt_yes_no
 def prompt_yes_no(message: str) -> bool:
     """Return True if user answers yes, False if no."""
     while True:
@@ -34,6 +39,7 @@ def prompt_yes_no(message: str) -> bool:
         if answer in ("no", "n"):
             return False
         print("Please answer yes or no.")
+# end: prompt_yes_no
 
 
 if __name__ == '__main__':
