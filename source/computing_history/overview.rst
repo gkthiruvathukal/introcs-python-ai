@@ -358,7 +358,7 @@ Samuel Morse and the Telegraph
    `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Samuel_Morse_portrait.jpg>`__,
    Public Domain.
 
-.. figure:: ../_static/images/computing_history/morse_code_chart.svg
+.. figure:: ../_static/images/computing_history/morse_code_chart.png
    :width: 380px
    :alt: International Morse Code chart showing dot-dash sequences for all letters and digits
 
