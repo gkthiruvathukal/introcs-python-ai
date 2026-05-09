@@ -110,23 +110,30 @@ including units this textbook does not address. The **Coverage** column uses:
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 85
+   :widths: 22 78
 
-   * - Level
+   * - Coverage
      - Meaning
    * - **Full**
-     - All or nearly all core topics are substantively addressed.
-   * - **Partial**
-     - Most core topics are addressed; identifiable gaps remain.
+     - All CS1-expected topics for this KU are substantively addressed.
+   * - **Partial — CS1 gap**
+     - This textbook covers part of the KU but is missing CS1-level
+       content that *should* be added to a CS1 course.
+   * - **Partial — CS2 gap**
+     - The CS1-level content for this KU is complete. The remaining
+       gaps are CS2+ topics that are intentionally deferred.
    * - **Minimal**
-     - The topic is introduced but not developed to the depth
-       the standard expects.
+     - The topic is touched on incidentally but not developed to the
+       depth the standard expects (used mainly for CS2-level KUs where
+       the textbook happens to introduce the concept).
    * - **—**
-     - Topic is absent from the textbook.
+     - Topic is absent from this textbook entirely.
 
 The **Course Level** column shows where a KU is *first expected* in a typical
-CS curriculum — CS0, CS1, CS2, CS3, or CS3+. The Gap Analysis section focuses
-on KUs at the CS1 level, since this is a CS1 textbook.
+CS curriculum — CS0, CS1, CS2, CS3, or CS3+. For every row marked CS1,
+the Coverage column explicitly flags whether further development is needed
+in this book (CS1 gap) or whether the CS1 portion is already complete
+(CS2 gap, or Full).
 
 Coverage Summary
 ----------------
@@ -203,34 +210,47 @@ SDF thoroughly — it is the backbone of the curriculum.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **SDF1** Algorithms and Design
      - Tier 1
      - CS1
-     - Context, Data, Functions
+     - :doc:`Context </context/context>`,
+       :doc:`Data </data/data>`,
+       :doc:`Functions </functions/functions>`
      - **Full**
    * - **SDF2** Fundamental Programming Concepts
      - Tier 1
      - CS1
-     - Data, Functions, Decisions, While, For,
-       Files, User Input, Recursion
+     - :doc:`Data </data/data>`,
+       :doc:`Functions </functions/functions>`,
+       :doc:`Decisions </decisions/decisions>`,
+       :doc:`While Loops </while/while>`,
+       :doc:`For Loops </for/for>`,
+       :doc:`Files </files/files>`,
+       :ref:`User Input <User-Input-Overview>`,
+       :doc:`Recursion </recursion/recursion>`
      - **Full**
    * - **SDF3** Fundamental Data Structures
      - Tier 1/2
      - CS1
-     - Lists, Tuples, Dicts, Lists of Dicts,
-       Dict Algorithms, Data Structures.
+     - :doc:`Lists </lists/lists>`,
+       :doc:`Tuples </tuples/tuples>`,
+       :doc:`Dictionaries </dictionaries/dictionaries>`,
+       :ref:`Lists of Dicts <Lists-Of-Dictionaries>`,
+       :ref:`Dict Algorithms <Dictionary-Algorithms>`,
+       :doc:`Data Structures </datastructures/datastructures>`.
        *Missing:* binary search trees, graphs
        (CS2 topics).
-     - **Partial**
+     - **Partial — CS2 gap**
    * - **SDF4** Development Methods
      - Tier 1
      - CS1
-     - Testing, Error Handling.
+     - :doc:`Testing </testing/testing>`,
+       :ref:`Error Handling <Error-Handling>`.
        *Missing:* systematic debugging strategies,
        refactoring as a standalone topic.
-     - **Partial**
+     - **Partial — CS1 gap**
 
 .. index::
    SDF; Algorithms and Design
@@ -241,7 +261,8 @@ SDF thoroughly — it is the backbone of the curriculum.
 **CS2023 note.** CS2023 retains all four SDF KUs and adds an explicit
 competency requiring students to *select* the appropriate control structure
 for a given problem — a distinction this textbook honours through its
-separate ``while`` and ``for`` chapters.
+separate :doc:`While Loops </while/while>` and :doc:`For Loops </for/for>`
+chapters.
 
 Programming Languages (PL)
 ---------------------------
@@ -263,20 +284,22 @@ programming.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **PL1** Object-Oriented Programming
      - Tier 1
      - CS1
-     - Classes.
+     - :doc:`Classes </classes/classes>`.
        *Missing:* inheritance, subclasses,
        ``super()``, method overriding, polymorphism
-       (CS2 depth, but basic OOP is CS1).
-     - **Partial**
+       (basic inheritance is CS1; full polymorphism
+       is CS2).
+     - **Partial — CS1 gap**
    * - **PL2** Functional Programming
      - Tier 2
      - CS2
-     - For (list comprehensions), Recursion
+     - :ref:`List Comprehensions <List-Comprehensions>`,
+       :ref:`Recursion Examples <Recursion-Examples>`
        (memoisation via ``lru_cache``).
        *Missing:* closures, ``map``/``filter``,
        higher-order functions as a paradigm.
@@ -284,17 +307,20 @@ programming.
    * - **PL3** Event-Driven and Reactive Programming
      - Tier 2
      - CS1
-     - GUI (Tkinter event loop, callbacks,
+     - :ref:`GUI <Graphical-User-Interfaces-With-Tkinter>`
+       (Tkinter event loop, callbacks,
        ``command=`` bindings).
-       *Missing:* reactive/stream programming models.
-     - **Partial**
+       *Missing:* reactive/stream programming models
+       (CS2 topic).
+     - **Partial — CS2 gap**
    * - **PL4** Basic Type Systems
      - Tier 1
      - CS1
-     - Data, Functions (type hints, ``typing``
-       module). *Missing:* formal type compatibility
-       rules, type inference.
-     - **Partial**
+     - :doc:`Data </data/data>`,
+       :ref:`Type Hints <Type-Hints-Functions>`.
+       *Missing:* formal type compatibility rules,
+       type inference (CS2 topics).
+     - **Partial — CS2 gap**
    * - **PL5** Program Representation
      - Tier 2
      - CS2
@@ -303,7 +329,8 @@ programming.
    * - **PL6** Language Translation and Execution
      - Tier 2
      - CS2
-     - Modules (``__name__``, interpreter model).
+     - :ref:`Modules <Modules-And-Variable-Scope>`
+       (``__name__``, interpreter model).
        Superficial; bytecode and runtime model absent.
      - **Minimal**
    * - **PL7** Syntax Analysis
@@ -337,8 +364,9 @@ programming.
 **CS2023 note.** CS2023 elevates PL2/Functional Programming from Tier 2 to
 *Should*, reflecting the industry shift toward functional styles in Python,
 JavaScript, and Rust. It also introduces a dedicated *Type Systems and
-Semantics* KU aligned with Python's gradual-typing model; current coverage
-could be deepened. Inheritance and polymorphism remain *Must*-level; their
+Semantics* KU aligned with Python's gradual-typing model; the
+:ref:`Type Hints <Type-Hints-Functions>` coverage could be deepened to meet
+this expectation. Inheritance and polymorphism remain *Must*-level; their
 absence is the largest single PL gap.
 
 Algorithms and Complexity (AL)
@@ -361,32 +389,37 @@ to a dedicated CS3-level Algorithms course.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **AL1** Basic Analysis
      - Tier 1
      - CS2
-     - Lists, Data Structures (informal Big-O
-       comparisons). *Missing:* formal asymptotic
-       notation, recurrence relations, space/time
-       trade-offs.
+     - :doc:`Lists </lists/lists>`,
+       :doc:`Data Structures </datastructures/datastructures>`
+       (informal Big-O comparisons).
+       *Missing:* formal asymptotic notation,
+       recurrence relations, space/time trade-offs.
      - **Minimal**
    * - **AL2** Algorithmic Strategies
      - Tier 1
      - CS2
-     - Recursion (divide-and-conquer).
+     - :doc:`Recursion </recursion/recursion>`
+       (divide-and-conquer).
        *Missing:* greedy algorithms, explicit dynamic
        programming, backtracking.
      - **Minimal**
    * - **AL3** Fundamental Data Structures and Algorithms
      - Tier 1
      - CS2
-     - Lists (sequential/binary search; selection,
-       bubble, Timsort), Dicts (hash tables,
-       conceptual), Data Structures (stacks, queues,
-       linked lists). *Missing:* binary search trees,
-       graph algorithms (BFS, DFS).
-     - **Partial**
+     - :ref:`Sorting <Sorting>`,
+       :ref:`Searching <Searching>`,
+       :doc:`Dictionaries </dictionaries/dictionaries>`
+       (hash tables, conceptual),
+       :doc:`Data Structures </datastructures/datastructures>`
+       (stacks, queues, linked lists).
+       *Missing:* binary search trees, graph
+       algorithms (BFS, DFS) — CS2 topics.
+     - **Partial — CS2 gap**
    * - **AL4** Basic Computability Theory
      - Tier 2
      - CS3
@@ -415,8 +448,8 @@ to a dedicated CS3-level Algorithms course.
 
 **CS2023 note.** CS2023 retains AL1–AL3 at *Must* level and adds stronger
 guidance on analysing recursive algorithms via recurrence relations. The
-Recursion chapter provides the right examples but does not derive the
-corresponding complexity expressions.
+:doc:`Recursion </recursion/recursion>` chapter provides the right examples
+but does not derive the corresponding complexity expressions.
 
 Social Issues and Professional Practice (SP)
 --------------------------------------------
@@ -438,45 +471,49 @@ CS2. SP7, SP8, and SP9 are Elective; SP8 (History) is addressed in full.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **SP1** Social Context
      - Tier 1
      - CS1
-     - Context (motivational framing of computing's
-       societal role). *Missing:* structured analysis
-       of computing's impact on employment, culture,
+     - :doc:`Context </context/context>`
+       (motivational framing of computing's societal
+       role). *Missing:* structured analysis of
+       computing's impact on employment, culture,
        and underrepresented communities.
-     - **Partial**
+     - **Partial — CS1 gap**
    * - **SP2** Analytical Tools
      - Tier 1
      - CS1
      - (Not addressed — ethical reasoning frameworks
        such as consequentialism and deontology are
-       not covered)
+       not covered. **CS1 content to be added.**)
      - **—**
    * - **SP3** Professional Ethics
      - Tier 1/2
      - CS1
      - (Not addressed — ACM Code of Ethics, academic
-       integrity, computing law not covered)
+       integrity, computing law not covered.
+       **CS1 content to be added.**)
      - **—**
    * - **SP4** Intellectual Property
      - Tier 2
      - CS1
      - (Not addressed — copyright, open-source
-       licensing not covered)
+       licensing not covered.
+       **CS1 content to be added.**)
      - **—**
    * - **SP5** Privacy and Civil Liberties
      - Tier 2
      - CS1
      - (Not addressed — data privacy, surveillance,
-       encryption policy not covered)
+       encryption policy not covered.
+       **CS1 content to be added.**)
      - **—**
    * - **SP6** Professional Communication
      - Tier 2
      - CS2
-     - (CS2 topic — technical writing, oral
+     - (CS2 topic — technical writing and oral
        presentations not addressed)
      - **—**
    * - **SP7** Sustainability
@@ -487,9 +524,10 @@ CS2. SP7, SP8, and SP9 are Elective; SP8 (History) is addressed in full.
    * - **SP8** History
      - Elective
      - CS1
-     - Computing History (prehistory through stored-
-       program era; key figures including women ENIAC
-       programmers and Ada Lovelace).
+     - :ref:`Computing History <Computing-History>`
+       (prehistory through stored-program era; key
+       figures including women ENIAC programmers
+       and Ada Lovelace).
      - **Full**
    * - **SP9** Economics of Computing
      - Elective
@@ -508,9 +546,10 @@ CS2. SP7, SP8, and SP9 are Elective; SP8 (History) is addressed in full.
 
 **CS2023 note.** CS2023 makes Professional Ethics a *Must* topic and expands
 it to include AI ethics, algorithmic bias, and data privacy. It also adds a
-new *Diversity, Equity, and Inclusion* KU. The Computing History chapter
-partially addresses DEI history through the ENIAC programmers and Ada Lovelace,
-but a systematic treatment is needed.
+new *Diversity, Equity, and Inclusion* KU. The
+:ref:`Computing History <Computing-History>` chapter partially addresses DEI
+history through the ENIAC programmers and Ada Lovelace, but a systematic
+treatment is needed.
 
 Architecture and Organization (AR)
 ------------------------------------
@@ -532,22 +571,26 @@ or Elective and belong to upper-division systems courses.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **AR1** Digital Logic and Digital Systems
      - Tier 1
      - CS2
-     - Hardware (CPU, RAM, storage overview),
-       Computing History (von Neumann architecture).
+     - :ref:`Hardware <Hardware-And-Software>`
+       (CPU, RAM, storage overview),
+       :ref:`Computing History <Computing-History>`
+       (von Neumann architecture).
        *Missing:* Boolean gates, combinational
        circuits, fetch-decode-execute cycle in detail.
      - **Minimal**
    * - **AR2** Machine Level Representation of Data
      - Tier 1
      - CS2
-     - Data (bits, bytes, f-string format specifiers
-       for hex/binary), Computing History (Pascaline,
-       two's complement mentioned historically).
+     - :ref:`f-strings <fstrings>`
+       (hex/binary format specifiers),
+       :ref:`Computing History <Computing-History>`
+       (Pascaline, two's complement mentioned
+       historically).
        *Missing:* signed/unsigned integers, IEEE 754
        floating point, two's complement arithmetic.
      - **Minimal**
@@ -589,7 +632,8 @@ or Elective and belong to upper-division systems courses.
 
 **CS2023 note.** CS2023 retains AR1 and AR2 at *Must* level but clarifies
 that a CS1 course need only achieve a *conceptual* treatment of hardware
-organisation — gate-level circuits and assembly language remain CS2 expectations.
+organisation — gate-level circuits and assembly language remain CS2
+expectations.
 
 Software Engineering (SE)
 --------------------------
@@ -611,16 +655,19 @@ engineering courses.
    * - Knowledge Unit
      - CS2013 Tier
      - Level
-     - Textbook Chapters / Notes
+     - Textbook Sections
      - Coverage
    * - **SE1** Software Processes
      - Tier 2
      - CS2
-     - Testing (test-first development),
-       Basic String Ops (problem-solving framework).
+     - :doc:`Testing </testing/testing>`
+       (test-first development),
+       :doc:`Basic String Ops </basicstringops/basicstringops>`
+       (problem-solving framework).
        *Missing:* SDLC models, agile methods,
-       iterative development as a process.
-     - **Partial**
+       iterative development as a formal process
+       (CS2 topics).
+     - **Partial — CS2 gap**
    * - **SE2** Project Management
      - Tier 2
      - CS2
@@ -629,11 +676,14 @@ engineering courses.
    * - **SE3** Tools and Environments
      - Tier 1
      - CS1
-     - Terminal (CLI, shell commands, redirection),
-       Testing (pytest), User Input (``sys.argv``).
+     - :ref:`Terminal <Terminal-Overview>`
+       (CLI, shell commands, redirection),
+       :doc:`Testing </testing/testing>` (pytest),
+       :ref:`User Input <User-Input-Overview>`
+       (``sys.argv``).
        *Missing:* version control (lab stub exists
        but content not yet written).
-     - **Partial**
+     - **Partial — CS1 gap**
    * - **SE4** Requirements Engineering
      - Tier 2
      - CS2
@@ -647,17 +697,20 @@ engineering courses.
    * - **SE6** Software Construction
      - Tier 2
      - CS1
-     - Testing (docstrings, type hints, code style).
+     - :ref:`Writing Tests <Writing-Tests>`
+       (docstrings, type hints, code style).
        *Missing:* code review, pair programming,
-       static analysis tools.
-     - **Partial**
+       static analysis tools (CS2 topics).
+     - **Partial — CS2 gap**
    * - **SE7** Verification and Validation
      - Tier 2
      - CS1
-     - Testing (pytest unit tests, assert statements,
-       test coverage concept). *Missing:* integration
-       testing, regression testing, formal V&V.
-     - **Partial**
+     - :ref:`Pytest Intro <Pytest-Intro>`,
+       :ref:`Writing Tests <Writing-Tests>`
+       (unit tests, assert statements, coverage
+       concept). *Missing:* integration testing,
+       regression testing, formal V&V (CS2 topics).
+     - **Partial — CS2 gap**
    * - **SE8** Software Evolution
      - Elective
      - CS3+
@@ -710,8 +763,9 @@ and are not listed as gaps for a CS1 textbook.
      - ACM Code of Ethics; academic integrity;
        computing law; AI ethics and algorithmic
        bias (CS2023 adds these).
-     - Add a dedicated section to the Context
-       chapter or a short standalone chapter.
+     - Add a dedicated section to
+       :doc:`Context </context/context>` or a short
+       standalone chapter.
    * - Ethical reasoning tools
      - SP2
      - **High**
@@ -724,23 +778,25 @@ and are not listed as gaps for a CS1 textbook.
      - **High**
      - Subclasses, ``super()``, method overriding,
        duck typing as Python's polymorphism model.
-     - Extend the Classes chapter with a second
-       section on inheritance.
+     - Extend :doc:`Classes </classes/classes>`
+       with a second section on inheritance.
    * - Intellectual property
      - SP4
      - Medium
      - Copyright, open-source licensing (MIT, GPL,
        Apache), software patents.
-     - Add a short section to the Context or
-       Modules chapter (e.g., choosing a licence
-       for your own project).
+     - Add a short section to
+       :doc:`Context </context/context>` or
+       :ref:`Modules <Modules-And-Variable-Scope>`
+       (e.g., choosing a licence for your project).
    * - Privacy and civil liberties
      - SP5
      - Medium
      - Data collection, surveillance, encryption
        policy, GDPR concepts.
-     - Weave into the Internet Data chapter as
-       an ethical reflection after API usage.
+     - Add an ethical reflection to
+       :ref:`Internet Data <Internet-Data>` after
+       the API usage sections.
    * - Version control
      - SE3
      - Medium
@@ -752,8 +808,9 @@ and are not listed as gaps for a CS1 textbook.
      - Low
      - Reactive/stream programming models beyond
        simple widget callbacks.
-     - Extend the GUI chapter; appropriate for
-       CS1 enrichment.
+     - Extend the
+       :ref:`GUI <Graphical-User-Interfaces-With-Tkinter>`
+       chapter; appropriate for CS1 enrichment.
 
 Notes on CS2023
 ---------------
@@ -768,7 +825,7 @@ skills + dispositions) alongside traditional topic lists. A competency for
 SDF2/Fundamental Programming Concepts, for example, requires students not
 just to understand loops but to *select the appropriate loop construct* for a
 given problem — a distinction this textbook honours through its explicit
-``while`` vs. ``for`` chapters.
+:doc:`While Loops </while/while>` vs. :doc:`For Loops </for/for>` chapters.
 
 **Professional Ethics elevated.** Ethics moved from Tier 1/Elective in CS2013
 to *Must* in CS2023 across SP2 and SP3. The gap identified above is more
@@ -776,20 +833,24 @@ urgent under CS2023.
 
 **Functional programming elevated.** CS2023 raises PL2/Functional Programming
 from Tier 2 to *Should* — one level below *Must* — reflecting the industry
-trend toward functional styles in Python, JavaScript, and Rust.
+trend toward functional styles in Python, JavaScript, and Rust. The
+:ref:`List Comprehensions <List-Comprehensions>` section is a good foundation
+to build on.
 
 **Type systems expanded.** CS2023 introduces a dedicated *Type Systems and
 Semantics* KU (building on PL4) that includes gradual typing — highly relevant
-to Python's ``typing`` module and the type-hint approach taken throughout this
-textbook. Deepening that coverage would meet this expectation.
+to Python's ``typing`` module and the :ref:`Type Hints <Type-Hints-Functions>`
+approach taken throughout this textbook. Deepening that coverage would meet
+this expectation.
 
 **Version control promoted.** CS2023 elevates SE3/Version Control to *Must*
 at the CS1 level, reflecting industry consensus that Git is a day-one skill.
 
 **New: Diversity, Equity, and Inclusion.** CS2023 adds a KU requiring
-programmes to address DEI in computing contexts. The Computing History chapter
-partially addresses this through its coverage of the ENIAC programmers and
-Ada Lovelace, but a more systematic treatment is needed.
+programmes to address DEI in computing contexts. The
+:ref:`Computing History <Computing-History>` chapter partially addresses this
+through its coverage of the ENIAC programmers and Ada Lovelace, but a more
+systematic treatment is needed.
 
 Recommendations for Instructors
 ---------------------------------
@@ -801,28 +862,30 @@ topics (formal algorithm analysis, trees and graphs, assembly language,
 compilers) to CS2 and later courses. The following additions would bring it
 to near-full CS2013 Core Tier 1 coverage for a CS1 context:
 
-1. **Add an ethics section** (closes SP2 + SP3) to the Context chapter
-   covering the ACM Code of Ethics, ethical reasoning frameworks, academic
-   integrity, and basic computing law. This is the highest-priority gap
-   under both CS2013 and CS2023.
+1. **Add an ethics section** (closes SP2 + SP3) to
+   :doc:`Context </context/context>` covering the ACM Code of Ethics,
+   ethical reasoning frameworks, academic integrity, and basic computing law.
+   This is the highest-priority gap under both CS2013 and CS2023.
 
-2. **Add an inheritance section** (closes PL1) to the Classes chapter
-   demonstrating subclasses, ``super()``, and method overriding with a
-   concrete example (e.g., extending the ``Contact`` class to
-   ``ProfessionalContact``).
+2. **Add an inheritance section** (closes PL1) to
+   :doc:`Classes </classes/classes>` demonstrating subclasses, ``super()``,
+   and method overriding with a concrete example (e.g., extending the
+   ``Contact`` class to ``ProfessionalContact``).
 
 3. **Complete the version control lab** (closes SE3) in
    ``appendix/lab-versioncontrol.rst`` covering Git commits, branches, and
    the pull-request workflow. This is *Must*-level in CS2023.
 
-4. **Weave privacy and IP notes** (partially closes SP4 + SP5) into the
-   Internet Data chapter when discussing API keys, rate limits, and data
-   collected from users.
+4. **Weave privacy and IP notes** (partially closes SP4 + SP5) into
+   :ref:`Internet Data <Internet-Data>` when discussing API keys, rate
+   limits, and data collected from users.
 
 Topics such as formal Big-O proofs, binary search trees, greedy algorithms,
 and machine-level data representation are better addressed in CS2 (Data
 Structures). Topics such as Boolean gates, assembly language, and the
 fetch-decode-execute cycle belong in a CS2/CS3-level Computer Organization
 course. This textbook lays the groundwork for all of them through its
-coverage of recursion, stacks/queues/linked lists, and the hardware and
-computing history chapters.
+coverage of :doc:`Recursion </recursion/recursion>`,
+:doc:`Data Structures </datastructures/datastructures>`,
+and the :ref:`Hardware <Hardware-And-Software>` and
+:ref:`Computing History <Computing-History>` chapters.
