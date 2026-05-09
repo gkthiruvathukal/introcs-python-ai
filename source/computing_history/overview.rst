@@ -13,17 +13,17 @@ Episodes in Computing History
 
    - George K. Thiruvathukal, "Episodes in Computing History — Salon Talk,"
      Loyola University Chicago, 2025.
-     `ecommons.luc.edu/cs_facpubs/417 <https://ecommons.luc.edu/cs_facpubs/417/>`_
-     (`doi:10.6084/m9.figshare.29632070 <https://doi.org/10.6084/m9.figshare.29632070>`_) — primary source.
+     `ecommons.luc.edu/cs_facpubs/417 <https://ecommons.luc.edu/cs_facpubs/417/>`__
+     (`doi:10.6084/m9.figshare.29632070 <https://doi.org/10.6084/m9.figshare.29632070>`__) — primary source.
 
    - George K. Thiruvathukal and David B. Dennis, "Computer Science and Cultural History:
      A Dialogue," CESTEMER Conference, Goodman Theater, Chicago, September 2017.
-     `ecommons.luc.edu/history_facpubs/42 <https://ecommons.luc.edu/history_facpubs/42/>`_
+     `ecommons.luc.edu/history_facpubs/42 <https://ecommons.luc.edu/history_facpubs/42/>`__
 
    - George K. Thiruvathukal, "Artificial Intelligence and/or Machine Learning (AI &| ML),"
      Invited Panel Discussion, Loyola University Retiree Association (LUCRA), March 2024.
-     `ecommons.luc.edu/cs_facpubs/378 <https://ecommons.luc.edu/cs_facpubs/378/>`_
-     (`doi:10.6084/m9.figshare.25955026 <https://doi.org/10.6084/m9.figshare.25955026>`_)
+     `ecommons.luc.edu/cs_facpubs/378 <https://ecommons.luc.edu/cs_facpubs/378/>`__
+     (`doi:10.6084/m9.figshare.25955026 <https://doi.org/10.6084/m9.figshare.25955026>`__)
 
    - George K. Thiruvathukal, Editor in Chief, *Computing in Science and Engineering*
      (IEEE/AIP), 2013–2016. A mini-history of computing was among the editorial projects
@@ -104,7 +104,7 @@ The House of Wisdom and Al-Khowarizmi
 
    Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan — the
    mathematician whose Latinized name gave us the word *algorithm*.
-   *Source:* Adam Harangozó / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench.jpg>`_,
+   *Source:* Adam Harangozó / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench.jpg>`__,
    CC BY-SA 4.0.
 
 In 800 CE, Caliph Al-Mamun established *Bayt al-Hikmah* — the House of Wisdom
@@ -174,7 +174,7 @@ The Quipu of the Inca Empire
 
    A quipu — knotted, colored cords used by the Inca Empire for census records,
    tax accounting, and long-distance communication.
-   *Source:* Jorge Mori / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Quipu.JPG>`_,
+   *Source:* Jorge Mori / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Quipu.JPG>`__,
    Public Domain (CC0).
 
 Across the Atlantic, the Inca Empire and its predecessors developed a
@@ -197,7 +197,7 @@ The Abacus
 
    A Chinese suanpan abacus — the primary calculation aid across Asia and the
    Mediterranean for millennia. This example encodes the number 9,034.
-   *Source:* Felix Winkelnkemper / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Chinese_Suanpan_Abacus.jpg>`_,
+   *Source:* Felix Winkelnkemper / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Chinese_Suanpan_Abacus.jpg>`__,
    CC BY-SA 4.0.
 
 The abacus, an early form of beads on wires, appeared in China around 3000 BCE.
@@ -238,7 +238,7 @@ Napier's Bones and the Slide Rule
 
    Napier's Bones (c. 1650, ivory) at the National Museum of Scotland — numbered
    rods that reduced multiplication to reading diagonal sums.
-   *Source:* Kim Traynor / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Napier%27s_Bones.JPG>`_,
+   *Source:* Kim Traynor / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Napier%27s_Bones.JPG>`__,
    CC BY-SA 3.0.
 
 By the seventeenth century the tools of calculation were becoming more
@@ -273,7 +273,7 @@ Blaise Pascal's Pascaline
    carry mechanism introduced the principle of complement arithmetic still used
    in modern CPUs.
    *Source:* J. A. V. Turck, *Origin of Modern Calculating Machines*, 1921 /
-   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Pascaline_calculator.jpg>`_,
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Pascaline_calculator.jpg>`__,
    Public Domain.
 
 Blaise Pascal built his *Pascaline* around 1642, at the age of nineteen, to
@@ -359,7 +359,7 @@ The Jacquard Loom
 
    A Jacquard loom (c. 1804) at the Musée des Arts et Métiers, Paris. The chain
    of punched cards at top encodes the weaving pattern — effectively a program.
-   *Source:* David Monniaux / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Jacquard_loom_p1040320.jpg>`_,
+   *Source:* David Monniaux / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Jacquard_loom_p1040320.jpg>`__,
    CC BY-SA 3.0.
 
 In 1804, the French silk weaver Joseph Marie Jacquard introduced a loom
@@ -390,8 +390,17 @@ Charles Babbage and Ada Lovelace
    Babbage's Difference Engine No. 2 — the Science Museum London's 1991
    reconstruction, built from Babbage's original drawings. It computed correctly
    to 31 digits on the first try.
-   *Source:* Carsten Ullrich / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:LondonScienceMuseumsReplicaDifferenceEngine.jpg>`_,
+   *Source:* Carsten Ullrich / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:LondonScienceMuseumsReplicaDifferenceEngine.jpg>`__,
    CC BY-SA 2.5.
+
+
+Charles Babbage designed two mechanical computing engines of extraordinary
+ambition. The Difference Engine, designed in the 1820s, was intended to compute
+and print mathematical tables automatically, eliminating the errors that
+human *computers* introduced when calculating logarithm and trigonometry tables
+by hand. A working Difference Engine was not actually constructed until 1991,
+when the Science Museum in London built one from Babbage's original drawings and
+found that it worked correctly to 31 digits.
 
 .. figure:: ../_static/images/computing_history/ada_lovelace.png
    :width: 200px
@@ -401,16 +410,8 @@ Charles Babbage and Ada Lovelace
    Ada Lovelace (c. 1840), painted by Alfred Edward Chalon. Her annotated
    translation of Menabrea's account of the Analytical Engine is recognized as
    the first algorithm intended for machine execution.
-   *Source:* Alfred Edward Chalon / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg>`_,
+   *Source:* Alfred Edward Chalon / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg>`__,
    Public Domain.
-
-Charles Babbage designed two mechanical computing engines of extraordinary
-ambition. The Difference Engine, designed in the 1820s, was intended to compute
-and print mathematical tables automatically, eliminating the errors that
-human *computers* introduced when calculating logarithm and trigonometry tables
-by hand. A working Difference Engine was not actually constructed until 1991,
-when the Science Museum in London built one from Babbage's original drawings and
-found that it worked correctly to 31 digits.
 
 Babbage's more ambitious Analytical Engine went further still: it was designed
 to be programmable, with a separate store (memory), a mill (processor), input
@@ -435,7 +436,7 @@ Herman Hollerith and the 1890 Census
 
    Hollerith's electrical tabulating machines in operation, as illustrated in
    *Scientific American*, August 30, 1890. His company eventually became IBM.
-   *Source:* Uncredited illustrator / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:1890_Census_Hollerith_Electrical_Counting_Machines_Sci_Amer.jpg>`_,
+   *Source:* Uncredited illustrator / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:1890_Census_Hollerith_Electrical_Counting_Machines_Sci_Amer.jpg>`__,
    Public Domain.
 
 By 1880 the United States Census Bureau faced a crisis: it had taken nearly a
@@ -487,7 +488,7 @@ Konrad Zuse and the Z3
    Reconstruction of Konrad Zuse's Z3 (1941) at the Deutsches Museum, Munich —
    the first Turing-complete programmable computer. The original was destroyed
    in a 1943 Allied bombing raid.
-   *Source:* Venusianer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Z3_Deutsches_Museum.JPG>`_,
+   *Source:* Venusianer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Z3_Deutsches_Museum.JPG>`__,
    CC BY-SA 3.0.
 
 The German engineer Konrad Zuse built the Z3 in 1941 — the first
@@ -510,7 +511,7 @@ Colossus at Bletchley Park
    Colossus (1944) at Bletchley Park — the world's first electronic, digital,
    programmable computer. Its existence was classified until the 1970s.
    *Source:* The National Archives (UK), ref. FO850/234 /
-   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Colossus.jpg>`_,
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Colossus.jpg>`__,
    Public Domain.
 
 In Britain, the urgent need to break German military codes drove the development
@@ -541,18 +542,14 @@ ENIAC and the Women Who Programmed It
 
    ENIAC (1945) on display at the University of Pennsylvania — the room-filling
    machine that could perform thousands of arithmetic operations per second.
-   *Source:* Paul W. Shaffer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:ENIAC_Penn1.jpg>`_,
+   *Source:* Paul W. Shaffer / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:ENIAC_Penn1.jpg>`__,
    CC BY-SA 3.0.
 
 The ENIAC — Electronic Numerical Integrator and Computer — was built at the
 University of Pennsylvania by J. Presper Eckert and John Mauchly and became
 operational in 1945. Filling a room and consuming 150 kilowatts of power, it
 could perform thousands of arithmetic operations per second, far faster than any
-mechanical device. What is less often celebrated is that the programming and
-wiring of computations on the ENIAC was carried out by six women: Jean Jennings,
-Frances Bilas, Betty Holberton, Ruth Lichterman, Kathleen McNulty, and Marlyn
-Wescoff. Working from mathematical problem descriptions and wiring diagrams, they
-developed the techniques of programming as we understand them today.
+mechanical device.
 
 .. figure:: ../_static/images/computing_history/eniac_programmers.png
    :width: 280px
@@ -563,8 +560,15 @@ developed the techniques of programming as we understand them today.
    Frances Spence) at the ENIAC main control panel, Moore School of Engineering,
    c. 1945–1947.
    *Source:* United States Army /
-   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Two_women_operating_ENIAC.gif>`_,
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Two_women_operating_ENIAC.gif>`__,
    Public Domain.
+
+What is less often celebrated is that the programming and
+wiring of computations on the ENIAC was carried out by six women: Jean Jennings,
+Frances Bilas, Betty Holberton, Ruth Lichterman, Kathleen McNulty, and Marlyn
+Wescoff. Working from mathematical problem descriptions and wiring diagrams, they
+developed the techniques of programming as we understand them today.
+
 
 .. index:: UNIVAC; 1952 presidential election, CBS; UNIVAC prediction
 
@@ -627,7 +631,7 @@ The Universal Turing Machine
 
    Alan Turing (1912–1954), photographed in 1951 by Elliott & Fry. His 1936
    paper created theoretical computer science before electronic computers existed.
-   *Source:* Elliott & Fry / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951).jpg>`_,
+   *Source:* Elliott & Fry / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951).jpg>`__,
    Public Domain.
 
 In 1936, a young Cambridge mathematician named Alan Turing published a paper
@@ -664,7 +668,7 @@ John von Neumann and the Architecture of Modern Computers
    the arithmetic unit, control unit, and memory architecture that every
    computer still uses today.
    *Source:* Los Alamos National Laboratory /
-   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:JohnvonNeumann-LosAlamos.gif>`_,
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:JohnvonNeumann-LosAlamos.gif>`__,
    Public Domain.
 
 While Turing provided the theoretical foundation, John von Neumann provided the
