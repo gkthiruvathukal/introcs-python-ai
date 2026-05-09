@@ -44,15 +44,15 @@ Tally Sticks and Early Counting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../_static/images/computing_history/tally_stick.jpg
-   :width: 560px
-   :alt: Diagram of an English Exchequer tally stick showing notches for a payment of £236 4s 3½d, 1739
+   :width: 400px
+   :alt: Carved reindeer antler with tally marks from La Madeleine, France, approximately 17,000 years old
 
-   An English Exchequer tally stick (1739) — the notched pattern encodes a
-   payment of £236 4s 3½d. Splitting the stick gave payer and collector one
-   half each, making forgery nearly impossible.
-   *Source:* Encyclopædia Britannica, 11th ed. (1911) /
-   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:EB1911_Tally_-_tally_stick_(diagram).jpg>`__,
-   Public Domain.
+   A carved reindeer antler with tally marks from La Madeleine, France
+   (c. 15,000–11,500 BCE) — one of humanity's earliest known recording devices,
+   predating writing by thousands of years.
+   *Source:* Ryan Somma /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Carved_reindeer_antler_with_tally_marks_(4697848661).jpg>`__,
+   CC BY-SA 2.0.
 
 Around 4000 BCE, traders in the Mesopotamian city of Uruk made a remarkable
 discovery: the same number could stand for ten sheep, ten bags of grain, or
