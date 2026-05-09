@@ -1,4 +1,4 @@
-.. index:: computing history, numbers, zero, abacus, quipu, Napier, Pascal, Babbage, Ada Lovelace, Hollerith, Morse, Turing, von Neumann, ENIAC, Atanasoff-Berry Computer, ABC, Vannevar Bush, memex, Al-Khowarizmi, algorithm
+.. index:: computing history, numbers; history, zero; history, abacus, quipu, ENIAC, Atanasoff-Berry Computer, ABC, memex, algorithm; etymology
 
 .. _Computing-History:
 
@@ -36,6 +36,8 @@ as a series of episodes, each one building on what came before.
 Numbers and Calculation
 -----------------------
 
+.. index:: tally sticks, Mesopotamia; number system, counting; early history
+
 Tally Sticks and Early Counting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -55,6 +57,8 @@ diagonal, and one half of that X became the V for five. The word *calculus*
 itself is Latin for *a small stone used in reckoning* — the pebbles people once
 moved across counting boards to track quantities.
 
+.. index:: hieroglyphic numbers, Egyptian numerals; pictographic system
+
 Hieroglyphic Numbers and Pictographic Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -65,6 +69,8 @@ thousand, a finger pointing skyward for ten thousand, a tadpole drawn from the
 Nile for a hundred thousand, and a man with arms raised to heaven for a million.
 The system was expressive but cumbersome — to write 999 you needed twenty-seven
 separate signs — and it had no symbol for zero.
+
+.. index:: Roman numerals, zero; absent from Roman system
 
 Roman Numerals
 ^^^^^^^^^^^^^^
@@ -79,6 +85,8 @@ the limitation becomes immediately apparent.
 The Greeks adapted their alphabet for numerals, and the Romans followed with
 their own alphabetical-looking symbols. But it was a tradition far to the east
 that would supply the missing ingredient.
+
+.. index:: al-Khowarizmi, Muhammad ibn Musa; House of Wisdom, House of Wisdom; Baghdad, algebra; etymology, algorithm; etymology
 
 The House of Wisdom and Al-Khowarizmi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,6 +116,8 @@ throughout Europe via Arab traders. Two words in everyday use today carry his
 memory: *algorithm* derives from the Latinization of his name, and *algebra*
 from the title of his book, *Al-Jabr*.
 
+.. index:: Hindu-Arabic numerals, zero; Chaturbhuj Temple inscription, Boole, George; boolean logic, boolean logic; computing foundation
+
 Hindu-Arabic Notation and the Gift of Zero
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -126,6 +136,8 @@ combined with George Boole's boolean logic of 1854 — which reduced all logical
 reasoning to true and false, one and zero — provides the complete mathematical
 foundation for every computer ever built.
 
+.. index:: base sixty, sexagesimal system, Mesopotamia; base-60
+
 The Mesopotamians and Base Sixty
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -139,6 +151,8 @@ astronomical treatise of the second century CE, drew on this system throughout.
 
 Nascent Computing Attempts
 --------------------------
+
+.. index:: quipu, khipu, Inca Empire; information encoding
 
 The Quipu of the Inca Empire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -161,6 +175,8 @@ positional system. Quipus were used for census counts, tax accounting, and
 record-keeping across a vast empire. They are a vivid reminder that information
 encoding admits many physical forms.
 
+.. index:: abacus; history, suanpan
+
 The Abacus
 ^^^^^^^^^^^
 
@@ -181,6 +197,8 @@ calculations. For millennia the abacus was the primary calculation aid across
 Asia and the Mediterranean, and skilled users could perform arithmetic at
 remarkable speed.
 
+.. index:: finger reckoning, digit; etymology
+
 Finger Reckoning
 ^^^^^^^^^^^^^^^^^
 
@@ -192,6 +210,8 @@ numbers up to nine thousand using elaborate configurations of both hands.
 Educated people memorized multiplication tables up to five times five; for
 larger products they used systematic finger configurations and addition to
 derive the rest.
+
+.. index:: Napier, John; logarithms, Napier's Bones, slide rule, Schickard, Wilhelm; mechanical calculator, Oughtred, William; slide rule
 
 Napier's Bones and the Slide Rule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -221,6 +241,8 @@ scales alongside each other, producing the circular slide rule in 1622 and the
 familiar linear form shortly after. Engineers relied on the slide rule for
 precise calculation until pocket electronic calculators arrived in the 1970s.
 
+.. index:: Pascal, Blaise; Pascaline, Pascaline, two's complement; origins
+
 Blaise Pascal's Pascaline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -245,6 +267,8 @@ performed by adding the nine's complement of the subtrahend. What looks like
 subtraction is actually addition with a cleverly disguised operand — a
 technique computers use to this day in the form of two's complement arithmetic.
 
+.. index:: Leibniz, Gottfried Wilhelm; Stepped Drum Calculator, Stepped Drum Calculator
+
 Leibniz's Stepped Drum Calculator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -257,6 +281,8 @@ centuries.
 Communications and the Information Age
 ---------------------------------------
 
+.. index:: homing pigeons; long-range communication
+
 Homing Pigeons
 ^^^^^^^^^^^^^^^^
 
@@ -266,6 +292,8 @@ long-range message delivery. The Greeks used pigeons to carry the names of
 Olympic victors to their home cities. Pigeons were still in active military use
 during the Siege of Paris in 1870–71 and were officially discontinued as a
 communication technology only around 1910.
+
+.. index:: Morse, Samuel F.B.; telegraph, telegraph; history, Morse code, Associated Press; telegraph origins
 
 Samuel Morse and the Telegraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -292,6 +320,8 @@ intelligence gave the Union Army a decisive advantage in the Civil War.
 Looms and Mechanical Computing
 -------------------------------
 
+.. index:: Jacquard loom, Jacquard, Joseph Marie; loom, punched cards; Jacquard loom origins
+
 The Jacquard Loom
 ^^^^^^^^^^^^^^^^^^
 
@@ -313,6 +343,8 @@ cards constituted, in effect, a program. The connection to computing was not
 lost on later inventors: Babbage explicitly acknowledged the Jacquard loom as an
 inspiration for his Analytical Engine, and Herman Hollerith's punched cards for
 the 1890 census carried the same principle into data processing.
+
+.. index:: Babbage, Charles; Difference Engine, Babbage, Charles; Analytical Engine, Lovelace, Ada; first algorithm, Difference Engine, Analytical Engine, Ada programming language; Lovelace
 
 Charles Babbage and Ada Lovelace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,6 +387,8 @@ original text, is credited with writing what is recognized as the first
 algorithm intended for machine execution. The Ada programming language, used
 today in safety-critical systems, is named in her honor.
 
+.. index:: Hollerith, Herman; 1890 census, punched cards; Hollerith tabulator, IBM; origins
+
 Herman Hollerith and the 1890 Census
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -380,6 +414,8 @@ primary medium for data entry into computers well into the 1970s.
 Early Electronic Computing
 ---------------------------
 
+.. index:: Atanasoff, John Vincent; ABC computer, Berry, Clifford; ABC computer, Atanasoff-Berry Computer; binary arithmetic
+
 The Atanasoff-Berry Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -396,6 +432,8 @@ hold intermediate results. Although the machine was never
 fully completed and was largely forgotten for decades, a landmark 1973 U.S.
 federal court ruling invalidated the ENIAC patent and recognized Atanasoff as
 the originator of several foundational computing concepts.
+
+.. index:: Zuse, Konrad; Z3, Z3; first Turing-complete computer
 
 Konrad Zuse and the Z3
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -418,6 +456,8 @@ parallel developments in Britain and the United States. The Z3 was destroyed in
 a 1943 Allied bombing raid; a reconstruction now stands in the Deutsches Museum
 in Munich.
 
+.. index:: Colossus; Bletchley Park, Bletchley Park; Colossus, Lorenz machine; Colossus
+
 Colossus at Bletchley Park
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -438,6 +478,8 @@ built at Bletchley Park and operational by 1944. Colossus was designed to crack
 messages encrypted by the Lorenz machine, the cipher teleprinter used by the
 German High Command. Its existence was kept secret until the 1970s, which
 obscured its place in computing history for decades.
+
+.. index:: ENIAC; University of Pennsylvania, Eckert, J. Presper; ENIAC, Mauchly, John; ENIAC, Jennings, Jean; ENIAC programmer, Holberton, Betty; ENIAC programmer, Bilas, Frances; ENIAC programmer, Lichterman, Ruth; ENIAC programmer, McNulty, Kathleen; ENIAC programmer, Wescoff, Marlyn; ENIAC programmer
 
 ENIAC and the Women Who Programmed It
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -474,6 +516,8 @@ developed the techniques of programming as we understand them today.
    `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Two_women_operating_ENIAC.gif>`_,
    Public Domain.
 
+.. index:: UNIVAC; 1952 presidential election, CBS; UNIVAC prediction
+
 UNIVAC and the 1952 Election
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -482,6 +526,8 @@ consciousness in a striking way: CBS used it to predict the outcome of the 1952
 presidential election. The machine's projection of an Eisenhower landslide —
 based on early returns — was so at odds with conventional wisdom that CBS
 initially declined to broadcast it. The machine was right.
+
+.. index:: Bush, Vannevar; memex, memex; hypertext precursor, "As We May Think"; Bush 1945, World Wide Web; Bush's vision
 
 "As We May Think" and the World Wide Web
 -----------------------------------------
@@ -510,6 +556,8 @@ his vision remained unachieved even late in his life.
 
 Stored Program and Universal Computing
 ----------------------------------------
+
+.. index:: Turing, Alan; Turing machine, Turing machine; universal, Turing-complete; Python, Turing-equivalent
 
 The Universal Turing Machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -540,6 +588,8 @@ shortening the conflict. Despite this, he was prosecuted in 1952 for his
 homosexuality, subjected to chemical castration, and died in 1954. He was
 posthumously pardoned by the British government in 2013 and granted a statutory
 pardon in 2017.
+
+.. index:: von Neumann, John; architecture, von Neumann architecture, stored-program concept
 
 John von Neumann and the Architecture of Modern Computers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

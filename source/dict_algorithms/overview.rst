@@ -13,6 +13,8 @@ to values with extremely fast lookup times. As programs grow in size and complex
 certain dictionary patterns appear again and again. This chapter covers the most
 important ones.
 
+.. index:: dict; counting pattern, frequency count, dict.get(); default zero
+
 Counting with Dictionaries
 --------------------------
 
@@ -48,6 +50,8 @@ The ``.get()`` method makes this more concise:
 ``get(key, 0)`` returns the current count if the key exists, or ``0`` if it does
 not, avoiding a ``KeyError``.
 
+.. index:: dict; filtering pattern, dict comprehension; filtering
+
 Filtering Dictionaries
 -----------------------
 
@@ -69,6 +73,8 @@ Output:
 .. code-block:: none
 
    {'Alice': 95, 'Bob': 82, 'Diana': 99}
+
+.. index:: dict; grouping pattern, dict.setdefault(); grouping pattern
 
 Grouping with Dictionaries
 ---------------------------
@@ -112,6 +118,8 @@ The general grouping pattern is:
    for w in words:
        groups.setdefault(w[0], []).append(w)
 
+.. index:: dict; invert, dict comprehension; key-value swap
+
 Reversing a Dictionary
 -----------------------
 
@@ -130,6 +138,8 @@ Output:
    {90: 'A', 80: 'B', 70: 'C'}
 
 If values are not unique, later entries overwrite earlier ones during the reversal.
+
+.. index:: dict; merge operator |, dict.update(); merge, Python 3.9; dict merge
 
 Merging Dictionaries
 ---------------------
@@ -157,6 +167,8 @@ If both dictionaries share a key, the right-hand dictionary wins. For older Pyth
    c = dict(a)
    c.update(b)
 
+.. index:: dict.get(); safe access, KeyError; avoiding with get
+
 Safe Access with ``.get()``
 ----------------------------
 
@@ -173,6 +185,8 @@ Output:
 .. code-block:: none
 
    production
+
+.. index:: nested dictionaries, hierarchical data; dict
 
 Nested Dictionaries
 --------------------
@@ -193,6 +207,8 @@ Output:
 .. code-block:: none
 
    90
+
+.. index:: dict algorithms; lists of dicts, index by unique field; O(1) lookup, frequency count; list of dicts
 
 Algorithms on Lists of Dictionaries
 -------------------------------------
@@ -244,6 +260,8 @@ Output:
    for p in people:
        by_age.setdefault(p["age"], []).append(p)
 
+.. index:: group_by_length; example, dict; group by length
+
 Group by Length (Practice)
 --------------------------
 
@@ -264,6 +282,8 @@ Output:
 .. code-block:: none
 
    {3: ['tea', 'jam', 'bag'], 2: ['to'], 5: ['apple']}
+
+.. index:: dict algorithms; real-world uses, analytics pipelines; dict, search index; dict
 
 Real-World Applications
 -----------------------

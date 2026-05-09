@@ -13,6 +13,8 @@ components you can touch, and **software**, the instructions that tell the hardw
 what to do. Understanding both layers — and how they work together — gives you a
 mental model that will serve you throughout your programming career.
 
+.. index:: hardware; components, CPU; role, RAM; role, motherboard, storage; SSD HDD, input devices, output devices
+
 What Is Hardware?
 -----------------
 
@@ -39,6 +41,8 @@ The core hardware components are:
 All major components are connected through the **motherboard**, which acts as the
 circulatory system of the computer, carrying power and signals between parts.
 
+.. index:: software; categories, system software, application software, utility software, drivers; hardware
+
 What Is Software?
 -----------------
 
@@ -58,6 +62,8 @@ There are three main categories of software:
 
 - **Utility software** — supporting tools that maintain and optimize the system.
   Examples: antivirus tools, backup utilities, file compression, disk cleanup.
+
+.. index:: input-process-output model, hardware; software interaction
 
 How Hardware and Software Work Together
 ---------------------------------------
@@ -82,6 +88,8 @@ Here is a concrete walkthrough — pressing the "A" key on a keyboard:
    the letter. The document and cursor position are held in RAM.
 4. **Output**: the OS updates the display, and the monitor shows the letter A.
 
+.. index:: operating system; role, OS; resource manager, OS; service provider, OS; translator
+
 The Role of the Operating System
 ---------------------------------
 
@@ -95,6 +103,8 @@ and hardware. It plays three roles simultaneously:
 - **Translator** — applications do not talk directly to hardware. They ask the OS
   instead ("draw this window", "save this file"), and the OS uses drivers to
   translate those requests into hardware signals.
+
+.. index:: hardware; analogies, software; analogies
 
 Metaphors for Hardware and Software
 -------------------------------------

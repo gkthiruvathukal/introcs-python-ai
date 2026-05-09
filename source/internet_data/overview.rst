@@ -14,6 +14,8 @@ programmers through **APIs** (Application Programming Interfaces). An API provid
 a structured way to request information from a web service without needing to scrape
 raw HTML.
 
+.. index:: API; definition, web service; API, HTTP; API communication
+
 What Is an API?
 ---------------
 
@@ -28,6 +30,8 @@ Many websites expose public APIs that let you request data directly. Examples in
 - GitHub repository information
 
 Most APIs communicate over HTTP and return data in JSON format.
+
+.. index:: HTTP; GET request, HTTP; POST request, query parameters; URL, URL; query string
 
 HTTP Basics
 -----------
@@ -47,6 +51,8 @@ A URL can include **query parameters** to filter or customize the response:
 
 Everything after ``?`` is a query string: ``city=Chicago`` and ``units=metric`` are
 two parameters separated by ``&``.
+
+.. index:: requests module, requests.get(), HTTP; status codes, response.status_code
 
 The ``requests`` Module
 ------------------------
@@ -78,6 +84,8 @@ Common status codes:
 
 Always check the status code before using the response data.
 
+.. index:: JSON; parsing with requests, response.json(), API response; dict conversion
+
 Parsing JSON
 ------------
 
@@ -99,6 +107,8 @@ a dictionary:
 ``response.json()`` parses the JSON body and returns the equivalent Python object —
 usually a dictionary or a list of dictionaries.
 
+.. index:: query parameters; requests, requests.get(); params dict
+
 Using Query Parameters
 -----------------------
 
@@ -114,6 +124,8 @@ Instead of building query strings manually, pass parameters as a dictionary:
    response = requests.get(url, params=params)
    print(response.url)        # shows the full URL with parameters appended
    print(response.json())
+
+.. index:: requests.exceptions.ConnectionError, requests.exceptions.Timeout, HTTP; error handling
 
 Handling Errors
 ---------------
@@ -136,6 +148,8 @@ Defensive code checks the status code and handles network failures:
    except requests.exceptions.Timeout:
        print("Request timed out.")
 
+.. index:: json.dump(); file output, API response; saving to file
+
 Saving API Results to a File
 -----------------------------
 
@@ -156,6 +170,8 @@ After retrieving data you can persist it locally for later analysis:
 
 ``json.dump`` writes a Python object to a file as JSON. ``indent=2`` makes the
 output human-readable.
+
+.. index:: GitHub API; example, requests; complete example
 
 Putting It Together
 -------------------

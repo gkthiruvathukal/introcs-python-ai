@@ -14,6 +14,8 @@ organize related functions, classes, and constants into logical units. Along wit
 modules comes a formal understanding of **scope** — the rules that determine where
 a variable exists and where it can be accessed.
 
+.. index:: modules; benefits, modular programming, reusability; modules, maintainability; modules
+
 Why Modules Matter
 ------------------
 
@@ -47,6 +49,8 @@ The benefits of modular programming are:
 5. **Abstraction** — hide implementation details and expose only the interface
    (functions and classes) that others need.
 
+.. index:: import; patterns, from … import, import as; alias, sys.path, ImportError
+
 Importing Modules
 -----------------
 
@@ -74,6 +78,8 @@ When you run ``import something``, Python looks in:
 
 If it cannot find the module you will get an ``ImportError``.
 
+.. index:: __name__ variable, __main__; entry-point guard, module; run vs import
+
 The ``__name__`` Variable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -93,6 +99,8 @@ Every Python file has a special variable called ``__name__``.
 
 This pattern lets you write code that behaves differently depending on whether it
 is the entry point or a library being imported.
+
+.. index:: scope; definition, LEGB rule; scope lookup, local scope, enclosing scope, global scope, built-in scope
 
 Understanding Scope
 -------------------
@@ -126,6 +134,8 @@ Output:
 
 Python finds ``x = 30`` at the local level and stops searching.
 
+.. index:: variable shadowing, scope; shadowing
+
 Variable Shadowing
 ^^^^^^^^^^^^^^^^^^
 
@@ -144,10 +154,14 @@ If a variable in an inner scope shares a name with one in an outer scope, it
 
 Use distinct variable names to avoid accidental shadowing.
 
+.. index:: global statement; modules, nonlocal statement, UnboundLocalError; global
+
 Global and Nonlocal Variables
 ------------------------------
 
 Sometimes a function needs to modify a variable that lives outside its local scope.
+
+.. index:: global statement; example
 
 Global Variables
 ^^^^^^^^^^^^^^^^^
@@ -171,6 +185,8 @@ Output:
 
 Without the ``global`` keyword, Python would treat ``count`` inside the function
 as a new local variable — and the assignment would raise an ``UnboundLocalError``.
+
+.. index:: nonlocal statement; example, closure; nonlocal
 
 Nonlocal Variables
 ^^^^^^^^^^^^^^^^^^^
@@ -199,6 +215,8 @@ Output:
 As a general rule, prefer returning values from functions rather than modifying
 external state — it makes code easier to reason about.
 
+.. index:: variable lifetime, garbage collection; Python, local variable; lifetime, global variable; lifetime
+
 Variable Lifetime
 -----------------
 
@@ -214,6 +232,8 @@ Python automatically frees memory for objects that are no longer referenced
 (garbage collection), so you rarely manage memory manually. However, be aware that
 mutating a shared list inside a function affects every module that holds a reference
 to that list.
+
+.. index:: package; __init__.py, multi-file project, __init__.py
 
 Organizing Multi-File Projects
 -------------------------------
@@ -241,6 +261,8 @@ You import from the package like this:
 
    from datastructures.linked_list import LinkedList
 
+.. index:: circular import; problem and fix, ImportError; circular
+
 Avoiding Circular Imports
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -248,6 +270,8 @@ A **circular import** occurs when module A imports module B, and module B also
 imports module A. Python cannot finish loading either file and raises an
 ``ImportError``. The fix is to move shared code into a third utility module, or to
 place the import inside a function rather than at the top of the file.
+
+.. index:: NameError; undefined variable, UnboundLocalError; assign before use, ImportError; module not found
 
 Common Errors
 -------------

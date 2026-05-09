@@ -17,6 +17,8 @@ structure, a **list of dictionaries** is the natural tool.
 Think of it like a spreadsheet: each dictionary is one row, with consistent column
 names (keys) across every row. The list holds all the rows together.
 
+.. index:: lists of dictionaries; motivation, parallel lists; problem
+
 Why Lists of Dictionaries?
 --------------------------
 
@@ -44,6 +46,8 @@ A list of dictionaries keeps each record self-contained:
 Adding or removing a student now touches exactly one item in the list. The data
 stays synchronized because each record is a complete, independent unit.
 
+.. index:: one-dictionary-per-record principle, records; consistent structure
+
 The One-Dictionary-Per-Record Principle
 ----------------------------------------
 
@@ -63,6 +67,8 @@ Each dictionary in the list should represent exactly one complete entity.
        {"name": "Alice", "age": 20, "gpa": 3.8},
        {"name": "Bob",   "age": 22, "gpa": 3.6},
    ]
+
+.. index:: factory function; record creation, records; validation
 
 Consistent Structure with a Factory Function
 ---------------------------------------------
@@ -87,6 +93,8 @@ enforces that consistency:
 The factory function is a single source of truth for what a record looks like. It
 prevents key-name typos, sets sensible defaults, and catches invalid values early.
 
+.. index:: lists of dictionaries; access pattern, dict.get(); safe access
+
 Accessing Data
 --------------
 
@@ -107,6 +115,8 @@ To safely access a key that might be missing, use ``.get()``:
 
    email = students[0].get("email", "not provided")
 
+.. index:: lists of dictionaries; iteration, for; dict records
+
 Iterating Over Records
 -----------------------
 
@@ -124,6 +134,8 @@ Output:
    Alice Johnson (Computer Science) — GPA: 3.8
    Bob Martinez (Mathematics) — GPA: 3.6
    Charlie Davis (Undecided) — GPA: 3.9
+
+.. index:: lists of dictionaries; filtering, list comprehension; filtering records
 
 Filtering Records
 -----------------
@@ -143,6 +155,8 @@ Or using a list comprehension:
 
    honor_roll = [s for s in students if s["gpa"] >= 3.7]
 
+.. index:: lists of dictionaries; search, linear search; dict records
+
 Searching for a Record
 -----------------------
 
@@ -160,6 +174,8 @@ Find the first record that matches a condition:
    if result:
        print(result)
 
+.. index:: lists of dictionaries; update record, CRUD; update
+
 Updating a Record
 -----------------
 
@@ -172,6 +188,8 @@ Locate the record and assign a new value to its key:
            student["gpa"] = 3.9
            break
 
+.. index:: lists of dictionaries; sorting, sorted(); key function, lambda; sort key
+
 Sorting
 -------
 
@@ -181,6 +199,8 @@ Sorting
 
    by_gpa  = sorted(students, key=lambda s: s["gpa"], reverse=True)
    by_name = sorted(students, key=lambda s: s["name"])
+
+.. index:: lists of dictionaries; grouping, dict.setdefault(); grouping
 
 Grouping Records
 ----------------
@@ -195,6 +215,8 @@ Collect records that share a common field value into a dictionary of lists:
        if major not in by_major:
            by_major[major] = []
        by_major[major].append(student)
+
+.. index:: JSON; lists of dictionaries, json.dumps(), json.loads(), API response; Python dict
 
 Lists of Dictionaries and JSON
 -------------------------------

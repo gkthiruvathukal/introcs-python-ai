@@ -180,7 +180,7 @@ without bound.  The default limit is 1 000.  You can inspect or raise it:
 
 Hitting the limit raises ``RecursionError``.
 
-.. index:: tail recursion, Guido van Rossum; TCO decision
+.. index:: tail recursion, van Rossum, Guido; TCO decision
 
 No Tail-Call Optimisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

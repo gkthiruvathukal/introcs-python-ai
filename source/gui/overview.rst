@@ -24,6 +24,8 @@ comfortable with the command line.
 You encounter GUIs every day: the desktop environment, web browsers, file explorers,
 calculators, and games all use them.
 
+.. index:: Tkinter; overview, tk.Tk(), mainloop(), event loop; Tkinter
+
 What Is Tkinter?
 ----------------
 
@@ -50,6 +52,8 @@ The simplest possible Tkinter program:
 - ``pack()`` places the widget inside the window.
 - ``mainloop()`` starts the event loop — it keeps the window open and listens for
   user actions until the window is closed.
+
+.. index:: widgets; Tkinter, Label widget, Button widget, Entry widget, Text widget, Frame widget, Canvas widget, Listbox widget, Checkbutton widget
 
 Widgets
 -------
@@ -95,6 +99,8 @@ Example — a button that reacts to a click:
 The ``command`` attribute points to a function that is called when the button is
 clicked.
 
+.. index:: Entry widget; user input, entry.get(), label.config(); dynamic update
+
 Handling User Input
 -------------------
 
@@ -125,6 +131,8 @@ retrieve what they typed:
 ``label.config(text=...)`` updates the label's text dynamically without
 recreating the widget.
 
+.. index:: layout managers; Tkinter, pack(); Tkinter, grid(); Tkinter, place(); Tkinter
+
 Layout Managers
 ---------------
 
@@ -145,6 +153,8 @@ Tkinter offers three geometry managers for positioning widgets:
 For most programs, ``pack()`` or ``grid()`` is sufficient. ``place()`` is useful
 when you need precise control over widget positions.
 
+.. index:: messagebox; Tkinter, messagebox.showerror(), messagebox.showinfo(), messagebox.askyesno()
+
 Error Messages with ``messagebox``
 ------------------------------------
 
@@ -157,6 +167,8 @@ Display pop-up dialogs for errors or confirmations:
    messagebox.showerror("Error", "Invalid input. Please try again.")
    messagebox.showinfo("Success", "Data saved successfully.")
    messagebox.askyesno("Confirm", "Are you sure you want to delete this?")
+
+.. index:: Tkinter; API integration, requests; Tkinter example, GUI; API data display
 
 Integrating an API with a GUI
 ------------------------------

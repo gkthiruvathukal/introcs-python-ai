@@ -11,6 +11,8 @@ Error Handling
 Errors are a normal part of programming. Python distinguishes between three
 categories of errors, each requiring a different response.
 
+.. index:: syntax error, runtime error; exception, logic error; debugging
+
 Types of Errors
 ---------------
 
@@ -30,6 +32,8 @@ A **syntax error** is caught by Python before the program runs. A **runtime erro
 (also called an *exception*) occurs while the program is running and, if unhandled,
 crashes it. A **logic error** produces incorrect results without crashing —
 these are the hardest to find.
+
+.. index:: try/except; basic pattern, except; clause ordering, else; try block, finally; cleanup
 
 Basic Exception Handling
 ------------------------
@@ -57,6 +61,8 @@ gracefully instead of crashing.
 - ``finally`` always runs, whether or not an exception occurred. Use it for
   clean-up (closing files, releasing resources).
 
+.. index:: ValueError, ZeroDivisionError, FileNotFoundError, TypeError, KeyError, IndexError
+
 Common Exception Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -78,6 +84,8 @@ Common Exception Types
    * - ``IndexError``
      - List index out of range.
 
+.. index:: FileNotFoundError; catching, exception; as clause, open(); exception handling
+
 Catching File Errors
 --------------------
 
@@ -94,6 +102,8 @@ makes programs robust:
 
 The ``as e`` clause binds the exception object to the variable ``e``, giving you
 access to the error message.
+
+.. index:: exception; inside a loop, try/except; in loop, skip invalid items
 
 Handling Errors Inside a Loop
 ------------------------------
@@ -121,6 +131,8 @@ Output:
    Skipped bad value: three
    Total: 7
 
+.. index:: raise statement, exception; raising deliberately
+
 Raising Exceptions
 ------------------
 
@@ -144,6 +156,8 @@ Output:
 .. code-block:: none
 
    Cannot divide by zero.
+
+.. index:: EAFP style; Python, LBYL style, exception; prevention vs catching
 
 Prevention vs. Catching
 -----------------------
