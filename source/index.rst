@@ -35,5 +35,6 @@ Introduction to Computer Science in Python
    recursion/recursion
    datastructures/datastructures
    gui/gui
+   curriculum_alignment/curriculum_alignment
    appendix/appendix
    genindex
