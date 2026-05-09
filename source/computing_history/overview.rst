@@ -99,7 +99,6 @@ The House of Wisdom and Al-Khowarizmi
 
 .. figure:: ../_static/images/computing_history/al_khowarizmi.png
    :width: 280px
-   :figclass: float-right
    :alt: Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan
 
    Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan — the
@@ -169,7 +168,6 @@ The Quipu of the Inca Empire
 
 .. figure:: ../_static/images/computing_history/quipu.png
    :width: 280px
-   :figclass: float-right
    :alt: A quipu from the Inca Empire, consisting of knotted colored strings
 
    A quipu — knotted, colored cords used by the Inca Empire for census records,
@@ -192,7 +190,6 @@ The Abacus
 
 .. figure:: ../_static/images/computing_history/abacus.png
    :width: 280px
-   :figclass: float-right
    :alt: A Chinese suanpan abacus with beads on rods
 
    A Chinese suanpan abacus — the primary calculation aid across Asia and the
@@ -233,7 +230,6 @@ Napier's Bones and the Slide Rule
 
 .. figure:: ../_static/images/computing_history/napiers_bones.png
    :width: 280px
-   :figclass: float-right
    :alt: Napier's Bones — a set of numbered ivory rods used for multiplication
 
    Napier's Bones (c. 1650, ivory) at the National Museum of Scotland — numbered
@@ -266,7 +262,6 @@ Blaise Pascal's Pascaline
 
 .. figure:: ../_static/images/computing_history/pascaline.png
    :width: 280px
-   :figclass: float-right
    :alt: The Pascaline mechanical calculator built by Blaise Pascal around 1642
 
    The Pascaline (c. 1642) — Pascal's eight-digit mechanical adder.  Its
@@ -354,7 +349,6 @@ The Jacquard Loom
 
 .. figure:: ../_static/images/computing_history/jacquard_loom.png
    :width: 220px
-   :figclass: float-right
    :alt: A Jacquard loom at the Musée des Arts et Métiers, Paris
 
    A Jacquard loom (c. 1804) at the Musée des Arts et Métiers, Paris. The chain
@@ -384,7 +378,6 @@ Charles Babbage and Ada Lovelace
 
 .. figure:: ../_static/images/computing_history/babbage_difference_engine.png
    :width: 280px
-   :figclass: float-right
    :alt: The Science Museum London's 1991 reconstruction of Babbage's Difference Engine No. 2
 
    Babbage's Difference Engine No. 2 — the Science Museum London's 1991
@@ -404,7 +397,6 @@ found that it worked correctly to 31 digits.
 
 .. figure:: ../_static/images/computing_history/ada_lovelace.png
    :width: 200px
-   :figclass: float-left
    :alt: Portrait of Ada Lovelace by Alfred Edward Chalon, c. 1840
 
    Ada Lovelace (c. 1840), painted by Alfred Edward Chalon. Her annotated
@@ -431,7 +423,6 @@ Herman Hollerith and the 1890 Census
 
 .. figure:: ../_static/images/computing_history/hollerith_tabulator.png
    :width: 280px
-   :figclass: float-right
    :alt: Hollerith's electrical tabulating machines as illustrated in Scientific American, 1890
 
    Hollerith's electrical tabulating machines in operation, as illustrated in
@@ -482,7 +473,6 @@ Konrad Zuse and the Z3
 
 .. figure:: ../_static/images/computing_history/zuse_z3.png
    :width: 280px
-   :figclass: float-right
    :alt: Reconstruction of Konrad Zuse's Z3 computer at the Deutsches Museum, Munich
 
    Reconstruction of Konrad Zuse's Z3 (1941) at the Deutsches Museum, Munich —
@@ -505,7 +495,6 @@ Colossus at Bletchley Park
 
 .. figure:: ../_static/images/computing_history/colossus.png
    :width: 280px
-   :figclass: float-right
    :alt: Colossus, the world's first programmable electronic computer, at Bletchley Park
 
    Colossus (1944) at Bletchley Park — the world's first electronic, digital,
@@ -537,7 +526,6 @@ ENIAC and the Women Who Programmed It
 
 .. figure:: ../_static/images/computing_history/eniac.png
    :width: 280px
-   :figclass: float-right
    :alt: The ENIAC computer filling a large room at the University of Pennsylvania
 
    ENIAC (1945) on display at the University of Pennsylvania — the room-filling
@@ -553,7 +541,6 @@ mechanical device.
 
 .. figure:: ../_static/images/computing_history/eniac_programmers.png
    :width: 280px
-   :figclass: float-left
    :alt: Betty Jennings and Frances Bilas operating the ENIAC main control panel, c. 1946
 
    Betty Jennings (left, later Jean Bartik) and Frances Bilas (right, later
@@ -626,7 +613,6 @@ The Universal Turing Machine
 
 .. figure:: ../_static/images/computing_history/alan_turing.png
    :width: 200px
-   :figclass: float-right
    :alt: Portrait photograph of Alan Turing, 1951
 
    Alan Turing (1912–1954), photographed in 1951 by Elliott & Fry. His 1936
@@ -661,7 +647,6 @@ John von Neumann and the Architecture of Modern Computers
 
 .. figure:: ../_static/images/computing_history/von_neumann.png
    :width: 200px
-   :figclass: float-right
    :alt: Portrait photograph of John von Neumann at Los Alamos
 
    John von Neumann at Los Alamos, c. 1940s. His 1945 EDVAC report described
