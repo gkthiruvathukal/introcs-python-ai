@@ -88,7 +88,11 @@ The Greeks adapted their alphabet for numerals, and the Romans followed with
 their own alphabetical-looking symbols. But it was a tradition far to the east
 that would supply the missing ingredient.
 
-.. index:: al-Khowarizmi, Muhammad ibn Musa; House of Wisdom, House of Wisdom; Baghdad, algebra; etymology, algorithm; etymology
+.. index::
+   single: al-Khowarizmi, Muhammad ibn Musa; House of Wisdom
+   House of Wisdom; Baghdad
+   algebra; etymology
+   algorithm; etymology
 
 The House of Wisdom and Al-Khowarizmi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,7 +122,11 @@ throughout Europe via Arab traders. Two words in everyday use today carry his
 memory: *algorithm* derives from the Latinization of his name, and *algebra*
 from the title of his book, *Al-Jabr*.
 
-.. index:: Hindu-Arabic numerals, zero; Chaturbhuj Temple inscription, Boole, George; boolean logic, boolean logic; computing foundation
+.. index::
+   Hindu-Arabic numerals
+   zero; Chaturbhuj Temple inscription
+   single: Boole, George; boolean logic
+   boolean logic; computing foundation
 
 Hindu-Arabic Notation and the Gift of Zero
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -213,7 +221,12 @@ Educated people memorized multiplication tables up to five times five; for
 larger products they used systematic finger configurations and addition to
 derive the rest.
 
-.. index:: Napier, John; logarithms, Napier's Bones, slide rule, Schickard, Wilhelm; mechanical calculator, Oughtred, William; slide rule
+.. index::
+   single: Napier, John; logarithms
+   Napier's Bones
+   slide rule
+   single: Schickard, Wilhelm; mechanical calculator
+   single: Oughtred, William; slide rule
 
 Napier's Bones and the Slide Rule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,7 +256,10 @@ scales alongside each other, producing the circular slide rule in 1622 and the
 familiar linear form shortly after. Engineers relied on the slide rule for
 precise calculation until pocket electronic calculators arrived in the 1970s.
 
-.. index:: Pascal, Blaise; Pascaline, Pascaline, two's complement; origins
+.. index::
+   single: Pascal, Blaise; Pascaline
+   Pascaline
+   two's complement; origins
 
 Blaise Pascal's Pascaline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -269,7 +285,9 @@ performed by adding the nine's complement of the subtrahend. What looks like
 subtraction is actually addition with a cleverly disguised operand — a
 technique computers use to this day in the form of two's complement arithmetic.
 
-.. index:: Leibniz, Gottfried Wilhelm; Stepped Drum Calculator, Stepped Drum Calculator
+.. index::
+   single: Leibniz, Gottfried Wilhelm; Stepped Drum Calculator
+   Stepped Drum Calculator
 
 Leibniz's Stepped Drum Calculator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -295,7 +313,11 @@ Olympic victors to their home cities. Pigeons were still in active military use
 during the Siege of Paris in 1870–71 and were officially discontinued as a
 communication technology only around 1910.
 
-.. index:: Morse, Samuel F.B.; telegraph, telegraph; history, Morse code, Associated Press; telegraph origins
+.. index::
+   single: Morse, Samuel F.B.; telegraph
+   telegraph; history
+   Morse code
+   Associated Press; telegraph origins
 
 Samuel Morse and the Telegraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -322,7 +344,10 @@ intelligence gave the Union Army a decisive advantage in the Civil War.
 Looms and Mechanical Computing
 -------------------------------
 
-.. index:: Jacquard loom, Jacquard, Joseph Marie; loom, punched cards; Jacquard loom origins
+.. index::
+   Jacquard loom
+   single: Jacquard, Joseph Marie; loom
+   punched cards; Jacquard loom origins
 
 The Jacquard Loom
 ^^^^^^^^^^^^^^^^^^
@@ -346,7 +371,13 @@ lost on later inventors: Babbage explicitly acknowledged the Jacquard loom as an
 inspiration for his Analytical Engine, and Herman Hollerith's punched cards for
 the 1890 census carried the same principle into data processing.
 
-.. index:: Babbage, Charles; Difference Engine, Babbage, Charles; Analytical Engine, Lovelace, Ada; first algorithm, Difference Engine, Analytical Engine, Ada programming language; Lovelace
+.. index::
+   single: Babbage, Charles; Difference Engine
+   single: Babbage, Charles; Analytical Engine
+   single: Lovelace, Ada; first algorithm
+   Difference Engine
+   Analytical Engine
+   Ada programming language; Lovelace
 
 Charles Babbage and Ada Lovelace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -389,7 +420,10 @@ original text, is credited with writing what is recognized as the first
 algorithm intended for machine execution. The Ada programming language, used
 today in safety-critical systems, is named in her honor.
 
-.. index:: Hollerith, Herman; 1890 census, punched cards; Hollerith tabulator, IBM; origins
+.. index::
+   single: Hollerith, Herman; 1890 census
+   punched cards; Hollerith tabulator
+   IBM; origins
 
 Herman Hollerith and the 1890 Census
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -416,7 +450,10 @@ primary medium for data entry into computers well into the 1970s.
 Early Electronic Computing
 ---------------------------
 
-.. index:: Atanasoff, John Vincent; ABC computer, Berry, Clifford; ABC computer, Atanasoff-Berry Computer; binary arithmetic
+.. index::
+   single: Atanasoff, John Vincent; ABC computer
+   single: Berry, Clifford; ABC computer
+   Atanasoff-Berry Computer; binary arithmetic
 
 The Atanasoff-Berry Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -435,7 +472,9 @@ fully completed and was largely forgotten for decades, a landmark 1973 U.S.
 federal court ruling invalidated the ENIAC patent and recognized Atanasoff as
 the originator of several foundational computing concepts.
 
-.. index:: Zuse, Konrad; Z3, Z3; first Turing-complete computer
+.. index::
+   single: Zuse, Konrad; Z3
+   Z3; first Turing-complete computer
 
 Konrad Zuse and the Z3
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -481,7 +520,16 @@ messages encrypted by the Lorenz machine, the cipher teleprinter used by the
 German High Command. Its existence was kept secret until the 1970s, which
 obscured its place in computing history for decades.
 
-.. index:: ENIAC; University of Pennsylvania, Eckert, J. Presper; ENIAC, Mauchly, John; ENIAC, Jennings, Jean; ENIAC programmer, Holberton, Betty; ENIAC programmer, Bilas, Frances; ENIAC programmer, Lichterman, Ruth; ENIAC programmer, McNulty, Kathleen; ENIAC programmer, Wescoff, Marlyn; ENIAC programmer
+.. index::
+   ENIAC; University of Pennsylvania
+   single: Eckert, J. Presper; ENIAC
+   single: Mauchly, John; ENIAC
+   single: Jennings, Jean; ENIAC programmer
+   single: Holberton, Betty; ENIAC programmer
+   single: Bilas, Frances; ENIAC programmer
+   single: Lichterman, Ruth; ENIAC programmer
+   single: McNulty, Kathleen; ENIAC programmer
+   single: Wescoff, Marlyn; ENIAC programmer
 
 ENIAC and the Women Who Programmed It
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -529,7 +577,11 @@ presidential election. The machine's projection of an Eisenhower landslide —
 based on early returns — was so at odds with conventional wisdom that CBS
 initially declined to broadcast it. The machine was right.
 
-.. index:: Bush, Vannevar; memex, memex; hypertext precursor, "As We May Think"; Bush 1945, World Wide Web; Bush's vision
+.. index::
+   single: Bush, Vannevar; memex
+   memex; hypertext precursor
+   "As We May Think"; Bush 1945
+   World Wide Web; Bush's vision
 
 "As We May Think" and the World Wide Web
 -----------------------------------------
@@ -559,7 +611,11 @@ his vision remained unachieved even late in his life.
 Stored Program and Universal Computing
 ----------------------------------------
 
-.. index:: Turing, Alan; Turing machine, Turing machine; universal, Turing-complete; Python, Turing-equivalent
+.. index::
+   single: Turing, Alan; Turing machine
+   Turing machine; universal
+   Turing-complete; Python
+   Turing-equivalent
 
 The Universal Turing Machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -591,7 +647,10 @@ homosexuality, subjected to chemical castration, and died in 1954. He was
 posthumously pardoned by the British government in 2013 and granted a statutory
 pardon in 2017.
 
-.. index:: von Neumann, John; architecture, von Neumann architecture, stored-program concept
+.. index::
+   single: von Neumann, John; architecture
+   von Neumann architecture
+   stored-program concept
 
 John von Neumann and the Architecture of Modern Computers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

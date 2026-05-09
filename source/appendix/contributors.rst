@@ -1,20 +1,20 @@
 .. index::
-   Thiruvathukal, George K.
-   Al Shaikhli, Ihab
-   Bisharat, Arslan
-   Eslami, Behnaz
-   Hyatt, Matt
-   Luce, Jason
-   Sandoval Madrigal, Manny
-   Nazari, Mujtaba
-   Pautsch, Erik
-   Saban, Michael
-   Shirsat, Rushikesh
-   Synovic, Nicholas
-   Läufer, Konstantin
-   Irakliotis, Leo
-   Christopher, Thomas W.
-   Harrington, Andy
+   single: Thiruvathukal, George K.
+   single: Al Shaikhli, Ihab
+   single: Bisharat, Arslan
+   single: Eslami, Behnaz
+   single: Hyatt, Matt
+   single: Luce, Jason
+   single: Sandoval Madrigal, Manny
+   single: Nazari, Mujtaba
+   single: Pautsch, Erik
+   single: Saban, Michael
+   single: Shirsat, Rushikesh
+   single: Synovic, Nicholas
+   single: Läufer, Konstantin
+   single: Irakliotis, Leo
+   single: Christopher, Thomas W.
+   single: Harrington, Andy
 
 Contributors
 ============
