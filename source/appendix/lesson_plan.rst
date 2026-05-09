@@ -22,10 +22,10 @@ assessment.
      - :doc:`/context/context`
    * - 2
      - Hardware, software, and the development environment
-     - :doc:`/hardware/hardware`
+     - :doc:`/hardware/overview`
    * - 3
      - The terminal, shell commands, and running Python scripts
-     - :doc:`/terminal/terminal`
+     - :doc:`/terminal/overview`
    * - 4
      - Data types, variables, expressions, and basic I/O
      - :doc:`/data/data`
@@ -40,14 +40,14 @@ assessment.
      - :doc:`/functions/functions`
    * - 8
      - Modules, imports, and variable scope
-     - :doc:`/modules/modules`
+     - :doc:`/modules/overview`
    * - 9
      - **Midterm review and assessment.** User input: ``input()``,
        ``argparse``, and reading files
-     - :doc:`/user_input/user_input`
+     - :doc:`/user_input/overview`
    * - 10
      - Error handling, exceptions, and defensive programming
-     - :doc:`/error_handling/error_handling`
+     - :doc:`/error_handling/overview`
    * - 11
      - While loops and interactive programs
      - :doc:`/while/while`
@@ -63,11 +63,11 @@ assessment.
    * - 15
      - Dictionaries, lists of dictionaries, and dictionary algorithms
      - :doc:`/dictionaries/dictionaries`,
-       :doc:`/lists_of_dicts/lists_of_dicts`,
-       :doc:`/dict_algorithms/dict_algorithms`
+       :doc:`/lists_of_dicts/overview`,
+       :doc:`/dict_algorithms/overview`
    * - 16
      - Internet data, APIs, and graphical user interfaces. **Final review.**
-     - :doc:`/internet_data/internet_data`, :doc:`/gui/gui`
+     - :doc:`/internet_data/overview`, :doc:`/gui/overview`
 
 Advanced and Optional Topics
 -----------------------------

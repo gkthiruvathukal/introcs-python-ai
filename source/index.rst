@@ -11,30 +11,30 @@ Introduction to Computer Science in Python
    :maxdepth: 2
 
    context/context
-   computing_history/computing_history
-   hardware/hardware
-   terminal/terminal
+   computing_history/overview
+   hardware/overview
+   terminal/overview
    data/data
    functions/functions
-   modules/modules
+   modules/overview
    basicstringops/basicstringops
    decisions/decisions
-   user_input/user_input
+   user_input/overview
    while/while
    for/for
    files/files
-   error_handling/error_handling
+   error_handling/overview
    lists/lists
    tuples/tuples
    dictionaries/dictionaries
-   lists_of_dicts/lists_of_dicts
-   dict_algorithms/dict_algorithms
-   internet_data/internet_data
+   lists_of_dicts/overview
+   dict_algorithms/overview
+   internet_data/overview
    classes/classes
    testing/testing
    recursion/recursion
    datastructures/datastructures
-   gui/gui
-   curriculum_alignment/curriculum_alignment
+   gui/overview
+   curriculum_alignment/overview
    appendix/appendix
    genindex
