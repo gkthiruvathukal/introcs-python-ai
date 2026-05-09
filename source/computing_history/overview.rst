@@ -91,7 +91,7 @@ that would supply the missing ingredient.
 The House of Wisdom and Al-Khowarizmi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/al_khowarizmi.jpg
+.. figure:: ../_static/images/computing_history/al_khowarizmi.png
    :width: 280px
    :figclass: float-right
    :alt: Statue of Muhammad ibn Musa al-Khwarizmi in Urgench, Uzbekistan
@@ -157,7 +157,7 @@ Nascent Computing Attempts
 The Quipu of the Inca Empire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/quipu.jpg
+.. figure:: ../_static/images/computing_history/quipu.png
    :width: 280px
    :figclass: float-right
    :alt: A quipu from the Inca Empire, consisting of knotted colored strings
@@ -180,7 +180,7 @@ encoding admits many physical forms.
 The Abacus
 ^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/abacus.jpg
+.. figure:: ../_static/images/computing_history/abacus.png
    :width: 280px
    :figclass: float-right
    :alt: A Chinese suanpan abacus with beads on rods
@@ -216,7 +216,7 @@ derive the rest.
 Napier's Bones and the Slide Rule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/napiers_bones.jpg
+.. figure:: ../_static/images/computing_history/napiers_bones.png
    :width: 280px
    :figclass: float-right
    :alt: Napier's Bones — a set of numbered ivory rods used for multiplication
@@ -246,7 +246,7 @@ precise calculation until pocket electronic calculators arrived in the 1970s.
 Blaise Pascal's Pascaline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/pascaline.jpg
+.. figure:: ../_static/images/computing_history/pascaline.png
    :width: 280px
    :figclass: float-right
    :alt: The Pascaline mechanical calculator built by Blaise Pascal around 1642
@@ -325,7 +325,7 @@ Looms and Mechanical Computing
 The Jacquard Loom
 ^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/jacquard_loom.jpg
+.. figure:: ../_static/images/computing_history/jacquard_loom.png
    :width: 220px
    :figclass: float-right
    :alt: A Jacquard loom at the Musée des Arts et Métiers, Paris
@@ -349,7 +349,7 @@ the 1890 census carried the same principle into data processing.
 Charles Babbage and Ada Lovelace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/babbage_difference_engine.jpg
+.. figure:: ../_static/images/computing_history/babbage_difference_engine.png
    :width: 280px
    :figclass: float-right
    :alt: The Science Museum London's 1991 reconstruction of Babbage's Difference Engine No. 2
@@ -360,7 +360,7 @@ Charles Babbage and Ada Lovelace
    *Source:* Carsten Ullrich / `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:LondonScienceMuseumsReplicaDifferenceEngine.jpg>`_,
    CC BY-SA 2.5.
 
-.. figure:: ../_static/images/computing_history/ada_lovelace.jpg
+.. figure:: ../_static/images/computing_history/ada_lovelace.png
    :width: 200px
    :figclass: float-left
    :alt: Portrait of Ada Lovelace by Alfred Edward Chalon, c. 1840
@@ -392,7 +392,7 @@ today in safety-critical systems, is named in her honor.
 Herman Hollerith and the 1890 Census
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/hollerith_tabulator.jpg
+.. figure:: ../_static/images/computing_history/hollerith_tabulator.png
    :width: 280px
    :figclass: float-right
    :alt: Hollerith's electrical tabulating machines as illustrated in Scientific American, 1890
@@ -438,7 +438,7 @@ the originator of several foundational computing concepts.
 Konrad Zuse and the Z3
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/zuse_z3.jpg
+.. figure:: ../_static/images/computing_history/zuse_z3.png
    :width: 280px
    :figclass: float-right
    :alt: Reconstruction of Konrad Zuse's Z3 computer at the Deutsches Museum, Munich
@@ -461,7 +461,7 @@ in Munich.
 Colossus at Bletchley Park
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/colossus.jpg
+.. figure:: ../_static/images/computing_history/colossus.png
    :width: 280px
    :figclass: float-right
    :alt: Colossus, the world's first programmable electronic computer, at Bletchley Park
@@ -484,7 +484,7 @@ obscured its place in computing history for decades.
 ENIAC and the Women Who Programmed It
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/eniac.jpg
+.. figure:: ../_static/images/computing_history/eniac.png
    :width: 280px
    :figclass: float-right
    :alt: The ENIAC computer filling a large room at the University of Pennsylvania
@@ -504,7 +504,7 @@ Frances Bilas, Betty Holberton, Ruth Lichterman, Kathleen McNulty, and Marlyn
 Wescoff. Working from mathematical problem descriptions and wiring diagrams, they
 developed the techniques of programming as we understand them today.
 
-.. figure:: ../_static/images/computing_history/eniac_programmers.jpg
+.. figure:: ../_static/images/computing_history/eniac_programmers.png
    :width: 280px
    :figclass: float-left
    :alt: Betty Jennings and Frances Bilas operating the ENIAC main control panel, c. 1946
@@ -562,7 +562,7 @@ Stored Program and Universal Computing
 The Universal Turing Machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/alan_turing.jpg
+.. figure:: ../_static/images/computing_history/alan_turing.png
    :width: 200px
    :figclass: float-right
    :alt: Portrait photograph of Alan Turing, 1951
@@ -594,7 +594,7 @@ pardon in 2017.
 John von Neumann and the Architecture of Modern Computers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/images/computing_history/von_neumann.jpg
+.. figure:: ../_static/images/computing_history/von_neumann.png
    :width: 200px
    :figclass: float-right
    :alt: Portrait photograph of John von Neumann at Los Alamos
