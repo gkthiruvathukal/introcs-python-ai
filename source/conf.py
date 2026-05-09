@@ -19,8 +19,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = u'Introduction to Computer Science in Python: Principles and Practice'
-author = u'The Computer Science Department Faculty at Loyola University Chicago'
-copyright = u'2025, The Computer Science Department Faculty at Loyola University Chicago'
+author = u'Loyola University Chicago Computer Science Department; Edited by George K. Thiruvathukal'
+copyright = u'2026, Loyola University Chicago Computer Science Department'
 
 version = date.today().strftime("%d %b %Y")
 release = version
@@ -86,7 +86,7 @@ latex_elements = {
 latex_documents = [
     ('index', 'introcs-python.tex',
      u'Introduction to Computer Science in Python:\\\\ Principles and Practice',
-     u'The Computer Science Department Faculty at Loyola University Chicago', 'manual'),
+     u'Loyola University Chicago Computer Science Department; Edited by George K. Thiruvathukal', 'manual'),
 ]
 
 epub_basename = 'introcs-python'
