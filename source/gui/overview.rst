@@ -1,4 +1,6 @@
 .. index:: GUI, Tkinter, graphical user interface, widgets, events
+   ACM-IEEE CS2013; PL3 Event-Driven and Reactive Programming
+   ACM-IEEE CS2023; PL3 Event-Driven and Reactive Programming
 
 .. _Graphical-User-Interfaces-With-Tkinter:
 

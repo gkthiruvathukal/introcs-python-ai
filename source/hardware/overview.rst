@@ -1,4 +1,6 @@
 .. index:: hardware, software, CPU, RAM, operating system
+   ACM-IEEE CS2013; AR1 Digital Logic and Digital Systems
+   ACM-IEEE CS2023; AR1 Digital Logic and Digital Systems
 
 .. _Hardware-And-Software:
 

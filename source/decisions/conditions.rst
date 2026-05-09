@@ -1,4 +1,6 @@
 .. index:: Boolean, bool, True, False
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
 
 .. _Simple-Conditions:
 

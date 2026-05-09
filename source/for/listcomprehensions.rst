@@ -1,4 +1,6 @@
 .. index:: list comprehension
+   ACM-IEEE CS2013; PL2 Functional Programming
+   ACM-IEEE CS2023; PL2 Functional Programming
 
 .. _List-Comprehensions:
 

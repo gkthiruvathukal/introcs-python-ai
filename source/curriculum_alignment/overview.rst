@@ -1,6 +1,6 @@
 .. index::
-   CS2013; curriculum alignment
-   CS2023; curriculum alignment
+   ACM-IEEE CS2013; curriculum alignment
+   ACM-IEEE CS2023; curriculum alignment
    ACM; computing curriculum
    IEEE; computing curriculum
    curriculum; ACM/IEEE standards
@@ -195,8 +195,8 @@ Software Development Fundamentals (SDF)
 ----------------------------------------
 
 .. index::
-   CS2013; SDF
-   CS2023; SDF
+   ACM-IEEE CS2013; SDF
+   ACM-IEEE CS2023; SDF
    SDF; Software Development Fundamentals
 
 SDF is the Knowledge Area most directly targeted by a first programming course.
@@ -268,8 +268,8 @@ Programming Languages (PL)
 ---------------------------
 
 .. index::
-   CS2013; PL
-   CS2023; PL
+   ACM-IEEE CS2013; PL
+   ACM-IEEE CS2023; PL
    PL; Programming Languages
 
 CS2013 defines ten PL KUs. PL1 and PL4 are Core Tier 1 CS1 topics; PL2 and
@@ -373,8 +373,8 @@ Algorithms and Complexity (AL)
 -------------------------------
 
 .. index::
-   CS2013; AL
-   CS2023; AL
+   ACM-IEEE CS2013; AL
+   ACM-IEEE CS2023; AL
    AL; Algorithms and Complexity
 
 CS2013 has seven AL KUs. AL1–AL3 are Core Tier 1 but are primarily taught in
@@ -455,8 +455,8 @@ Social Issues and Professional Practice (SP)
 --------------------------------------------
 
 .. index::
-   CS2013; SP
-   CS2023; SP
+   ACM-IEEE CS2013; SP
+   ACM-IEEE CS2023; SP
    SP; Social Issues and Professional Practice
 
 CS2013 has nine SP KUs. SP1–SP3 (Social Context, Analytical Tools, and
@@ -555,8 +555,8 @@ Architecture and Organization (AR)
 ------------------------------------
 
 .. index::
-   CS2013; AR
-   CS2023; AR
+   ACM-IEEE CS2013; AR
+   ACM-IEEE CS2023; AR
    AR; Architecture and Organization
 
 CS2013 has eight AR KUs. AR1 and AR2 are Core Tier 1 and expected at a
@@ -639,8 +639,8 @@ Software Engineering (SE)
 --------------------------
 
 .. index::
-   CS2013; SE
-   CS2023; SE
+   ACM-IEEE CS2013; SE
+   ACM-IEEE CS2023; SE
    SE; Software Engineering
 
 CS2013 has ten SE KUs. SE3 (Tools and Environments) is Core Tier 1 and the

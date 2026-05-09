@@ -1,4 +1,8 @@
 .. index:: function; def
+   ACM-IEEE CS2013; SDF1 Algorithms and Design
+   ACM-IEEE CS2023; SDF1 Algorithms and Design
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
 
 A First Function Definition
 ===========================

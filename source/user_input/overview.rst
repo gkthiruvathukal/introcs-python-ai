@@ -1,4 +1,8 @@
 .. index:: input, user input, argparse, command line interface, interactive programs
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2013; SE3 Tools and Environments
+   ACM-IEEE CS2023; SE3 Tools and Environments
 
 .. _User-Input-Overview:
 

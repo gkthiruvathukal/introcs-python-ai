@@ -1,4 +1,6 @@
 .. index:: dictionary algorithms, counting, grouping, filtering, merging, frequency
+   ACM-IEEE CS2013; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2023; SDF3 Fundamental Data Structures
 
 .. _Dictionary-Algorithms:
 

@@ -1,4 +1,6 @@
 .. index:: f-string, format string
+   ACM-IEEE CS2013; AR2 Machine Level Representation of Data
+   ACM-IEEE CS2023; AR2 Machine Level Representation of Data
 
 .. _fstrings:
 

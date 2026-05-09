@@ -1,4 +1,8 @@
 .. index:: recursion, base case, recursive case, call stack
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2013; AL2 Algorithmic Strategies
+   ACM-IEEE CS2023; AL2 Algorithmic Strategies
 
 .. _Recursion-Intro:
 

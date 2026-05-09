@@ -1,4 +1,8 @@
 .. index:: pytest, testing; pytest, test function
+   ACM-IEEE CS2013; SDF4 Development Methods
+   ACM-IEEE CS2023; SDF4 Development Methods
+   ACM-IEEE CS2013; SE7 Verification and Validation
+   ACM-IEEE CS2023; SE7 Verification and Validation
 
 .. _Pytest-Intro:
 

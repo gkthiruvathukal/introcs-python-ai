@@ -1,4 +1,8 @@
 .. index:: stack, queue, collections.deque
+   ACM-IEEE CS2013; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2023; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2013; AL3 Fundamental Data Structures and Algorithms
+   ACM-IEEE CS2023; AL3 Fundamental Data Structures and Algorithms
 
 .. _Stacks-Queues:
 

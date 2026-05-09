@@ -1,4 +1,6 @@
 .. index:: terminal, shell, command line, stdin, stdout, stderr, sys.argv, argparse, cat, touch, cp, mv, rm, echo, less, grep, find, chmod, chown, ps, top, kill, file permissions, process management
+   ACM-IEEE CS2013; SE3 Tools and Environments
+   ACM-IEEE CS2023; SE3 Tools and Environments
 
 .. _Terminal-Overview:
 

@@ -1,4 +1,6 @@
 .. index:: lists of dictionaries, nested data, records, CRUD, factory function
+   ACM-IEEE CS2013; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2023; SDF3 Fundamental Data Structures
 
 .. _Lists-Of-Dictionaries:
 

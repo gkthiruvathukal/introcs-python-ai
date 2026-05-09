@@ -1,4 +1,6 @@
 .. index:: computing history, numbers; history, zero; history, abacus, quipu, ENIAC, Atanasoff-Berry Computer, ABC, memex, algorithm; etymology
+   ACM-IEEE CS2013; SP8 History
+   ACM-IEEE CS2023; SP8 History
 
 .. _Computing-History:
 

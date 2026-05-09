@@ -1,5 +1,9 @@
 .. index:: variable; assignment
    assignment statement
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2013; PL4 Basic Type Systems
+   ACM-IEEE CS2023; PL4 Basic Type Systems
 
 .. _Variables-and-Assignment:
 

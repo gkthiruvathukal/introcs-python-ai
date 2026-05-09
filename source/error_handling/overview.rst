@@ -1,4 +1,6 @@
 .. index:: error handling, exceptions, try, except, finally, raise, ValueError, ZeroDivisionError
+   ACM-IEEE CS2013; SDF4 Development Methods
+   ACM-IEEE CS2023; SDF4 Development Methods
 
 .. _Error-Handling:
 

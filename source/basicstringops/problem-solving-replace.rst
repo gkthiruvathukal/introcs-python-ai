@@ -1,5 +1,7 @@
 .. index:: string; problem solving
    problem solving
+   ACM-IEEE CS2013; SE1 Software Processes
+   ACM-IEEE CS2023; SE1 Software Processes
 
 .. _solve-string-replace:
 

@@ -1,4 +1,6 @@
 .. index:: class; Contact, OOP; __init__, self, instance variable
+   ACM-IEEE CS2013; PL1 Object-Oriented Programming
+   ACM-IEEE CS2023; PL1 Object-Oriented Programming
 
 .. _First-Class:
 

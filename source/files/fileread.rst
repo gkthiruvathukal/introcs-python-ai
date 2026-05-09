@@ -1,4 +1,6 @@
 .. index:: file; reading, open(), with statement, for; file lines
+   ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
 
 .. _fileread:
 

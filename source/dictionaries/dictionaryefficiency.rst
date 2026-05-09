@@ -1,4 +1,6 @@
 .. index:: dict; efficiency, hash table, O(1) lookup
+   ACM-IEEE CS2013; AL3 Fundamental Data Structures and Algorithms
+   ACM-IEEE CS2023; AL3 Fundamental Data Structures and Algorithms
 
 .. _Dictionary-Efficiency:
 

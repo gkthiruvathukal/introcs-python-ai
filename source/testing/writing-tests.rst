@@ -1,4 +1,8 @@
 .. index:: testing; effective, pytest.raises, edge cases
+   ACM-IEEE CS2013; SE6 Software Construction
+   ACM-IEEE CS2023; SE6 Software Construction
+   ACM-IEEE CS2013; SE7 Verification and Validation
+   ACM-IEEE CS2023; SE7 Verification and Validation
 
 .. _Writing-Tests:
 

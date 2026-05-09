@@ -1,4 +1,6 @@
 .. index:: sorting, list; sort, sorted()
+   ACM-IEEE CS2013; AL3 Fundamental Data Structures and Algorithms
+   ACM-IEEE CS2023; AL3 Fundamental Data Structures and Algorithms
 
 .. _Sorting:
 

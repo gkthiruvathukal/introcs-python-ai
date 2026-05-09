@@ -1,4 +1,6 @@
 .. index:: type hints, type annotations, ->
+   ACM-IEEE CS2013; PL4 Basic Type Systems
+   ACM-IEEE CS2023; PL4 Basic Type Systems
 
 .. _Type-Hints-Functions:
 

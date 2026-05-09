@@ -1,4 +1,6 @@
 .. index:: modules, import, scope, LEGB, global, nonlocal, __name__, __main__
+   ACM-IEEE CS2013; PL6 Language Translation and Execution
+   ACM-IEEE CS2023; PL6 Language Translation and Execution
 
 .. _Modules-And-Variable-Scope:
 

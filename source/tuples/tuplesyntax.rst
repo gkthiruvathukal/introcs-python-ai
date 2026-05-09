@@ -1,4 +1,6 @@
 .. index:: tuple, tuple; syntax, tuple; immutability
+   ACM-IEEE CS2013; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2023; SDF3 Fundamental Data Structures
 
 .. _Tuple-Syntax:
 

@@ -1,4 +1,6 @@
 .. index:: list, list; syntax, list; indexing, list; slicing
+   ACM-IEEE CS2013; SDF3 Fundamental Data Structures
+   ACM-IEEE CS2023; SDF3 Fundamental Data Structures
 
 .. _List-Syntax:
 

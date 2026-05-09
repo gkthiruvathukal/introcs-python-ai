@@ -1,3 +1,7 @@
+.. index::
+   ACM-IEEE CS2013; SP1 Social Context
+   ACM-IEEE CS2023; SP1 Social Context
+
 .. _resources-online:
 
 Resources Online
