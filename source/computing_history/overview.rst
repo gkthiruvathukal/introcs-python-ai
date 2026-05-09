@@ -43,6 +43,17 @@ Numbers and Calculation
 Tally Sticks and Early Counting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/tally_stick.jpg
+   :width: 560px
+   :alt: Diagram of an English Exchequer tally stick showing notches for a payment of £236 4s 3½d, 1739
+
+   An English Exchequer tally stick (1739) — the notched pattern encodes a
+   payment of £236 4s 3½d. Splitting the stick gave payer and collector one
+   half each, making forgery nearly impossible.
+   *Source:* Encyclopædia Britannica, 11th ed. (1911) /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:EB1911_Tally_-_tally_stick_(diagram).jpg>`__,
+   Public Domain.
+
 Around 4000 BCE, traders in the Mesopotamian city of Uruk made a remarkable
 discovery: the same number could stand for ten sheep, ten bags of grain, or
 ten talents of copper. The quantity and the thing being counted were
@@ -287,6 +298,16 @@ technique computers use to this day in the form of two's complement arithmetic.
 Leibniz's Stepped Drum Calculator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/leibniz.jpg
+   :width: 200px
+   :alt: Portrait of Gottfried Wilhelm Leibniz, c. 1695
+
+   Gottfried Wilhelm Leibniz (c. 1695), mathematician and inventor of the
+   Stepped Drum Calculator.
+   *Source:* Christoph Bernhard Francke /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg>`__,
+   Public Domain.
+
 Gottfried Wilhelm Leibniz extended Pascal's design with the Stepped Drum
 Calculator, which could perform not just addition but multiplication and
 division through repeated additions. The stepped drum — a cylinder with teeth of
@@ -300,6 +321,16 @@ Communications and the Information Age
 
 Homing Pigeons
 ^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/carrier_pigeons.jpg
+   :width: 400px
+   :alt: WWI mobile carrier pigeon station with soldiers and pigeon lofts, c. 1917–1918
+
+   A mobile carrier pigeon station, Western Front, c. 1917–1918 — pigeons
+   remained a critical long-range communication technology through both World Wars.
+   *Source:* U.S. War Department /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Mobile_carrier_pigeons_station_-_NARA_-_17391470.jpg>`__,
+   Public Domain (NARA).
 
 Calculating is only half the problem; the other half is communicating results
 across distance. Persian trainers pioneered the use of homing pigeons for
@@ -316,6 +347,26 @@ communication technology only around 1910.
 
 Samuel Morse and the Telegraph
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../_static/images/computing_history/samuel_morse.jpg
+   :width: 200px
+   :alt: Portrait of Samuel F.B. Morse, c. 1855–1865, by Mathew Brady
+
+   Samuel F.B. Morse (c. 1855–1865) — painter turned inventor whose
+   telegraph and dot-dash code transformed long-distance communication.
+   *Source:* Mathew Brady /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Samuel_Morse_portrait.jpg>`__,
+   Public Domain.
+
+.. figure:: ../_static/images/computing_history/morse_code_chart.svg
+   :width: 380px
+   :alt: International Morse Code chart showing dot-dash sequences for all letters and digits
+
+   The International Morse Code — dots and dashes assigned to each letter
+   and digit, with common letters receiving the shortest sequences.
+   *Source:* Rhey T. Snodgrass & Victor F. Camp (1922) /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:International_Morse_Code.svg>`__,
+   Public Domain.
 
 Samuel F.B. Morse (1791–1872) began his career as a painter — a Yale graduate
 who moved to New York in 1823 and became one of the foremost American artists
@@ -450,6 +501,17 @@ Early Electronic Computing
 The Atanasoff-Berry Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/atanasoff_berry_computer.jpg
+   :width: 340px
+   :alt: Reconstruction of the Atanasoff-Berry Computer at Iowa State University's Durham Center
+
+   Reconstruction of the Atanasoff-Berry Computer (ABC) at Iowa State
+   University's Durham Center — the first electronic digital computing device,
+   built between 1937 and 1942.
+   *Source:* Manop /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Atanasoff-Berry_Computer.jpg>`__,
+   CC BY-SA 3.0.
+
 Before the better-known wartime machines, John Vincent Atanasoff and his
 graduate student Clifford Berry built the first electronic digital computing
 device at Iowa State College between 1937 and 1942. The Atanasoff-Berry
@@ -562,6 +624,17 @@ developed the techniques of programming as we understand them today.
 UNIVAC and the 1952 Election
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ../_static/images/computing_history/univac_1952.jpg
+   :width: 340px
+   :alt: UNIVAC I computer with Walter Cronkite and engineers at CBS on election night, 1952
+
+   UNIVAC I on election night, November 4, 1952 — with Walter Cronkite (center)
+   and engineers J. Presper Eckert and Harold Sweeny. The machine correctly
+   predicted an Eisenhower landslide that CBS initially refused to air.
+   *Source:* U.S. Census Bureau /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:UNIVAC_1_demo.jpg>`__,
+   Public Domain.
+
 The UNIVAC II, the commercial successor to the ENIAC era, entered public
 consciousness in a striking way: CBS used it to predict the outcome of the 1952
 presidential election. The machine's projection of an Eisenhower landslide —
@@ -576,6 +649,17 @@ initially declined to broadcast it. The machine was right.
 
 "As We May Think" and the World Wide Web
 -----------------------------------------
+
+.. figure:: ../_static/images/computing_history/vannevar_bush.jpg
+   :width: 200px
+   :alt: Portrait of Vannevar Bush, 1938, by Harris & Ewing
+
+   Vannevar Bush (1938), Director of the Office of Scientific Research and
+   Development — whose 1945 essay "As We May Think" envisioned the memex,
+   a precursor to the World Wide Web.
+   *Source:* Harris & Ewing /
+   `Wikimedia Commons <https://commons.wikimedia.org/wiki/File:Vannevar_Bush,_1938,_Harris_%26_Ewing_original.jpg>`__,
+   Public Domain.
 
 While engineers were building the first electronic machines, a visionary
 government scientist named Vannevar Bush was looking further ahead. In a
