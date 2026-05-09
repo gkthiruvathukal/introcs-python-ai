@@ -46,7 +46,7 @@ html_theme = 'sphinx_book_theme'
 html_theme_options = {
     "home_page_in_toc": True,
     "show_toc_level": 2,
-    "repository_url": "https://github.com/LoyolaChicagoBooks/introcs-python",
+    "repository_url": "https://github.com/LoyolaChicagoBooks/introcs-python-ai",
     "use_repository_button": True,
     "use_issues_button": True,
     "use_download_button": False,
