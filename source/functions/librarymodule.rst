@@ -3,13 +3,6 @@
 Library Modules
 ===============
 
-.. note::
-
-   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
-   lines 563–683).  The ``math`` module table, ``random`` module examples,
-   and ``from … import`` forms closely follow the SE4ML presentation.
-   Writing-your-own-module example is an original addition.
-
 Python's strength comes partly from its enormous standard library and
 ecosystem of third-party packages.  A *module* is a ``.py`` file containing
 functions and variables you can use in your own programs.

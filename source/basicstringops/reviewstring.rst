@@ -1,12 +1,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Questions 1–5 adapted from the C# edition
-   (``basicstringops/reviewstring.rst``).  Questions 6–10 are original
-   additions specific to Python.
-
 1. What is printed by this fragment?
 
    .. code-block:: python

@@ -1,12 +1,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition data-chapter review questions.
-   Python-specific questions (f-strings, floor division, truthiness) are
-   original additions.
-
 1. Python has two main numeric types.
 
    a.  Name them.

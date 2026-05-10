@@ -5,13 +5,6 @@
 The Rational Class
 ==================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``classes/rational.rst``).
-   Python's dunder (double-underscore) methods replace C#'s
-   ``operator+``, ``operator*``, and ``CompareTo`` syntax.
-   Python's ``math.gcd`` replaces the hand-coded GCD function.
-
 A *rational number* is a ratio of two integers: 2/3, -5/4, 7.  We build
 a ``Rational`` class that stores numerator and denominator in lowest
 terms and supports arithmetic with natural Python operators.
@@ -108,8 +101,8 @@ Static Parse Method
 
 .. index:: Rational; classmethod, @classmethod
 
-A class method acts on the class itself rather than an instance —
-Python's replacement for C#'s ``static Parse``:
+A class method for parsing a string acts on the class itself rather than an
+instance:
 
 .. literalinclude:: ../../examples/introcs-python/classes/rational.py
    :language: python

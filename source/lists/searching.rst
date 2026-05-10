@@ -7,13 +7,6 @@
 Searching
 =========
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``arrays/searching.rst``).
-   Python's ``in`` operator and ``list.index()`` replace the explicit
-   C# ``IntArrayLinearSearch()`` function.  The ``bisect`` module
-   provides binary search for sorted lists.
-
 Searching finds whether a value exists in a collection and, if so,
 where.  Python provides both built-in conveniences and the ability to
 write searches explicitly.

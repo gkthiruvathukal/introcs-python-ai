@@ -7,12 +7,6 @@
 List Comprehensions
 ===================
 
-.. note::
-
-   *Source:* Python-specific — no equivalent exists in the C# edition.
-   List comprehensions are a concise Python idiom for building lists from
-   sequences.  Every list comprehension has an equivalent ``for`` loop; the
-   examples below show both forms so you can see the correspondence.
 
 A common pattern with ``for`` loops is building a new list by transforming
 or filtering an existing sequence:

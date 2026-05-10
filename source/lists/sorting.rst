@@ -7,14 +7,6 @@
 Sorting
 =======
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``arrays/sorting.rst``).
-   Bubble sort, selection sort, and insertion sort are translated to Python
-   to illustrate the underlying algorithms.  Python's ``list.sort()`` and
-   ``sorted()`` use Timsort, an optimized O(N log N) algorithm — far faster
-   than the O(N²) algorithms for large lists.
-
 .. index:: Timsort, O(N log N), sorting algorithm
 
 Understanding how sorting works is essential even if you always use the
@@ -81,8 +73,8 @@ Output:
 
    [-5, 2, 8, 9, 12, 22]
 
-Python's tuple-assignment swap ``a, b = b, a`` replaces the temporary
-variable required in C# (``int t = a; a = b; b = t;``).
+Python's tuple-assignment swap ``a, b = b, a`` eliminates the need for
+a temporary variable.
 
 Bubble Sort
 -----------

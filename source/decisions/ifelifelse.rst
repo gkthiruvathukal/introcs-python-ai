@@ -3,15 +3,8 @@
 ``if``-``elif``-``else`` Statements
 ====================================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/ifelsechained.rst``).
-   The grade-classification and wages examples are Python adaptations of the
-   original C# examples.  The BMI and ticket-price examples are original
-   additions.
-
 When there are more than two choices, chain conditions using ``elif``
-(short for "else if").  Python uses ``elif`` where C# uses ``else if``.
+(short for "else if").
 
 .. index:: elif; grade example, if-elif-else; pattern
 

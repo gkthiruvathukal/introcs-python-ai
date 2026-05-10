@@ -3,12 +3,6 @@
 While Loop Examples
 ===================
 
-.. note::
-
-   *Source:* Bisection method adapted from the C# edition
-   (``while/whileexamples.rst``).  The Python implementation is a direct
-   translation; the explanation and figure description follow the original.
-
 .. _bisection-method:
 
 Bisection Method
@@ -39,11 +33,6 @@ Repeat until the interval is small enough.
 Example: square root of 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-   *Source:* Example (finding √2 as a root of ``x² − 2``) adapted from the
-   C# edition bisection example.
-
 We find the root of :math:`f(x) = x^2 - 2` in the interval [0, 2], which is
 :math:`\sqrt{2} \approx 1.41421`.
 
@@ -63,10 +52,6 @@ iterations to reach that tolerance starting from [0, 2].
 
 Why This Matters
 ^^^^^^^^^^^^^^^^
-
-.. note::
-
-   *Source:* Original addition.
 
 .. index:: while loop; tolerance condition, precondition checking, first-class functions
 

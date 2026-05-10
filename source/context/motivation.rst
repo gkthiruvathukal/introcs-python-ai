@@ -1,12 +1,6 @@
 Motivation for This Book
 ========================
 
-.. note::
-
-   *Source:* Pedagogy and Why Python sections drawn from the SE4ML Python
-   chapter (``chapter_python.rst``, lines 14–110).  Characteristics of Python
-   list is an original synthesis.
-
 This is really a preface, but the Sphinx publishing environment we use does not
 have a separate preface section.
 
@@ -36,7 +30,7 @@ interpreter and see results immediately, without writing a complete program
 first.  This makes it easy to experiment.
 
 **It is concise.**  A Python program that does something useful is often
-significantly shorter than the equivalent in Java or C#.  There is less
+significantly shorter than equivalents in other languages.  There is less
 *boilerplate* — required scaffolding that does not itself express the
 programmer's intent.
 

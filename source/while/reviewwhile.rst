@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``while/reviewwhile.rst``).
-   Python-specific questions on ``input()`` validation and ``break``/``continue``
-   are original additions.
-
 #.  When should you prefer a ``while`` loop over a ``for`` loop?
 
 #.  What is an *infinite loop*?

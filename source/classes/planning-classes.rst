@@ -5,12 +5,6 @@
 Planning a Class Structure
 ==========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``classes/planning_classes.rst``).
-   The design principles — identify nouns as classes, verbs as methods,
-   data as instance variables — are language-agnostic.
-
 Before writing code, it pays to think about what classes you need and
 what each class is responsible for.
 

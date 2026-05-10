@@ -5,12 +5,6 @@
 Lab: Lists
 ==========
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``arrays/lab-array1d.rst``).
-   Exercises translated to Python idioms; C# array syntax replaced by
-   Python list syntax.
-
 Goals for this lab:
 
 - Practice creating and modifying lists.

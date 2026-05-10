@@ -5,12 +5,6 @@
 Tuple Unpacking
 ===============
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   The swap ``a, b = b, a`` replaces the three-variable swap used in the
-   C# sorting examples.  ``zip()`` unpacking replaces paired index loops.
-
 *Tuple unpacking* (also called *destructuring*) assigns each element of
 a tuple to a separate variable in one statement.
 
@@ -54,11 +48,7 @@ Output:
    20 10
 
 Python evaluates the right-hand side completely before assigning, so no
-temporary variable is needed.  Compare this to the C# equivalent::
-
-    int t = a;
-    a = b;
-    b = t;
+temporary variable is needed.
 
 Unpacking Function Return Values
 ----------------------------------

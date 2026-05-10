@@ -8,14 +8,6 @@
 A Creative Problem Solution
 ============================
 
-.. note::
-
-   *Source:* Problem statement, incremental-development approach, and
-   test-first framing adapted from the C# edition
-   (``basicstringops/problem-solving-replace.rst``).  The Python
-   implementation using ``find`` and slicing is an original adaptation
-   (the C# version used ``Substring`` and ``IndexOf``).
-
 The exercises so far have been straightforward: learn a method, apply it.
 Now we introduce a *problem-solving* exercise to practice combining
 what you know in a less obvious way.

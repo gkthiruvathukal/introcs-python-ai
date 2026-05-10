@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``files/reviewfiles.rst``).
-   Questions about ``StreamReader``/``StreamWriter`` are replaced by
-   Python ``open()`` and ``with`` statement equivalents.
-
 #.  The ``with`` statement and ``open()``.
 
     a.  What does the ``with`` statement do when used with ``open()``?

@@ -6,12 +6,6 @@
 Lab: String Operations
 =======================
 
-.. note::
-
-   *Source:* Parts 1, 3, and 4 adapted from the C# edition
-   (``basicstringops/lab-string-ops.rst``).  Parts 2 (Initials) and 5
-   (Pig Latin) are original additions.
-
 Goals
 -----
 

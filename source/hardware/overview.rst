@@ -611,3 +611,41 @@ Exercises
 8. Classify each of the following as a personal computer, server, distributed
    system, or cloud service: your laptop, Gmail, a university's web server,
    a weather forecasting supercomputer, Netflix.
+9. Convert 42 to binary, octal, and hexadecimal by hand using repeated division,
+   showing each step. Then verify your answers using Python's ``bin()``, ``oct()``,
+   and ``hex()``.
+10. Call ``to_base(42, b)`` for every base ``b`` from 2 to 16 and print the
+    results. What do you notice as the base increases?
+11. Write a ``from_base(s, base)`` function — the inverse of ``to_base`` — that
+    converts a string representation back to a decimal integer. It should handle
+    negative numbers (strings starting with ``-``) and bases up to 60. Test it
+    by verifying that ``from_base(to_base(n, base), base) == n`` for several
+    values of ``n`` and ``base``.
+12. Use ``to_base`` to express 7,384 seconds in base 60. Then verify the result
+    by computing the hours, minutes, and seconds manually
+    (``7384 // 3600``, ``(7384 % 3600) // 60``, ``7384 % 60``).
+    What familiar notation does the base-60 output resemble?
+13. Write a Python loop that prints the complete truth table for OR and for XOR
+    across all four input combinations. Then verify both of De Morgan's laws hold
+    for every combination:
+
+    .. code-block:: python
+
+       for a in [False, True]:
+           for b in [False, True]:
+               assert not (a and b) == (not a or  not b)
+               assert not (a or  b) == (not a and not b)
+
+14. Implement ``nand(a, b)`` as ``not (a and b)``. Then express AND, OR, and NOT
+    using *only* ``nand``:
+
+    - ``NOT a``  is ``nand(a, a)``
+    - ``a AND b`` is ``nand(nand(a, b), nand(a, b))``
+    - ``a OR b``  is ``nand(nand(a, a), nand(b, b))``
+
+    Verify each identity holds for all four input combinations. This property —
+    that every logical operation can be built from NAND alone — is why real CPUs
+    are constructed almost entirely from NAND gates.
+15. Extend ``to_base`` to raise a ``ValueError`` with a descriptive message if
+    ``base`` is less than 2 or greater than 60. Test that the error is raised
+    correctly for ``base=1`` and ``base=61``.

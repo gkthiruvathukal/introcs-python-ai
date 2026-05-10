@@ -5,13 +5,6 @@
 String Methods and Length
 =========================
 
-.. note::
-
-   *Source:* Immutability warning, method descriptions, and exercise adapted
-   from the C# edition (``basicstringops/stringmethods.rst``).  Python-specific
-   methods (``strip``, ``split``, ``join``, ``startswith``, ``endswith``) and
-   the quick-reference table are original additions.
-
 Strings in Python are *objects* — they bundle data (the characters) with
 operations (methods).  You call a method with dot notation:
 ``string_value.method_name(arguments)``.

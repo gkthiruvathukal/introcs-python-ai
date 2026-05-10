@@ -7,11 +7,6 @@
 Tuple Syntax
 ============
 
-.. note::
-
-   *Source:* Python-specific — C# has no direct equivalent in this edition.
-   Python tuples are the immutable counterpart to lists.  Use them when a
-   fixed-size, ordered collection should not be modified after creation.
 
 A *tuple* is an ordered, *immutable* sequence of values.  Once created,
 its elements cannot be changed.

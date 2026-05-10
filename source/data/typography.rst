@@ -3,12 +3,6 @@
 Reading Python Syntax
 =====================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``data/typography.rst``).
-   Python-specific elements (REPL ``>>>`` prompt, colon-and-indent blocks,
-   reading error messages) are original additions.
-
 Throughout this book, we describe Python syntax using *templates* — patterns
 showing the structure of a statement with the variable parts in italics or
 indicated by placeholder names.
@@ -28,20 +22,8 @@ Indentation is Syntax
 ---------------------
 
 The most important thing to understand about reading Python syntax is that
-*indentation matters*.  In languages like C# or Java, blocks of code are
-delimited by braces ``{}``.  In Python, a block is indicated by indentation —
+*indentation matters*.  In Python, a block is indicated by indentation —
 all statements in the same block are indented by the same amount.
-
-Compare a C# ``if`` statement:
-
-.. code-block:: none
-
-   // C# — not Python
-   if (x > 0) {
-       Console.WriteLine("positive");
-   }
-
-With the Python equivalent:
 
 .. code-block:: python
 

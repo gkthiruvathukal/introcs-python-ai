@@ -3,31 +3,12 @@
 Python Program Structure
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``data/programstructure.rst``).
-   The ``if __name__ == '__main__':`` pattern and indentation-as-syntax
-   discussion are Python-specific original additions.
-
-A Python program file — a ``.py`` file — is much simpler in structure than
-the equivalent in C# or Java.
+A Python program file — a ``.py`` file — is simple and direct in structure.
 
 .. index:: Python; top-level statements, .py file
 
 No Required Wrapper
 -------------------
-
-In C#, every statement must live inside a class and a ``Main`` method:
-
-.. code-block:: none
-
-   // C# — not Python
-   using System;
-   class Hello {
-       static void Main() {
-           Console.WriteLine("Hello, world!");
-       }
-   }
 
 In Python, you simply write statements at the top level of the file:
 
@@ -73,8 +54,8 @@ Indentation
 -----------
 
 Python uses *indentation* to show the structure of a program — which
-statements belong to a function, loop, or condition.  Unlike C# which uses
-braces ``{}``, Python requires consistent indentation.
+statements belong to a function, loop, or condition.  Python requires
+consistent indentation rather than braces.
 
 .. code-block:: python
 

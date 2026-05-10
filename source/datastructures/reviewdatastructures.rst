@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``datastructures/datastructures.rst``).
-   The C# chapter is a brief placeholder; questions cover the full Python
-   content on stacks, queues, and linked lists.
-
 #.  LIFO.
 
     a.  What does LIFO stand for?

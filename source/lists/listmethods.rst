@@ -5,13 +5,6 @@
 List Methods
 ============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``lists/listsyntax.rst`` and
-   ``arrays/onedim.rst``).  Python list methods replace C# ``List<T>``
-   methods (``Add``, ``Remove``, ``Contains``, etc.).  Built-in functions
-   ``sorted()``, ``min()``, ``max()``, and ``sum()`` replace C# LINQ equivalents.
-
 Python lists come with a rich set of methods for adding, removing,
 searching, and reordering elements.
 

@@ -3,16 +3,9 @@
 Compound Boolean Expressions
 =============================
 
-.. note::
-
-   *Source:* Logical operator descriptions adapted from the C# edition and the
-   SE4ML Python chapter (``chapter_python.rst``, lines 920–948).  Truth tables
-   and common patterns are original additions.
-
 Simple comparisons test one thing at a time.  Often we need to combine
 conditions: "the temperature is above 70 *and* it is not raining."
-Python uses the keywords ``and``, ``or``, and ``not`` — not symbols like
-``&&``, ``||``, and ``!`` as in C#.
+Python uses the keywords ``and``, ``or``, and ``not``.
 
 .. index:: and operator
 

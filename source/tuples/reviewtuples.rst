@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   Questions cover Python tuple syntax, immutability, unpacking, and
-   common use cases.
-
 #.  What is the key difference between a tuple and a list?
 
 #.  Single-element tuples.

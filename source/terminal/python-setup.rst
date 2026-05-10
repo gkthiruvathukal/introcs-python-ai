@@ -5,9 +5,6 @@
 Installing and Setting Up Python
 =================================
 
-.. note::
-   *Source:* Python-specific — no equivalent in the C# edition.
-
 This book is terminal-centric by design. We believe that learning to work at the
 command line from the start builds habits that will serve you throughout your career.
 That means we deliberately de-emphasize graphical IDEs and point-and-click

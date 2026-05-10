@@ -9,12 +9,6 @@
 Writing Effective Tests
 =======================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   Examples test the ``Rational`` class from :ref:`Rational-Class` and
-   illustrate best practices applicable to any Python module.
-
 Good tests are specific, independent, and cover edge cases.  Each test
 function should check one thing and have a name that explains what
 scenario it is testing.

@@ -9,16 +9,6 @@
 Introduction to Recursion
 =========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``recursion/recursion.rst``).
-   The C# chapter is a brief forward pointer; this section provides full
-   Python coverage.  Recursive structure and base/recursive-case thinking
-   are language-agnostic.  Python-specific additions: the default
-   recursion limit, ``sys.setrecursionlimit``, the absence of
-   tail-call optimisation, and the security implications of unbounded
-   recursion.
-
 A function is *recursive* if it calls itself.  This sounds circular, but
 it works because every recursive call moves closer to a *base case* that
 does not recurse.

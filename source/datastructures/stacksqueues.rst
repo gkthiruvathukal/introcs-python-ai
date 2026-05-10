@@ -9,13 +9,6 @@
 Stacks and Queues
 =================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``datastructures/datastructures.rst``).
-   C#'s ``Stack<T>`` and ``Queue<T>`` are replaced by Python's list-based
-   stack and ``collections.deque``.  The abstract data type concepts
-   (LIFO, FIFO) are language-agnostic.
-
 .. index:: abstract data type, ADT
 
 Stacks and queues are *abstract data types* — they define what operations

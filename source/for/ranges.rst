@@ -5,16 +5,8 @@
 The ``range()`` Function
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``for/forstatements.rst``).
-   The three-part C# ``for`` heading — initialisation, condition, update —
-   is replaced in Python by ``range()``.  All the same counting patterns are
-   available; the syntax is more concise and harder to get wrong.
-
 Python's ``range()`` produces a sequence of integers on demand.  Paired with
-``for``, it covers every counter-based loop that C# handles with
-``for (int i = ...; ...; ...)`` headings.
+``for``, it covers every counter-based loop pattern.
 
 One-Argument Form: ``range(n)``
 --------------------------------
@@ -24,8 +16,6 @@ One-Argument Form: ``range(n)``
 .. code-block:: none
 
    range(n)   →  0, 1, 2, ..., n-1
-
-This replaces the C# pattern ``for (int i = 0; i < n; i++)``.
 
 .. code-block:: python
 
@@ -62,8 +52,6 @@ Two-Argument Form: ``range(start, stop)``
 
    range(start, stop)   →  start, start+1, ..., stop-1
 
-This replaces ``for (int i = start; i < stop; i++)``.
-
 .. code-block:: python
 
    for i in range(1, 6):
@@ -79,8 +67,7 @@ Output:
    4
    5
 
-Note that ``stop`` is *exclusive* — the loop runs while ``i < stop``, just
-like C#'s condition.
+Note that ``stop`` is *exclusive* — the loop runs while ``i < stop``.
 
 Three-Argument Form: ``range(start, stop, step)``
 --------------------------------------------------
@@ -90,8 +77,6 @@ Three-Argument Form: ``range(start, stop, step)``
 .. code-block:: none
 
    range(start, stop, step)   →  start, start+step, start+2*step, ...
-
-This replaces ``for (int i = start; i < stop; i += step)``.
 
 Counting by fives from 0 to 20:
 
@@ -129,8 +114,7 @@ Output:
    2
    1
 
-``range(n-1, -1, -1)`` visits indices n-1 down to 0, which is the Python
-equivalent of C#'s ``for (int i = n-1; i >= 0; i--)``.
+``range(n-1, -1, -1)`` visits indices n-1 down to 0.
 
 An alternative that reads more naturally is ``reversed(range(n))``:
 
@@ -165,13 +149,13 @@ Summary
    :header-rows: 1
    :widths: 45 45
 
-   * - C# ``for`` heading
-     - Python equivalent
-   * - ``for (int i=0; i<n; i++)``
+   * - Pattern
+     - Python ``range()`` form
+   * - Count from 0 to n-1
      - ``for i in range(n):``
-   * - ``for (int i=a; i<b; i++)``
+   * - Count from a to b-1
      - ``for i in range(a, b):``
-   * - ``for (int i=a; i<b; i+=k)``
+   * - Count from a to b-1 by k
      - ``for i in range(a, b, k):``
-   * - ``for (int i=n-1; i>=0; i--)``
+   * - Count down from n-1 to 0
      - ``for i in range(n-1, -1, -1):``

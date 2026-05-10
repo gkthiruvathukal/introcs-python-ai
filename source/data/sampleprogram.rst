@@ -5,12 +5,6 @@
 A Sample Python Program
 =======================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``data/sampleprogram.rst``).
-   The room-painting scenario and line-by-line walkthrough mirror the C#
-   original; the code is a Python translation.
-
 As a start, consider a small problem and a program to solve it.  Suppose you
 paint the walls of rooms in one color and the ceiling in another, and you want
 to calculate the size of the areas to cover with paint.  For simplicity, ignore
@@ -93,7 +87,7 @@ This line does several things at once, working from the inside out:
 2. ``float(...)`` converts that string to a floating-point number: ``20.5``.
 3. The result is *assigned* to the variable ``length``.
 
-Unlike C#, there is no need to declare ``length`` first or specify its type.
+There is no need to declare ``length`` first or specify its type.
 
 .. code-block:: python
 

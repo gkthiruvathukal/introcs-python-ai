@@ -5,11 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   Questions cover pytest conventions, assert usage, and testing strategy.
-
 #.  What naming convention must a test file follow for pytest to discover
     it automatically?
 
@@ -34,9 +29,3 @@ Chapter Review Questions
 
 #.  How do you run only the tests in a file called ``test_strings.py``
     from the command line?
-
-#.  C# vs. Python testing.
-
-    a.  In the C# edition, what attribute marks a test method?
-    b.  What is the Python pytest equivalent?
-    c.  What replaces ``Assert.AreEqual`` in pytest?

@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``recursion/recursion.rst``).
-   The C# chapter is a brief placeholder; these questions cover the full
-   Python recursion content presented in this chapter.
-
 #.  What are the two essential parts of every correct recursive function?
 
 #.  Python's recursion limit.

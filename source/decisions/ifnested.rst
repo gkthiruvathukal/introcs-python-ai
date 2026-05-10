@@ -3,12 +3,6 @@
 Nested ``if`` Statements
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/ifnested.rst``).
-   Python-specific indentation guidance is original.  Loan-approval and
-   shipping-cost examples replace the original C# examples.
-
 An ``if`` body can itself contain another ``if`` statement.  This is
 called *nesting*.  Python's indentation makes the nesting level visually
 obvious.

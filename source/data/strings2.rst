@@ -3,13 +3,6 @@
 String Special Cases
 ====================
 
-.. note::
-
-   *Source:* Escape sequences table drawn directly from the SE4ML Python
-   chapter (``chapter_python.rst``, lines 2356–2413).  Raw strings, multiline
-   strings, and the ``in`` operator section are adapted from the SE4ML
-   presentation.
-
 .. index:: escape sequences; table
 
 Escape Sequences

@@ -5,12 +5,6 @@
 Tuple Examples
 ==============
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   Examples draw on standard Python idioms for representing fixed-structure
-   data such as coordinates, colours, and paired sequences.
-
 Tuples as Records
 -----------------
 

@@ -1,12 +1,6 @@
 Multiple Function Parameters
 =============================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``functions/funcparam2.rst``).
-   Keyword arguments and default-value parameters are Python-specific
-   original additions.
-
 A function can have more than one parameter.  Parameters are listed in the
 ``def`` line separated by commas.
 

@@ -1,11 +1,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/reviewdecisions.rst``).
-   Questions 7–10 are original additions.
-
 1. Two similar-looking operators.
 
    a.  What does ``=`` do in Python?
@@ -15,7 +10,6 @@ Chapter Review Questions
 2. Python's Boolean operators.
 
    a.  Name all three.
-   b.  How do they differ from the C# equivalents (``&&``, ``||``, ``!``)?
 
 3. What is printed?
 

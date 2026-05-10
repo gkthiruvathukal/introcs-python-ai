@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``lists/reviewlists.rst`` and
-   ``arrays/reviewarrays.rst``).  Questions updated for Python list syntax
-   and methods.
-
 #.  What is the index of the first element of a list?  The last?
 
 #.  How do you get the number of elements in a list named ``data``?

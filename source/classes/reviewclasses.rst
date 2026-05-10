@@ -5,12 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``classes/reviewclasses.rst``).
-   Questions updated for Python syntax: ``__init__`` replaces constructors,
-   ``self`` replaces ``this``, dunder methods replace operator overloading.
-
 #.  What is the difference between a *class* and an *instance* of a class?
 
 #.  What is ``__init__`` and when is it called?

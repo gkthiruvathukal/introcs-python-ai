@@ -7,14 +7,6 @@
 For Loop Syntax
 ===============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``foreach/foreachintro.rst`` and
-   ``for/forstatements.rst``).  Python's ``for`` loop is a *foreach* — it
-   unifies C#'s separate ``foreach`` and ``for`` constructs into one statement.
-   No type declaration is needed for the loop variable.  The ``break`` and
-   ``continue`` statements work the same way as in C#.
-
 We have seen how ``while`` loops repeat as long as a condition holds.  A very
 common pattern is iterating over every item in a sequence — every character in
 a string, every number in a range, every element in a list.  Python's ``for``

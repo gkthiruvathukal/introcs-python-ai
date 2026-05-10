@@ -5,13 +5,6 @@
 Working with ``pathlib``
 ========================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   C# uses the ``System.IO.Directory`` and ``System.IO.File`` classes;
-   Python's ``pathlib`` module provides an object-oriented interface that
-   combines both into a single ``Path`` type.
-
 The ``pathlib`` module, introduced in Python 3.4, represents file system
 paths as objects rather than plain strings.  This makes path manipulation
 readable and cross-platform.

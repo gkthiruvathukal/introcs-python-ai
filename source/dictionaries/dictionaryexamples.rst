@@ -5,13 +5,6 @@
 Dictionary Examples
 ===================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``dictionaries/dictionaryexamples.rst``).
-   The word-count example is a direct Python translation of the C# ``count_words``
-   program.  ``collections.Counter`` is a Python-specific addition with no C#
-   equivalent; it is introduced as a modern convenience.
-
 Word Count
 ----------
 

@@ -1,11 +1,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition context review questions.  Questions
-   specific to Python (dynamic typing, REPL) are original additions.
-
 1. What is an algorithm?
 
    a.  Give a one-sentence definition.
@@ -14,7 +9,7 @@ Chapter Review Questions
 2. Python is called *dynamically typed*.
 
    a.  Explain what that means in your own words.
-   b.  How does this differ from a statically-typed language like C# or Java?
+   b.  How does this differ from a statically-typed language?
 
 3. What is the Python interactive shell (REPL)?
 

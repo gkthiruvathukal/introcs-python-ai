@@ -3,13 +3,6 @@
 Strings, Part I
 ===============
 
-.. note::
-
-   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
-   lines 2312–2355) and the C# edition (``data/strings1.rst``).  String
-   literals, concatenation, repetition, and immutability follow the SE4ML
-   presentation; ``str()`` conversion is adapted from the C# edition.
-
 A *string* is a sequence of characters.  Strings are one of the most
 commonly used types in Python.
 

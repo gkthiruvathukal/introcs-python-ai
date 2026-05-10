@@ -7,11 +7,6 @@
 While Statements
 ================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``while/whilestatements.rst``).
-   Tea-cooling and countdown examples are Python translations of the original.
-   The ``while True`` / ``break`` idiom replaces C#'s ``do``-``while``.
 
 We have seen that programs can branch with ``if`` statements and call
 functions.  The last essential control structure is *repetition* — executing

@@ -7,14 +7,6 @@
 A First Example of Class Instances
 ====================================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``classes/a-first-class.rst``).
-   The ``Contact`` class is a direct Python translation.  Python uses
-   ``__init__`` in place of a named constructor, and ``self`` in place of
-   C#'s implicit ``this``.  There are no ``public``/``private`` keywords;
-   the convention ``_name`` signals a non-public attribute.
-
 We have used many built-in types and library classes.  Now we define our
 own.  As a first example, a *contact* has a name, phone number, and email
 address — three pieces of data that belong together as one entity.

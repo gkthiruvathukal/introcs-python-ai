@@ -5,14 +5,6 @@
 For Loop Examples
 =================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``for/forexamples.rst``).
-   C# format strings are replaced by Python f-strings.  The power table,
-   ASCII table, modular multiplication table, and reversed-string examples
-   are direct translations.  The ``enumerate()`` section is Python-specific
-   with no C# equivalent.
-
 Multiples of k
 --------------
 
@@ -56,7 +48,7 @@ Compound Assignment Operators
 
 .. index:: operator; +=, operator; -=, operator; *=, operator; //=, operator; %=
 
-Python supports the same shorthand assignment operators as C#.  For any
+Python supports shorthand assignment operators.  For any
 binary operator *op*, ``x op= expr`` means ``x = x op expr``:
 
 - ``x += 5``  is the same as  ``x = x + 5``

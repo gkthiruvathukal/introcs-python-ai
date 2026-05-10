@@ -5,13 +5,6 @@
 Class Instance Examples
 =======================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``classes/classexamples.rst``).
-   The ``Averager`` example is a direct Python translation.  C#'s
-   ``Print()`` method is replaced by ``__str__``; ``__repr__`` is added
-   as a Python-specific bonus for interactive use.
-
 The Averager Class
 ------------------
 

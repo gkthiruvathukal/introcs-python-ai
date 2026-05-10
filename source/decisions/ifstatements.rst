@@ -5,13 +5,6 @@
 Simple ``if`` Statements
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/ifstatements.rst`` and
-   ``decisions/ifelse.rst``).  Suitcase and clothes examples are Python
-   translations of the original C# programs.  The conditional expression
-   (ternary) form is a Python-specific original addition.
-
 An ``if`` statement lets a program choose whether to execute a block of
 code based on a condition.  Python's syntax uses a colon and indentation —
 no braces, no parentheses around the condition.

@@ -7,12 +7,6 @@
 Dictionary Efficiency
 =====================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``dictionaries/dictionaryefficiency.rst``).
-   The hash-table explanation is language-agnostic; the Python context
-   replaces C#'s ``List.IndexOf`` with Python's ``list.index()``.
-
 Why is dictionary lookup so fast?  This section explains the idea behind
 hash tables — the data structure that makes O(1) average lookup possible.
 

@@ -7,13 +7,6 @@
 List Syntax
 ===========
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``arrays/onedim.rst`` and
-   ``lists/listsyntax.rst``).  Python lists replace both C# fixed-size
-   arrays and ``List<T>``.  Python lists are mutable, dynamically sized,
-   and can hold elements of mixed types.
-
 A *list* is an ordered, mutable sequence of values.  It is the most
 commonly used collection in Python.
 

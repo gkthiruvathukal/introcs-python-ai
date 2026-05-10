@@ -7,13 +7,6 @@
 Conditions
 ==========
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/conditions.rst``).
-   Chained comparisons and the truthiness discussion are Python-specific
-   features drawn from the SE4ML Python chapter
-   (``chapter_python.rst``, lines 872–905).
-
 So far all our programs have executed instructions sequentially.  But many
 problems require making a *decision*: do one thing if some condition is true,
 something else otherwise.
@@ -92,7 +85,7 @@ and empty sequences are *falsy*.  This matters in ``if`` statements.
 Chained Comparisons
 -------------------
 
-Python allows comparisons to be *chained* — a convenience not in C#:
+Python allows comparisons to be *chained*:
 
 .. code-block:: none
 

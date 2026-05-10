@@ -3,13 +3,6 @@
 Returned Function Values
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``functions/funcreturn.rst``).
-   The weekly-wages example mirrors the C# original.  Python-specific
-   details (implicit ``None`` return, early return pattern) are original
-   additions.
-
 So far, our functions have *done* something (printed output) but not
 *produced* a value for the calling code to use.  Functions that return values
 are far more flexible.
@@ -96,8 +89,8 @@ without hitting one) automatically returns ``None``:
    >>> print(result)
    None
 
-This is Python's way of handling what C# calls ``void`` functions.  Use
-``return`` only when the caller needs a value.
+A function that performs an action but returns no value implicitly returns
+``None``.  Use ``return`` only when the caller needs a value.
 
 .. index:: function; early return
 

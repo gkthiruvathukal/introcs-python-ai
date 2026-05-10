@@ -5,13 +5,6 @@
 Combining Input and Output
 ==========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``data/io.rst``) and the SE4ML
-   Python chapter (``chapter_python.rst``, lines 781–786).  The SE4ML section
-   was itself marked as a todo; full content here is an original expansion
-   covering ``input()``, type conversion, and combined patterns.
-
 Most useful programs need to communicate with the user — asking for data and
 reporting results.  In Python this is done with ``input()`` and ``print()``.
 
@@ -63,16 +56,6 @@ You can combine the two steps on one line, which is the most common pattern:
    >>> type(length)
    <class 'float'>
 
-This is the Python equivalent of C#'s:
-
-.. code-block:: none
-
-   // C# — not Python
-   string s = Console.ReadLine();
-   double length = double.Parse(s);
-
-But written more concisely on one line.
-
 .. warning::
 
    If the user types something that cannot be converted — for example, typing
@@ -105,16 +88,4 @@ Order Matters
 -------------
 
 The prompt string in ``input()`` is shown *before* reading, so the user sees
-what to type.  This is equivalent to the C# pattern of ``Console.Write``
-followed by ``Console.ReadLine``.
-
-Compare:
-
-.. code-block:: none
-
-   # Python
-   name = input("Enter your name: ")
-
-   // C# equivalent — not Python
-   Console.Write("Enter your name: ");
-   string name = Console.ReadLine();
+what to type before entering a value.

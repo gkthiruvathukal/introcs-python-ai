@@ -3,16 +3,8 @@
 User Input Utilities
 ====================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``while/userinput.rst``), which
-   described the ``UI`` helper library.  Python has no equivalent built-in
-   library, so we build our own helper functions here.  The ``try``/``except``
-   pattern is original Python-specific content.
-
-The C# edition used a ``UI`` helper library to prompt for validated input.
-Python has no such built-in library, but building one is a good exercise in
-combining loops, functions, and error handling.
+Python has no built-in library for validated input, but building one is a good
+exercise in combining loops, functions, and error handling.
 
 Simple Prompt Helpers
 ---------------------

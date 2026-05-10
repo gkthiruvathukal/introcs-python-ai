@@ -5,13 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``for/reviewfor.rst``).
-   C#-specific format-string questions are replaced by f-string equivalents.
-   Python-specific questions on ``range()``, ``enumerate()``, and list
-   comprehensions are added.
-
 #.  Choosing the right loop.
 
     a.  When might you prefer a ``for`` loop over a ``while`` loop?

@@ -7,12 +7,6 @@
 F-Strings and String Formatting
 ================================
 
-.. note::
-
-   *Source:* This section replaces the C# edition's ``writeline-substitution``
-   topic.  F-string content is an original addition specific to Python 3.6+.
-   The older ``str.format()`` and ``%`` formatting sections are derived from
-   the SE4ML Python chapter (``chapter_python.rst``, lines 2554–2709).
 
 Combining strings with variable values is one of the most common tasks in a
 program.  Python's *f-strings* (formatted string literals) are the modern,

@@ -3,12 +3,6 @@
 If-Statement Pitfalls
 ======================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/ifpitfalls.rst``).
-   Python-specific pitfalls (truthiness testing, ``is None``, missing
-   ``elif``) are original additions.
-
 As you start writing ``if`` statements, watch out for these common
 mistakes.
 

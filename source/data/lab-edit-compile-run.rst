@@ -1,19 +1,13 @@
 Lab: Editing and Running Python Programs
 =========================================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``data/lab-edit-compile-run.rst``).
-   Python workflow replaces the C# edit-compile-run cycle; VS Code and
-   terminal instructions are original additions.
-
 The goal of this lab is to get a working Python program running on your
 computer.
 
 The Python Workflow
 -------------------
 
-Unlike C#, Python does not require a separate compile step.  The workflow is:
+Python does not require a separate compile step.  The workflow is:
 
 1. Write a ``.py`` file with a text editor.
 2. Run it directly with ``python3``.

@@ -5,12 +5,6 @@
 Interactive ``while`` Loops
 ============================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``while/whileinteractive.rst``).
-   The ``input_in_range`` example is a Python translation.  The ``while True``
-   + ``break`` form and the sentinel-value pattern are original Python additions.
-
 An *interactive while loop* prompts the user for input each time through the
 loop.  The loop continues until the user supplies a valid or expected value.
 
@@ -29,8 +23,8 @@ A classic use: keep asking for a score until the user enters one in range.
 
 Notice that ``input`` appears *twice* — once before the loop to get the
 initial value, and once inside to refresh the value.  This is the
-*read-before-loop* pattern.  The C# edition called this an unavoidable
-duplication; Python's ``while True`` / ``break`` pattern avoids it:
+*read-before-loop* pattern.  Python's ``while True`` / ``break`` pattern
+avoids this duplication:
 
 .. index:: while True; interactive pattern
 

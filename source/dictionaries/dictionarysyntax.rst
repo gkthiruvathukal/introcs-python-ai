@@ -7,14 +7,6 @@
 Dictionary Syntax
 =================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``dictionaries/dictionarysyntax.rst``).
-   Python's ``dict`` replaces C#'s ``Dictionary<K,V>``.  No type annotation
-   is needed in the declaration.  Python dicts preserve insertion order
-   (guaranteed since Python 3.7) and use ``key in d`` in place of
-   ``ContainsKey``.
-
 A *dictionary* maps *keys* to *values*.  Given a key, you can look up its
 associated value in constant time — like looking up a word in a reference
 book.
@@ -68,7 +60,7 @@ Membership Test
 
 .. index:: in; dict key
 
-Use ``in`` to test whether a key is present (replaces C#'s ``ContainsKey``):
+Use ``in`` to test whether a key is present:
 
 .. code-block:: python
 

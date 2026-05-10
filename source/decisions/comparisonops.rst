@@ -3,12 +3,6 @@
 More Conditional Expressions
 =============================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``decisions/comparisonops.rst``).
-   Membership (``in``/``not in``) and identity (``is``/``is not``) operators
-   are Python-specific additions; string comparison examples are original.
-
 We introduced the basic comparison operators in the previous section.
 Here we look at a few more expressions that produce Boolean results.
 

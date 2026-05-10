@@ -5,12 +5,6 @@
 While Loops with Sequences
 ===========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``while/while-with-sequence.rst``).
-   One-char-per-line and vowel-counting examples are Python translations.
-   The note about ``for`` loops is an original forward reference.
-
 Strings are sequences of characters that we can access by index.  Before
 the ``for`` loop chapter, we use ``while`` loops with an index variable to
 process strings one character at a time.

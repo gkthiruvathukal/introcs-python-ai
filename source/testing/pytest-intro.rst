@@ -9,13 +9,6 @@
 Introduction to pytest
 ======================
 
-.. note::
-
-   *Source:* Python-specific — the C# edition uses NUnit with ``[Test]``
-   attributes and ``[TestFixture]`` classes.  Python's ``pytest`` is
-   simpler: plain functions named ``test_*`` with plain ``assert``
-   statements, no decorators required for basic tests.
-
 Testing is the practice of running code with known inputs and checking
 that the outputs match expectations.  A *test* that passes gives
 confidence that a function works; a test that fails pinpoints exactly
@@ -112,25 +105,3 @@ pytest discovers tests automatically:
 You do not need a ``main`` function or any special imports beyond the
 module under test.
 
-Comparison with NUnit (C#)
----------------------------
-
-.. index:: NUnit; comparison
-
-In the C# edition, tests required ``[TestFixture]`` on the class and
-``[Test]`` on each method.  The equivalent in pytest is simpler:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 40
-
-   * - C# NUnit
-     - Python pytest
-   * - ``[TestFixture] class MyTests``
-     - (plain file, no class needed)
-   * - ``[Test] public void TestX()``
-     - ``def test_x():``
-   * - ``Assert.AreEqual(expected, actual)``
-     - ``assert actual == expected``
-   * - ``Assert.Throws<T>(...)``
-     - ``pytest.raises(T)``

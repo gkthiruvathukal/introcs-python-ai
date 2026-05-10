@@ -5,13 +5,6 @@
 Python Dataclasses and Named Tuples
 ====================================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition.
-   ``@dataclass`` (introduced in Python 3.7) automatically generates
-   ``__init__``, ``__repr__``, and ``__eq__`` for classes that primarily
-   hold data, reducing boilerplate.  ``namedtuple`` (from the ``collections``
-   module) is an older, lighter-weight alternative for immutable records.
 
 Writing a data-holding class by hand requires repeating each field name
 three or four times — in ``__init__`` parameters, in ``self.x = x``

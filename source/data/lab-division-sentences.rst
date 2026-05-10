@@ -1,12 +1,6 @@
 Lab: Division Sentences
 =======================
 
-.. note::
-
-   *Source:* Adapted from the C# edition lab on integer division.  The
-   floor-division (``//``) and modulo (``%``) operators are the Python
-   equivalents of C# integer division and remainder.
-
 In this lab you will practice using the floor division (``//``) and remainder
 (``%``) operators to produce English sentences describing division.
 

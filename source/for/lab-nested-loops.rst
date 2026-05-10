@@ -5,13 +5,6 @@
 Lab: Nested Loops
 =================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``for/lab-nested-loops.rst``).
-   Exercises translated to Python idioms.  ``print_reps`` and
-   ``string_of_reps`` replace C# methods of the same name;
-   ``factorial`` and ``print_rectangle`` follow the same logic.
-   The multiplication table is a Python addition.
 
 Goals for this lab:
 

@@ -8,13 +8,6 @@
 Recursion Examples
 ==================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``recursion/recursion.rst``).
-   GCD and binary search are classic examples mentioned in the C# text;
-   this section provides full Python implementations.  Flatten and
-   directory traversal are Python-specific additions.
-
 GCD — Euclidean Algorithm
 --------------------------
 

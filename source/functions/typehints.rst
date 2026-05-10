@@ -7,13 +7,6 @@
 Type Hints for Functions
 ========================
 
-.. note::
-
-   *Source:* Python-specific — no direct equivalent in the C# edition
-   (C# types are mandatory; Python's are optional annotations).
-   Introduced here at the function level; the full type-annotation
-   system is covered after object-oriented programming.
-
 Python is *dynamically typed* — you do not have to declare what type a
 variable holds.  But you *can* add optional type labels, called *type
 hints* or *type annotations*, to make your intent clear to readers and
@@ -76,7 +69,7 @@ Use the type names you already know: ``str``, ``int``, ``float``,
        print(f"Happy Birthday, dear {person}.")
        print("Happy Birthday to you!")
 
-``-> None`` is the Python equivalent of C#'s ``void``.  You may omit
+``-> None`` indicates the function returns no value.  You may omit
 it when the absence of a return value is obvious, but including it
 makes the signature complete.
 

@@ -5,13 +5,6 @@
 Writing Files
 =============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``files/filewrite.rst``).
-   Python's ``open(path, "w")`` replaces C#'s ``StreamWriter``.
-   The ``with`` statement handles closing automatically, eliminating
-   the common C# bug of forgetting to call ``Close()``.
-
 To write a file, pass ``"w"`` (write) or ``"a"`` (append) as the second
 argument to ``open()``.
 
@@ -30,8 +23,7 @@ Opening a file in write mode creates it if it does not exist, or
        f.write("Second line.\n")
 
 After the ``with`` block exits, Python flushes and closes the file.
-There is no need to call ``close()`` explicitly — this is the main
-advantage over forgetting it in C#.
+There is no need to call ``close()`` explicitly.
 
 You can also use ``print()`` with the ``file=`` keyword argument, which
 automatically adds a newline:
@@ -63,8 +55,7 @@ Example: Copy a File to Upper Case
 .. index:: example; copy upper
 
 This example reads an input file line by line and writes each line in
-upper case to a new output file — a Python translation of the C#
-``copy_upper`` example:
+upper case to a new output file:
 
 .. code-block:: python
 

@@ -5,12 +5,6 @@
 Lab: File Data and Collections
 ===============================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``dictionaries/lab-filedata.rst``).
-   The C# lab uses ``StreamReader`` and ``Dictionary<string,string>``; this
-   Python version uses ``open()`` / ``with`` and Python ``dict``.
-
 Goals for this lab:
 
 - Read data from a text file into a dictionary.

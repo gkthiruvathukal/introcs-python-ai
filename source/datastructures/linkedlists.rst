@@ -5,13 +5,6 @@
 Linked Lists
 ============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``datastructures/datastructures.rst``).
-   Python uses ``None`` where C# uses ``null`` as the end-of-list sentinel.
-   The ``Node`` class and linked-list logic are otherwise directly
-   analogous to the C# pointer-based implementation.
-
 A *linked list* stores elements in nodes, where each node holds a value
 and a reference to the next node.  Unlike Python's built-in list, a
 linked list does not require a contiguous block of memory.

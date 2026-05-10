@@ -5,13 +5,6 @@
 String Indexing and Slicing
 ============================
 
-.. note::
-
-   *Source:* Indexing table, subscript notation, and exercise adapted from the
-   C# edition (``basicstringops/stringindexing.rst``).  Negative indices,
-   slicing, and step notation are Python-specific features drawn from the SE4ML
-   Python chapter (``chapter_python.rst``, lines 2512–2552).
-
 Strings are sequences of characters.  Python counts positions starting at
 **0**, so the indices of the characters in ``"coding"`` are:
 
@@ -45,8 +38,7 @@ Use square brackets to access a single character:
    >>> s[5]
    'g'
 
-Unlike C#, Python has no separate ``char`` type — the result is always a
-one-character string.
+The result is always a one-character string.
 
 The subscript can be any expression that evaluates to an integer:
 
@@ -73,8 +65,7 @@ Python allows *negative* indices that count from the right end:
    >>> s[-6]     # same as s[0]
    'c'
 
-This is a convenience not available in C#.  ``s[-1]`` is equivalent to
-``s[len(s) - 1]``.
+``s[-1]`` is equivalent to ``s[len(s) - 1]``.
 
 .. index:: string; slice, slice notation
 

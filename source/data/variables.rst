@@ -10,13 +10,6 @@
 Variables and Assignment
 =========================
 
-.. note::
-
-   *Source:* Drawn from the SE4ML Python chapter (``chapter_python.rst``,
-   lines 442–484) and the C# edition (``data/variables.rst``).
-   Augmented assignment, swap idiom, and no-declaration discussion are
-   Python-specific additions based on the SE4ML presentation.
-
 Programs need to store and refer to data.  *Variables* are names that refer
 to values stored in memory.
 
@@ -24,12 +17,6 @@ to values stored in memory.
 
 No Declarations Needed
 ----------------------
-
-In C# or Java, you must *declare* a variable before using it, specifying its
-type::
-
-   // C# — not Python
-   double width = 5.0;
 
 In Python, you simply assign a value.  The variable is created automatically
 and takes the type of whatever you assign to it:

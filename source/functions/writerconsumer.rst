@@ -1,12 +1,6 @@
 Two Roles: Writer and Consumer of Functions
 ============================================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``functions/writerconsumer.rst``).
-   Docstrings and ``help()`` are Python-specific additions.  The contract and
-   separation-of-concerns framing closely follow the C# original.
-
 When working with functions, there are two distinct perspectives to keep in
 mind: the *writer* of the function and the *consumer* (or caller) of the
 function.

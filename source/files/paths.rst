@@ -5,13 +5,6 @@
 Path Strings
 ============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``files/paths.rst``).
-   Python uses plain strings or ``pathlib.Path`` objects instead of C#'s
-   ``System.IO.Path`` class.  Cross-platform separator differences are
-   the same, but Python's ``pathlib`` handles them transparently.
-
 When a program runs there is always a *current working directory*.  Files in
 that directory can be opened by their plain name, like ``"data.txt"``.  Files
 elsewhere require a *path string* — a chain of directory names leading to

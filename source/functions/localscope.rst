@@ -3,13 +3,6 @@
 Local Scope
 ===========
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``functions/localscope.rst``) and
-   the SE4ML Python chapter (``chapter_python.rst``, lines 528–561 and
-   1972–2016).  The LEGB scope rules and ``global`` statement are Python-
-   specific content from the SE4ML presentation.
-
 Variables created inside a function are *local* to that function — they exist
 only while the function is running and are invisible outside it.
 

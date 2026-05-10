@@ -7,13 +7,6 @@
 Reading Files
 =============
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``files/fileread.rst``).
-   Python's ``with open(...) as f:`` replaces C#'s ``StreamReader``.
-   The ``for line in f:`` loop replaces the ``while (!reader.EndOfStream)``
-   pattern.  ``f.read()`` corresponds to C#'s ``ReadToEnd()``.
-
 The ``open()`` function connects a Python program to a file on disk.
 The ``with`` statement ensures the file is automatically closed when the
 block exits — even if an error occurs.

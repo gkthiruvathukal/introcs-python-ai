@@ -5,11 +5,6 @@
 Chapter Review Questions
 ========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``dictionaries/reviewdictionaries.rst``).
-   Questions updated for Python ``dict`` syntax and idioms.
-
 #.  Is a Python ``dict`` mutable or immutable?
 
 #.  What is the syntax to create a dictionary mapping ``"a"`` to 1 and

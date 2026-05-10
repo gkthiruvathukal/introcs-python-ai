@@ -7,13 +7,6 @@
 A First Function Definition
 ===========================
 
-.. note::
-
-   *Source:* Adapted from the C# edition (``functions/firstfunc.rst``) and the
-   SE4ML Python chapter (``chapter_python.rst``, lines 485–562).  The birthday
-   example mirrors the C# original; ``def`` syntax details follow the SE4ML
-   presentation.
-
 Programs often need to repeat the same sequence of steps in more than one
 place.  Rather than copy and paste, we define a *function* — a named block of
 code we can call by name.
