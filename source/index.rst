@@ -13,7 +13,7 @@ Introduction to Computer Science in Python
    context/context
    computing_history/overview
    hardware/overview
-   terminal/overview
+   terminal/terminal
    data/data
    functions/functions
    modules/overview
