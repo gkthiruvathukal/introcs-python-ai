@@ -69,6 +69,8 @@ Conversion Methods
 Putting It Together
 --------------------
 
+Here we create two ``Rational`` values and exercise the arithmetic and display methods:
+
 .. code-block:: python
 
    f = Rational(6, -10)

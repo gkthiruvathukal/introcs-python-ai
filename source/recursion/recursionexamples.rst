@@ -77,6 +77,11 @@ nested list has no clean iterative equivalent:
                result.append(item)
        return result
 
+For each element, the function checks whether it is itself a list.  If it
+is, it recurses into it; if not, it appends the value directly.  Any depth
+of nesting is handled naturally because the recursion keeps going until it
+reaches a non-list item.
+
 .. code-block:: python
 
    nested = [1, [2, 3], [4, [5, 6]], 7]
@@ -107,6 +112,11 @@ File systems are trees — a natural fit for recursion:
            for child in sorted(path.iterdir()):
                print_tree(child, indent + 1)
 
+Each call prints the current entry's name, indented by its depth, then
+recurses into each child if the entry is a directory.  Files are leaf nodes —
+they print their name and return immediately.  Calling it on the current
+directory walks the entire tree:
+
 .. code-block:: python
 
    print_tree(Path("."))
@@ -132,6 +142,11 @@ automatically:
        if n <= 1:
            return n
        return fib(n - 1) + fib(n - 2)
+
+The ``@lru_cache`` decorator wraps ``fib`` so that the first time any value
+is computed it is stored; subsequent calls with the same argument return the
+cached result instantly.  The recursive structure of the code is unchanged —
+only its performance profile improves.
 
 .. code-block:: python
 

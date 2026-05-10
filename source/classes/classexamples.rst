@@ -69,6 +69,8 @@ recreates the object.
        def __repr__(self) -> str:
            return f"Point({self.x!r}, {self.y!r})"
 
+Here we create a ``Point`` and call both conversion functions to observe the difference:
+
 .. code-block:: python
 
    p = Point(3, 7)

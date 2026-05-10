@@ -24,6 +24,8 @@ word seen:
                counts[word] = counts.get(word, 0) + 1
        return counts
 
+We can test it on a short phrase to see counts accumulate for repeated words:
+
 .. code-block:: python
 
    text = "four score and seven years ago our fathers four score"

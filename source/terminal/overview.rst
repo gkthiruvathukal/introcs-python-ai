@@ -115,6 +115,8 @@ succeeds, you just get the prompt back.
 ``whoami`` — show current user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Prints your account name — useful when you are working on a shared system or switching between users:
+
 .. code-block:: none
 
    $ whoami

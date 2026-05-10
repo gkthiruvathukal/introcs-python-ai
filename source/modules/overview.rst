@@ -168,6 +168,8 @@ Sometimes a function needs to modify a variable that lives outside its local sco
 Global Variables
 ^^^^^^^^^^^^^^^^^
 
+Declaring a variable ``global`` inside a function allows it to modify that variable in the enclosing module scope:
+
 .. code-block:: python
 
    count = 0

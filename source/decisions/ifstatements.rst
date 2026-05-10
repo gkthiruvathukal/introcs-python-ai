@@ -14,6 +14,8 @@ no braces, no parentheses around the condition.
 One-Branch ``if``
 -----------------
 
+This example prints a surcharge message only when a suitcase exceeds the weight limit:
+
 .. code-block:: python
 
    weight = float(input("Enter suitcase weight (lbs): "))

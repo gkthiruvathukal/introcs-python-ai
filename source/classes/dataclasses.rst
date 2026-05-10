@@ -44,6 +44,8 @@ This single declaration is equivalent to:
        def __eq__(self, other):
            return (self.name, self.phone, self.email) == (other.name, other.phone, other.email)
 
+Here we create a ``Contact`` instance and verify that display and equality work without any extra code:
+
 .. code-block:: python
 
    c = Contact("Marie Ortiz", "773-508-7890", "mortiz2@luc.edu")

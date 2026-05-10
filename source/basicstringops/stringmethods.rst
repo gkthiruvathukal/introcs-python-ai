@@ -43,6 +43,8 @@ function, not a method:
 Case Conversion
 ---------------
 
+Python provides methods for converting between upper and lower case, capitalising the first word, or title-casing every word:
+
 .. code-block:: none
 
    >>> "Hello World".upper()
@@ -94,6 +96,8 @@ returning ``-1`` when not found.
 
 Testing Start and End
 ---------------------
+
+``startswith()`` and ``endswith()`` return ``True`` or ``False`` and are commonly used in ``if`` statements to filter or classify strings:
 
 .. code-block:: none
 

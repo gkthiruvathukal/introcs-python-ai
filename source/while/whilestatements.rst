@@ -80,6 +80,8 @@ each test:
 Countdown Example
 -----------------
 
+This loop counts down from 5, printing each value, then prints a final message once the condition becomes false:
+
 .. code-block:: python
 
    count = 5

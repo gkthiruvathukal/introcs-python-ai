@@ -11,6 +11,8 @@ When there are more than two choices, chain conditions using ``elif``
 Grade Classification
 --------------------
 
+This example maps a numeric score to a letter grade using a chain of ``elif`` conditions:
+
 .. code-block:: python
 
    score = int(input("Enter score (0-100): "))
@@ -40,6 +42,8 @@ skipped.  The ``else`` at the end is a catch-all — it runs only when
 
 General Form
 ------------
+
+An ``if``-``elif``-``else`` chain can have any number of ``elif`` branches:
 
 .. code-block:: none
 

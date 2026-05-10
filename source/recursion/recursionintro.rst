@@ -80,6 +80,10 @@ faster, and scales to any size:
            result *= i
        return result
 
+The loop multiplies ``result`` by every integer from 2 up to ``n``, accumulating
+the product one factor at a time.  Calling it with large values works without any
+risk of hitting the recursion limit:
+
 .. code-block:: python
 
    print(factorial_iterative(5))    # 120
@@ -113,6 +117,10 @@ Fibonacci Numbers
        if n <= 1:
            return n
        return fib_recursive(n - 1) + fib_recursive(n - 2)
+
+The base cases return 0 and 1 directly.  Every other call splits into two
+smaller sub-problems, mirroring the mathematical definition F(n) = F(n−1) + F(n−2).
+We verify it produces the expected sequence for the first eight values:
 
 .. code-block:: python
 
@@ -148,6 +156,11 @@ stack growth at all:
        for _ in range(2, n + 1):
            prev, curr = curr, prev + curr
        return curr
+
+The loop keeps only the two most recent values, advancing the pair forward on
+each iteration.  This requires O(1) space and O(N) time, with no stack growth.
+Values that would be impossibly slow for the naive recursive version are
+computed instantly:
 
 .. code-block:: python
 

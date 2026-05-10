@@ -9,6 +9,8 @@ A function can have more than one parameter.  Parameters are listed in the
 Example: Addition
 -----------------
 
+This function takes two numbers and prints a sentence describing their sum:
+
 .. code-block:: python
 
    def print_sum(a, b):
