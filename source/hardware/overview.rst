@@ -110,6 +110,14 @@ RAM a Python object occupies, and ``time`` lets you measure how long operations 
    print(f"RAM  time: {ram_time:.4f} s")
    print(f"Disk time: {disk_time:.4f} s")
 
+Sample output (exact numbers vary by machine):
+
+.. code-block:: none
+
+   RAM used by list: 8,000,056 bytes
+   RAM  time: 0.0049 s
+   Disk time: 0.1268 s
+
 Running this will show the disk read taking many times longer than the in-memory sum,
 even on a fast SSD. The gap is larger still on a traditional hard drive. Keeping
 frequently used data in RAM — rather than re-reading it from disk every time — is one
@@ -158,6 +166,78 @@ Output:
 You can also convert back: ``int('0b101010', 2)``, ``int('0x2a', 16)``, and
 ``int('0o52', 8)`` all return ``42``. The prefix (``0b``, ``0o``, ``0x``) tells
 Python which base to use.
+
+**Horner's Method: converting to any base**
+
+Python's ``bin``, ``oct``, and ``hex`` only handle bases 2, 8, and 16. The classic
+algorithm for converting a decimal integer to *any* base uses repeated division:
+divide by the base, record the remainder as the next digit, and repeat until the
+quotient reaches zero. Reading the remainders in reverse gives the result. This is
+known as **Horner's method** (or successive division).
+
+For bases up to 16 we can represent each digit as a single character (``0``–``9``
+then ``A``–``F``). For larger bases there are not enough single characters, so we
+represent each digit as a decimal number separated by colons — exactly the way
+hours, minutes, and seconds are written for base 60.
+
+.. code-block:: python
+
+   def to_base(n, base):
+       if n == 0:
+           return '0'
+       chars = '0123456789ABCDEF'
+       negative = n < 0
+       n = abs(n)
+       result = []
+       while n > 0:
+           digit = n % base
+           result.append(chars[digit] if base <= 16 else str(digit))
+           n //= base
+       result.reverse()
+       digits_str = ''.join(result) if base <= 16 else ':'.join(result)
+       return ('-' + digits_str) if negative else digits_str
+
+   # Standard bases
+   print(to_base( 42,  2))    # binary
+   print(to_base( 42,  8))    # octal
+   print(to_base( 42, 16))    # hexadecimal
+   print(to_base(-42,  2))    # negative number
+   print(to_base(255, 16))    # one full byte in hex
+
+   # Base 7
+   print(to_base( 42,  7))    # 6*7 + 0
+   print(to_base(100,  7))    # 2*49 + 0*7 + 2
+   print(to_base(-42,  7))    # negative in base 7
+
+   # Base 60 — sexagesimal (Babylonian)
+   print(to_base(  42, 60))   # less than 60: single group
+   print(to_base(  90, 60))   # 1*60 + 30  →  like 1 min 30 sec
+   print(to_base(3600, 60))   # 1*3600 + 0 + 0  →  like 1 hour
+   print(to_base(3661, 60))   # 1*3600 + 1*60 + 1  →  like 1:01:01
+
+Output:
+
+.. code-block:: none
+
+   101010
+   52
+   2A
+   -101010
+   FF
+   60
+   202
+   -60
+   42
+   1:30
+   1:0:0
+   1:1:1
+
+Base 60 (**sexagesimal**) was invented by the Babylonians around 2000 BCE and
+is still with us today: 60 seconds in a minute, 60 minutes in an hour, 360
+degrees in a circle (6 × 60). The colon-separated output mirrors the familiar
+``hours:minutes:seconds`` notation — which is itself a base-60 representation.
+Base 7 is less common in practice but illustrates that the same algorithm works
+for any base with no changes to the code.
 
 .. index:: boolean logic, logic gates, AND, OR, NOT, XOR, truth table, De Morgan's laws
    ACM-IEEE CS2013; DS/BasicLogic Discrete Structures: Basic Logic
