@@ -1,6 +1,16 @@
-.. index:: hardware, software, CPU, RAM, operating system
+.. index:: hardware, software, CPU, RAM, operating system, memory hierarchy, process, cloud computing, data representation, boolean logic, ICT literacy
    ACM-IEEE CS2013; AR1 Digital Logic and Digital Systems
    ACM-IEEE CS2023; AR1 Digital Logic and Digital Systems
+   ACM-IEEE CS2013; AR/MachineLevel Machine Level Representation of Data
+   ACM-IEEE CS2023; AR/MachineLevel Machine Level Representation of Data
+   ACM-IEEE CS2013; AR/MemoryArch Memory Architectures
+   ACM-IEEE CS2023; AR/MemoryArch Memory Architectures
+   ACM-IEEE CS2013; DS/BasicLogic Discrete Structures Basic Logic
+   ACM-IEEE CS2023; DS/BasicLogic Discrete Structures Basic Logic
+   ACM-IEEE CS2013; CN/Intro ICT Literacy Foundations
+   ACM-IEEE CS2023; CN/Intro ICT Literacy Foundations
+   ACM-IEEE CS2013; OS/Overview Operating Systems Overview
+   ACM-IEEE CS2023; OS/Overview Operating Systems Overview
 
 .. _Hardware-And-Software:
 
@@ -8,7 +18,11 @@ Hardware and Software
 =====================
 
 .. note::
-   *Source:* Contributed by PhD students in COMP 501 at Loyola University Chicago.
+   *Source:* Originally contributed by PhD students in COMP 501 at Loyola University
+   Chicago. The Memory Hierarchy, Processes, and Types of Computer Systems sections
+   draw on material from the companion
+   `Operating Systems <https://os.cs.luc.edu>`__ and
+   `CS Curricula <https://curricula.cs.luc.edu>`__ sites.
 
 Every computer system is built on two inseparable layers: **hardware**, the physical
 components you can touch, and **software**, the instructions that tell the hardware
@@ -43,6 +57,184 @@ The core hardware components are:
 All major components are connected through the **motherboard**, which acts as the
 circulatory system of the computer, carrying power and signals between parts.
 
+.. index:: memory hierarchy, cache; CPU, registers; CPU, RAM; speed, storage; speed
+   ACM-IEEE CS2013; AR/MemoryArch Memory Architectures
+   ACM-IEEE CS2023; AR/MemoryArch Memory Architectures
+   ACM-IEEE CS2013; AR/MultiLevel Multi-Level Machine Organization
+   ACM-IEEE CS2023; AR/MultiLevel Multi-Level Machine Organization
+
+The Memory Hierarchy
+--------------------
+
+The hardware components that store data are not equal — they differ dramatically in
+speed and size. This tradeoff is captured by the **memory hierarchy**, a ladder that
+runs from the fastest (and smallest) storage to the slowest (and largest):
+
+.. code-block:: none
+
+   Registers   →  inside the CPU; hold the value being computed right now
+   Cache       →  L1/L2/L3; recently used data kept close to the CPU
+   RAM         →  your running program and its data
+   SSD / HDD   →  files, databases, and the operating system at rest
+
+Each level is roughly 10–100× slower than the one above it but offers far more
+capacity. When the CPU needs a value it checks the cache first, then RAM, and only
+falls back to storage as a last resort.
+
+You can see the hierarchy in action from Python. The ``sys`` module reports how much
+RAM a Python object occupies, and ``time`` lets you measure how long operations take:
+
+.. code-block:: python
+
+   import sys
+   import time
+
+   # A list of one million integers lives in RAM
+   numbers = list(range(1_000_000))
+   print(f"RAM used by list: {sys.getsizeof(numbers):,} bytes")
+
+   # Summing values already in RAM is fast
+   start = time.perf_counter()
+   total = sum(numbers)
+   ram_time = time.perf_counter() - start
+
+   # Writing those values to a file and reading them back is much slower
+   with open("numbers.txt", "w") as f:
+       f.write("\n".join(str(n) for n in numbers))
+
+   start = time.perf_counter()
+   with open("numbers.txt") as f:
+       total = sum(int(line) for line in f)
+   disk_time = time.perf_counter() - start
+
+   print(f"RAM  time: {ram_time:.4f} s")
+   print(f"Disk time: {disk_time:.4f} s")
+
+Running this will show the disk read taking many times longer than the in-memory sum,
+even on a fast SSD. The gap is larger still on a traditional hard drive. Keeping
+frequently used data in RAM — rather than re-reading it from disk every time — is one
+of the most important performance principles in all of computing.
+
+.. index:: data representation, binary, hexadecimal, octal, bits, bytes
+   ACM-IEEE CS2013; AR/MachineLevel Machine Level Representation of Data
+   ACM-IEEE CS2023; AR/MachineLevel Machine Level Representation of Data
+   ACM-IEEE CS2013; DS/Data Discrete Structures: Data Representation
+   ACM-IEEE CS2023; DS/Data Discrete Structures: Data Representation
+
+Data Representation
+--------------------
+
+Every piece of data a computer stores or processes — numbers, text, images, sound —
+is ultimately represented as **bits**: individual 0s and 1s. Eight bits make a
+**byte**. A single byte can represent 256 different values (0–255).
+
+Humans usually write numbers in **decimal** (base 10, digits 0–9). Computers work
+internally in **binary** (base 2, digits 0 and 1). Two other bases appear constantly
+in computing:
+
+- **Octal** (base 8) — historically used in Unix file permissions.
+- **Hexadecimal** (base 16, digits 0–9 and A–F) — a compact shorthand for binary
+  since one hex digit represents exactly four bits.
+
+Python has built-in functions for converting between bases:
+
+.. code-block:: python
+
+   num = 42
+   print(f"Decimal:     {num}")
+   print(f"Binary:      {bin(num)}")
+   print(f"Octal:       {oct(num)}")
+   print(f"Hexadecimal: {hex(num)}")
+
+Output:
+
+.. code-block:: none
+
+   Decimal:     42
+   Binary:      0b101010
+   Octal:       0o52
+   Hexadecimal: 0x2a
+
+You can also convert back: ``int('0b101010', 2)``, ``int('0x2a', 16)``, and
+``int('0o52', 8)`` all return ``42``. The prefix (``0b``, ``0o``, ``0x``) tells
+Python which base to use.
+
+.. index:: boolean logic, logic gates, AND, OR, NOT, XOR, truth table, De Morgan's laws
+   ACM-IEEE CS2013; DS/BasicLogic Discrete Structures: Basic Logic
+   ACM-IEEE CS2023; DS/BasicLogic Discrete Structures: Basic Logic
+   ACM-IEEE CS2013; AR/ALU Digital Logic and Digital Systems
+   ACM-IEEE CS2023; AR/ALU Digital Logic and Digital Systems
+
+Boolean Logic and Logic Gates
+------------------------------
+
+At the hardware level, the CPU is built from billions of tiny **logic gates** — each
+one performs a simple operation on bits. The fundamental gates are:
+
+- **AND** — output is 1 only if *both* inputs are 1.
+- **OR** — output is 1 if *at least one* input is 1.
+- **NOT** — inverts the input: 0 becomes 1, 1 becomes 0.
+- **XOR** (exclusive OR) — output is 1 if the inputs *differ*; 0 if they are the same.
+
+All computation — arithmetic, comparison, branching — is ultimately built from
+combinations of these gates. Python exposes the same operations through its boolean
+operators:
+
+.. code-block:: python
+
+   a = True
+   b = False
+
+   print(f"a AND b:  {a and b}")
+   print(f"a OR b:   {a or b}")
+   print(f"NOT a:    {not a}")
+   print(f"a XOR b:  {a != b}")   # exclusive OR: true when inputs differ
+
+Output:
+
+.. code-block:: none
+
+   a AND b:  False
+   a OR b:   True
+   NOT a:    False
+   a XOR b:  True
+
+A **truth table** enumerates every possible combination of inputs and the
+corresponding output. Here is one for AND:
+
+.. code-block:: python
+
+   print(f"{'A':<6} {'B':<6} {'A AND B'}")
+   for a in [False, True]:
+       for b in [False, True]:
+           print(f"{str(a):<6} {str(b):<6} {a and b}")
+
+Output:
+
+.. code-block:: none
+
+   A      B      A AND B
+   False  False  False
+   False  True   False
+   True   False  False
+   True   True   True
+
+**De Morgan's Laws** are two identities that relate AND, OR, and NOT. They come
+up constantly when simplifying logical conditions in code:
+
+.. code-block:: python
+
+   a, b = True, False
+
+   # NOT (a AND b)  ==  (NOT a) OR  (NOT b)
+   print(not (a and b) == (not a or not b))   # True
+
+   # NOT (a OR b)   ==  (NOT a) AND (NOT b)
+   print(not (a or b)  == (not a and not b))  # True
+
+You will use boolean logic every time you write an ``if`` statement. The chapter on
+:ref:`Simple Conditions <Simple-Conditions>` covers this in depth.
+
 .. index:: software; categories, system software, application software, utility software, drivers; hardware
 
 What Is Software?
@@ -64,6 +256,44 @@ There are three main categories of software:
 
 - **Utility software** — supporting tools that maintain and optimize the system.
   Examples: antivirus tools, backup utilities, file compression, disk cleanup.
+
+.. index:: systems programming languages, C language, C++ language, Rust language, assembly language, Ada language, Go language, Python; as high-level language
+   ACM-IEEE CS2013; PL/Languages Programming Languages: Language Translation and Execution
+   ACM-IEEE CS2023; PL/Languages Programming Languages: Language Translation and Execution
+
+Programming Languages Across the Stack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Not all software is written in the same language. Different layers of the stack
+call for different tools:
+
+- **Assembly** — one step above raw machine code. Specific to a CPU architecture.
+  Used for bootloaders, firmware, and performance-critical inner loops. Gives
+  complete control but is tedious and non-portable.
+
+- **C** — the dominant systems language since the 1970s. The Linux kernel, macOS
+  core, and most of the internet's infrastructure are written in C. Fast, portable,
+  and close to the hardware — but the programmer manages memory manually.
+
+- **C++** — extends C with object-oriented features. Used in operating systems,
+  game engines, browsers (Chrome, Firefox), and real-time systems.
+
+- **Rust** — a modern systems language designed for memory safety without a
+  garbage collector. Increasingly used in OS components, browsers, and
+  infrastructure where C/C++ were previously the only options.
+
+- **Ada** — developed by the U.S. Department of Defense for safety-critical and
+  mission-critical systems: avionics, defense, and medical devices.
+
+- **Go** — a modern, compiled language from Google designed for simplicity and
+  performance. Its efficiency and built-in concurrency support have made it popular
+  for networking, cloud infrastructure, and server-side systems programming.
+
+- **Python** — the language you are learning in this course — sits at the opposite
+  end of the spectrum from assembly. It is interpreted, memory-managed, and highly
+  expressive. Python trades raw performance for readability and development speed,
+  making it ideal for data analysis, scripting, automation, and applications.
+  Many systems are built with a fast C/Rust core and a Python layer on top.
 
 .. index:: input-process-output model, hardware; software interaction
 
@@ -91,6 +321,8 @@ Here is a concrete walkthrough — pressing the "A" key on a keyboard:
 4. **Output**: the OS updates the display, and the monitor shows the letter A.
 
 .. index:: operating system; role, OS; resource manager, OS; service provider, OS; translator
+   ACM-IEEE CS2013; OS/Overview Operating Systems Overview
+   ACM-IEEE CS2023; OS/Overview Operating Systems Overview
 
 The Role of the Operating System
 ---------------------------------
@@ -105,6 +337,161 @@ and hardware. It plays three roles simultaneously:
 - **Translator** — applications do not talk directly to hardware. They ask the OS
   instead ("draw this window", "save this file"), and the OS uses drivers to
   translate those requests into hardware signals.
+
+.. index:: process; definition, PID, os module; getpid, os module; getppid, process; parent
+   ACM-IEEE CS2013; OS/Overview Operating Systems Overview
+   ACM-IEEE CS2023; OS/Overview Operating Systems Overview
+   ACM-IEEE CS2013; OS/Processes Processes and Threads
+   ACM-IEEE CS2023; OS/Processes Processes and Threads
+
+Processes: Programs in Motion
+------------------------------
+
+A **program** is a set of instructions stored on disk — it is inert until the OS
+loads and runs it. When that happens the OS creates a **process**: a running instance
+of the program with its own slice of RAM, its own open files, and a unique
+**process ID (PID)**. The same program can produce many processes at once (think of
+opening several browser tabs).
+
+Every process on a Unix system has a parent — the process that created it. When
+you run a Python script from the terminal, your shell is the parent. Python itself
+is the child process. You can inspect this directly:
+
+.. code-block:: python
+
+   import os
+
+   print(f"This script's PID:    {os.getpid()}")
+   print(f"Parent process's PID: {os.getppid()}")
+
+Sample output (the exact numbers vary each run):
+
+.. code-block:: none
+
+   This script's PID:    48271
+   Parent process's PID: 48202
+
+The OS is responsible for creating, scheduling, and eventually cleaning up every
+process on the system. When your Python script finishes — or crashes — the OS
+reclaims the memory and file handles that process was using.
+
+You can also ask Python to start a new child process of its own using the
+``subprocess`` module:
+
+.. code-block:: python
+
+   import subprocess
+
+   result = subprocess.run(["python3", "--version"], capture_output=True, text=True)
+   print(result.stdout)
+
+.. code-block:: none
+
+   Python 3.12.x
+
+Here ``subprocess.run`` asks the OS to create a new process that runs
+``python3 --version``, waits for it to finish, and returns its output. This is
+exactly how the terminal works when you type a command — the shell is a process
+that spawns child processes for each command you run.
+
+.. index:: computer systems; types, personal computer, distributed system, cloud computing, quantum computing
+   ACM-IEEE CS2013; CN/Overview Networking and Communication Introduction
+   ACM-IEEE CS2023; CN/Overview Networking and Communication Introduction
+   ACM-IEEE CS2013; AR/MultiLevel Multi-Level Machine Organization
+   ACM-IEEE CS2023; AR/MultiLevel Multi-Level Machine Organization
+
+Types of Computer Systems
+--------------------------
+
+So far we have described a single desktop or laptop. In practice, "a computer system"
+can take many forms:
+
+**Personal computers and workstations**
+   The machines most students use for coursework: laptops, desktops, and tablets.
+   One user, one machine, general-purpose tasks.
+
+**Servers and data centers**
+   Powerful machines (or racks of machines) that run continuously and serve many
+   users at once — hosting websites, databases, and applications. The computer in
+   your pocket communicates with servers constantly.
+
+**Distributed systems**
+   Multiple computers networked together that cooperate to solve a problem or
+   provide a service. No single machine has all the data or does all the work.
+   The internet itself is a distributed system.
+
+   Every machine on a network has an identity you can inspect from Python:
+
+   .. code-block:: python
+
+      import socket
+      print(socket.gethostname())
+
+**Cloud computing**
+   Renting computing resources — servers, storage, databases — over the internet
+   rather than owning physical hardware. AWS, Google Cloud, and Microsoft Azure
+   are the dominant providers. When you push code to GitHub or stream music, you
+   are using cloud infrastructure.
+
+**High-performance computing (HPC) and clusters**
+   Hundreds or thousands of processors working in parallel on a single large
+   computation: weather forecasting, protein folding, physics simulations. These
+   systems divide a problem into pieces and solve them simultaneously.
+
+**Quantum computers**
+   Rather than bits (0 or 1), quantum computers use *qubits* that can exist in
+   multiple states simultaneously. This makes certain problems — such as breaking
+   encryption or simulating molecules — tractable in ways classical computers
+   cannot match. Quantum computing is still an emerging field, but it represents
+   a fundamental shift in how computation can be performed.
+
+.. note::
+   The Python programs in this book run on a personal computer. But the skills
+   you build here — writing clear, correct programs — transfer directly to
+   servers, cloud functions, and distributed systems. The language is the same;
+   only the scale changes.
+
+.. index:: ICT literacy, digital citizenship, online safety, information literacy
+   ACM-IEEE CS2013; CN/Intro Information and Communication Technology Literacy: Foundations
+   ACM-IEEE CS2023; CN/Intro Information and Communication Technology Literacy: Foundations
+
+Information and Communication Technology Literacy
+--------------------------------------------------
+
+The ACM/IEEE curricula include a knowledge unit called *ICT Literacy: Foundations*
+that is relevant from the very first course. It describes the competencies every
+computing student should develop — not just programming skills, but the broader
+habits of a responsible technology user:
+
+- **Fundamental concepts** — understanding what hardware, software, networks, and
+  the internet are and how they relate. This chapter covers the hardware and
+  software side; networking appears later in the book.
+
+- **Operational skills** — being able to use common tools (terminal, text editor,
+  file system, browser), manage files and directories, and navigate an operating
+  system. The Terminal chapter addresses this directly.
+
+- **Online communication** — understanding email, forums, collaborative platforms
+  (GitHub, shared documents), and how to use them appropriately in a professional
+  and academic context.
+
+- **Digital citizenship** — awareness of the ethical, cultural, and legal issues
+  around computing: intellectual property, privacy, and the social impact of
+  technology. These themes recur throughout the course.
+
+- **Online safety and security** — using strong, unique passwords; enabling
+  two-factor authentication; recognizing phishing; practicing safe browsing. These
+  are not optional extras — they are professional baseline skills.
+
+- **Problem-solving with ICT** — using search effectively, reading documentation,
+  troubleshooting hardware and software issues methodically. Learning to *find*
+  answers is as important as knowing answers.
+
+.. note::
+   These competencies are harder to grade than code — but they matter just as much.
+   A programmer who writes correct Python but falls for a phishing email, ignores
+   licensing, or cannot navigate a terminal is not yet a complete computing
+   professional.
 
 .. index:: hardware; analogies, software; analogies
 
@@ -133,3 +520,14 @@ Exercises
    button in a music app.
 4. In your own words, explain what an operating system does. Use the traffic-cop
    or translator metaphors if they help.
+5. Draw the memory hierarchy as a triangle with the fastest/smallest storage at
+   the top. Label each level with an approximate size (bytes, kilobytes,
+   gigabytes, terabytes) and a representative access time.
+6. Run the memory hierarchy Python example from this chapter. Record the RAM time
+   and disk time. How many times faster is RAM access on your machine?
+7. Run the process identity example (``os.getpid()`` / ``os.getppid()``). Open
+   your operating system's process viewer (Activity Monitor on macOS, Task Manager
+   on Windows, ``top`` on Linux) and find Python in the list. Does the PID match?
+8. Classify each of the following as a personal computer, server, distributed
+   system, or cloud service: your laptop, Gmail, a university's web server,
+   a weather forecasting supercomputer, Netflix.
