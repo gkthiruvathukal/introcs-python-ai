@@ -58,6 +58,58 @@ midpoint, then recurse on the left or right half:
 
 Each recursive call halves the search space, giving O(log N) depth.
 
+Inner Helper Pattern
+^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: recursion; inner helper, nested function; recursive helper
+
+The version above exposes ``lo`` and ``hi`` as optional parameters, so
+the recursive signature doubles as the public API.  An alternative hides
+the bounds inside a nested function, giving callers a clean
+two-argument interface:
+
+.. literalinclude:: ../../examples/introcs-python/recursion/binary_search_helper.py
+   :language: python
+   :start-after: # start: binary_search_helper
+   :end-before: # end: binary_search_helper
+
+The outer ``binary_search`` owns the list and kicks off the search with
+the full range.  The inner ``helper`` is the recursive engine — callers
+never see ``low`` or ``high`` and cannot accidentally pass wrong values
+for them.
+
+.. code-block:: python
+
+   data = [-5, 2, 8, 9, 12, 22]
+   print(binary_search(data, 9))   # 3
+   print(binary_search(data, 7))   # -1
+
+Property-Based Testing with Hypothesis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: Hypothesis; property-based testing, property-based testing, pytest; Hypothesis
+
+Testing by hand covers only the cases you think of.  *Property-based
+testing* generates hundreds of random inputs automatically and checks
+that a stated property holds for all of them.  The ``hypothesis``
+library does this in Python:
+
+.. literalinclude:: ../../examples/introcs-python/recursion/binary_search_helper.py
+   :language: python
+   :start-after: # start: hypothesis_test
+   :end-before: # end: hypothesis_test
+
+``@given(st.lists(st.integers()), st.integers())`` tells Hypothesis to
+generate a random sorted list and a random key on every run — hundreds
+of variations, including empty lists, single-element lists, and keys
+outside the array's range.  The two properties asserted are:
+
+- if ``key`` is absent, the result must be ``-1``
+- if ``key`` is present, the returned index must point to it
+
+Install Hypothesis with ``pip install hypothesis``, then run the test
+with ``pytest binary_search_helper.py``.
+
 Flattening a Nested List
 ------------------------
 

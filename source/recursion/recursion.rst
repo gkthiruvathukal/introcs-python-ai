@@ -6,4 +6,6 @@ Recursion
 
    recursionintro
    recursionexamples
+   recursionfs
+   recursiondparser
    reviewrecursion
