@@ -3,6 +3,8 @@
            mutual recursion; parser, associativity; grammar
    ACM-IEEE CS2013; PL2 Functional Programming
    ACM-IEEE CS2023; PL2 Functional Programming
+   ACM-IEEE CS2013; PL6 Language Translation and Execution
+   ACM-IEEE CS2023; PL6 Language Translation and Execution
    ACM-IEEE CS2013; AL1 Basic Analysis
    ACM-IEEE CS2023; AL1 Basic Analysis
    ACM-IEEE CS2013; PL4 Type Systems
@@ -12,6 +14,11 @@
 
 Recursive Descent Parsing
 ==========================
+
+.. note::
+   *Source:* Adapted from `recursion-book-rd-parser
+   <https://github.com/gkthiruvathukal/recursion-book-rd-parser>`_
+   by George K. Thiruvathukal.
 
 A *recursive descent parser* translates a token sequence into a tree
 using one function per grammar rule.  When a grammar rule refers to

@@ -5,11 +5,18 @@
    ACM-IEEE CS2023; OS8 File Systems
    ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
    ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
+   ACM-IEEE CS2013; AL2 Algorithmic Strategies
+   ACM-IEEE CS2023; AL2 Algorithmic Strategies
 
 .. _Recursion-Filesystem:
 
 Recursive Filesystem Traversal
 ================================
+
+.. note::
+   *Source:* Adapted from `recursion-book-python-filesystems
+   <https://github.com/gkthiruvathukal/recursion-book-python-filesystems>`_
+   by George K. Thiruvathukal.
 
 File systems are trees: each directory may contain files and other
 directories.  Recursive algorithms map naturally onto this structure.

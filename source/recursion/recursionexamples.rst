@@ -2,6 +2,12 @@
            generator; factorial, generator; Fibonacci
    ACM-IEEE CS2013; PL2 Functional Programming
    ACM-IEEE CS2023; PL2 Functional Programming
+   ACM-IEEE CS2013; AL1 Basic Analysis
+   ACM-IEEE CS2023; AL1 Basic Analysis
+   ACM-IEEE CS2013; AL2 Algorithmic Strategies
+   ACM-IEEE CS2023; AL2 Algorithmic Strategies
+   ACM-IEEE CS2013; OS8 File Systems
+   ACM-IEEE CS2023; OS8 File Systems
 
 .. _Recursion-Examples:
 
