@@ -187,9 +187,17 @@ Output:
 
    Saved graffiti_trend.png
 
-The saved chart shows request volume over time, typically with a dip in
-winter months (fewer outdoor surfaces are tagged when it is cold) and
-peaks in late spring and summer.
+The chart below shows request volume using representative data for
+2022–2024.  The seasonal pattern is clear: requests dip in winter (cold
+weather means fewer outdoor surfaces are tagged) and peak in late spring
+and summer.
+
+.. figure:: graffiti_trend.png
+   :alt: Bar chart of 311 graffiti removal requests per month, 2022–2024
+   :align: center
+
+   Monthly graffiti removal requests — representative data based on
+   Chicago 311 historical trends.
 
 Exercises
 ---------
