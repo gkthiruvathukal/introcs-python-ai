@@ -7,6 +7,10 @@ Introduction to Computer Science in Python
       :target: https://github.com/LoyolaChicagoBooks/introcs-python-ai/actions/workflows/main.yml
       :alt: Build Status
 
+   .. image:: https://img.shields.io/github/v/release/LoyolaChicagoBooks/introcs-python-ai
+      :target: https://github.com/LoyolaChicagoBooks/introcs-python-ai/releases/latest
+      :alt: Latest Release
+
 .. toctree::
    :maxdepth: 2
 
