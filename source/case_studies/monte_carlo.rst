@@ -1,5 +1,6 @@
 .. index:: Monte Carlo simulation; case study, pi estimation; case study,
-           random sampling; area estimation, darts; Monte Carlo
+           random sampling; area estimation, darts; Monte Carlo,
+           pandas; DataFrame, pandas; to_csv
    ACM-IEEE CS2013; AL2 Algorithmic Strategies
    ACM-IEEE CS2023; AL2 Algorithmic Strategies
    ACM-IEEE CS2013; DS6 Discrete Probability
@@ -59,13 +60,17 @@ from [-1, 1].  A dart is *inside* the circle when x² + y² ≤ 1:
    :start-after: # start: generate_darts
    :end-before: # end: generate_darts
 
-The function returns a list of dictionaries so the data is
-self-describing and can be saved to CSV for later reuse.
+The function returns a DataFrame with columns ``x``, ``y``, and
+``inside``, so the data is self-describing and can be saved or
+analysed with standard pandas operations.
 
-.. index:: estimate_pi; case study
+.. index:: estimate_pi; case study, pandas.Series.sum; Monte Carlo
 
 Step 2 — Estimate π
 ---------------------
+
+Because ``darts["inside"]`` is a boolean Series, ``darts["inside"].sum()``
+counts the ``True`` values directly — no loop required:
 
 .. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
    :language: python
@@ -86,10 +91,14 @@ Output:
 
    π ≈ 3.141440  (true: 3.141593)
 
-.. index:: save_darts; CSV, csv.DictWriter; simulation
+.. index:: save_darts; CSV, pandas.DataFrame.to_csv; simulation
 
 Step 3 — Save the Data
 -----------------------
+
+``DataFrame.to_csv`` writes the file in one call.  Passing
+``index=False`` omits the row numbers that pandas adds by default,
+so the file is clean and portable:
 
 .. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
    :language: python
@@ -226,8 +235,9 @@ Challenges
    should the answer be?
 
 4. Write a function ``estimate_pi_from_csv(filename)`` that reads a
-   saved darts CSV and returns the π estimate without regenerating the
-   darts.
+   saved darts CSV with ``pd.read_csv`` and passes the resulting
+   DataFrame to ``estimate_pi``.  Verify it produces the same value
+   as the original run.
 
 5. Plot how the absolute error changes as n increases from 100 to
    1 000 000 (use a logarithmic x-axis).  Does the slope of the error

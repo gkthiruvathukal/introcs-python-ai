@@ -1,21 +1,20 @@
 import math
 import random
 import time
+import pandas as pd
 import matplotlib.pyplot as plt
 from monte_carlo import generate_darts, estimate_pi
 
 
 # start: plot_darts
-def plot_darts(darts: list[dict], filename: str = 'darts.png') -> None:
+def plot_darts(darts: pd.DataFrame, filename: str = 'darts.png') -> None:
     """Scatter-plot dart throws, coloring inside/outside the circle differently."""
-    inside_x  = [d['x'] for d in darts if     d['inside']]
-    inside_y  = [d['y'] for d in darts if     d['inside']]
-    outside_x = [d['x'] for d in darts if not d['inside']]
-    outside_y = [d['y'] for d in darts if not d['inside']]
+    inside  = darts[darts["inside"]]
+    outside = darts[~darts["inside"]]
 
     fig, ax = plt.subplots(figsize=(6, 6))
-    ax.scatter(inside_x,  inside_y,  s=0.5, color='steelblue', alpha=0.4, label='inside')
-    ax.scatter(outside_x, outside_y, s=0.5, color='salmon',    alpha=0.4, label='outside')
+    ax.scatter(inside["x"],  inside["y"],  s=0.5, color='steelblue', alpha=0.4, label='inside')
+    ax.scatter(outside["x"], outside["y"], s=0.5, color='salmon',    alpha=0.4, label='outside')
 
     theta = [math.tau * i / 1000 for i in range(1001)]
     ax.plot([math.cos(t) for t in theta], [math.sin(t) for t in theta],
@@ -34,7 +33,7 @@ def plot_darts(darts: list[dict], filename: str = 'darts.png') -> None:
 
 # start: sample_and_estimate
 def _sample_and_estimate(n: int, max_display: int,
-                          chunk_size: int = 10_000_000) -> tuple[float, list[dict]]:
+                          chunk_size: int = 10_000_000) -> tuple[float, pd.DataFrame]:
     """Return (pi_estimate, display_sample) for n darts.
 
     Processes in chunks of chunk_size so arbitrarily large n never requires
@@ -44,7 +43,9 @@ def _sample_and_estimate(n: int, max_display: int,
     import numpy as np
 
     inside_total = 0
-    sample: list[dict] = []
+    sample_x: list[float] = []
+    sample_y: list[float] = []
+    sample_inside: list[bool] = []
     remaining = n
 
     while remaining > 0:
@@ -54,15 +55,15 @@ def _sample_and_estimate(n: int, max_display: int,
         mask = x * x + y * y <= 1.0
         inside_total += int(mask.sum())
 
-        if len(sample) < max_display:
-            k = min(chunk, max_display - len(sample))
-            sample.extend(
-                {'x': float(x[i]), 'y': float(y[i]), 'inside': bool(mask[i])}
-                for i in range(k)
-            )
+        if len(sample_x) < max_display:
+            k = min(chunk, max_display - len(sample_x))
+            sample_x.extend(x[:k].tolist())
+            sample_y.extend(y[:k].tolist())
+            sample_inside.extend(mask[:k].tolist())
 
         remaining -= chunk
 
+    sample = pd.DataFrame({'x': sample_x, 'y': sample_y, 'inside': sample_inside})
     return 4.0 * inside_total / n, sample
 # end: sample_and_estimate
 
@@ -95,16 +96,14 @@ def plot_convergence_grid(sizes: list[int],
         pi_est, sample = _sample_and_estimate(n, max_display)
         elapsed = time.perf_counter() - t0
 
-        inside_x  = [d['x'] for d in sample if     d['inside']]
-        inside_y  = [d['y'] for d in sample if     d['inside']]
-        outside_x = [d['x'] for d in sample if not d['inside']]
-        outside_y = [d['y'] for d in sample if not d['inside']]
+        inside  = sample[sample["inside"]]
+        outside = sample[~sample["inside"]]
 
         pt_size = max(0.3, 10 / (math.log10(n) ** 1.5))
         alpha   = max(0.15, 0.7 - 0.1 * math.log10(n))
 
-        ax.scatter(inside_x,  inside_y,  s=pt_size, color='steelblue', alpha=alpha)
-        ax.scatter(outside_x, outside_y, s=pt_size, color='salmon',    alpha=alpha)
+        ax.scatter(inside["x"],  inside["y"],  s=pt_size, color='steelblue', alpha=alpha)
+        ax.scatter(outside["x"], outside["y"], s=pt_size, color='salmon',    alpha=alpha)
         ax.plot(cos_t, sin_t, 'k-', linewidth=1.0)
         ax.set_aspect('equal')
         ax.set_xlim(-1.05, 1.05)

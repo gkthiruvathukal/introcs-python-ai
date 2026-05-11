@@ -1,7 +1,5 @@
 import urllib.request
-import csv
-import collections
-from datetime import datetime
+import pandas as pd
 import matplotlib.pyplot as plt
 
 DATASET_URL = (
@@ -20,74 +18,55 @@ def fetch_graffiti(output: str = "311_graffiti.csv") -> None:
 
 
 # start: load_graffiti
-def load_graffiti(filename: str, limit: int = 5) -> list[dict]:
-    """Read the first limit rows and return them as a list of dicts."""
-    rows = []
-    with open(filename, newline='', encoding='utf-8') as f:
-        for i, row in enumerate(csv.DictReader(f)):
-            if i >= limit:
-                break
-            rows.append(row)
-    return rows
+def load_graffiti(filename: str, limit: int | None = None) -> pd.DataFrame:
+    """Load the dataset into a DataFrame; parse Creation Date as datetime."""
+    df = pd.read_csv(filename, nrows=limit)
+    df["Creation Date"] = pd.to_datetime(
+        df["Creation Date"], format="%m/%d/%Y", errors="coerce"
+    )
+    return df
 # end: load_graffiti
 
 
 # start: aggregate_graffiti
 def aggregate_graffiti(filename: str, group_by: str = "ZIP Code",
-                        top: int = 10) -> list[tuple[str, int]]:
-    """Count requests per group_by value and return the top N as (key, count) pairs."""
-    counter: collections.Counter = collections.Counter()
-    with open(filename, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            counter[row[group_by]] += 1
-    return counter.most_common(top)
+                        top: int = 10) -> pd.Series:
+    """Return the top-N value counts for the given column."""
+    df = load_graffiti(filename)
+    return df[group_by].value_counts().head(top)
 # end: aggregate_graffiti
 
 
 # start: filter_graffiti
 def filter_graffiti(filename: str, status: str = "Completed",
                      start: str = "2015-01-01",
-                     end: str = "2015-12-31") -> list[dict]:
+                     end: str = "2015-12-31") -> pd.DataFrame:
     """Return rows whose Status matches and Creation Date falls in [start, end]."""
-    start_dt = datetime.strptime(start, "%Y-%m-%d")
-    end_dt   = datetime.strptime(end,   "%Y-%m-%d")
-    results = []
-    with open(filename, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            try:
-                row_date = datetime.strptime(row["Creation Date"], "%m/%d/%Y")
-            except ValueError:
-                continue
-            if row["Status"] == status and start_dt <= row_date <= end_dt:
-                results.append(row)
-    return results
+    df = load_graffiti(filename)
+    mask = (
+        (df["Status"] == status) &
+        (df["Creation Date"] >= start) &
+        (df["Creation Date"] <= end)
+    )
+    return df[mask]
 # end: filter_graffiti
 
 
 # start: visualize_graffiti
 def visualize_graffiti(filename: str,
                         output: str = "graffiti_trend.png",
-                        year_start: int = None,
-                        year_end: int = None) -> None:
-    """Save a bar chart of monthly graffiti request counts.
+                        year_start: int | None = None,
+                        year_end: int | None = None) -> None:
+    """Save a bar chart of monthly graffiti request counts."""
+    df = load_graffiti(filename).dropna(subset=["Creation Date"])
+    if year_start is not None:
+        df = df[df["Creation Date"].dt.year >= year_start]
+    if year_end is not None:
+        df = df[df["Creation Date"].dt.year <= year_end]
 
-    year_start and year_end are inclusive; omit both to plot all years.
-    """
-    monthly: collections.Counter = collections.Counter()
-    with open(filename, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            try:
-                date = datetime.strptime(row["Creation Date"], "%m/%d/%Y")
-                if year_start is not None and date.year < year_start:
-                    continue
-                if year_end is not None and date.year > year_end:
-                    continue
-                monthly[date.strftime("%Y-%m")] += 1
-            except ValueError:
-                continue
-
-    months = sorted(monthly)
-    counts = [monthly[m] for m in months]
+    monthly = df.groupby(df["Creation Date"].dt.to_period("M")).size()
+    months = [str(m) for m in monthly.index]
+    counts = monthly.to_list()
 
     fig, ax = plt.subplots(figsize=(12, 5))
     ax.bar(months, counts, color='steelblue')
@@ -107,18 +86,12 @@ def visualize_by_year(filename: str,
                        output: str = "graffiti_by_year.png",
                        min_year: int = 2010) -> None:
     """Save a bar chart of total graffiti removal requests per year."""
-    yearly: collections.Counter = collections.Counter()
-    with open(filename, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            try:
-                date = datetime.strptime(row["Creation Date"], "%m/%d/%Y")
-                if date.year >= min_year:
-                    yearly[date.year] += 1
-            except ValueError:
-                continue
+    df = load_graffiti(filename).dropna(subset=["Creation Date"])
+    df = df[df["Creation Date"].dt.year >= min_year]
 
-    years = sorted(yearly)
-    counts = [yearly[y] for y in years]
+    yearly = df.groupby(df["Creation Date"].dt.year).size()
+    years = list(yearly.index)
+    counts = list(yearly.values)
 
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.bar(years, counts, color='steelblue', width=0.6)
@@ -175,7 +148,7 @@ if __name__ == '__main__':
     p_year.add_argument('-i', '--input', default='311_graffiti.csv')
     p_year.add_argument('-o', '--output', default='graffiti_by_year.png')
     p_year.add_argument('--min-year', type=int, default=2010,
-                        help='Earliest year to include (default: 2000)')
+                        help='Earliest year to include (default: 2010)')
 
     p_viz = sub.add_parser('visualize', help='Save a monthly bar chart to a PNG file.')
     p_viz.add_argument('-i', '--input', default='311_graffiti.csv')
@@ -191,20 +164,18 @@ if __name__ == '__main__':
         fetch_graffiti(args.output)
 
     elif args.command == 'load':
-        rows = load_graffiti(args.input, args.limit)
-        for row in rows:
-            print(row['Creation Date'], row['Status'], row['ZIP Code'])
+        df = load_graffiti(args.input, args.limit)
+        print(df[["Creation Date", "Status", "ZIP Code"]].to_string(index=False))
 
     elif args.command == 'aggregate':
         results = aggregate_graffiti(args.input, args.group_by, args.top)
-        for key, count in results:
-            print(f"{key:20s}  {count:6,}")
+        for key, count in results.items():
+            print(f"{str(key):20s}  {count:6,}")
 
     elif args.command == 'filter':
         matches = filter_graffiti(args.input, args.status, args.start, args.end)
         print(f"{len(matches):,} '{args.status}' requests from {args.start} to {args.end}")
-        for row in matches[:args.limit]:
-            print(row['Creation Date'], row['Status'], row['ZIP Code'])
+        print(matches[["Creation Date", "Status", "ZIP Code"]].head(args.limit).to_string(index=False))
 
     elif args.command == 'visualize-year':
         visualize_by_year(args.input, args.output, args.min_year)

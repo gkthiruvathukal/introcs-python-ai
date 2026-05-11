@@ -1,6 +1,6 @@
 .. index:: Chicago Data Portal; case study, 311 graffiti; case study,
            open data; civic dataset, data pipeline; fetch-load-analyze-visualize,
-           urllib.request; download, csv.DictReader; real data
+           urllib.request; download, pandas; DataFrame, pandas; read_csv
    ACM-IEEE CS2013; IM1 Information Management Concepts
    ACM-IEEE CS2023; IM1 Information Management Concepts
    ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
@@ -26,8 +26,9 @@ download that dataset, explore its structure, and find patterns — which
 ZIP codes generate the most requests?  How does volume change by
 season?
 
-This case study builds a complete data pipeline in Python using only
-the standard library plus ``matplotlib``:
+This case study builds a complete data pipeline in Python using
+``pandas`` for data loading and analysis, and ``matplotlib`` for
+visualisation:
 
 .. code-block:: none
 
@@ -64,14 +65,17 @@ Output:
    Downloading to 311_graffiti.csv ...
    Done.
 
-.. index:: csv.DictReader; civic data, data inspection; CSV
+.. index:: pandas.read_csv; civic data, DataFrame; inspection, pandas; nrows
 
 Step 2 — Load and Inspect
 --------------------------
 
-``csv.DictReader`` turns each row into a dictionary keyed by the
-column headers.  A ``limit`` parameter lets you preview a few rows
-before processing the full file:
+``pd.read_csv`` reads the file into a DataFrame in one call.  The
+optional ``nrows`` parameter limits how many rows are read, which is
+useful for previewing a large file without loading all of it into
+memory.  We immediately parse the ``Creation Date`` column as proper
+``datetime`` objects so that filtering and grouping by date work
+naturally later:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
@@ -80,28 +84,30 @@ before processing the full file:
 
 .. code-block:: python
 
-   rows = load_graffiti("311_graffiti.csv", limit=3)
-   for row in rows:
-       print(row["Creation Date"], row["Status"], row["ZIP Code"])
+   df = load_graffiti("311_graffiti.csv", limit=3)
+   print(df[["Creation Date", "Status", "ZIP Code"]].to_string(index=False))
 
 Output (representative):
 
 .. code-block:: none
 
-   01/02/2024  Completed  60614
-   01/02/2024  Completed  60647
-   01/03/2024  Open       60618
+   Creation Date     Status ZIP Code
+      2024-01-02  Completed    60614
+      2024-01-02  Completed    60647
+      2024-01-03       Open    60618
 
 The dataset includes columns for creation and completion dates, street
 address, ZIP code, latitude/longitude, ward, and police district.
 
-.. index:: collections.Counter; 311 aggregation, group-by; ZIP code
+.. index:: pandas.Series.value_counts; 311 aggregation, group-by; ZIP code
 
 Step 3 — Aggregate
 -------------------
 
-``collections.Counter`` counts how many requests fall under each
-value of a given column — here, ZIP code:
+``Series.value_counts()`` counts how many rows contain each distinct
+value in a column and returns a Series sorted from most to least
+frequent.  Chaining ``.head(top)`` limits the result to the top N
+entries:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
@@ -110,7 +116,7 @@ value of a given column — here, ZIP code:
 
 .. code-block:: python
 
-   for zip_code, count in aggregate_graffiti("311_graffiti.csv", top=5):
+   for zip_code, count in aggregate_graffiti("311_graffiti.csv", top=5).items():
        print(f"{zip_code:10s}  {count:6,}")
 
 Output (representative):
@@ -123,23 +129,24 @@ Output (representative):
    60622       3,840
    60625       3,512
 
-.. index:: datetime.strptime; 311 filtering, date range filtering; status filter
+.. index:: boolean indexing; pandas, date range filtering; DataFrame
 
 Step 4 — Filter
 ----------------
 
-Real datasets need filtering before analysis.  This function returns
-only rows matching a given status whose creation date falls within a
-specified range:
+Real datasets need filtering before analysis.  Because ``load_graffiti``
+already parsed ``Creation Date`` as datetime, we can compare it directly
+against date strings using pandas boolean indexing.  The ``&`` operator
+combines conditions row-wise; wrapping each condition in parentheses is
+required because of Python's operator precedence:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
    :start-after: # start: filter_graffiti
    :end-before: # end: filter_graffiti
 
-The ``Creation Date`` column uses ``MM/DD/YYYY`` format, so
-``datetime.strptime`` with ``"%m/%d/%Y"`` parses it.  Rows with
-unparseable dates are skipped with ``continue``.
+The result is a new DataFrame containing only the matching rows — no
+manual date parsing or ``try``/``except`` loops needed.
 
 .. code-block:: python
 
@@ -243,21 +250,27 @@ other datasets published on the Chicago Data Portal.
 Challenges
 ----------
 
-1. Modify ``aggregate_graffiti`` to group by ``"Ward"`` instead of
+1. Call ``aggregate_graffiti`` with ``group_by="Ward"`` instead of
    ``"ZIP Code"``.  Which ward has the most graffiti removal requests?
 
-2. Write a function ``average_completion_days(filename)`` that returns
-   the average number of days between ``"Creation Date"`` and
-   ``"Completion Date"`` for completed requests.  Skip rows where
-   either date is missing or unparseable.
+2. Write a function ``average_completion_days(filename)`` that loads
+   the DataFrame, parses both ``"Creation Date"`` and
+   ``"Completion Date"`` as datetime, and returns the mean of
+   ``df["Completion Date"] - df["Creation Date"]`` (in days) for
+   completed requests.  Use ``pd.to_datetime(..., errors="coerce")``
+   to handle missing values — they become ``NaT`` and are excluded
+   automatically by ``.mean()``.
 
 3. The dataset includes ``"Latitude"`` and ``"Longitude"`` columns.
-   Write a function that filters rows to those within a bounding box
-   (min/max lat/lon) and returns the count.  Use it to count requests
-   in a neighbourhood of your choice.
+   Write a function that filters the DataFrame to rows within a
+   bounding box (min/max lat/lon) using boolean indexing, and returns
+   the count.  Use it to count requests in a neighbourhood of your
+   choice.
 
 4. Extend ``visualize_graffiti`` to overlay a 12-month rolling average
-   line on top of the monthly bars.
+   line on top of the monthly bars.  After computing ``monthly``, use
+   ``pd.Series(counts).rolling(12, min_periods=1).mean()`` to generate
+   the smoothed values.
 
 5. Download the 311 Pothole Reports dataset (view ID ``7as2-ds3y``)
    and compare monthly volumes for graffiti and potholes side-by-side
