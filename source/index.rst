@@ -25,6 +25,7 @@ Introduction to Computer Science in Python
    files/files
    error_handling/overview
    lists/lists
+   linear_algebra/linear_algebra
    tuples/tuples
    dictionaries/dictionaries
    lists_of_dicts/overview
