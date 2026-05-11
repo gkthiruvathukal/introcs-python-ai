@@ -27,6 +27,13 @@ def save_darts(darts: pd.DataFrame, filename: str = 'darts.csv') -> None:
 # end: save_darts
 
 
+# start: load_darts
+def load_darts(filename: str) -> pd.DataFrame:
+    """Load a previously saved darts CSV back into a DataFrame."""
+    return pd.read_csv(filename)
+# end: load_darts
+
+
 # start: convergence
 def convergence_table(sizes: list[int]) -> None:
     """Print how the pi estimate improves as n grows."""
@@ -49,16 +56,22 @@ if __name__ == '__main__':
                         help='Number of darts to throw (default: 100000)')
     parser.add_argument('--save', metavar='FILE',
                         help='Save dart data to a CSV file')
+    parser.add_argument('--load', metavar='FILE',
+                        help='Load darts from a CSV file instead of generating')
     parser.add_argument('--convergence', action='store_true',
                         help='Print a convergence table across several dart counts')
     parser.add_argument('--seed', type=int, default=None,
                         help='Random seed for reproducibility')
     args = parser.parse_args()
 
-    if args.seed is not None:
-        random.seed(args.seed)
+    if args.load:
+        darts = load_darts(args.load)
+        print(f"Loaded {len(darts):,} darts from {args.load}")
+    else:
+        if args.seed is not None:
+            random.seed(args.seed)
+        darts = generate_darts(args.darts)
 
-    darts = generate_darts(args.darts)
     estimate = estimate_pi(darts)
     print(f"π ≈ {estimate:.6f}  (true: {math.pi:.6f})")
 

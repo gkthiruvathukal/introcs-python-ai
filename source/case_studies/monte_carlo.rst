@@ -64,13 +64,77 @@ The function returns a DataFrame with columns ``x``, ``y``, and
 ``inside``, so the data is self-describing and can be saved or
 analysed with standard pandas operations.
 
+.. index:: save_darts; CSV, pandas.DataFrame.to_csv; simulation
+
+Step 2 — Save the Darts to a File
+-----------------------------------
+
+``DataFrame.to_csv`` writes the DataFrame to disk in one call.
+Passing ``index=False`` omits the row numbers that pandas adds by
+default, keeping the file clean and portable:
+
+.. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
+   :language: python
+   :start-after: # start: save_darts
+   :end-before: # end: save_darts
+
+.. code-block:: python
+
+   darts = generate_darts(100_000)
+   save_darts(darts, "darts.csv")
+
+Output:
+
+.. code-block:: none
+
+   $ head -3 darts.csv
+   x,y,inside
+   0.327450182,-0.645223491,True
+   -0.812774563,0.203948217,True
+
+Separating generation from analysis is a deliberate design choice.
+Once the darts are on disk you can share the file, re-run the
+analysis without re-generating, or load the same dataset in a
+completely different script.
+
+.. index:: load_darts; pandas.read_csv, DataFrame; round-trip
+
+Step 3 — Load the Darts from a File
+--------------------------------------
+
+``pd.read_csv`` reconstructs the DataFrame from the saved file.
+Because the ``inside`` column was written as ``True``/``False``,
+pandas reads it back as a boolean column automatically:
+
+.. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
+   :language: python
+   :start-after: # start: load_darts
+   :end-before: # end: load_darts
+
+.. code-block:: python
+
+   darts = load_darts("darts.csv")
+   print(darts.shape, darts.dtypes)
+
+Output:
+
+.. code-block:: none
+
+   (100000, 3)
+   x        float64
+   y        float64
+   inside      bool
+   dtype: object
+
 .. index:: estimate_pi; case study, pandas.Series.sum; Monte Carlo
 
-Step 2 — Estimate π
+Step 4 — Estimate π
 ---------------------
 
-Because ``darts["inside"]`` is a boolean Series, ``darts["inside"].sum()``
-counts the ``True`` values directly — no loop required:
+``estimate_pi`` works identically whether the DataFrame came from
+``generate_darts`` or ``load_darts`` — both produce the same shape
+and column types.  Because ``darts["inside"]`` is a boolean Series,
+``.sum()`` counts the ``True`` values directly:
 
 .. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
    :language: python
@@ -82,7 +146,7 @@ With 100 000 darts:
 .. code-block:: python
 
    import math
-   darts = generate_darts(100_000)
+   darts = load_darts("darts.csv")
    print(f"π ≈ {estimate_pi(darts):.6f}  (true: {math.pi:.6f})")
 
 Output:
@@ -91,26 +155,9 @@ Output:
 
    π ≈ 3.141440  (true: 3.141593)
 
-.. index:: save_darts; CSV, pandas.DataFrame.to_csv; simulation
-
-Step 3 — Save the Data
------------------------
-
-``DataFrame.to_csv`` writes the file in one call.  Passing
-``index=False`` omits the row numbers that pandas adds by default,
-so the file is clean and portable:
-
-.. literalinclude:: ../../examples/introcs-python/simulation/monte_carlo.py
-   :language: python
-   :start-after: # start: save_darts
-   :end-before: # end: save_darts
-
-Saving the darts lets you re-run the analysis or share the dataset
-without regenerating it.
-
 .. index:: convergence; law of large numbers, error rate; Monte Carlo
 
-Step 4 — Measure Convergence
+Step 5 — Measure Convergence
 ------------------------------
 
 How many darts do you need?  The error shrinks roughly as 1/√n — each
@@ -140,7 +187,7 @@ Output (varies due to randomness — representative run):
 
 .. index:: matplotlib; Monte Carlo scatter plot
 
-Step 5 — Visualize
+Step 6 — Visualize
 -------------------
 
 A scatter plot makes the geometry tangible: blue dots inside the
@@ -234,10 +281,10 @@ Challenges
    area of a diamond with vertices at (±1, 0) and (0, ±1).  What
    should the answer be?
 
-4. Write a function ``estimate_pi_from_csv(filename)`` that reads a
-   saved darts CSV with ``pd.read_csv`` and passes the resulting
-   DataFrame to ``estimate_pi``.  Verify it produces the same value
-   as the original run.
+4. Generate two sets of darts with different seeds and save each to
+   its own CSV file.  Load both files with ``load_darts``, concatenate
+   the DataFrames with ``pd.concat``, and compute ``estimate_pi`` on
+   the combined dataset.  Does combining datasets improve the estimate?
 
 5. Plot how the absolute error changes as n increases from 100 to
    1 000 000 (use a logarithmic x-axis).  Does the slope of the error
