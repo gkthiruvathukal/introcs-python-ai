@@ -67,7 +67,7 @@ Every RST file contributed by PhD students carries a `.. note::` attribution:
 
 ---
 
-## Content status (as of 2026-05-07)
+## Content status (as of 2026-05-11)
 
 ### Complete chapters (full prose, no stubs)
 
@@ -93,11 +93,19 @@ Every RST file contributed by PhD students carries a `.. note::` attribution:
 | Lists of Dictionaries | `source/lists_of_dicts/` |
 | Dictionary Algorithms | `source/dict_algorithms/` |
 | Internet Data | `source/internet_data/` |
+| Simulation | `source/simulation/` |
 | Classes & dataclasses | `source/classes/` |
 | Testing (pytest) | `source/testing/` |
 | Recursion | `source/recursion/` |
 | Data Structures | `source/datastructures/` |
 | Graphical User Interfaces (Tkinter) | `source/gui/` |
+| Case Studies | `source/case_studies/` |
+
+### Stub chapters (outlined, ready to write)
+
+| Chapter | Directory | Notes |
+|---------|-----------|-------|
+| Linear Algebra | `source/linear_algebra/` | Four files with detailed `.. todo::` outlines: `overview.rst`, `vectors.rst`, `matrices.rst`, `applications.rst`. Placed in toctree after Lists, before Tuples. |
 
 ### Appendix
 
@@ -150,6 +158,9 @@ introcs-python/
     ├── recursion/              # Ch 23
     ├── datastructures/         # Ch 24
     ├── gui/                    # Ch 25
+    ├── linear_algebra/         # Ch 16 (stub) — overview, vectors, matrices, applications
+    ├── simulation/             # Ch 22 — Monte Carlo
+    ├── case_studies/           # Ch 27 — Monte Carlo, Chicago 311 graffiti
     └── appendix/               # lesson_plan, contributors, stubs
 ```
 
@@ -162,18 +173,18 @@ Each chapter follows the two-file pattern:
 ## Build instructions
 
 ```bash
-# Install dependencies (once)
-pip install -r requirements.txt
+# Install dependencies (once) — always use the project .venv
+.venv/bin/pip install -r requirements.txt
 
-# HTML (fast, for day-to-day work)
-make html
+# HTML (fast, for day-to-day work) — use .venv sphinx-build, not make
+.venv/bin/sphinx-build -b html source build/html
 open build/html/index.html
 
 # Full clean rebuild (required when adding new toctree entries)
-make clean && make html
+rm -rf build/ && .venv/bin/sphinx-build -b html source build/html
 
 # Check for Sphinx warnings/errors
-make html 2>&1 | grep -E "ERROR|WARNING"
+.venv/bin/sphinx-build -b html source build/html 2>&1 | grep -E "ERROR|WARNING"
 
 # PDF (requires TeX Live full install with xelatex)
 make latex
@@ -287,6 +298,9 @@ topic naturally has two parts, use `a.` / `b.` / `c.` sub-items:
 - `for item in iterable:` over index-based loops where natural
 - `snake_case` for variables/functions, `PascalCase` for classes
 - Raise `ValueError` for invalid arguments (not silent failure)
+- **pandas** for all tabular/CSV data work — `pd.read_csv`, `df.to_csv(index=False)`,
+  boolean indexing, `value_counts()`, `groupby()`.  Do not use `csv.DictReader`/
+  `csv.DictWriter` or `collections.Counter` for tasks pandas handles naturally.
 
 ---
 
@@ -337,6 +351,20 @@ find, plus File Permissions (chmod, chown) and Process Management (ps, top, kill
   Recursion" subsections.
 - `recursionexamples.rst`: ends with a "Generators for Sequences with a Ceiling"
   section showing infinite generators + `itertools.takewhile`.
+
+### Case studies chapter (`source/case_studies/`)
+
+Two complete case studies, both using **pandas** and **matplotlib**:
+
+- **Monte Carlo simulation** (`monte_carlo.rst`) — estimates π by throwing random
+  darts.  Pipeline: `generate_darts` → `save_darts` → `load_darts` → `estimate_pi`.
+  The generate/save/load separation mirrors the Scala workshop design.
+  Visualisation in `monte_carlo_plot.py` (scatter plot + convergence grid).
+- **Chicago 311 Graffiti** (`graffiti_311.rst`) — full fetch→load→aggregate→filter→
+  visualise pipeline against the Chicago Data Portal open dataset.
+  The CSV (`311_graffiti.csv`) is gitignored; fetch with:
+  `python examples/introcs-python/internet_data/graffiti.py fetch`
+  Dataset covers 2011–2018 only (portal stopped updating this view).
 
 ### Motivation chapter (`source/context/motivation.rst`)
 
