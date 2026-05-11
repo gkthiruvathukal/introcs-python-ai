@@ -1,4 +1,9 @@
 .venv/
 build/
+_build/
 __pycache__/
 *.pyc
+
+# Downloaded datasets — fetch with:
+#   python examples/introcs-python/internet_data/graffiti.py fetch
+*.csv
