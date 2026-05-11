@@ -13,7 +13,7 @@ Case Study: Monte Carlo Simulation
 .. note::
    *Source:* Adapted from `scalaworkshop
    <https://github.com/gkthiruvathukal/scalaworkshop>`_
-   by George K. Thiruvathukal.  Original Scala implementation at
+   by George K. Thiruvathukal and Konstantin Läufer.  Original Scala implementation at
    `introds-scala-examples/montecarlo-scala
    <https://github.com/LoyolaChicagoBooks/introds-scala-examples/tree/main/montecarlo-scala>`_.
 

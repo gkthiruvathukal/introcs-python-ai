@@ -15,7 +15,7 @@ Case Study: Chicago 311 Graffiti Data
 .. note::
    *Source:* Adapted from `scalaworkshop
    <https://github.com/gkthiruvathukal/scalaworkshop>`_
-   by George K. Thiruvathukal.  Data is published by the
+   by George K. Thiruvathukal and Konstantin Läufer.  Data is published by the
    City of Chicago under the Chicago Data Portal open data licence.
 
 The **Chicago Data Portal** (``data.cityofchicago.org``) publishes

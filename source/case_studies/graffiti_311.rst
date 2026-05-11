@@ -14,7 +14,7 @@ Case Study: Chicago 311 Graffiti Data
 .. note::
    *Source:* Adapted from `scalaworkshop
    <https://github.com/gkthiruvathukal/scalaworkshop>`_
-   by George K. Thiruvathukal.  Original Scala implementation at
+   by George K. Thiruvathukal and Konstantin Läufer.  Original Scala implementation at
    `introds-scala-examples/311-case-study-scala
    <https://github.com/LoyolaChicagoBooks/introds-scala-examples/tree/main/311-case-study-scala>`_.
    Data published by the City of Chicago under the Chicago Data Portal

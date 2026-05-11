@@ -15,7 +15,7 @@ Monte Carlo Simulation
 .. note::
    *Source:* Adapted from `scalaworkshop
    <https://github.com/gkthiruvathukal/scalaworkshop>`_
-   by George K. Thiruvathukal.
+   by George K. Thiruvathukal and Konstantin Läufer.
 
 A *simulation* uses a computer to model a process that would be
 expensive, slow, or impossible to run in the real world.  *Monte Carlo
