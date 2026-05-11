@@ -1,13 +1,12 @@
-.. index:: Chicago Data Portal, open data; Chicago, CSV; real-world dataset,
-           data pipeline; fetch-load-analyze-visualize, urllib.request; download
+.. index:: Chicago Data Portal; case study, 311 graffiti; case study,
+           open data; civic dataset, data pipeline; fetch-load-analyze-visualize,
+           urllib.request; download, csv.DictReader; real data
    ACM-IEEE CS2013; IM1 Information Management Concepts
    ACM-IEEE CS2023; IM1 Information Management Concepts
    ACM-IEEE CS2013; SDF2 Fundamental Programming Concepts
    ACM-IEEE CS2023; SDF2 Fundamental Programming Concepts
-   ACM-IEEE CS2013; CN1 Introduction to Networking
-   ACM-IEEE CS2023; CN1 Introduction to Networking
 
-.. _Graffiti-Case-Study:
+.. _Case-Study-311-Graffiti:
 
 Case Study: Chicago 311 Graffiti Data
 =======================================
@@ -15,38 +14,44 @@ Case Study: Chicago 311 Graffiti Data
 .. note::
    *Source:* Adapted from `scalaworkshop
    <https://github.com/gkthiruvathukal/scalaworkshop>`_
-   by George K. Thiruvathukal.  Data is published by the
-   City of Chicago under the Chicago Data Portal open data licence.
+   by George K. Thiruvathukal.  Original Scala implementation at
+   `introds-scala-examples/311-case-study-scala
+   <https://github.com/LoyolaChicagoBooks/introds-scala-examples/tree/main/311-case-study-scala>`_.
+   Data published by the City of Chicago under the Chicago Data Portal
+   open data licence.
 
-The **Chicago Data Portal** (``data.cityofchicago.org``) publishes
-hundreds of datasets covering city services, crime, transportation, and
-more.  All are freely downloadable as CSV or JSON.  This case study
-works through the entire data pipeline — fetch, load, aggregate, filter,
-visualize — using the 311 Graffiti Removal dataset, which records every
-public graffiti removal request submitted to the city.
+**Problem.** The City of Chicago publishes every graffiti-removal
+request submitted through its 311 system as open data.  Can we
+download that dataset, explore its structure, and find patterns — which
+ZIP codes generate the most requests?  How does volume change by
+season?
 
-The URL for the full dataset is:
+This case study builds a complete data pipeline in Python using only
+the standard library plus ``matplotlib``:
+
+.. code-block:: none
+
+   Fetch → Load → Aggregate → Filter → Visualize
+
+The dataset URL is:
 
 .. code-block:: none
 
    https://data.cityofchicago.org/api/views/hec5-y4x5/rows.csv?accessType=DOWNLOAD
 
-.. index:: urllib.request.urlretrieve; download, data fetching; CSV
+.. index:: urllib.request.urlretrieve; 311, data fetching; civic data
 
-Fetching the Dataset
----------------------
+Step 1 — Fetch
+--------------
 
-Python's standard library module ``urllib.request`` can download a file
-from a URL directly to disk with a single call:
+``urllib.request.urlretrieve`` streams the file directly to disk
+without loading the entire response into memory — important for a
+dataset that can exceed 100 MB:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
    :start-after: # start: fetch_graffiti
    :end-before: # end: fetch_graffiti
-
-``urlretrieve(url, filename)`` streams the remote file to ``filename``
-without loading the entire response into memory first — important for
-large datasets.
 
 .. code-block:: python
 
@@ -59,21 +64,19 @@ Output:
    Downloading to 311_graffiti.csv ...
    Done.
 
-.. index:: csv.DictReader; real data, data loading; CSV
+.. index:: csv.DictReader; civic data, data inspection; CSV
 
-Loading and Inspecting
------------------------
+Step 2 — Load and Inspect
+--------------------------
 
-``csv.DictReader`` turns each CSV row into a dictionary keyed by the
-column headers — no index juggling required:
+``csv.DictReader`` turns each row into a dictionary keyed by the
+column headers.  A ``limit`` parameter lets you preview a few rows
+before processing the full file:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
    :start-after: # start: load_graffiti
    :end-before: # end: load_graffiti
-
-Calling it with a small limit lets you inspect the shape of the data
-before processing the whole file:
 
 .. code-block:: python
 
@@ -81,32 +84,29 @@ before processing the whole file:
    for row in rows:
        print(row["Creation Date"], row["Status"], row["ZIP Code"])
 
-Output (representative — actual dates depend on when the data was downloaded):
+Output (representative):
 
 .. code-block:: none
 
-   01/02/2024 Completed 60614
-   01/02/2024 Completed 60647
-   01/03/2024 Open      60618
+   01/02/2024  Completed  60614
+   01/02/2024  Completed  60647
+   01/03/2024  Open       60618
 
 The dataset includes columns for creation and completion dates, street
 address, ZIP code, latitude/longitude, ward, and police district.
 
-.. index:: collections.Counter; aggregation, aggregation; group-by
+.. index:: collections.Counter; 311 aggregation, group-by; ZIP code
 
-Aggregating by ZIP Code
-------------------------
+Step 3 — Aggregate
+-------------------
 
-``collections.Counter`` is the natural tool for counting occurrences of
-each value — here, the number of requests per ZIP code:
+``collections.Counter`` counts how many requests fall under each
+value of a given column — here, ZIP code:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
    :start-after: # start: aggregate_graffiti
    :end-before: # end: aggregate_graffiti
-
-``counter.most_common(top)`` returns pairs sorted by count descending,
-so the busiest ZIP codes appear first:
 
 .. code-block:: python
 
@@ -123,14 +123,14 @@ Output (representative):
    60622       3,840
    60625       3,512
 
-.. index:: datetime.strptime; date parsing, filtering; date range, filtering; status
+.. index:: datetime.strptime; 311 filtering, date range filtering; status filter
 
-Filtering by Status and Date
-------------------------------
+Step 4 — Filter
+----------------
 
-Real datasets often need filtering before analysis.  This function
-returns only rows with a given status whose creation date falls within a
-date range:
+Real datasets need filtering before analysis.  This function returns
+only rows matching a given status whose creation date falls within a
+specified range:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
@@ -138,9 +138,8 @@ date range:
    :end-before: # end: filter_graffiti
 
 The ``Creation Date`` column uses ``MM/DD/YYYY`` format, so
-``datetime.strptime`` with the pattern ``"%m/%d/%Y"`` parses it.  Rows
-with unparseable dates are skipped with ``continue`` rather than
-crashing the program.
+``datetime.strptime`` with ``"%m/%d/%Y"`` parses it.  Rows with
+unparseable dates are skipped with ``continue``.
 
 .. code-block:: python
 
@@ -156,26 +155,20 @@ Output:
 
    9,480 completed requests in January 2015
 
-.. index:: matplotlib; bar chart, bar chart; monthly trend, visualization; time series
+.. index:: matplotlib; 311 bar chart, bar chart; monthly trend
 
-Visualizing Monthly Trends
----------------------------
+Step 5 — Visualize
+-------------------
 
-Grouping by year-month and plotting a bar chart reveals seasonal
-patterns in graffiti removal activity:
+Grouping by year-month and plotting a bar chart reveals the seasonal
+pattern in graffiti removal activity.  Requests dip in winter (cold
+weather means fewer outdoor surfaces are tagged) and peak in late
+spring and summer:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
    :start-after: # start: visualize_graffiti
    :end-before: # end: visualize_graffiti
-
-The function groups every creation date into a ``YYYY-MM`` bucket using
-``date.strftime("%Y-%m")``, sorts the months chronologically, and draws
-a bar per month.  Install ``matplotlib`` first if needed:
-
-.. code-block:: none
-
-   pip install matplotlib
 
 .. note::
 
@@ -195,23 +188,20 @@ Output:
 
    Saved graffiti_trend.png
 
-The chart below shows monthly request volume for 2015–2018.  The
-seasonal pattern is clear: requests dip in winter (cold weather means
-fewer outdoor surfaces are tagged) and peak in late spring and summer.
+Install ``matplotlib`` first if needed:
 
-.. figure:: graffiti_trend.png
+.. code-block:: none
+
+   pip install matplotlib
+
+.. figure:: ../internet_data/graffiti_trend.png
    :alt: Bar chart of 311 graffiti removal requests per month, 2015–2018
    :align: center
 
-   Monthly graffiti removal requests from the Chicago 311 open dataset.
+   Monthly graffiti removal requests from the Chicago 311 open dataset (2015–2018).
 
-.. index:: bar chart; yearly trend, aggregation; yearly
-
-Annual Totals
---------------
-
-To see the full picture across all years in the dataset, use
-``visualize_by_year``:
+To see the full span of the dataset at a glance, plot annual totals
+across all years:
 
 .. literalinclude:: ../../examples/introcs-python/internet_data/graffiti.py
    :language: python
@@ -235,26 +225,40 @@ Output:
    Total graffiti removal requests per year (2010–2018).  The 2010 bar
    is partial (data begins mid-year); 2011–2018 show full annual volumes.
 
-Exercises
----------
+.. index:: civic data; equity analysis, 311; interpretation
+
+What the Data Reveals
+----------------------
+
+311 reports are not merely complaints — they are a form of civic
+participation.  Analysing this data over time and across ZIP codes
+surfaces questions about equity: are removal requests serviced equally
+across neighbourhoods?  Are response times consistent?  Which wards
+have the highest volume, and why?
+
+This dataset is a starting point.  The same pipeline — fetch, load,
+aggregate, filter, visualise — applies to any of the hundreds of
+other datasets published on the Chicago Data Portal.
+
+Challenges
+----------
 
 1. Modify ``aggregate_graffiti`` to group by ``"Ward"`` instead of
    ``"ZIP Code"``.  Which ward has the most graffiti removal requests?
 
-2. Write a function ``average_completion_days(filename)`` that reads the
-   dataset and returns the average number of days between
-   ``"Creation Date"`` and ``"Completion Date"`` for completed requests.
-   Skip rows where either date is missing or unparseable.
+2. Write a function ``average_completion_days(filename)`` that returns
+   the average number of days between ``"Creation Date"`` and
+   ``"Completion Date"`` for completed requests.  Skip rows where
+   either date is missing or unparseable.
 
 3. The dataset includes ``"Latitude"`` and ``"Longitude"`` columns.
    Write a function that filters rows to those within a bounding box
    (min/max lat/lon) and returns the count.  Use it to count requests
    in a neighbourhood of your choice.
 
-4. Extend ``visualize_graffiti`` to overlay a line showing the
-   12-month rolling average on top of the monthly bars.
+4. Extend ``visualize_graffiti`` to overlay a 12-month rolling average
+   line on top of the monthly bars.
 
-5. Download a second Chicago dataset (for example, 311 Pothole Reports
-   at ``https://data.cityofchicago.org/api/views/7as2-ds3y/rows.csv?accessType=DOWNLOAD``).
-   Compare monthly request volumes for graffiti and potholes on the same
-   chart using two sets of bars.
+5. Download the 311 Pothole Reports dataset (view ID ``7as2-ds3y``)
+   and compare monthly volumes for graffiti and potholes side-by-side
+   on a single chart using two sets of bars.

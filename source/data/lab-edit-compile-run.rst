@@ -25,8 +25,11 @@ If Python 3 is not yet installed, download it from `python.org
    $ python3 --version
    Python 3.12.0
 
-We recommend `Visual Studio Code <https://code.visualstudio.com>`_ as an
-editor.  Install the Python extension from the VS Code marketplace.
+We recommend learning a terminal-based editor such as `Vim
+<https://www.vim.org>`_ or `GNU Emacs <https://www.gnu.org/software/emacs/>`_.
+`Visual Studio Code <https://code.visualstudio.com>`_ is acceptable, but
+it is most effective once you have mastered the basics of editing files and
+moving between the editor and the command-line shell.
 
 The Interactive Shell
 ---------------------

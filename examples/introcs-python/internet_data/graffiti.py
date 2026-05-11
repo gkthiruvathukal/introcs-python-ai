@@ -46,8 +46,8 @@ def aggregate_graffiti(filename: str, group_by: str = "ZIP Code",
 
 # start: filter_graffiti
 def filter_graffiti(filename: str, status: str = "Completed",
-                     start: str = "2024-01-01",
-                     end: str = "2024-01-31") -> list[dict]:
+                     start: str = "2015-01-01",
+                     end: str = "2015-12-31") -> list[dict]:
     """Return rows whose Status matches and Creation Date falls in [start, end]."""
     start_dt = datetime.strptime(start, "%Y-%m-%d")
     end_dt   = datetime.strptime(end,   "%Y-%m-%d")
@@ -66,13 +66,22 @@ def filter_graffiti(filename: str, status: str = "Completed",
 
 # start: visualize_graffiti
 def visualize_graffiti(filename: str,
-                        output: str = "graffiti_trend.png") -> None:
-    """Save a bar chart of monthly graffiti request counts."""
+                        output: str = "graffiti_trend.png",
+                        year_start: int = None,
+                        year_end: int = None) -> None:
+    """Save a bar chart of monthly graffiti request counts.
+
+    year_start and year_end are inclusive; omit both to plot all years.
+    """
     monthly: collections.Counter = collections.Counter()
     with open(filename, newline='', encoding='utf-8') as f:
         for row in csv.DictReader(f):
             try:
                 date = datetime.strptime(row["Creation Date"], "%m/%d/%Y")
+                if year_start is not None and date.year < year_start:
+                    continue
+                if year_end is not None and date.year > year_end:
+                    continue
                 monthly[date.strftime("%Y-%m")] += 1
             except ValueError:
                 continue
@@ -91,3 +100,114 @@ def visualize_graffiti(filename: str,
     plt.close()
     print(f"Saved {output}")
 # end: visualize_graffiti
+
+
+# start: visualize_by_year
+def visualize_by_year(filename: str,
+                       output: str = "graffiti_by_year.png",
+                       min_year: int = 2010) -> None:
+    """Save a bar chart of total graffiti removal requests per year."""
+    yearly: collections.Counter = collections.Counter()
+    with open(filename, newline='', encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            try:
+                date = datetime.strptime(row["Creation Date"], "%m/%d/%Y")
+                if date.year >= min_year:
+                    yearly[date.year] += 1
+            except ValueError:
+                continue
+
+    years = sorted(yearly)
+    counts = [yearly[y] for y in years]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.bar(years, counts, color='steelblue', width=0.6)
+    ax.set_title("311 Graffiti Removal Requests Per Year")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Requests")
+    ax.set_xticks(years)
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, _: f"{int(x):,}")
+    )
+    plt.tight_layout()
+    plt.savefig(output, dpi=100)
+    plt.close()
+    print(f"Saved {output}")
+# end: visualize_by_year
+
+
+if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description='Chicago 311 Graffiti Removal dataset analysis tool.'
+    )
+    sub = parser.add_subparsers(dest='command', required=True)
+
+    p_fetch = sub.add_parser('fetch', help='Download the dataset from the Chicago Data Portal.')
+    p_fetch.add_argument('-o', '--output', default='311_graffiti.csv',
+                         help='Destination filename (default: 311_graffiti.csv)')
+
+    p_load = sub.add_parser('load', help='Preview the first N rows.')
+    p_load.add_argument('-i', '--input', default='311_graffiti.csv')
+    p_load.add_argument('-l', '--limit', type=int, default=5,
+                        help='Number of rows to display (default: 5)')
+
+    p_agg = sub.add_parser('aggregate', help='Count requests grouped by a column.')
+    p_agg.add_argument('-i', '--input', default='311_graffiti.csv')
+    p_agg.add_argument('-g', '--group-by', default='ZIP Code',
+                       help='Column to group by (default: "ZIP Code")')
+    p_agg.add_argument('-n', '--top', type=int, default=10,
+                       help='Number of top groups to show (default: 10)')
+
+    p_filt = sub.add_parser('filter', help='Filter rows by status and date range.')
+    p_filt.add_argument('-i', '--input', default='311_graffiti.csv')
+    p_filt.add_argument('-s', '--status', default='Completed',
+                        help='Request status to match (default: Completed)')
+    p_filt.add_argument('--start', default='2015-01-01',
+                        help='Start date YYYY-MM-DD (default: 2015-01-01)')
+    p_filt.add_argument('--end', default='2015-12-31',
+                        help='End date YYYY-MM-DD (default: 2015-12-31)')
+    p_filt.add_argument('-l', '--limit', type=int, default=10,
+                        help='Max rows to print (default: 10)')
+
+    p_year = sub.add_parser('visualize-year', help='Save a yearly bar chart to a PNG file.')
+    p_year.add_argument('-i', '--input', default='311_graffiti.csv')
+    p_year.add_argument('-o', '--output', default='graffiti_by_year.png')
+    p_year.add_argument('--min-year', type=int, default=2010,
+                        help='Earliest year to include (default: 2000)')
+
+    p_viz = sub.add_parser('visualize', help='Save a monthly bar chart to a PNG file.')
+    p_viz.add_argument('-i', '--input', default='311_graffiti.csv')
+    p_viz.add_argument('-o', '--output', default='graffiti_trend.png')
+    p_viz.add_argument('--year-start', type=int, default=None,
+                       help='First year to include (default: all)')
+    p_viz.add_argument('--year-end', type=int, default=None,
+                       help='Last year to include (default: all)')
+
+    args = parser.parse_args()
+
+    if args.command == 'fetch':
+        fetch_graffiti(args.output)
+
+    elif args.command == 'load':
+        rows = load_graffiti(args.input, args.limit)
+        for row in rows:
+            print(row['Creation Date'], row['Status'], row['ZIP Code'])
+
+    elif args.command == 'aggregate':
+        results = aggregate_graffiti(args.input, args.group_by, args.top)
+        for key, count in results:
+            print(f"{key:20s}  {count:6,}")
+
+    elif args.command == 'filter':
+        matches = filter_graffiti(args.input, args.status, args.start, args.end)
+        print(f"{len(matches):,} '{args.status}' requests from {args.start} to {args.end}")
+        for row in matches[:args.limit]:
+            print(row['Creation Date'], row['Status'], row['ZIP Code'])
+
+    elif args.command == 'visualize-year':
+        visualize_by_year(args.input, args.output, args.min_year)
+
+    elif args.command == 'visualize':
+        visualize_graffiti(args.input, args.output, args.year_start, args.year_end)

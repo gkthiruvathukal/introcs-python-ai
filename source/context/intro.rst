@@ -15,7 +15,7 @@ University Chicago.  The materials are available to all on the web.
    For all work in this course, install Python 3 and use the command-line
    tools.  The basic workflow is:
 
-   1. Write a ``.py`` file in a text editor (VS Code is recommended).
+   1. Write a ``.py`` file in a text editor (Vim or Emacs recommended).
    2. Run it from the terminal::
 
          python3 filename.py
@@ -29,9 +29,12 @@ University Chicago.  The materials are available to all on the web.
 *  `python.org <https://www.python.org>`_ is the official Python website.
    It includes documentation for the standard library and language reference.
 
-*  `Visual Studio Code <https://code.visualstudio.com>`_ with the Python
-   extension is the recommended editor.  It provides syntax highlighting,
-   error detection, and an integrated terminal.
+*  We recommend learning a terminal-based editor such as `Vim <https://www.vim.org>`_
+   or `GNU Emacs <https://www.gnu.org/software/emacs/>`_.  Mastering one of these
+   builds habits — editing, navigating, and running code — that transfer directly
+   to any command-line environment.  `Visual Studio Code
+   <https://code.visualstudio.com>`_ is an acceptable alternative, but you will get
+   more out of it once you are comfortable working between an editor and the shell.
 
 .. index:: Python; interactive shell
    REPL

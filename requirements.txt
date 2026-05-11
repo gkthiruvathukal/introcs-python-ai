@@ -1,2 +1,4 @@
 sphinx
 sphinx-book-theme
+numpy
+matplotlib

@@ -46,7 +46,32 @@ def convergence_table(sizes: list[int]) -> None:
 
 
 if __name__ == '__main__':
+    import argparse
     import math
-    darts = generate_darts(100_000)
-    print(f"π ≈ {estimate_pi(darts):.6f}  (true value: {math.pi:.6f})")
-    convergence_table([100, 1_000, 10_000, 100_000, 1_000_000])
+
+    parser = argparse.ArgumentParser(
+        description='Monte Carlo π estimator.'
+    )
+    parser.add_argument('-n', '--darts', type=int, default=100_000,
+                        help='Number of darts to throw (default: 100000)')
+    parser.add_argument('--save', metavar='FILE',
+                        help='Save dart data to a CSV file')
+    parser.add_argument('--convergence', action='store_true',
+                        help='Print a convergence table across several dart counts')
+    parser.add_argument('--seed', type=int, default=None,
+                        help='Random seed for reproducibility')
+    args = parser.parse_args()
+
+    if args.seed is not None:
+        random.seed(args.seed)
+
+    darts = generate_darts(args.darts)
+    estimate = estimate_pi(darts)
+    print(f"π ≈ {estimate:.6f}  (true: {math.pi:.6f})")
+
+    if args.save:
+        save_darts(darts, args.save)
+        print(f"Darts saved to {args.save}")
+
+    if args.convergence:
+        convergence_table([100, 1_000, 10_000, 100_000, 1_000_000])
