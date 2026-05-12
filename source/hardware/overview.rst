@@ -90,10 +90,7 @@ runs from the fastest (and smallest) storage to the slowest (and largest):
 
 The table below puts concrete numbers on these differences.  Latencies are
 approximate and vary by hardware generation, but the *ratios* between levels
-are remarkably stable.  Sources: Jeff Dean and Peter Norvig,
-*Latency Numbers Every Programmer Should Know* (widely cited industry
-reference); Hennessy and Patterson, *Computer Architecture: A Quantitative
-Approach*, 7th ed. (2024).
+are remarkably stable [DeanNorvig]_ [HennessyPatterson2024]_.
 
 .. list-table:: Approximate memory hierarchy latencies
    :header-rows: 1
@@ -710,3 +707,14 @@ Exercises
 15. Extend ``to_base`` to raise a ``ValueError`` with a descriptive message if
     ``base`` is less than 2 or greater than 60. Test that the error is raised
     correctly for ``base=1`` and ``base=61``.
+
+.. rubric:: References
+
+.. [DeanNorvig] Jeff Dean and Peter Norvig, *Latency Numbers Every Programmer
+   Should Know*, Google, 2012.
+   Widely circulated reference; canonical version maintained at
+   https://gist.github.com/jboner/2841832
+
+.. [HennessyPatterson2024] John L. Hennessy and David A. Patterson,
+   *Computer Architecture: A Quantitative Approach*, 7th ed.,
+   Morgan Kaufmann, 2024.
