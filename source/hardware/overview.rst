@@ -70,12 +70,17 @@ The hardware components that store data are not equal — they differ dramatical
 speed and size. This tradeoff is captured by the **memory hierarchy**, a ladder that
 runs from the fastest (and smallest) storage to the slowest (and largest):
 
-.. code-block:: none
-
-   Registers   →  inside the CPU; hold the value being computed right now
-   Cache       →  L1/L2/L3; recently used data kept close to the CPU
-   RAM         →  your running program and its data
-   SSD / HDD   →  files, databases, and the operating system at rest
+- **Registers** — a handful of locations inside the CPU itself that hold the
+  values being computed right now.  Registers are the fastest storage that
+  exists, but a typical processor has fewer than a hundred of them.
+- **Cache** — a small pool of high-speed memory (L1, L2, and L3 levels) built
+  onto the processor chip.  The CPU automatically copies recently used data
+  here so it does not have to reach out to RAM every time.
+- **RAM** (main memory) — where your running program and all of its data live
+  while the machine is on.  Much larger than cache but noticeably slower.
+- **SSD / HDD** (secondary storage) — files, databases, and the operating
+  system at rest.  Solid-state drives are far faster than spinning hard disks,
+  but both are orders of magnitude slower than RAM.
 
 Each level is roughly 10–100× slower than the one above it but offers far more
 capacity. When the CPU needs a value it checks the cache first, then RAM, and only
