@@ -81,6 +81,17 @@ Each level is roughly 10–100× slower than the one above it but offers far mor
 capacity. When the CPU needs a value it checks the cache first, then RAM, and only
 falls back to storage as a last resort.
 
+.. figure:: memory_hierarchy.png
+   :alt: The memory hierarchy pyramid, showing registers at the top (fastest, smallest)
+         down through cache, RAM, and disk storage at the bottom (slowest, largest)
+   :align: center
+   :width: 80%
+
+   The memory hierarchy pyramid.  Speed increases and capacity decreases as you
+   move toward the top.
+   `Image <https://commons.wikimedia.org/wiki/File:ComputerMemoryHierarchy.svg>`_
+   by Blog.Knatten.org, `CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`_.
+
 You can see the hierarchy in action from Python. The ``sys`` module reports how much
 RAM a Python object occupies, and ``time`` lets you measure how long operations take:
 
