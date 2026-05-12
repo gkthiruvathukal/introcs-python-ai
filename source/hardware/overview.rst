@@ -88,6 +88,45 @@ runs from the fastest (and smallest) storage to the slowest (and largest):
   long-term storage.  Sequential access only; far cheaper per gigabyte than
   any disk, but retrieving data can take minutes.
 
+The table below puts concrete numbers on these differences.  Latencies are
+approximate and vary by hardware generation, but the *ratios* between levels
+are remarkably stable.  Sources: Jeff Dean and Peter Norvig,
+*Latency Numbers Every Programmer Should Know* (widely cited industry
+reference); Hennessy and Patterson, *Computer Architecture: A Quantitative
+Approach*, 7th ed. (2024).
+
+.. list-table:: Approximate memory hierarchy latencies
+   :header-rows: 1
+   :widths: 22 28 22
+
+   * - Level
+     - Typical latency
+     - Order of magnitude
+   * - Registers
+     - < 1 ns
+     - 10⁰ ns
+   * - L1 cache
+     - ~1 ns
+     - 10⁰ ns
+   * - L2 cache
+     - ~4 ns
+     - 10⁰ ns
+   * - L3 cache
+     - ~15 ns
+     - 10¹ ns
+   * - RAM
+     - ~100 ns
+     - 10² ns
+   * - NVMe SSD
+     - ~100,000 ns (100 µs)
+     - 10⁵ ns
+   * - HDD
+     - ~10,000,000 ns (10 ms)
+     - 10⁷ ns
+   * - Tape
+     - ~10,000,000,000 ns (10 s)
+     - 10¹⁰ ns
+
 Each level is roughly 10–100× slower than the one above it but offers far more
 capacity. When the CPU needs a value it checks the cache first, then RAM, and only
 falls back to storage as a last resort.
