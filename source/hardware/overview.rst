@@ -78,9 +78,15 @@ runs from the fastest (and smallest) storage to the slowest (and largest):
   here so it does not have to reach out to RAM every time.
 - **RAM** (main memory) — where your running program and all of its data live
   while the machine is on.  Much larger than cache but noticeably slower.
-- **SSD / HDD** (secondary storage) — files, databases, and the operating
-  system at rest.  Solid-state drives are far faster than spinning hard disks,
-  but both are orders of magnitude slower than RAM.
+- **SSD** (solid-state drive) — flash-based secondary storage for files,
+  databases, and the operating system at rest.  Much faster than a spinning
+  disk but still orders of magnitude slower than RAM.
+- **HDD** (hard disk drive) — traditional spinning magnetic storage offering
+  large capacity at low cost, but with mechanical seek times that make it
+  the slowest form of local storage in everyday use.
+- **Tape** — removable magnetic tape cartridges used for archival backups and
+  long-term storage.  Sequential access only; far cheaper per gigabyte than
+  any disk, but retrieving data can take minutes.
 
 Each level is roughly 10–100× slower than the one above it but offers far more
 capacity. When the CPU needs a value it checks the cache first, then RAM, and only
