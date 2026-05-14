@@ -1,8 +1,10 @@
 .. index::
    single: Thiruvathukal, George K.
+   single: Abuhamad, Mohammed
    single: Al Shaikhli, Ihab
    single: Bisharat, Arslan
    single: Eslami, Behnaz
+   single: Henriques Moreira, Daniel
    single: Hyatt, Matt
    single: Luce, Jason
    single: Sandoval Madrigal, Manny
@@ -54,7 +56,9 @@ at Loyola University Chicago.
 **Other Contributors**
 
 The following individuals made foundational contributions to earlier versions
-of this material.
+of this material and to related course materials adapted for this book.
 
+- Daniel Henriques Moreira, contributor to COMP 180 data analysis course materials
+- Mohammed Abuhamad, contributor to COMP 180 data analysis course materials
 - Thomas W. Christopher, Associate Professor (Emeritus) of Computer Science, Illinois Institute of Technology
 - Andy Harrington, Associate Professor (Emeritus) of Computer Science, Loyola University Chicago

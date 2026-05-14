@@ -35,6 +35,7 @@ Introduction to Computer Science in Python
    lists_of_dicts/overview
    dict_algorithms/overview
    internet_data/internet_data
+   data_analysis/data_analysis
    simulation/overview
    classes/classes
    testing/testing
