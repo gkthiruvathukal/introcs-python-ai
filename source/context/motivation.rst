@@ -106,8 +106,8 @@ question before.
    elements within a systems and engineering curriculum — not as ends in
    themselves.  This book is a practical companion to that argument.
 
-A Pattern of Disruption
-^^^^^^^^^^^^^^^^^^^^^^^^
+A Pattern of Disruption? Or Yet Another Disruption?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Every generation of programmers has faced a tool that was supposed to make
 programming knowledge unnecessary.  Each time, the same anxiety arose, and
@@ -314,4 +314,3 @@ what are the inputs and outputs, what are the edge cases, what does
 success look like?  Code is the precise expression of answers to those
 questions.  AI can help you write the expression.  It is unlikely to
 answer the questions for you.
-
