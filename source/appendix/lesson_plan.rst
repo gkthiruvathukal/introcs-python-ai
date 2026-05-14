@@ -116,8 +116,8 @@ three checkpoints before a final demonstration and design walkthrough.
      - Lab 14
      - 
    * - 15
-     - Graphical user interfaces, integration, and final review
-     - :doc:`/gui/overview`
+     - Terminal user interfaces, integration, and final review
+     - :doc:`/ui/overview`
      - 
      - Lab 15
      - Practice demonstration

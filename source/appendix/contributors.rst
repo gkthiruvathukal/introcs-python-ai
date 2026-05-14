@@ -33,8 +33,8 @@ contributions as authors, editors, and reviewers.
 
 The chapters on hardware and software, the terminal, modules and scope, user
 input, error handling, lists of dictionaries, dictionary algorithms, internet
-data, and graphical user interfaces were contributed by PhD students in COMP 501
-at Loyola University Chicago.
+data, and user interface programming were contributed by PhD students in COMP
+501 at Loyola University Chicago.
 
 - Ihab Al Shaikhli, PhD Student
 - Arslan Bisharat, PhD Student

@@ -307,9 +307,9 @@ programming.
    * - **PL3** Event-Driven and Reactive Programming
      - Tier 2
      - CS1
-     - :ref:`GUI <Graphical-User-Interfaces-With-Tkinter>`
-       (Tkinter event loop, callbacks,
-       ``command=`` bindings).
+     - :ref:`Terminal User Interfaces <Terminal-User-Interfaces>`
+       (Textual event loop, button events,
+       widget updates).
        *Missing:* reactive/stream programming models
        (CS2 topic).
      - **Partial — CS2 gap**
@@ -809,7 +809,7 @@ and are not listed as gaps for a CS1 textbook.
      - Reactive/stream programming models beyond
        simple widget callbacks.
      - Extend the
-       :ref:`GUI <Graphical-User-Interfaces-With-Tkinter>`
+       :ref:`Terminal User Interfaces <Terminal-User-Interfaces>`
        chapter; appropriate for CS1 enrichment.
 
 Notes on CS2023

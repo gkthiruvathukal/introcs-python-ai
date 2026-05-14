@@ -41,7 +41,7 @@ Introduction to Computer Science in Python
    testing/testing
    recursion/recursion
    datastructures/datastructures
-   gui/overview
+   ui/overview
    case_studies/case_studies
    curriculum_alignment/overview
    appendix/appendix
