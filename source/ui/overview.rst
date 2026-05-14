@@ -9,13 +9,6 @@
 Terminal User Interfaces with Rich and Textual
 ==============================================
 
-.. note::
-
-   *Source:* Adapted from COMP 501 graphical user interface material
-   contributed by PhD students at Loyola University Chicago.  This version
-   replaces the original Tkinter desktop examples with terminal user interface
-   examples using ``rich`` and ``textual``.
-
 A **Terminal User Interface** (TUI) lets a program interact with users inside
 the terminal using layout, color, tables, input controls, and keyboard or mouse
 events.  A TUI is still text-based, but it is more structured than a plain
@@ -136,11 +129,21 @@ Output:
 
    5 countries, 650.6 million people total. Largest: United States.
 
-.. figure:: rich_countries.svg
-   :alt: Terminal output showing a Rich panel, table, and summary
-   :align: center
+.. only:: html
 
-   A Rich terminal display with a panel, table, and summary.
+   .. figure:: rich_countries.svg
+      :alt: Terminal output showing a Rich panel, table, and summary
+      :align: center
+
+      A Rich terminal display with a panel, table, and summary.
+
+.. only:: latex
+
+   .. figure:: rich_countries.png
+      :alt: Terminal output showing a Rich panel, table, and summary
+      :align: center
+
+      A Rich terminal display with a panel, table, and summary.
 
 The exact appearance depends on your terminal, but the program structure is
 simple: data, table-building function, summary function, and ``main``.
@@ -186,11 +189,21 @@ Run it from the terminal:
 
    python examples/introcs-python/ui/textual_counter.py
 
-.. figure:: textual_counter.svg
-   :alt: Textual counter app with a count display and Add one and Reset buttons
-   :align: center
+.. only:: html
 
-   A small Textual app after the ``Add one`` button has been pressed.
+   .. figure:: textual_counter.svg
+      :alt: Textual counter app with a count display and Add one and Reset buttons
+      :align: center
+
+      A small Textual app after the ``Add one`` button has been pressed.
+
+.. only:: latex
+
+   .. figure:: textual_counter.png
+      :alt: Textual counter app with a count display and Add one and Reset buttons
+      :align: center
+
+      A small Textual app after the ``Add one`` button has been pressed.
 
 The important parts are:
 

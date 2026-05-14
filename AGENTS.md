@@ -98,7 +98,7 @@ Every RST file contributed by PhD students carries a `.. note::` attribution:
 | Testing (pytest) | `source/testing/` |
 | Recursion | `source/recursion/` |
 | Data Structures | `source/datastructures/` |
-| Graphical User Interfaces (Tkinter) | `source/gui/` |
+| Terminal User Interfaces (Rich/Textual) | `source/ui/` |
 | Case Studies | `source/case_studies/` |
 
 ### Stub chapters (outlined, ready to write)
