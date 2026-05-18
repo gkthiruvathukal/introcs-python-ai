@@ -7,6 +7,7 @@
    single: Henriques Moreira, Daniel
    single: Hyatt, Matt
    single: Luce, Jason
+   single: Miller, Allan 
    single: Sandoval Madrigal, Manny
    single: Nazari, Mujtaba
    single: Pautsch, Erik
@@ -58,6 +59,7 @@ data, and user interface programming were contributed by PhD students in COMP
 The following individuals made foundational contributions to earlier versions
 of this material and to related course materials adapted for this book.
 
+- Allan J. Miller, contributor to COMP 180 data analysis course materials
 - Daniel Henriques Moreira, contributor to COMP 180 data analysis course materials
 - Mohammed Abuhamad, contributor to COMP 180 data analysis course materials
 - Thomas W. Christopher, Associate Professor (Emeritus) of Computer Science, Illinois Institute of Technology
